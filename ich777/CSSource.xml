@@ -14,6 +14,8 @@
   <Project/>
   <Overview>This Docker will download and install SteamCMD. It will also install Counter-Strike: Source and run it.&#xD;
 &#xD;
+ATTENTION: First Startup can take very long since it downloades the gameserver files!
+&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.</Overview>
   <Beta>False</Beta>
   <Category>Other:</Category>
@@ -91,7 +93,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">232330</Config>
   <Config Name="GAME_NAME" Target="GAME_NAME" Default="" Mode="" Description="Game name to start (is connected to the GAME_PARAMS)." Type="Variable" Display="always" Required="true" Mask="false">cstrike</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-secure +maxplayers 32 +map de_dust2</Config>
-  <Config Name="UDP" Target="27015" Default="" Mode="udp" Description="UDP Gameport" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
+  <Config Name="UDP" Target="27015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new with UDP and the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
   <Config Name="TCP RCON" Target="27015" Default="" Mode="tcp" Description="TCP RCON Port (not required)" Type="Port" Display="always" Required="false" Mask="false">27016</Config>
   <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="false" Mask="false">27015</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
