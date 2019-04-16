@@ -16,7 +16,7 @@
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.</Overview>
   <Beta>False</Beta>
-  <Category>Other:<Category/>
+  <Category>Other:</Category>
   <WebUI/>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/css.png</Icon>
