@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSGO.xml</TemplateURL>
+  <Name>CSGO</Name>
+  <Date>2019-04-16</Date>
+  <Repository>ich777/steamcmd</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/ich777/steamcmd/</Support>
+  <Project>https://www.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Counter-Strike: GO and run it.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloades the gameserver files!
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.</Overview>
+  <Beta>False</Beta>
+  <Category>Other:</Category>
+  <WebUI/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csgo.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1555428057</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This Docker will download and install SteamCMD. It will also install Counter-Strike: GO and run it.&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>27015</HostPort>
+        <ContainerPort>27015</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>27015</HostPort>
+        <ContainerPort>27015</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
+      <ContainerDir>/serverdata/steamcmd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/cstrikego</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>740</Value>
+      <Name>GAME_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>csgo</Value>
+      <Name>GAME_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>+game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2</Value>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>27015</Value>
+      <Name>GAME_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cstrikego</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">740</Config>
+  <Config Name="GAME_NAME" Target="GAME_NAME" Default="" Mode="" Description="Game name to start (is connected to the GAME_PARAMS)." Type="Variable" Display="always" Required="true" Mask="false">csgo</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">+game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2</Config>
+  <Config Name="UDP" Target="27015" Default="" Mode="udp" Description="UDP Gameport" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
+  <Config Name="TCP RCON" Target="27015" Default="" Mode="tcp" Description="TCP RCON Port (not required)" Type="Port" Display="always" Required="false" Mask="false">27016</Config>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="false" Mask="false">27015</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
