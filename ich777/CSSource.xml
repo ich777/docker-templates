@@ -18,7 +18,6 @@ Update Notice: Simply restart the container if a newer version of the game is av
   <Beta>False</Beta>
   <Category>Other:</Category>
   <WebUI/>
-  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/css.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
