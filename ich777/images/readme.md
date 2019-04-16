@@ -1,1 +1,0 @@
-Icons for Unraid templates.
