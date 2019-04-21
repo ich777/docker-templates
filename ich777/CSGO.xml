@@ -15,7 +15,9 @@
 &#xD;
 ATTENTION: First Startup can take very long since it downloades the gameserver files!
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.</Overview>
+Update Notice: Simply restart the container if a newer version of the game is available.
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Beta>False</Beta>
   <Category>Other:</Category>
   <WebUI/>
@@ -28,7 +30,9 @@ Update Notice: Simply restart the container if a newer version of the game is av
   <DonateLink/>
   <Description>This Docker will download and install SteamCMD. It will also install Counter-Strike: GO and run it.&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.</Description>
+Update Notice: Simply restart the container if a newer version of the game is available.
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
