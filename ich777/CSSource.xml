@@ -6,7 +6,6 @@
   <Repository>ich777/steamcmd</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
-  <Project>https://www.steampowered.com/</Project>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
