@@ -1,8 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSGO.xml</TemplateURL>
   <Name>CSGO</Name>
-  <Date>2019-04-16</Date>
   <Repository>ich777/steamcmd</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
@@ -13,24 +11,26 @@
   <Project>https://www.steampowered.com/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install Counter-Strike: GO and run it.&#xD;
 &#xD;
-ATTENTION: First Startup can take very long since it downloades the gameserver files!
+ATTENTION: First Startup can take very long since it downloades the gameserver files!&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
-  <Beta>False</Beta>
   <Category>Other:</Category>
   <WebUI/>
+  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSGO.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csgo.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1555428057</DateInstalled>
+  <DateInstalled/>
   <DonateText/>
   <DonateLink/>
   <Description>This Docker will download and install SteamCMD. It will also install Counter-Strike: GO and run it.&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.
+ATTENTION: First Startup can take very long since it downloades the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Description>
   <Networking>
@@ -42,7 +42,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
         <Protocol>udp</Protocol>
       </Port>
       <Port>
-        <HostPort>27015</HostPort>
+        <HostPort>27016</HostPort>
         <ContainerPort>27015</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -77,6 +77,21 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VALIDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PASSWRD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>27015</Value>
       <Name>GAME_PORT</Name>
       <Mode/>
@@ -100,7 +115,10 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">+game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2</Config>
   <Config Name="UDP" Target="27015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
   <Config Name="TCP RCON" Target="27015" Default="" Mode="tcp" Description="TCP RCON Port (not required)" Type="Port" Display="always" Required="false" Mask="false">27016</Config>
-  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="false" Mask="false">27015</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">27015</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
