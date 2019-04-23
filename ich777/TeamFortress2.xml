@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>TeamFortress2</Name>
-  <Date>2019-04-17</Date>
   <Repository>ich777/steamcmd:tf2</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
@@ -16,10 +15,9 @@ It will also install SteamCMD (you can have multiple installations with only one
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the game server files!&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
-  <Beta>False</Beta>
   <Category>Other:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/TeamFortress2.xml</TemplateURL>
@@ -27,7 +25,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1555481159</DateInstalled>
+  <DateInstalled/>
   <DonateText/>
   <DonateLink/>
   <Description>This Docker will download and install TeamFortress2 and run it.&#xD;
@@ -36,7 +34,7 @@ It will also install SteamCMD (you can have multiple installations with only one
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the game server files!&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Description>
   <Networking>
@@ -83,6 +81,11 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>VALIDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>27015</Value>
       <Name>GAME_PORT</Name>
       <Mode/>
@@ -106,7 +109,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">+sv_pure 1 +randommap +maxplayers 24</Config>
   <Config Name="TCP RCON" Target="27015" Default="" Mode="tcp" Description="TCP RCON Port (not required)" Type="Port" Display="always" Required="false" Mask="false">27015</Config>
   <Config Name="UDP" Target="27015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
-  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="false" Mask="false">27015</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">27015</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
