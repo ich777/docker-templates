@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>CSSource</Name>
-  <Repository>ich777/steamcmd</Repository>
+  <Name>TeamFortress2</Name>
+  <Repository>ich777/steamcmd:tf2</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>
@@ -9,26 +9,30 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-steamcmd-dockers/</Support>
   <Project>https://www.steampowered.com/</Project>
-  <Overview>This Docker will download and install SteamCMD. It will also install Counter-Strike: Source and run it.&#xD;
+  <Overview>This Docker will download and install TeamFortress2 and run it.&#xD;
 &#xD;
-ATTENTION: First Startup can take very long since it downloades the gameserver files!&#xD;
+It will also install SteamCMD (you can have multiple installations with only one steamcmd directory, check out my other containers).&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the game server files!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>Other:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSSource.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/css.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/TeamFortress2.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/tf2.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Description>This Docker will download and install SteamCMD. It will also install Counter-Strike: Source and run it.&#xD;
+  <Description>This Docker will download and install TeamFortress2 and run it.&#xD;
 &#xD;
-ATTENTION: First Startup can take very long since it downloades the gameserver files!&#xD;
+It will also install SteamCMD (you can have multiple installations with only one steamcmd directory, check out my other containers).&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the game server files!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -39,12 +43,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Port>
         <HostPort>27015</HostPort>
         <ContainerPort>27015</ContainerPort>
-        <Protocol>udp</Protocol>
+        <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>27016</HostPort>
+        <HostPort>27015</HostPort>
         <ContainerPort>27015</ContainerPort>
-        <Protocol>tcp</Protocol>
+        <Protocol>udp</Protocol>
       </Port>
     </Publish>
   </Networking>
@@ -55,40 +59,30 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/cstrikesource</HostDir>
+      <HostDir>/mnt/user/appdata/tf2</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-      <Value>232330</Value>
+      <Value>232250</Value>
       <Name>GAME_ID</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>cstrike</Value>
+      <Value>tf</Value>
       <Name>GAME_NAME</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>-secure +maxplayers 32 +map de_dust2</Value>
+      <Value>+sv_pure 1 +randommap +maxplayers 24</Value>
       <Name>GAME_PARAMS</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>USERNAME</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
       <Name>VALIDATE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>PASSWRD</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -109,15 +103,13 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   </Environment>
   <Labels/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cstrikesource</Config>
-  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">232330</Config>
-  <Config Name="GAME_NAME" Target="GAME_NAME" Default="" Mode="" Description="Game name to start (is connected to the GAME_PARAMS)." Type="Variable" Display="always" Required="true" Mask="false">cstrike</Config>
-  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-secure +maxplayers 32 +map de_dust2</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/tf2</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">232250</Config>
+  <Config Name="GAME_NAME" Target="GAME_NAME" Default="" Mode="" Description="Game name to start (is connected to the GAME_PARAMS)." Type="Variable" Display="always" Required="true" Mask="false">tf</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">+sv_pure 1 +randommap +maxplayers 24</Config>
+  <Config Name="TCP RCON" Target="27015" Default="" Mode="tcp" Description="TCP RCON Port (not required)" Type="Port" Display="always" Required="false" Mask="false">27015</Config>
   <Config Name="UDP" Target="27015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
-  <Config Name="TCP RCON" Target="27015" Default="" Mode="tcp" Description="TCP RCON Port (not required)" Type="Port" Display="always" Required="false" Mask="false">27016</Config>
-  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">27015</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
