@@ -16,7 +16,7 @@ PUBLIC PLAY: If you want that your server is public listed you must add '+sv_set
 Create your token here: https://steamcommunity.com/dev/managegameservers (every gameserver needs it's own token!!!)&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
-  <Category>Other:</Category>
+  <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSGO.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csgo.png</Icon>
