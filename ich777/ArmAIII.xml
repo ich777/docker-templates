@@ -19,7 +19,7 @@ ATTENTION: First Startup can take very long since it downloades the gameserver f
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
-  <Category>Other:</Category>
+  <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ArmAIII.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/armaiii.png</Icon>
