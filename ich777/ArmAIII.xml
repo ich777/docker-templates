@@ -14,7 +14,7 @@ To run this container you must provide a valid Steam username and password since
 &#xD;
 Password Notice: The Docker will automaticly download a server.cfg preconfigured with ServerName: Docker Server and Password: Docker&#xD;
 &#xD;
-ATTENTION: First Startup can take very long since it downloades the gameserver files!&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -34,7 +34,7 @@ To run this container you must provide a valid Steam username and password since
 &#xD;
 Password Notice: The Docker will automaticly download a server.cfg preconfigured with ServerName: Docker Server and Password: Docker&#xD;
 &#xD;
-ATTENTION: First Startup can take very long since it downloades the gameserver files!&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
