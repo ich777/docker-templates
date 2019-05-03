@@ -2,20 +2,18 @@
 <Container version="2">
   <Name>Terraria</Name>
   <Repository>ich777/terrariaserver</Repository>
-  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Registry>https://hub.docker.com/r/ich777/terrariaserver/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://terraria.org/</Project>
-  <Overview>This Docker will download and install SteamCMD. It will also install Terraria and run it. SERVER PASSWORD: Docker&#xD;
+  <Overview>This Docker will download and install Terraria and run it. SERVER PASSWORD: Docker&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
-&#xD;
-You can also run multiple servers with only one SteamCMD directory!</Overview>
+Update Notice: Change the game version to whatever version do you want and restart the docker.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Terraria.xml</TemplateURL>
@@ -26,13 +24,11 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DateInstalled/>
   <DonateText/>
   <DonateLink/>
-  <Description>This Docker will download and install SteamCMD. It will also install Terraria and run it. SERVER PASSWORD: Docker&#xD;
+  <Description>This Docker will download and install Terraria and run it. SERVER PASSWORD: Docker&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
-&#xD;
-You can also run multiple servers with only one SteamCMD directory!</Description>
+Update Notice: Change the game version to whatever version do you want and restart the docker.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
