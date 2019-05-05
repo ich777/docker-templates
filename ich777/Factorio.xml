@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Factorio</Name>
-  <Repository>dtandersen/factorio:stable</Repository>
+  <Repository>factoriotools/factorio:stable</Repository>
   <Registry>https://hub.docker.com/r/dtandersen/factorio/</Registry>
   <Network>bridge</Network>
   <MyIP/>
