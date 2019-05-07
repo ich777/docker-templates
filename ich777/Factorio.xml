@@ -11,7 +11,7 @@
   <Project>https://www.factorio.com/</Project>
   <Overview>This Docker Container will download the latest stable release of the game, generate the map and you're ready to play.&#xD;
 &#xD;
-If you want to play the latest beta release of the game change the repository to "dtandersen/factorio:latest" in Advanced View.&#xD;
+If you want to play the latest beta release of the game change the repository to "factoriotools/factorio:latest" in Advanced View.&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.
 &#xD;
 The Docker Container is originaly created by dtandersen and now moved to factoriotools.</Overview>
@@ -29,7 +29,7 @@ The Docker Container is originaly created by dtandersen and now moved to factori
   <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker Container will download the latest stable release of the game, generate the map and you're ready to play.&#xD;
 &#xD;
-If you want to play the latest beta release of the game change the repository to "dtandersen/factorio:latest" in Advanced View.&#xD;
+If you want to play the latest beta release of the game change the repository to "factoriotools/factorio:latest" in Advanced View.&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.
 &#xD;
 The Docker Container is originaly created by dtandersen and now moved to factoriotools.</Description>
