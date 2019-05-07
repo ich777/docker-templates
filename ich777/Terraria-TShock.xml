@@ -22,8 +22,9 @@ Update Notice: Change the game version to whatever version do you want and resta
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you like my work please Donate.</DonateText>
+  <DonateLink>paypal.me/chips777</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install Terraria and the TShock MOD and run it. SERVER PASSWORD: Docker&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
