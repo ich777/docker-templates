@@ -22,7 +22,7 @@ Update Notice: Simply restart the container if a newer version of the game or th
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText>If you like my work please Donate.</DonateText>
+  <DonateText>If you like my work please </DonateText>
   <DonateLink>paypal.me/chips777</DonateLink>
   <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install the latest version of FiveM (GTA V MOD SERVER) and all other required files (resources, server.cfg).&#xD;
