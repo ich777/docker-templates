@@ -27,8 +27,9 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you like my work please Donate.</DonateText>
+  <DonateLink>paypal.me/chips777</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install SteamCMD. It will also install ArmA III and run it.&#xD;
 To run this container you must provide a valid Steam username and password since the game needs a valid account to download (NOTICE: You must disable Steam Guard otherwise this container will not work, Steam recommens  to make a new Steam account for dedicated servers).&#xD;
 &#xD;
