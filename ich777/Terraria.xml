@@ -22,7 +22,7 @@ Update Notice: Change the game version to whatever version do you want and resta
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText>If you like my work please Donate.</DonateText>
+  <DonateText>If you like my work please </DonateText>
   <DonateLink>paypal.me/chips777</DonateLink>
   <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install Terraria and run it. SERVER PASSWORD: Docker&#xD;
