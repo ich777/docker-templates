@@ -27,7 +27,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-<DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
+  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install SteamCMD. It will also install Don't Starve Together and run it.&#xD;
 &#xD;
 ATTENTION: After the first complete startup (you can see it in the log) copy your 'cluster_token.txt' in the 'token/Cluster_1' folder and restart the container.&#xD;
