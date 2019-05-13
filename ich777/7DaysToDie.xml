@@ -98,7 +98,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
-      <Value>-configfile=serverconfig.xml -logfile 7DaysToDie_Data/output_log.txt $@</Value>
+      <Value>serverconfig.xml</Value>
+      <Name>SERVERCONFIG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-logfile 7DaysToDie_Data/output_log.txt $@</Value>
       <Name>GAME_PARAMS</Name>
       <Mode/>
     </Variable>
@@ -132,6 +137,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/7dtd</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">294420</Config>
+  <Config Name="Serverconfig" Target="SERVERCONFIG" Default="" Mode="" Description="Please change if your serverconfigfile has another name." Type="Variable" Display="always" Required="true" Mask="false">serverconfig.xml</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-configfile=serverconfig.xml -logfile 7DaysToDie_Data/output_log.txt $@</Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
