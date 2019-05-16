@@ -31,35 +31,35 @@ ATTENTION: Please don't delete the tar.gz file in the main directory!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available and the container will download and install it.</Description>
   <Networking>
-  <Mode>bridge</Mode>
+    <Mode>bridge</Mode>
     <Publish>
-     <Port>
-       <HostPort>8303</HostPort>
+      <Port>
+        <HostPort>8303</HostPort>
         <ContainerPort>8303</ContainerPort>
         <Protocol>udp</Protocol>
-     </Port>
-     <Port>
-       <HostPort>8303</HostPort>
-       <ContainerPort>8303</ContainerPort>
-       <Protocol>tcp</Protocol>
-     </Port>
+      </Port>
+      <Port>
+        <HostPort>8303</HostPort>
+        <ContainerPort>8303</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
     <Volume>
-     <HostDir>/mnt/user/appdata/teeworlds/</HostDir>
-     <ContainerDir>/serverdata/serverfiles/</ContainerDir>
-     <Mode>rw</Mode>
+      <HostDir>/mnt/user/appdata/teeworlds/</HostDir>
+      <ContainerDir>/serverdata/serverfiles/</ContainerDir>
+      <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment>
     <Variable>
-     <Value>dm.cfg</Value>
+      <Value>dm.cfg</Value>
       <Name>GAME_CONFIG</Name>
       <Mode/>
     </Variable>
     <Variable>
-     <Value>99</Value>
+      <Value>99</Value>
       <Name>UID</Name>
       <Mode/>
     </Variable>
