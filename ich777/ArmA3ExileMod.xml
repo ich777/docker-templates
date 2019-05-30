@@ -105,8 +105,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
-      <Value>-cfg=@ExileServer/basic.cfg -config=@ExileServer/config.cfg -autoinit -mod=@Exile\; -servermod=@ExileServer\; &gt;&gt; ExileModLog.0</Value>
-      <Name>GAME_PARAMS</Name>
+      <Value/>
       <Mode/>
     </Variable>
     <Variable>
@@ -159,7 +158,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/arma3exilemod/gamefiles</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">233780</Config>
-  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server.&#13;&#10;Note: To change the Port of the server please click on 'Show more settings' button, don't forget to change the other ports." Type="Variable" Display="always" Required="false" Mask="false">-cfg=@ExileServer/basic.cfg -config=@ExileServer/config.cfg -autoinit -mod=@Exile\; -servermod=@ExileServer\; &gt;&gt; ExileModLog.0</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server.&#13;&#10;Note: To change the Port of the server please click on 'Show more settings' button, don't forget to change the other ports." Type="Variable" Display="always" Required="false" Mask="false">
   <Config Name="TCP GamePort" Target="2302" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number, never forget that ArmA III uses the starting port number with TCP and UDP and the following 4 ascendant port numbers UDP)" Type="Port" Display="always" Required="true" Mask="false">2302</Config>
   <Config Name="UDP Game Port" Target="2302" Default="" Mode="udp" Description="Same as TCP Game Port" Type="Port" Display="always" Required="true" Mask="false">2302</Config>
   <Config Name="UDP Steam Querry Port" Target="2303" Default="" Mode="udp" Description="UDP Game Port +1" Type="Port" Display="always" Required="true" Mask="false">2303</Config>
