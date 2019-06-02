@@ -19,7 +19,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Mordhau.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/css.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mordhau.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
