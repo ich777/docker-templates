@@ -16,7 +16,7 @@ ATTENTION: First Startup can take very long since it downloads the gameserver fi
 Update Notice: Change the game version to whatever version do you want and restart the docker.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Terraria.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
