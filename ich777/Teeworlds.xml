@@ -16,7 +16,7 @@ ATTENTION: Please don't delete the tar.gz file in the main directory!&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available and the container will download and install it.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Teeworlds.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/teeworlds.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
