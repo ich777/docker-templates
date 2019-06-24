@@ -20,7 +20,7 @@ ATTENTION: Don't forget to accept the EULA down below and don't forget to edit t
 CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS Minecraft' (without quotes), to disconnect from the console simply close the window.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MinecraftBasicServer.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mc.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
