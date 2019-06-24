@@ -18,7 +18,7 @@ The Docker Container is originaly created by dtandersen and now moved to factori
   <Beta>False</Beta>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Factorio.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/factorio.png</Icon>
   <ExtraParams>--restart=always</ExtraParams>
   <PostArgs/>
