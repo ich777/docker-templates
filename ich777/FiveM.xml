@@ -16,7 +16,7 @@ To run this container you must provide a valid Server Key (you can get them from
 Update Notice: Simply restart the container if a newer version of the game or the resources are available.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/FiveM.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fivem.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
