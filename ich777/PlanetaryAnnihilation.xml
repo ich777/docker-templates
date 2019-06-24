@@ -18,7 +18,7 @@ This Docker supports the original version of Planetary Annihilation and the expa
 Update Notice: Set the Variable 'Update on Start' to 'true' (without quotes) then the docker will check every restart if there is a newer version available otherwise leave it blank.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/PlanetaryAnnihilation.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pa.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
