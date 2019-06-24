@@ -16,7 +16,7 @@ If you want to connect to the console open a terminal and enter 'screen -xS MTA'
 UPDATE NOTICE: You can Force Update this Container (please note that you have to set Download Resources to 'true' and leave Skip Basicconfiguration blank to download everything new). </Overview>
   <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:2205]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/MultiTheftAuto.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mta.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
