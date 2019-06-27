@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MinecraftBedrockEdition</Name>
+  <Repository>ich777/minecraftbedrockserver</Repository>
+  <Registry>https://hub.docker.com/r/ich777/minecraftbedrockserver/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.minecraft.net/</Project>
+  <Overview>This is a Basic Minecraft Bedrock Edition Server.&#xD;
+&#xD;
+It will download the specified version of Minecraft Bedrock Edition (in the template this is v1.11.4.2)&#xD;
+&#xD;
+If you want to update the server simply enter the version wich you want to download, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
+&#xD;
+CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS Minecraft' (without quotes), to disconnect from the console simply close the window.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/bedrock.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This is a Basic Minecraft Bedrock Edition Server.&#xD;
+&#xD;
+It will download the specified version of Minecraft Bedrock Edition (in the template this is v1.11.4.2)&#xD;
+&#xD;
+If you want to update the server simply enter the version wich you want to download, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
+&#xD;
+CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS Minecraft' (without quotes), to disconnect from the console simply close the window.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>19132</HostPort>
+        <ContainerPort>19132</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>19132</HostPort>
+        <ContainerPort>19132</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/minecraftbedrockedition</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1.11.4.2</Value>
+      <Name>GAME_VERSION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/minecraftbedrockedition</Config>
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TCP - Game Port" Target="19132" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
+  <Config Name="UDP - Game Port" Target="19132" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
+  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the prefered version to install." Type="Variable" Display="always" Required="false" Mask="false">1.11.4.2</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
