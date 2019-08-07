@@ -90,7 +90,7 @@ Update Notice: If there is a newer version if set to 'latest' simply restart the
   </Environment>
   <Labels/>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openttd</Config>
-  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server if needed otherwise leave blank." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server if needed otherwise leave blank. To load the last autosavegame you MUST specifie the following '-D -g /serverdata/serverfiles/openttd/save/autosave/autosave0.sav' you can also customize the path begins always with '/serverdata/serverfiles/'" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP - Game Port" Target="3979" Default="" Mode="tcp" Description="Container Port: 3979" Type="Port" Display="always" Required="true" Mask="false">3979</Config>
   <Config Name="UDP - Game Port" Target="3979" Default="" Mode="udp" Description="Container Port: 3979" Type="Port" Display="always" Required="true" Mask="false">3979</Config>
   <Config Name="Game Version to Install" Target="GAME_VERSION" Default="" Mode="" Description="Define the prefered game version (eg: '1.8.0' without quotes) or set to 'latest' (without quotes) to pull the newest build." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
