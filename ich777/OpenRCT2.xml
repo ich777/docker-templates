@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OpenRCT2</Name>
+  <Repository>ich777/openrct2server</Repository>
+  <Registry>https://hub.docker.com/r/ich777/openrct2server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://openrct2.org/</Project>
+  <Overview>This Docker will download and install the preferred version of OpenRCT2.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Manual Installation: You can also drop a custom version (even a develop version) into the root of the server and restart the Docker, it will automaticaly install it (don' forget to set the variable 'Game Version' to that version that you are installing). &#xD;
+&#xD;
+Update Notice: If you want to update or downgrade the game simply change the version number.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openrct2.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will download and install the preferred version of OpenRCT2.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Manual Installation: You can also drop a custom version (even a develop version) into the root of the server and restart the Docker, it will automaticaly install it (don' forget to set the variable 'Game Version' to that version that you are installing). &#xD;
+&#xD;
+Update Notice: If you want to update or downgrade the game simply change the version number.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>11753</HostPort>
+        <ContainerPort>11753</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/openrct2</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>0.2.2</Value>
+      <Name>GAME_VERSION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>--password Docker</Value>
+      <Name>GAME_CONFIG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>docker.sv6</Value>
+      <Name>GAME_SAVE_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>11753</Value>
+      <Name>GAME_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openrct2</Config>
+  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Preferred game version to install" Type="Variable" Display="always" Required="true" Mask="false">0.2.2</Config>
+  <Config Name="Extra Startup Parameters" Target="GAME_CONFIG" Default="" Mode="" Description="Enter you Extra Startup Parameters if needed." Type="Variable" Display="always" Required="false" Mask="false">--password Docker</Config>
+  <Config Name="Savegame Name" Target="GAME_SAVE_NAME" Default="" Mode="" Description="Enter here the name of the savegame to load (located for example: /saves/docker.sav)" Type="Variable" Display="always" Required="true" Mask="false">docker.sv6</Config>
+  <Config Name="TCP - Game Port" Target="11753" Default="" Mode="tcp" Description="TCP Game Port (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to change it in the 'Show more settings ...' section below)" Type="Port" Display="always" Required="true" Mask="false">11753</Config>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">11753</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
