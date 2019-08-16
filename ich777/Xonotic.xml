@@ -13,7 +13,7 @@
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-Update Notice: If you want to update the game simpli change the version number.</Overview>
+Update Notice: If you want to update the game simply change the version number.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -28,7 +28,7 @@ Update Notice: If you want to update the game simpli change the version number.<
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-Update Notice: If you want to update the game simpli change the version number.</Description>
+Update Notice: If you want to update the game simply change the version number.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
