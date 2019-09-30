@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RapidPhotoDownloader</Name>
+  <Repository>ich777/rapidphotodownloader</Repository>
+  <Registry>https://hub.docker.com/r/ich777/rapidphotodownloader/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>ttps://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.damonlynch.net/rapid/</Project>
+  <Overview>This Docker will download and install Rapid Photo Downloader.&#xD;
+&#xD;
+ATTENTION: Please be sure to set the right source and destination folder on the server, otherwise the template creates automaticaly two new folders to your shares if not changed ('rpd-source-folder' &amp;amp; 'rpd-destiantion-folder').&#xD;
+&#xD;
+Update Notice: Go to the Rapid Photo Downloader homepage (https://www.damonlynch.net/rapid/) and got to the download selection, rightclick on "Install script" and select "Copy Link Location" then paste the copied link into the "Download URL" variable.</Overview>
+  <Category>MediaApp:Photos Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc_auto.html</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/rapidphotodownloader.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will download and install Rapid Photo Downloader.&#xD;
+&#xD;
+ATTENTION: Please be sure to set the right source and destination folder on the server, otherwise the template creates automaticaly two new folders to your shares if not changed ('rpd-source-folder' &amp;amp; 'rpd-destiantion-folder').&#xD;
+&#xD;
+Update Notice: Go to the Rapid Photo Downloader homepage (https://www.damonlynch.net/rapid/) and got to the download selection, rightclick on "Install script" and select "Copy Link Location" then paste the copied link into the "Download URL" variable.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/rapidphotodownloader/</HostDir>
+      <ContainerDir>/rapidphotodownloader</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/rpd-source-folder</HostDir>
+      <ContainerDir>/media/source</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/rpd-destination-folder</HostDir>
+      <ContainerDir>/media/destination</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>FORCE_UPDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://launchpad.net/rapid/pyqt/0.9.17/+download/install.py</Value>
+      <Name>DL_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Dir" Target="/rapidphotodownloader" Default="" Mode="rw" Description="Container Path: /rapidphotodownloader" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rapidphotodownloader/</Config>
+  <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="If you want to force an update of the container set the value to 'true' (without quotes) otherwise leave blank." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Source Folder" Target="/media/source" Default="" Mode="rw" Description="Container Path: /media/source" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/rpd-source-folder</Config>
+  <Config Name="Destinantion Folder" Target="/media/destination" Default="" Mode="rw" Description="Container Path: /media/destination" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/rpd-destination-folder</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Download URL" Target="DL_URL" Default="" Mode="" Description="Container Variable: DL_URL" Type="Variable" Display="advanced" Required="true" Mask="false">https://launchpad.net/rapid/pyqt/0.9.17/+download/install.py</Config>
+</Container>
