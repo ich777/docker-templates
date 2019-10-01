@@ -16,7 +16,7 @@ BETA Warning: Since this Docker runs with WINE it's marked as BETA, i can not gu
 Also i recommend you to give this docker a Static IP (Custom Mode) and that you don't change any port unless you know what you are doing!&#xD;
 &#xD;
 PUBLIC PLAY: If you want that your server is public listed and easily accessable you must add '-serversteamaccount YOURTOKEN' to the GAME_PARAMS (without the quotes and replace YOURTOKEN with your token).&#xD;
-Create your token here: https://steamcommunity.com/dev/managegameservers (every gameserver needs it's own token!!!)&#xD;
+Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!)&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
@@ -39,7 +39,7 @@ BETA Warning: Since this Docker runs with WINE it's marked as BETA, i can not gu
 Also i recommend you to give this docker a Static IP (Custom Mode) and that you don't change any port unless you know what you are doing!&#xD;
 &#xD;
 PUBLIC PLAY: If you want that your server is public listed and easily accessable you must add '-serversteamaccount YOURTOKEN' to the GAME_PARAMS (without the quotes and replace YOURTOKEN with your token).&#xD;
-Create your token here: https://steamcommunity.com/dev/managegameservers (every gameserver needs it's own token!!!)&#xD;
+Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!)&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
