@@ -77,6 +77,16 @@ Update Notice: Go to the Rapid Photo Downloader homepage (https://www.damonlynch
       <Name>DL_URL</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>Custom Screen Width</Value>
+      <Name>CUSTOM_RES_W</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Custom Screen Height</Value>
+      <Name>CUSTOM_RES_H</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Data Dir" Target="/rapidphotodownloader" Default="" Mode="rw" Description="Container Path: /rapidphotodownloader" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rapidphotodownloader/</Config>
@@ -87,4 +97,6 @@ Update Notice: Go to the Rapid Photo Downloader homepage (https://www.damonlynch
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Download URL" Target="DL_URL" Default="" Mode="" Description="Container Variable: DL_URL" Type="Variable" Display="advanced" Required="true" Mask="false">https://launchpad.net/rapid/pyqt/0.9.17/+download/install.py</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1000 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1024</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 880 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">881</Config>
 </Container>
