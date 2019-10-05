@@ -25,7 +25,7 @@ ATTENTION: The variables Admin Name &amp;amp; Admin Hash will only work on the f
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1570313836</DateInstalled>
+  <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This Docker will download and install the preferred version of OpenRCT2 (don't forget to put in the server version to download).&#xD;
