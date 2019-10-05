@@ -20,7 +20,7 @@ Update Notice: If you want to update or downgrade the game simply change the ver
 ATTENTION: The variables Admin Name &amp;amp; Admin Hash will only work on the first time you enter these, after that you must change it manually in &#x2018;/SERVER_DIR/user-data/users.json&#x2019;.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/OpenRCT2.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openrct2.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
