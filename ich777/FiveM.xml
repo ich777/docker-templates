@@ -16,7 +16,7 @@ Update Notice: Simply restart the container and it will download the newest vers
 Console: To connect to the console open up the terminal for this docker and type in: &#x2018;screen -xS FiveM&#x2019; (without quotes).</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/FiveM.xml</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fivem.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
