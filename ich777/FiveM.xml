@@ -9,15 +9,14 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://fivem.net/</Project>
-  <Overview>With this Docker you can run FiveM (GTA V MOD SERVER) you only have to place the preffered fx.tar.xz in the main directory. The Docker will automatically extract it and download all other required files (resources, server.cfg).&#xD;
-You can get fx.tar.xz from here: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/&#xD;
+  <Overview>With this Docker you can run FiveM (GTA V MOD SERVER) it will automatically download the latest version or if you want to updated it yourself set the &#x2018;Manual Updates&#x2019; (in the 'Show more settings' tab down below) to &#x2018;true&#x2019; (without quotes). The Docker will automatically extract it and download all other required files (resources, server.cfg). You can get fx.tar.xz from here: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/ To run this container you must provide a valid Server Key (you can get them from here: https://keymaster.fivem.net/) and your prefered Server Name.&#xD;
 &#xD;
-To run this container you must provide a valid Server Key (you can get them from here: https://keymaster.fivem.net/) and your prefered Server Name.&#xD;
+Update Notice: Simply restart the container and it will download the newest version or if you set &#x2018;Manual Updates&#x2019; to &#x2018;true&#x2019; place the new fx.tar.xz in the main directory and restart the container.&#xD;
 &#xD;
-Update Notice: Simply place the new fx.tar.xz in the main directory and it will install it.</Overview>
+Console: To connect to the console open up the terminal for this docker and type in: &#x2018;screen -xS FiveM&#x2019; (without quotes).</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/FiveM.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fivem.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
@@ -25,13 +24,11 @@ Update Notice: Simply place the new fx.tar.xz in the main directory and it will 
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
-  <Description>With this Docker you can run FiveM (GTA V MOD SERVER) you only have to place the preffered fx.tar.xz in the main directory. The Docker will automatically extract it and download all other required files (resources, server.cfg).&#xD;
-You can get fx.tar.xz from here: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/&#xD;
+  <Description>With this Docker you can run FiveM (GTA V MOD SERVER) it will automatically download the latest version or if you want to updated it yourself set the &#x2018;Manual Updates&#x2019; (in the 'Show more settings' tab down below) to &#x2018;true&#x2019; (without quotes). The Docker will automatically extract it and download all other required files (resources, server.cfg). You can get fx.tar.xz from here: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/ To run this container you must provide a valid Server Key (you can get them from here: https://keymaster.fivem.net/) and your prefered Server Name.&#xD;
 &#xD;
-To run this container you must provide a valid Server Key (you can get them from here: https://keymaster.fivem.net/) and your prefered Server Name.&#xD;
+Update Notice: Simply restart the container and it will download the newest version or if you set &#x2018;Manual Updates&#x2019; to &#x2018;true&#x2019; place the new fx.tar.xz in the main directory and restart the container.&#xD;
 &#xD;
-Update Notice: Simply place the new fx.tar.xz in the main directory and it will install it.</Description>
+Console: To connect to the console open up the terminal for this docker and type in: &#x2018;screen -xS FiveM&#x2019; (without quotes).</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -76,12 +73,12 @@ Update Notice: Simply place the new fx.tar.xz in the main directory and it will 
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value></Value>
       <Name>SRV_NAME</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value></Value>
       <Name>SERVER_KEY</Name>
       <Mode/>
     </Variable>
@@ -100,13 +97,18 @@ Update Notice: Simply place the new fx.tar.xz in the main directory and it will 
       <Name>GID</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name/>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fivem</Config>
   <Config Name="ConfigFile" Target="GAME_CONFIG" Default="" Mode="" Description="You can edit the server.cfg after the first start." Type="Variable" Display="always" Required="false" Mask="false">server.cfg</Config>
   <Config Name="Start Variables" Target="START_VARS" Default="" Mode="" Description="Extra start variables." Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Server Name" Target="SRV_NAME" Default="" Mode="" Description="Your Servername" Type="Variable" Display="always" Required="true" Mask="false"></Config>
-  <Config Name="Server Key" Target="SERVER_KEY" Default="" Mode="" Description="Your Server Key from: https://keymaster.fivem.net/" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Server Name" Target="SRV_NAME" Default="" Mode="" Description="Your Servername" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Server Key" Target="SERVER_KEY" Default="" Mode="" Description="Your Server Key from: https://keymaster.fivem.net/" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="TCP 1" Target="30110" Default="" Mode="tcp" Description="Container Port: 30110" Type="Port" Display="always" Required="true" Mask="false">30110</Config>
   <Config Name="TCP 2" Target="30120" Default="" Mode="tcp" Description="Container Port: 30120" Type="Port" Display="always" Required="true" Mask="false">30120</Config>
   <Config Name="UDP 1" Target="30110" Default="" Mode="udp" Description="Container Port: 30110" Type="Port" Display="always" Required="true" Mask="false">30110</Config>
@@ -114,4 +116,5 @@ Update Notice: Simply place the new fx.tar.xz in the main directory and it will 
   <Config Name="FiveM Artifacts Server Adress" Target="SRV_ADR" Default="" Mode="" Description="Looks something like this: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/" Type="Variable" Display="advanced-hide" Required="true" Mask="false">https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Manual Updates" Target="" Default="" Mode="" Description="Set this to 'true' without quotes to update your server manually (otherwise leave blank)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
