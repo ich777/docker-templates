@@ -12,6 +12,8 @@
   <Overview>This Docker will download and install SteamCMD. It will also install Starbound (Valid Steam useraccount with the game purchased and Steam Guard disabled required) and run it.&#xD;
 &#xD;
 ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!&#xD;
+If you don't want to disable Steam Guard you can install the Docker as normal, click on it and open a console window and type in: '${STEAMCMD_DIR}/steamcmd.sh +login USERNAME PASSWORD +force_install_dir ${SERVER_DIR} +app_update ${GAME_ID} +quit' (without quotes and replace 'USERNAME' and 'PASSWORD' with your credentials), then enter the Steam Guard key and after the comman finishes just restart the Docker.&#xD;
+&#xD;
 First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
@@ -30,6 +32,8 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Description>This Docker will download and install SteamCMD. It will also install Starbound (Valid Steam useraccount with the game purchased and Steam Guard disabled required) and run it.&#xD;
 &#xD;
 ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!&#xD;
+If you don't want to disable Steam Guard you can install the Docker as normal, click on it and open a console window and type in: '${STEAMCMD_DIR}/steamcmd.sh +login USERNAME PASSWORD +force_install_dir ${SERVER_DIR} +app_update ${GAME_ID} +quit' (without quotes and replace 'USERNAME' and 'PASSWORD' with your credentials), then enter the Steam Guard key and after the comman finishes just restart the Docker.&#xD;
+&#xD;
 First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
@@ -85,12 +89,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
     </Variable>
     <Variable>
       <Value/>
-      <Name>VALIDATE</Name>
+      <Name>PASSWRD</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>PASSWRD</Name>
+      <Name>VALIDATE</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -109,8 +113,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/starbound</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">533830</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!" Type="Variable" Display="always-hide" Required="true" Mask="false"/>
-  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!" Type="Variable" Display="always-hide" Required="true" Mask="true"/>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!" Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!" Type="Variable" Display="always-hide" Required="false" Mask="true"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="TCP - GamePort" Target="21025" Default="" Mode="tcp" Description="Container Port: 21025" Type="Port" Display="always" Required="true" Mask="false">21025</Config>
   <Config Name="UDP - GamePort" Target="21025" Default="" Mode="udp" Description="Container Port: 21025" Type="Port" Display="always" Required="true" Mask="false">21025</Config>
