@@ -12,7 +12,7 @@
   <Overview>This Docker will download and install SteamCMD. It will also install Starbound (Valid Steam useraccount with the game purchased and Steam Guard disabled required) and run it.&#xD;
 &#xD;
 ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!&#xD;
-If you don't want to disable Steam Guard you can install the Docker as normal, click on it and open a console window and type in: '${STEAMCMD_DIR}/steamcmd.sh +login USERNAME PASSWORD +force_install_dir ${SERVER_DIR} +app_update ${GAME_ID} +quit' (without quotes and replace 'USERNAME' and 'PASSWORD' with your credentials), then enter the Steam Guard key and after the comman finishes just restart the Docker.&#xD;
+If you don't want to disable Steam Guard you can install the Docker as normal, click on it and open a console window and type in: '${STEAMCMD_DIR}/steamcmd.sh +login USERNAME PASSWORD +force_install_dir ${SERVER_DIR} +app_update ${GAME_ID} +quit' (without quotes and replace 'USERNAME' and 'PASSWORD' with your credentials), then enter the Steam Guard key and after the command finishes just restart the Docker.&#xD;
 &#xD;
 First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
@@ -32,7 +32,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Description>This Docker will download and install SteamCMD. It will also install Starbound (Valid Steam useraccount with the game purchased and Steam Guard disabled required) and run it.&#xD;
 &#xD;
 ATTENTION: For this Docker you have to specify a valid Steam user with Steam Guard disabled and the game purchased otherwise you will get a no subscription error and the gamefiles won't download!&#xD;
-If you don't want to disable Steam Guard you can install the Docker as normal, click on it and open a console window and type in: '${STEAMCMD_DIR}/steamcmd.sh +login USERNAME PASSWORD +force_install_dir ${SERVER_DIR} +app_update ${GAME_ID} +quit' (without quotes and replace 'USERNAME' and 'PASSWORD' with your credentials), then enter the Steam Guard key and after the comman finishes just restart the Docker.&#xD;
+If you don't want to disable Steam Guard you can install the Docker as normal, click on it and open a console window and type in: '${STEAMCMD_DIR}/steamcmd.sh +login USERNAME PASSWORD +force_install_dir ${SERVER_DIR} +app_update ${GAME_ID} +quit' (without quotes and replace 'USERNAME' and 'PASSWORD' with your credentials), then enter the Steam Guard key and after the command finishes just restart the Docker.&#xD;
 &#xD;
 First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
