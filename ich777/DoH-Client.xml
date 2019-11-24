@@ -17,7 +17,7 @@ You can also use this infront of your PiHole to also block Ad's and with DoH-Ser
 &#xD;
 If you got any questions please post it in the support thread on the Unraid forums.&#xD;
 &#xD;
-Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases)&#xD;
+Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
 The Docker needs to be run in bridge mode and a Fixed IP address.&#xD;
 &#xD;
@@ -40,7 +40,7 @@ You can also use this infront of your PiHole to also block Ad's and with DoH-Ser
 &#xD;
 If you got any questions please post it in the support thread on the Unraid forums.&#xD;
 &#xD;
-Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases)&#xD;
+Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
 The Docker needs to be run in bridge mode and a Fixed IP address.&#xD;
 &#xD;
@@ -69,7 +69,7 @@ This Docker is based on the DoH Client component from: https://github.com/m13253
   </Data>
   <Environment>
     <Variable>
-      <Value>2.2.1</Value>
+      <Value>latest</Value>
       <Name>DoH_V</Name>
       <Mode/>
     </Variable>
@@ -81,7 +81,7 @@ This Docker is based on the DoH Client component from: https://github.com/m13253
   </Environment>
   <Labels/>
   <Config Name="Container Path" Target="/DoH" Default="" Mode="rw" Description="Container Path: /DoH" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/doh-client</Config>
-  <Config Name="DoH Version" Target="DoH_V" Default="" Mode="" Description="Find the versions here: https://github.com/m13253/dns-over-https/releases" Type="Variable" Display="always" Required="true" Mask="false">2.2.1</Config>
+  <Config Name="DoH Version" Target="DoH_V" Default="" Mode="" Description="Find the versions here: https://github.com/m13253/dns-over-https/releases" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Golang Download URL" Target="GO_DL_URL" Default="" Mode="" Description="Container Variable: GO_DL_URL" Type="Variable" Display="advanced" Required="true" Mask="false">https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz</Config>
   <Config Name="UDP DNS Query Port" Target="53" Default="" Mode="udp" Description="UDP DNS Query Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">53</Config>
   <Config Name="TCP DNS Query Port" Target="53" Default="" Mode="tcp" Description="TCP DNS Query Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">53</Config>
