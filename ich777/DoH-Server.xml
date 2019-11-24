@@ -20,7 +20,7 @@ A detailed guide is available on my github page for this project: https://github
 &#xD;
 If you got any questions please poste it in the support thread on the Unraid forums.&#xD;
 &#xD;
-Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases)&#xD;
+Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
 The Docker runns by default on port: 8053 and handels querys in the directory /dns-query (eg: http://192.168.1.7:8053/dns-query)&#xD;
 &#xD;
@@ -46,7 +46,7 @@ A detailed guide is available on my github page for this project: https://github
 &#xD;
 If you got any questions please poste it in the support thread on the Unraid forums.&#xD;
 &#xD;
-Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases)&#xD;
+Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
 The Docker runns by default on port: 8053 and handels querys in the directory /dns-query (eg: http://192.168.1.7:8053/dns-query)&#xD;
 &#xD;
@@ -64,7 +64,7 @@ This Docker is based on the DoH Server component from: https://github.com/m13253
   </Data>
   <Environment>
     <Variable>
-      <Value>2.2.1</Value>
+      <Value>latest</Value>
       <Name>DoH_V</Name>
       <Mode/>
     </Variable>
@@ -76,6 +76,6 @@ This Docker is based on the DoH Server component from: https://github.com/m13253
   </Environment>
   <Labels/>
   <Config Name="Container Path" Target="/DoH" Default="" Mode="rw" Description="Container Path: /DoH" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/doh-server</Config>
-  <Config Name="DoH Version" Target="DoH_V" Default="" Mode="" Description="Find the versions here: https://github.com/m13253/dns-over-https/releases" Type="Variable" Display="always" Required="true" Mask="false">2.2.1</Config>
+  <Config Name="DoH Version" Target="DoH_V" Default="" Mode="" Description="Find the versions here: https://github.com/m13253/dns-over-https/releases" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Golang Download URL" Target="GO_DL_URL" Default="" Mode="" Description="Container Variable: GO_DL_URL" Type="Variable" Display="advanced" Required="true" Mask="false">https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz</Config>
 </Container>
