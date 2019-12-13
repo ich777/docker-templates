@@ -11,9 +11,9 @@
   <Project>https://www.minecraft.net/</Project>
   <Overview>This is a Basic Minecraft Bedrock Edition Server.&#xD;
 &#xD;
-It will download the specified version of Minecraft Bedrock Edition (in the template this is v1.11.4.2)&#xD;
+This container downloads Minecraft Bedrock Edition Server in the specified version or you can also set it to ‘latest’ to download and check on every restart if there is a newer version available.&#xD;
 &#xD;
-If you want to update the server simply enter the version wich you want to download, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
+UPDATE NOTICE: If you set the GAME_VERSION to ‘latest’ the container will check on every start/restart if there is a newer version available, otherwise enter the preferred version number that you want to install, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
 &#xD;
 CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS Minecraft' (without quotes), to disconnect from the console simply close the window.</Overview>
   <Category>GameServers:</Category>
@@ -28,9 +28,9 @@ CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS M
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This is a Basic Minecraft Bedrock Edition Server.&#xD;
 &#xD;
-It will download the specified version of Minecraft Bedrock Edition (in the template this is v1.11.4.2)&#xD;
+This container downloads Minecraft Bedrock Edition Server in the specified version or you can also set it to ‘latest’ to download and check on every restart if there is a newer version available.&#xD;
 &#xD;
-If you want to update the server simply enter the version wich you want to download, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
+UPDATE NOTICE: If you set the GAME_VERSION to ‘latest’ the container will check on every start/restart if there is a newer version available, otherwise enter the preferred version number that you want to install, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
 &#xD;
 CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS Minecraft' (without quotes), to disconnect from the console simply close the window.</Description>
   <Networking>
@@ -62,7 +62,7 @@ CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS M
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1.11.4.2</Value>
+      <Value>latest</Value>
       <Name>GAME_VERSION</Name>
       <Mode/>
     </Variable>
@@ -82,7 +82,7 @@ CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS M
   <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP - Game Port" Target="19132" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
   <Config Name="UDP - Game Port" Target="19132" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
-  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the prefered version to install." Type="Variable" Display="always" Required="false" Mask="false">1.11.4.2</Config>
+  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the prefered version to install." Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
