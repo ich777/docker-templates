@@ -22,7 +22,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
 You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/ProjectZomboid.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/projectzomboid.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
@@ -100,6 +100,11 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
+      <Value>adminDocker</Value>
+      <Name>ADMIN_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>99</Value>
       <Name>UID</Name>
       <Mode/>
@@ -121,6 +126,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="UDP - Game Port" Target="16261" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to change your server settings)" Type="Port" Display="always" Required="true" Mask="false">16261</Config>
   <Config Name="TCP - Player Ports" Target="16262-16326" Default="" Mode="tcp" Description="Every player that connects to your server need's it's own port (if you don't need that many ports you can also delete this entry and create a new Port for TCP eg: 16 players 16262-16278)" Type="Port" Display="always" Required="true" Mask="false">16262-16326</Config>
   <Config Name="TCP - RCON Port" Target="27015" Default="" Mode="tcp" Description="Not required" Type="Port" Display="always" Required="false" Mask="false">27015</Config>
+  <Config Name="Admin Password" Target="ADMIN_PWD" Default="" Mode="" Description="Initial Admin password, change bevor the first start!" Type="Variable" Display="advanced" Required="true" Mask="false">adminDocker</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
