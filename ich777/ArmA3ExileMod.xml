@@ -79,17 +79,17 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
+      <HostDir>/mnt/cache/appdata/steamcmd</HostDir>
       <ContainerDir>/serverdata/steamcmd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/arma3exilemod/gamefiles</HostDir>
+      <HostDir>/mnt/cache/appdata/arma3exilemod/gamefiles</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/arma3/profiles</HostDir>
+      <HostDir>/mnt/cache/appdata/arma3/profiles</HostDir>
       <ContainerDir>/serverdata/.local/share</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -152,8 +152,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/arma3exilemod/gamefiles</Config>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/arma3exilemod/gamefiles</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">233780</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server.&#13;&#10;Note: To change the Port of the server please click on 'Show more settings' button, don't forget to change the other ports." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP GamePort" Target="2302" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number, never forget that ArmA III uses the starting port number with TCP and UDP and the following 4 ascendant port numbers UDP)" Type="Port" Display="always" Required="true" Mask="false">2302</Config>
@@ -165,7 +165,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="true"></Config>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Profiles" Target="/serverdata/.local/share" Default="" Mode="rw" Description="/serverdata/.local/share" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/arma3/profiles</Config>
+  <Config Name="Profiles" Target="/serverdata/.local/share" Default="" Mode="rw" Description="/serverdata/.local/share" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/arma3/profiles</Config>
   <Config Name="TCP MariaDB" Target="3306" Default="" Mode="tcp" Description="Not required, only if you want to connect to the database from outside. Delete if you allready have a MariaDB container running." Type="Port" Display="always" Required="true" Mask="false">3306</Config>
   <Config Name="MariaDB Root Password" Target="MARIA_DB_ROOT_PWD" Default="" Mode="" Description="Enter the preffered root password of the database." Type="Variable" Display="always" Required="true" Mask="false">ExileMod</Config>
   <Config Name="ExileMod URL" Target="EXILEMOD_URL" Default="" Mode="" Description="Change only if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">http://palmbeachpc.com/@Exile-1.0.4.zip</Config>
