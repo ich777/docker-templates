@@ -51,12 +51,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
+      <HostDir>/mnt/cache/appdata/steamcmd</HostDir>
       <ContainerDir>/serverdata/steamcmd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/cstrikego</HostDir>
+      <HostDir>/mnt/cache/appdata/cstrikego</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -109,8 +109,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cstrikego</Config>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/cstrikego</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">740</Config>
   <Config Name="GAME_NAME" Target="GAME_NAME" Default="" Mode="" Description="Game name to start (is connected to the GAME_PARAMS)." Type="Variable" Display="always" Required="true" Mask="false">csgo</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">+game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2</Config>
