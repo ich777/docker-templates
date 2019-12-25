@@ -50,7 +50,7 @@ CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS M
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/minecraftbedrockedition</HostDir>
+      <HostDir>/mnt/cache/appdata/minecraftbedrockedition</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -78,7 +78,7 @@ CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS M
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/minecraftbedrockedition</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/minecraftbedrockedition</Config>
   <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP - Game Port" Target="19132" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
   <Config Name="UDP - Game Port" Target="19132" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
