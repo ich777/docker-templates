@@ -46,7 +46,7 @@ CONSOLE: To connect to the console open up the terminal for this docker and type
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/mindustry</HostDir>
+      <HostDir>/mnt/cache/appdata/mindustry</HostDir>
       <ContainerDir>/mindustry</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -84,7 +84,7 @@ CONSOLE: To connect to the console open up the terminal for this docker and type
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/mindustry" Default="" Mode="rw" Description="Container Path: /mindustry" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/mindustry</Config>
+  <Config Name="ServerFiles" Target="/mindustry" Default="" Mode="rw" Description="Container Path: /mindustry" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/mindustry</Config>
   <Config Name="TCP - Gameport" Target="6567" Default="" Mode="tcp" Description="Container Port: 6567" Type="Port" Display="always" Required="true" Mask="false">6567</Config>
   <Config Name="UDP - Gameport" Target="6567" Default="" Mode="udp" Description="Container Port: 6567" Type="Port" Display="always" Required="true" Mask="false">6567</Config>
   <Config Name="Game Version" Target="GAME_V" Default="" Mode="" Description="Preferred game version goes here (set to &#x2018;latest&#x2019; to download the latest and check on every startup if there is a newer version available)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
