@@ -36,7 +36,7 @@ CounterStrike 2D is a free to play top down shooter (you can get it on Steam or 
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/cs2d</HostDir>
+      <HostDir>/mnt/cache/appdata/cs2d</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -64,7 +64,7 @@ CounterStrike 2D is a free to play top down shooter (you can get it on Steam or 
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cs2d</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/cs2d</Config>
   <Config Name="Extra Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UDP - Game Port" Target="36963" Default="" Mode="udp" Description="Container Port: 36963" Type="Port" Display="always" Required="true" Mask="false">36963</Config>
   <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Put in the value 'true' (without quotes) to Force Update the game otherwise leave blank. Don't forget to delete the value after updating." Type="Variable" Display="always" Required="false" Mask="false"/>
