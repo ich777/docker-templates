@@ -45,7 +45,7 @@ The Docker Container is originaly created by dtandersen and now moved to factori
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/factorio/</HostDir>
+      <HostDir>/mnt/cache/appdata/factorio/</HostDir>
       <ContainerDir>/factorio</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -64,7 +64,7 @@ The Docker Container is originaly created by dtandersen and now moved to factori
   </Environment>
   <Labels/>
   <Config Name="UDP" Target="34197" Default="" Mode="udp" Description="Container Port: 34197" Type="Port" Display="always" Required="false" Mask="false">34197</Config>
-  <Config Name="Path" Target="/factorio" Default="" Mode="rw" Description="Container Path: /factorio" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/factorio/</Config>
+  <Config Name="Path" Target="/factorio" Default="" Mode="rw" Description="Container Path: /factorio" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/factorio/</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>
