@@ -102,7 +102,7 @@ Also there is a commandline mode without the GUI if you configured all right und
       <Mode/>
     </Variable>
     <Variable>
-      <Value>jre1.8.0_211</Value>
+      <Value>basicjre</Value>
       <Name>RUNTIME_NAME</Name>
       <Mode/>
     </Variable>
@@ -140,7 +140,7 @@ Also there is a commandline mode without the GUI if you configured all right und
   <Config Name="CryFS Blocksize" Target="CRYFS_BLOCKSIZE" Default="32768" Mode="" Description="Set your blocksize for the encryped files in bytes (262144 Byte = 256 KiB)" Type="Variable" Display="always" Required="true" Mask="false">262144</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Container Variable: RUNTIME_NAME" Type="Variable" Display="advanced-hide" Required="true" Mask="false">jre1.8.0_211</Config>
+  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Container Variable: RUNTIME_NAME" Type="Variable" Display="advanced-hide" Required="true" Mask="false">basicjre</Config>
   <Config Name="DirSyncPro Download URL" Target="DL_URL" Default="" Mode="" Description="Change only if you know what you are doing" Type="Variable" Display="advanced" Required="true" Mask="false">https://sourceforge.net/projects/directorysync/files/DirSync Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz</Config>
   <Config Name="CMD Mode" Target="CMD_MODE" Default="" Mode="" Description="Set to 'true' (without quotes) if you want to enable the command line mode without the GUI, otherwise leave blank." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="CMD File" Target="CMD_FILE" Default="" Mode="" Description="Please be sure to put the CMD file in the main directory of the Docker and only specify it without the extension for example if the file is named: 'Unraid.dsc' put in 'Unraid' (without quotes)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
