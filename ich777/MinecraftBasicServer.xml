@@ -87,7 +87,7 @@ CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS M
       <Mode/>
     </Variable>
     <Variable>
-      <Value>jre1.8.0_211</Value>
+      <Value>basicjre</Value>
       <Name>RUNTIME_NAME</Name>
       <Mode/>
     </Variable>
@@ -111,7 +111,7 @@ CONSOLE: To connect to the console open up a terminal and type in: 'screen -xS M
   <Config Name="TCP - Game Port" Target="25565" Default="" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="TCP2 - RCON" Target="25575" Default="" Mode="tcp" Description="Not required if not needed" Type="Port" Display="always" Required="false" Mask="false">25575</Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Enter your extracted Runtime folder name.&#13;&#10;Don't change unless you are knowing what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">jre1.8.0_211</Config>
+  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Enter your extracted Runtime folder name.&#13;&#10;Don't change unless you are knowing what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">basicjre</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
