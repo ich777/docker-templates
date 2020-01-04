@@ -56,7 +56,7 @@ ATTENTION: The variables Admin Name &amp;amp; Admin Hash will only work on the f
   </Data>
   <Environment>
     <Variable>
-      <Value>0.2.2</Value>
+      <Value>0.2.4</Value>
       <Name>GAME_VERSION</Name>
       <Mode/>
     </Variable>
