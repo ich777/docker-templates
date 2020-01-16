@@ -146,7 +146,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
-      <Value>http://85.25.202.58/download-all-the-files/ExileServer-1.0.4a.zip</Value>
+      <Value>http://www.exilemod.com/ExileServer-1.0.4a.zip</Value>
       <Name>EXILEMOD_SERVER_URL</Name>
       <Mode/>
     </Variable>
@@ -172,5 +172,5 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">2302</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="ExileMod Server URL" Target="EXILEMOD_SERVER_URL" Default="" Mode="" Description="Change only if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">http://85.25.202.58/download-all-the-files/ExileServer-1.0.4a.zip</Config>
+  <Config Name="ExileMod Server URL" Target="EXILEMOD_SERVER_URL" Default="" Mode="" Description="Change only if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">http://www.exilemod.com/ExileServer-1.0.4a.zip</Config>
 </Container>
