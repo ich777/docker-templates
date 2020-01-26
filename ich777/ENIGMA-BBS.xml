@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>ENiGMA-BBS</Name>
   <Repository>ich777/enigma-1-2-bbs</Repository>
-  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Registry>https://hub.docker.com/r/ich777/enigma-1-2-bbs</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
