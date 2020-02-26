@@ -17,7 +17,7 @@ Start the container for the first time let it do it's work and shut it down.&#xD
 After that copy over your favorite server executable (don't forget to set the Serverfile name to the same as you copied over) and start the container again.&#xD;
 &#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti <Name of your Container> screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
+CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti [Name of your Container] screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -37,7 +37,7 @@ Start the container for the first time let it do it's work and shut it down.&#xD
 After that copy over your favorite server executable (don't forget to set the Serverfile name to the same as you copied over) and start the container again.&#xD;
 &#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti <Name of your Container> screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
+CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti [Name of your Container] screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
