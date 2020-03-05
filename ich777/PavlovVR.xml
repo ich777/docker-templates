@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>PavlovVR</Name>
-  <Repository>ich777/steamcmd2:pavlovvr</Repository>
+  <Repository>ich777/steamcmd:pavlovvr</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>
