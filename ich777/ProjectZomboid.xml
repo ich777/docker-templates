@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>ProjectZomboid</Name>
-  <Repository>ich777/steamcmd2:projectzomboid</Repository>
-  <Registry>https://hub.docker.com/r/ich777/steamcmd2/</Registry>
+  <Repository>ich777/steamcmd:projectzomboid</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
