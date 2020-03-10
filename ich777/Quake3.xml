@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://www.idsoftware.com/</Project>
-  <Overview>This Docker will download and install Quake 3 (You have to copy your .pk3 files from your game directory to your server).&#xD;
+  <Overview>This Docker will download and install Quake III Server (You have to copy your .pk3 files from your game directory to your server).&#xD;
 &#xD;
 PK3 Filese: After the container started the first time you have to copy your pak*.pk3 files from your Quake III Arena directory into your server directory: .../.q3a/baseq3/ (i strongly recommend you to place all your pak*.pk3 files into it) after that simply restart the container and it would start the server.&#xD;
 &#xD;
@@ -24,7 +24,7 @@ Configuring the server: Your server.cfg and maprotationfile.cfg is located into 
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>This Docker will download and install Quake 3 (You have to copy your .pk3 files from your game directory to your server).&#xD;
+  <Description>This Docker will download and install Quake III Server (You have to copy your .pk3 files from your game directory to your server).&#xD;
 &#xD;
 PK3 Filese: After the container started the first time you have to copy your pak*.pk3 files from your Quake III Arena directory into your server directory: .../.q3a/baseq3/ (i strongly recommend you to place all your pak*.pk3 files into it) after that simply restart the container and it would start the server.&#xD;
 &#xD;
@@ -77,6 +77,16 @@ Configuring the server: Your server.cfg and maprotationfile.cfg is located into 
       <Name>Q3_PORT</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-1.32b-3.x86.run</Value>
+      <Name>DL_URL_PR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/quake3-1.32c.zip</Value>
+      <Name>DL_URL_PATCH</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="ServerFiles" Target="/quake3" Default="" Mode="rw" Description="Container Path: /quake3" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/quake3</Config>
@@ -86,5 +96,7 @@ Configuring the server: Your server.cfg and maprotationfile.cfg is located into 
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="Q3_PORT" Target="Q3_PORT" Default="" Mode="" Description="Container Variable: Q3_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">27960</Config>
+  <Config Name="Quake III Base Port" Target="Q3_PORT" Default="" Mode="" Description="Base Port" Type="Variable" Display="advanced" Required="true" Mask="false">27960</Config>
+  <Config Name="Pointrelease Download URL" Target="DL_URL_PR" Default="" Mode="" Description="Only change if you know what you're doing!" Type="Variable" Display="advanced" Required="true" Mask="false">https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/linux/linuxq3apoint-1.32b-3.x86.run</Config>
+  <Config Name="Patch URL" Target="DL_URL_PATCH" Default="" Mode="" Description="Only change if you know what you're doing!" Type="Variable" Display="advanced" Required="true" Mask="false">https://ftp.gwdg.de/pub/misc/ftp.idsoftware.com/idstuff/quake3/quake3-1.32c.zip</Config>
 </Container>
