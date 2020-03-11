@@ -11,7 +11,7 @@
   <Project>https://www.idsoftware.com/</Project>
   <Overview>This Docker will download and install Quake III Server (You have to copy your .pk3 files from your game directory to your server).&#xD;
 &#xD;
-PK3 Filese: After the container started the first time you have to copy your pak*.pk3 files from your Quake III Arena directory into your server directory: .../.q3a/baseq3/ (i strongly recommend you to place all your pak*.pk3 files into it) after that simply restart the container and it would start the server.&#xD;
+PK3 Files: After the container started the first time you have to copy your pak*.pk3 files from your Quake III Arena directory into your server directory: .../.q3a/baseq3/ (i strongly recommend you to place all your pak*.pk3 files into it) after that simply restart the container and it would start the server.&#xD;
 &#xD;
 Configuring the server: Your server.cfg and maprotationfile.cfg is located into your server directory and .../.q3a/baseq/ (after you successfully started the Quake III Server once).</Overview>
   <Category>GameServers:</Category>
@@ -26,7 +26,7 @@ Configuring the server: Your server.cfg and maprotationfile.cfg is located into 
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This Docker will download and install Quake III Server (You have to copy your .pk3 files from your game directory to your server).&#xD;
 &#xD;
-PK3 Filese: After the container started the first time you have to copy your pak*.pk3 files from your Quake III Arena directory into your server directory: .../.q3a/baseq3/ (i strongly recommend you to place all your pak*.pk3 files into it) after that simply restart the container and it would start the server.&#xD;
+PK3 Files: After the container started the first time you have to copy your pak*.pk3 files from your Quake III Arena directory into your server directory: .../.q3a/baseq3/ (i strongly recommend you to place all your pak*.pk3 files into it) after that simply restart the container and it would start the server.&#xD;
 &#xD;
 Configuring the server: Your server.cfg and maprotationfile.cfg is located into your server directory and .../.q3a/baseq/ (after you successfully started the Quake III Server once).</Description>
   <Networking>
