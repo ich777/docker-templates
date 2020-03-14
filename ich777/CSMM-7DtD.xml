@@ -45,7 +45,7 @@ UPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/csmm-7dtd</HostDir>
+      <HostDir>/mnt/user/appdata/csmm-7dtd</HostDir>
       <ContainerDir>/csmm-7dtd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -103,7 +103,7 @@ UPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/csmm-7dtd" Default="" Mode="rw" Description="Container Path: /csmm-7dtd" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/csmm-7dtd</Config>
+  <Config Name="ServerFiles" Target="/csmm-7dtd" Default="" Mode="rw" Description="Container Path: /csmm-7dtd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/csmm-7dtd</Config>
   <Config Name="Hostname" Target="HOSTNAME" Default="" Mode="" Description="Must be in this exact format: 'https://www.server.org' (without quotes, no path or locations allowed only subdomains and with no trailing '/')." Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Steam API Key" Target="STEAM_API_KEY" Default="" Mode="" Description="Steam API Key goes here (you can get it from: https://steamcommunity.com/dev/apikey)." Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="Dicord Bot Token" Target="BOTTOKEN" Default="" Mode="" Description="Your Discord Bot Token (you can get it from here: https://discordapp.com/developers/applications)" Type="Variable" Display="always" Required="false" Mask="true"/>
