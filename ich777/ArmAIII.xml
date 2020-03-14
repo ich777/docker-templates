@@ -77,12 +77,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/steamcmd</HostDir>
+      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
       <ContainerDir>/serverdata/steamcmd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/arma3/gamefiles</HostDir>
+      <HostDir>/mnt/user/appdata/arma3/gamefiles</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -135,8 +135,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/arma3/gamefiles</Config>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/arma3/gamefiles</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">233780</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server.&#13;&#10;Note: To change the Port of the server please click on 'Show more settings' button, don't forget to change the other ports." Type="Variable" Display="always" Required="true" Mask="false">-config=server.cfg -mod=</Config>
   <Config Name="TCP GamePort" Target="2302" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number, never forget that ArmA III uses the starting port number with TCP and UDP and the following 4 ascendant port numbers UDP)" Type="Port" Display="always" Required="true" Mask="false">2302</Config>
