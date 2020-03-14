@@ -62,7 +62,7 @@ This Docker is based on the DoH Client component from: https://github.com/m13253
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/doh-client</HostDir>
+      <HostDir>/mnt/user/appdata/doh-client</HostDir>
       <ContainerDir>/DoH</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -80,7 +80,7 @@ This Docker is based on the DoH Client component from: https://github.com/m13253
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Container Path" Target="/DoH" Default="" Mode="rw" Description="Container Path: /DoH" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/doh-client</Config>
+  <Config Name="Container Path" Target="/DoH" Default="" Mode="rw" Description="Container Path: /DoH" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/doh-client</Config>
   <Config Name="DoH Version" Target="DoH_V" Default="" Mode="" Description="Find the versions here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to download the latest version" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Golang Download URL" Target="GO_DL_URL" Default="" Mode="" Description="Container Variable: GO_DL_URL" Type="Variable" Display="advanced" Required="true" Mask="false">https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz</Config>
   <Config Name="UDP DNS Query Port" Target="53" Default="" Mode="udp" Description="UDP DNS Query Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">53</Config>
