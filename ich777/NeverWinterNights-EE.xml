@@ -45,7 +45,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/nwnee</HostDir>
+      <HostDir>/mnt/user/appdata/nwnee</HostDir>
       <ContainerDir>/nwnee</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -168,7 +168,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/nwnee" Default="" Mode="rw" Description="Container Path: /nwnee" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/nwnee</Config>
+  <Config Name="ServerFiles" Target="/nwnee" Default="" Mode="rw" Description="Container Path: /nwnee" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/nwnee</Config>
   <Config Name="Log Level" Target="LOG_LVL" Default="" Mode="" Description="Set the log level (from 2=only fatal errors to 7=very verbose)" Type="Variable" Display="always" Required="true" Mask="false">4</Config>
   <Config Name="UDP - Game Port" Target="5121" Default="" Mode="udp" Description="UDP Game Port" Type="Port" Display="always" Required="true" Mask="false">5121</Config>
   <Config Name="Module Name" Target="MOD_NAME" Default="" Mode="" Description="Enter the module name to load here (located in your serverdirectory 'Neverwinter Nights/modules' without the .mod extension)" Type="Variable" Display="always" Required="true" Mask="false"/>
