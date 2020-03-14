@@ -48,7 +48,7 @@ Update Notice: Set the Variable 'Update on Start' to 'true' (without quotes) the
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/planetaryannihilation</HostDir>
+      <HostDir>/mnt/user/appdata/planetaryannihilation</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -116,7 +116,7 @@ Update Notice: Set the Variable 'Update on Start' to 'true' (without quotes) the
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/planetaryannihilation</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/planetaryannihilation</Config>
   <Config Name="Your PA Account name" Target="PA_ACC_NAME" Default="" Mode="" Description="Your PA account name goes here, if you don't have one got to this link: https://service.planetaryannihilation.net/user/LinkSteam?TitleId=4 create an account and link your Steam account to it." Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Your PA Account Password" Target="PA_ACC_PWD" Default="" Mode="" Description="Your PA password goes here" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Game Stream" Target="GAME_STREAM" Default="" Mode="" Description="Choose between 'stable' and 'PTE' (without quotes)" Type="Variable" Display="always" Required="true" Mask="false">stable</Config>
