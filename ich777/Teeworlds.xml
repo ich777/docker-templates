@@ -47,7 +47,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/teeworlds/</HostDir>
+      <HostDir>/mnt/user/appdata/teeworlds/</HostDir>
       <ContainerDir>/serverdata/serverfiles/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -70,7 +70,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles/" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/teeworlds/</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles/" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/teeworlds/</Config>
   <Config Name="UDP" Target="8303" Default="" Mode="udp" Description="Container Port: 8303" Type="Port" Display="always" Required="true" Mask="false">8303</Config>
   <Config Name="ConfigFile" Target="GAME_CONFIG" Default="" Mode="" Description="Container Variable: GAME_CONFIG" Type="Variable" Display="always" Required="false" Mask="false">dm.cfg</Config>
   <Config Name="TCP" Target="8303" Default="" Mode="tcp" Description="Container Port: 8303" Type="Port" Display="always" Required="false" Mask="false">8303</Config>
