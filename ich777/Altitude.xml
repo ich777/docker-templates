@@ -45,7 +45,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/altitude</HostDir>
+      <HostDir>/mnt/user/appdata/altitude</HostDir>
       <ContainerDir>/altitude</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -73,7 +73,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/altitude" Default="" Mode="rw" Description="Container Path: /altitude" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/altitude</Config>
+  <Config Name="ServerFiles" Target="/altitude" Default="" Mode="rw" Description="Container Path: /altitude" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/altitude</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UDP - Server Port" Target="27276" Default="" Mode="udp" Description="UDP Game Port (if you need another port, please delete this entry and create a new UDP Port with the required port number, don't forget to change it also in your launcher_config.xml)" Type="Port" Display="always" Required="true" Mask="false">27276</Config>
   <Config Name="Download URL" Target="DL_URL" Default="" Mode="" Description="Don't change unless you know what you are doing." Type="Variable" Display="advanced" Required="true" Mask="false">http://installer.altitudegame.com/0.0.1/altitude.sh</Config>
