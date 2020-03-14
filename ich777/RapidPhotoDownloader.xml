@@ -41,7 +41,7 @@ Update Notice: Go to the Rapid Photo Downloader homepage (https://www.damonlynch
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/rapidphotodownloader/</HostDir>
+      <HostDir>/mnt/user/appdata/rapidphotodownloader/</HostDir>
       <ContainerDir>/rapidphotodownloader</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -89,7 +89,7 @@ Update Notice: Go to the Rapid Photo Downloader homepage (https://www.damonlynch
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Dir" Target="/rapidphotodownloader" Default="" Mode="rw" Description="Container Path: /rapidphotodownloader" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/rapidphotodownloader/</Config>
+  <Config Name="Data Dir" Target="/rapidphotodownloader" Default="" Mode="rw" Description="Container Path: /rapidphotodownloader" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rapidphotodownloader/</Config>
   <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="If you want to force an update of the container set the value to 'true' (without quotes) otherwise leave blank." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Source Folder" Target="/media/source" Default="" Mode="rw" Description="Container Path: /media/source" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/rpd-source-folder</Config>
