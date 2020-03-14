@@ -45,7 +45,7 @@ Also there is a commandline mode without the GUI if you configured all right und
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/dirsyncpro</HostDir>
+      <HostDir>/mnt/user/appdata/dirsyncpro</HostDir>
       <ContainerDir>/dirsyncpro</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -132,7 +132,7 @@ Also there is a commandline mode without the GUI if you configured all right und
   <Config Name="Remote Adress" Target="REMOTE_DIR" Default="" Mode="" Description="Server to connect and eventually the subdirectory (for smb:'192.168.0.1/smbshare' or for ftp: '192.168.0.1' or for webdav: 'https://nextcloud.host.com/remote.php/webdav' without quotes)&#13;&#10;The sahres are mounted inside the conatainer to '/mnt/smb' or '/mnt/ftp'&#13;&#10;(must be provided if smb or ftp is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Remote Username" Target="REMOTE_USER" Default="" Mode="" Description="Username for the share (must be provided if smb, ftp or webdav is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Remote Password" Target="REMOTE_PWD" Default="" Mode="" Description="Password for the share (must be provided if smb, ftp or webdav is used)" Type="Variable" Display="always" Required="false" Mask="true"/>
-  <Config Name="Data Directory" Target="/dirsyncpro" Default="" Mode="rw" Description="Data directory for the container" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/dirsyncpro</Config>
+  <Config Name="Data Directory" Target="/dirsyncpro" Default="" Mode="rw" Description="Data directory for the container" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/dirsyncpro</Config>
   <Config Name="Source Directory - Read Only" Target="/mnt/sourcefiles" Default="" Mode="ro" Description="You can change the Acces Mode from Read Only to Read/Write if you want to sync files back and forth." Type="Path" Display="always" Required="false" Mask="false">/</Config>
   <Config Name="Webinterface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Enable CryFS Encryption" Target="CRYFS" Default="" Mode="" Description="Set to 'true' (without quotes) if you want to enable CryFS encryption." Type="Variable" Display="always" Required="false" Mask="false"/>
