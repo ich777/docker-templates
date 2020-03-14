@@ -41,7 +41,7 @@ Configuring the server: Your server.cfg and maprotationfile.cfg is located into 
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/quake3</HostDir>
+      <HostDir>/mnt/user/appdata/quake3</HostDir>
       <ContainerDir>/quake3</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -89,7 +89,7 @@ Configuring the server: Your server.cfg and maprotationfile.cfg is located into 
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/quake3" Default="" Mode="rw" Description="Container Path: /quake3" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/quake3</Config>
+  <Config Name="ServerFiles" Target="/quake3" Default="" Mode="rw" Description="Container Path: /quake3" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/quake3</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="The startup parameters for the server (only change if you know what you are doing!)" Type="Variable" Display="always" Required="true" Mask="false">+set sv_punkbuster 0 +set fs_game osp +set com_hunkMegs 32</Config>
   <Config Name="Q3_MAP" Target="Q3_MAP" Default="" Mode="" Description="The initial map wich the server would start." Type="Variable" Display="always" Required="true" Mask="false">q3dm1</Config>
   <Config Name="UDP - Gameports" Target="27960-27963" Default="" Mode="udp" Description="The standard Game Port +2 (If you want to change the standard game port please click on more settings and change the start port and then delete this entry and create a new one with the preferred ports)." Type="Port" Display="always" Required="true" Mask="false">27960-27963</Config>
