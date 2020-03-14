@@ -41,7 +41,7 @@ Update Notice: If you want to update the game simply change the version number.<
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/xonotic</HostDir>
+      <HostDir>/mnt/user/appdata/xonotic</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -74,7 +74,7 @@ Update Notice: If you want to update the game simply change the version number.<
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/xonotic</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/xonotic</Config>
   <Config Name="EXTRA_GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UDP - Game Port" Target="26000" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">26000</Config>
   <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the preferred game version to download or update." Type="Variable" Display="always" Required="true" Mask="false">0.8.2</Config>
