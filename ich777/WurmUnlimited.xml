@@ -63,12 +63,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/steamcmd</HostDir>
+      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
       <ContainerDir>/serverdata/steamcmd</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/wurmunlimited</HostDir>
+      <HostDir>/mnt/user/appdata/wurmunlimited</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -171,8 +171,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/wurmunlimited</Config>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/wurmunlimited</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">402370</Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
