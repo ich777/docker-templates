@@ -44,7 +44,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/terraria-tshock</HostDir>
+      <HostDir>/mnt/user/appdata/terraria-tshock</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -72,7 +72,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/terraria-tshock</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/terraria-tshock</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-config serverconfig.txt</Config>
   <Config Name="TCP" Target="7777" Default="" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter here the version of the game that the docker should download." Type="Variable" Display="always" Required="true" Mask="false">1.3.5.3</Config>
