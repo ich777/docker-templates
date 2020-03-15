@@ -11,7 +11,7 @@
   <Project>https://www.openttd.org/</Project>
   <Overview>This Docker will download and install the version of OpenTTD that you enter in the variable 'Game Version to Install' (if you define 'latest' it will always pull the latest build).&#xD;
 &#xD;
-CONSOLE: If you want to connect to the console open a Terminal and type in 'screen -xS OpenTTD' (without quotes). Simply close the windows to disconnect.&#xD;
+CONSOLE: If you want to connect to the console open a Terminal and type in 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS OpenTTD' (without quotes). Simply close the windows to disconnect.&#xD;
 &#xD;
 ATTENTION: First start and updates can take very long time (Also note: Assigning fewer cores for compiling will result in slower startup on the first start up and updates, RECOMMENDED: leave the 'Compile Cores' blank to use all available cores).&#xD;
 &#xD;
@@ -29,7 +29,7 @@ Update Notice: If there is a newer version if set to 'latest' simply restart the
   <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install the version of OpenTTD that you enter in the variable 'Game Version to Install' (if you define 'latest' it will always pull the latest build).&#xD;
 &#xD;
-CONSOLE: If you want to connect to the console open a Terminal and type in 'screen -xS OpenTTD' (without quotes). Simply close the windows to disconnect.&#xD;
+CONSOLE: If you want to connect to the console open a Terminal and type in 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS OpenTTD' (without quotes). Simply close the windows to disconnect.&#xD;
 &#xD;
 ATTENTION: First start and updates can take very long time (Also note: Assigning fewer cores for compiling will result in slower startup on the first start up and updates, RECOMMENDED: leave the 'Compile Cores' blank to use all available cores).&#xD;
 &#xD;
