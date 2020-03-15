@@ -13,7 +13,7 @@
 &#xD;
 Update Notice: Simply restart the container and it will download the newest version or if you set &#x2018;Manual Updates&#x2019; to &#x2018;true&#x2019; place the new fx.tar.xz in the main directory and restart the container.&#xD;
 &#xD;
-Console: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u fivem -ti [Name of your Container] screen -xS FiveM' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
+Console: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS FiveM' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -28,7 +28,7 @@ Console: To connect to the console open up the terminal on the host machine and 
 &#xD;
 Update Notice: Simply restart the container and it will download the newest version or if you set &#x2018;Manual Updates&#x2019; to &#x2018;true&#x2019; place the new fx.tar.xz in the main directory and restart the container.&#xD;
 &#xD;
-Console: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u fivem -ti [Name of your Container] screen -xS FiveM' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
+Console: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS FiveM' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
