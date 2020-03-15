@@ -15,7 +15,7 @@ This container downloads Minecraft Bedrock Edition Server in the specified versi
 &#xD;
 UPDATE NOTICE: If you set the GAME_VERSION to ‘latest’ the container will check on every start/restart if there is a newer version available, otherwise enter the preferred version number that you want to install, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
 &#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti [Name of your Container] screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
+CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -32,7 +32,7 @@ This container downloads Minecraft Bedrock Edition Server in the specified versi
 &#xD;
 UPDATE NOTICE: If you set the GAME_VERSION to ‘latest’ the container will check on every start/restart if there is a newer version available, otherwise enter the preferred version number that you want to install, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
 &#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti [Name of your Container] screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
+CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
