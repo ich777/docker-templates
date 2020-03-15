@@ -13,7 +13,7 @@
 &#xD;
 UPDATE NOTICE: If you set the GAME_V to 'latest' the container will always check on startup for a new version or you can set it to whatever version you preferr eg: '100', '90',... (without quotes, upgrading and downgrading also possible).&#xD;
 &#xD;
-CONSOLE: To connect to the console open up the terminal for this docker and type in: 'screen -xS Mindustry' (without quotes).</Overview>
+CONSOLE: To connect to the console open up the terminal for this docker and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Mindustry' (without quotes).</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL/>
@@ -28,7 +28,7 @@ CONSOLE: To connect to the console open up the terminal for this docker and type
 &#xD;
 UPDATE NOTICE: If you set the GAME_V to 'latest' the container will always check on startup for a new version or you can set it to whatever version you preferr eg: '100', '90',... (without quotes, upgrading and downgrading also possible).&#xD;
 &#xD;
-CONSOLE: To connect to the console open up the terminal for this docker and type in: 'screen -xS Mindustry' (without quotes).</Description>
+CONSOLE: To connect to the console open up the terminal for this docker and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Mindustry' (without quotes).</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
