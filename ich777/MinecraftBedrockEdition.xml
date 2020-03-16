@@ -18,7 +18,7 @@ UPDATE NOTICE: If you set the GAME_VERSION to ‘latest’ the container will ch
 CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/bedrock.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
