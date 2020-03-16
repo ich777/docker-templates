@@ -14,7 +14,7 @@
 You can install it on your machine to get notified with Pushover if a site goes down, or you can install it on a remote machine to ping your server and get a notification if it's not reachable.</Overview>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pushover.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
