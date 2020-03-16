@@ -24,7 +24,7 @@ The Docker needs to be run in bridge mode and a Fixed IP address.&#xD;
 This Docker is based on the DoH Client component from: https://github.com/m13253/dns-over-https</Overview>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/DoH-Client.png</Icon>
   <ExtraParams>--restart=unless-stopped --cap-add=NET_ADMIN --sysctl net.ipv4.ip_unprivileged_port_start=0</ExtraParams>
   <PostArgs/>
