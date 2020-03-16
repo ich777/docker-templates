@@ -16,7 +16,7 @@ JDownloader 2 is a free, open-source download management tool with a huge commun
 Update Notice: Updates will be handled through jDownloader2 directly, simply click the 'Check for Updates' in the WebGUI.</Overview>
   <Category>MediaApp:Photos Productivity: Tools: Backup:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jdownloader.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
