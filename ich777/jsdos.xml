@@ -19,7 +19,7 @@ This all is powered by jsdos please also check out the website: https://js-dos.c
 ATTENTION: !!!Only Install one game on one port otherwise your browser will mess up the saves and paths!!!</Overview>
   <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jsdos.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
