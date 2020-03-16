@@ -16,7 +16,7 @@ Update Notice: If set to 'latest' the container will check on every startup if t
 All you data is stored in the jenkins/workdir folder in your appdata directory.</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jenkins.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
