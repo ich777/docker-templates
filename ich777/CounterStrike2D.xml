@@ -13,7 +13,7 @@
 CounterStrike 2D is a free to play top down shooter (you can get it on Steam or at https://www.cs2d.com/)</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/cs2d.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
