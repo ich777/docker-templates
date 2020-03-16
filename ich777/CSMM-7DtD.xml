@@ -16,7 +16,7 @@ It's a powerfull Server Manager with Server automation, Discord notifications, H
 UPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container (don't forget to turn it off after the update).</Overview>
   <Category>GameServers: Network:Other Productivity: Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:1337]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/CSMM-7DtD.xml</TemplateURL>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csmm.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
