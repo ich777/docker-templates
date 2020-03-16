@@ -17,7 +17,7 @@ ADMIN: The first logon user will become the sysadmin!&#xD;
 Manual Page: https://nuskooler.github.io/enigma-bbs/</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://github.com/ich777/docker-templates/raw/master/ich777/images/enigma1-2bbs.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
