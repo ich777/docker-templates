@@ -16,7 +16,7 @@ UPDATE NOTICE: If you set the GAME_V to 'latest' the container will always check
 CONSOLE: To connect to the console open up the terminal for this docker and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Mindustry' (without quotes).</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mindustry.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
