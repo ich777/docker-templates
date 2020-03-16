@@ -18,7 +18,7 @@ Restoring of encrypted files on another computer/server with this Docker: start 
 Also there is a commandline mode without the GUI if you configured all right under the 'Show more settings' section, please be sure that you put your config file in the main directory of the Docker and specify it.</Overview>
   <Category>Backup: Network:Other Productivity: Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/dirsyncpro.png</Icon>
   <ExtraParams>--restart=unless-stopped --cap-add SYS_ADMIN --cap-add DAC_READ_SEARCH</ExtraParams>
   <PostArgs/>
