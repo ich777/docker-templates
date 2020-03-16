@@ -16,7 +16,7 @@ PK3 Files: After the container started the first time you have to copy your pak*
 Configuring the server: Your server.cfg and maprotationfile.cfg is located into your server directory and .../.q3a/baseq/ (after you successfully started the Quake III Server once).</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/quake3.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
