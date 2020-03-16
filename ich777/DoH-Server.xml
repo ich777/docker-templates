@@ -27,7 +27,7 @@ The Docker runns by default on port: 8053 and handels querys in the directory /d
 This Docker is based on the DoH Server component from: https://github.com/m13253/dns-over-https</Overview>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/DoH.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
