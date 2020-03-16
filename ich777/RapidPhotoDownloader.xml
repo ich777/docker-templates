@@ -16,7 +16,7 @@ ATTENTION: Please be sure to set the right source and destination folder on the 
 Update Notice: Go to the Rapid Photo Downloader homepage (https://www.damonlynch.net/rapid/) and got to the download selection, rightclick on "Install script" and select "Copy Link Location" then paste the copied link into the "Download URL" variable.</Overview>
   <Category>MediaApp:Photos Productivity: Tools: Backup:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/rapidphotodownloader.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
