@@ -15,7 +15,7 @@ ATTENTION: If you want to reload the configuration please type in your unRAID te
 VARIABLES: If you need other variables here is a complete list of all variables: https://hub.docker.com/r/zabbix/zabbix-server-mysql</Overview>
   <Category/>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://github.com/Conmyster/unraid-docker-templates/raw/master/zabbix-agent/images/Zabbix-Logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
