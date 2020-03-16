@@ -16,7 +16,7 @@ ATTENTION: First Startup can take very long since it downloads the gameserver fi
 Update Notice: If you want to update the game simply change the version number.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/xonotic.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
