@@ -16,7 +16,7 @@ It is fully automated and will create all the necessary files and passwords so t
 Please read all the discriptions from the Variables carefully and also look at the 'Show more settings' tab.&#xD;
 &#xD;
 ATTENTION: Please ignore the socket errors after the server startup if you don't have IPv6 enabled on your server.</Overview>
-  <Category/>
+  <Category>Network:</Category>
   <WebUI/>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/stun-turn.png</Icon>
