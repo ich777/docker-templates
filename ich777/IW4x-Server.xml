@@ -4,10 +4,10 @@
   <Repository>ich777/iw4x-server</Repository>
   <Registry>https://hub.docker.com/r/ich777/iw4x-server/</Registry>
   <Network>bridge</Network>
+  <Beta>True</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Beta>True</Beta>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://iw4x.org/</Project>
   <Overview>This Docker will download and install a simple IW4x Server.&#xD;
