@@ -30,8 +30,9 @@ This Docker is based on the DoH Client component from: https://github.com/m13253
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Container will create a DNS Server wich connects by default to Goole's &amp;amp; DNS.SB's DoH resolver with ECS disabled (you can change that simply by editing the 'doh-client.conf' in your root directory of the container)&#xD;
 &#xD;
 You easily can now hide your DNS querys from your ISP with this docker for your whole internal network, you can use it in combination with DoH-Server to protect even your mobile devices and encrypt all your querys.&#xD;
