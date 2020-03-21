@@ -24,7 +24,7 @@ WINE NOTICE: Since this container runs with WINE i can't garantee that it will n
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1584825738</DateInstalled>
+  <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This Docker will download and install a simple IW4x Server.&#xD;
