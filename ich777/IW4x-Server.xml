@@ -4,7 +4,7 @@
   <Repository>ich777/iw4x-server</Repository>
   <Registry>https://hub.docker.com/r/ich777/iw4x-server/</Registry>
   <Network>bridge</Network>
-  <Beta>True</Beta>
+  <Beta>true</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
