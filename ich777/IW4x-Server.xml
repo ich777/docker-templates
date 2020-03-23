@@ -38,13 +38,13 @@ WINE NOTICE: Since this container runs with WINE i can't garantee that it will n
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>27060</HostPort>
-        <ContainerPort>27060</ContainerPort>
+        <HostPort>28960</HostPort>
+        <ContainerPort>28960</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>27060</HostPort>
-        <ContainerPort>27060</ContainerPort>
+        <HostPort>28960</HostPort>
+        <ContainerPort>28960</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
     </Publish>
@@ -98,15 +98,15 @@ WINE NOTICE: Since this container runs with WINE i can't garantee that it will n
       <Mode/>
     </Variable>
     <Variable>
-      <Value>27060</Value>
+      <Value>28960</Value>
       <Name>GAME_PORT</Name>
       <Mode/>
     </Variable>
   </Environment>
   <Labels/>
   <Config Name="ServerFiles" Target="/iw4x" Default="" Mode="rw" Description="Server Files" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/iw4x</Config>
-  <Config Name="TCP - Game Port" Target="27060" Default="" Mode="tcp" Description="TCP Game Port same as UDP (if you need another port, please delete this entry and create a new TCP Port with the corresponding port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="false" Mask="false">27060</Config>
-  <Config Name="UDP - Game Port" Target="27060" Default="" Mode="udp" Description="UDP Game Port same as TCP (if you need another port, please delete this entry and create a new UDP Port with the corresponding port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="false" Mask="false">27060</Config>
+  <Config Name="TCP - Game Port" Target="28960" Default="" Mode="tcp" Description="TCP Game Port same as UDP (if you need another port, please delete this entry and create a new TCP Port with the corresponding port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="false" Mask="false">28960</Config>
+  <Config Name="UDP - Game Port" Target="28960" Default="" Mode="udp" Description="UDP Game Port same as TCP (if you need another port, please delete this entry and create a new UDP Port with the corresponding port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="false" Mask="false">28960</Config>
   <Config Name="Startup Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Specify your Startup Parameters here." Type="Variable" Display="always" Required="true" Mask="false">+exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename playlists.info</Config>
   <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' (without quotes) to force an update." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Main IW4x Download URL" Target="IW4X_DL_URL" Default="" Mode="" Description="Main IW4x Download URL (only change if you know what you are doing)" Type="Variable" Display="advanced" Required="true" Mask="false">https://dss0.cc/updater/iw4x_files.zip</Config>
@@ -115,5 +115,5 @@ WINE NOTICE: Since this container runs with WINE i can't garantee that it will n
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Change if you need another Game Port (please create a new TCP and UDP Port with the corresponding port number)" Type="Variable" Display="advanced" Required="true" Mask="false">27060</Config>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Change if you need another Game Port (please create a new TCP and UDP Port with the corresponding port number)" Type="Variable" Display="advanced" Required="true" Mask="false">28960</Config>
 </Container>
