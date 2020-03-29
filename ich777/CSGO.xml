@@ -73,7 +73,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
-      <Value>+game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2</Value>
+      <Value>+game_type 0 -usercon +game_mode 0 +mapgroup mg_active +map de_dust2</Value>
       <Name>GAME_PARAMS</Name>
       <Mode/>
     </Variable>
@@ -113,7 +113,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cstrikego</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">740</Config>
   <Config Name="GAME_NAME" Target="GAME_NAME" Default="" Mode="" Description="Game name to start (is connected to the GAME_PARAMS)." Type="Variable" Display="always" Required="true" Mask="false">csgo</Config>
-  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">+game_type 0 +game_mode 0 +mapgroup mg_active +map de_dust2</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">+game_type 0 -usercon +game_mode 0 +mapgroup mg_active +map de_dust2</Config>
   <Config Name="UDP" Target="27015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
   <Config Name="TCP RCON" Target="27015" Default="" Mode="tcp" Description="TCP RCON Port (not required)" Type="Port" Display="always" Required="false" Mask="false">27015</Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
