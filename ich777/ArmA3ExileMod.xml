@@ -89,7 +89,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/cache/appdata/arma3/profiles</HostDir>
+      <HostDir>/mnt/cache/appdata/arma3exilemod/profiles</HostDir>
       <ContainerDir>/serverdata/.local/share</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -165,7 +165,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="true"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Profiles" Target="/serverdata/.local/share" Default="" Mode="rw" Description="/serverdata/.local/share" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/arma3/profiles</Config>
+  <Config Name="Profiles" Target="/serverdata/.local/share" Default="" Mode="rw" Description="/serverdata/.local/share" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/arma3exilemod/profiles</Config>
   <Config Name="TCP MariaDB" Target="3306" Default="" Mode="tcp" Description="Not required, only if you want to connect to the database from outside. Delete if you allready have a MariaDB container running." Type="Port" Display="always" Required="true" Mask="false">3306</Config>
   <Config Name="MariaDB Root Password" Target="MARIA_DB_ROOT_PWD" Default="" Mode="" Description="Enter the preffered root password of the database." Type="Variable" Display="always" Required="true" Mask="false">ExileMod</Config>
   <Config Name="Workshop Item Manual Installation" Target="WORKSHOP_MAN_INST" Default="" Mode="" Description="Please set to 'true' (without quotes) if you want to install the Workshopcontent for ExileMod manually since the account you specified above must have a valid game purchase for ArmA3 (you could also use one account to download the dedicated server files and another to install the Workshop files).&#13;&#10;A COMPLETE HOW TO WILL BE IN THE CONSOLE&#13;&#10;WARNING: Please let this variable set to 'true' if you initially set it to 'true'." Type="Variable" Display="always" Required="false" Mask="false"/>
