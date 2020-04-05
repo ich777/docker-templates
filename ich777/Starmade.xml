@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>StarMade</Name>
+  <Repository>ich777/starmade-server</Repository>
+  <Registry>https://hub.docker.com/r/ich777/starmade-server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.star-made.org/</Project>
+  <Overview>This container will download and install a StarMade Dedicated Server. It will also install a basic server.cfg at the first startup.&#xD;
+&#xD;
+UPDATE: The container will check on every restart if there is a newer version of StarMade available.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/starmade.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This container will download and install a StarMade Dedicated Server. It will also install a basic server.cfg at the first startup.&#xD;
+&#xD;
+UPDATE: The container will check on every restart if there is a newer version of StarMade available.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>4242</HostPort>
+        <ContainerPort>4242</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/starmade</HostDir>
+      <ContainerDir>/starmade</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1024</Value>
+      <Name>XMS_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1024</Value>
+      <Name>XMX_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>basicjre</Value>
+      <Name>RUNTIME_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-nogui</Value>
+      <Name>STARTER_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>http://files.star-made.org/StarMade-Starter.jar</Value>
+      <Name>DL_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="ServerFiles" Target="/starmade" Default="" Mode="rw" Description="Container Path: /starmade" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/starmade</Config>
+  <Config Name="Extra Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="XMS Size" Target="XMS_SIZE" Default="" Mode="" Description="Enter your XMS size in MB (XMS=The initial and minimum heap size. It is recommended to set the minimum heap size equivalent to the maximum heap size in order to minimize the garbage collection.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
+  <Config Name="XMX Size" Target="XMX_SIZE" Default="" Mode="" Description="Enter your XMX size in MB (XMX=The maximum heap size. The performance will decrease if the max heap value is set lower than the amount of live data. It will force frequent garbage collections in order to free up space.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
+  <Config Name="TCP - Game Port" Target="4242" Default="" Mode="tcp" Description="TCP - Game Port (If you need another port delete this entry and create a new Port with the corresponding port numbers)." Type="Port" Display="always" Required="true" Mask="false">4242</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Enter your extracted Runtime folder name.&#13;&#10;Don't change unless you are knowing what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">basicjre</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Starter Parameters" Target="STARTER_PARAMS" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">-nogui</Config>
+  <Config Name="Download URL" Target="DL_URL" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">http://files.star-made.org/StarMade-Starter.jar</Config>
+</Container>
