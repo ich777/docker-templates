@@ -63,12 +63,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/dontstarve/serverfiles</HostDir>
+      <HostDir>/mnt/cache/appdata/dontstarve/serverfiles</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/dontstarve/token</HostDir>
+      <HostDir>/mnt/cache/appdata/dontstarve/token</HostDir>
       <ContainerDir>/serverdata/.klei/DoNotStarveTogether</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -112,12 +112,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   </Environment>
   <Labels/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dontstarve/serverfiles</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/dontstarve/serverfiles</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">343050</Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="true"/>
-  <Config Name="Token" Target="/serverdata/.klei/DoNotStarveTogether" Default="" Mode="rw" Description="Put your created 'cluster_token.txt' in the 'Cluster_1' subfolder." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/dontstarve/token</Config>
+  <Config Name="Token" Target="/serverdata/.klei/DoNotStarveTogether" Default="" Mode="rw" Description="Put your created 'cluster_token.txt' in the 'Cluster_1' subfolder." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/dontstarve/token</Config>
   <Config Name="Caves" Target="CAVES" Default="" Mode="" Description="Delete 'true' if you don't want Caves on your Server." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="UDP1 - Game" Target="10890" Default="" Mode="udp" Description="Container Port: 10890" Type="Port" Display="always" Required="true" Mask="false">10890</Config>
   <Config Name="UDP2 - Master Server" Target="27016" Default="" Mode="udp" Description="Container Port: 27016" Type="Port" Display="always" Required="true" Mask="false">27016</Config>
