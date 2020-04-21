@@ -18,7 +18,7 @@ Please note that you need an XLink Kai: Evolution XTag (XLink Kai Gamertag) you 
 UPDATE NOTICE: The container will check on every start/restart if there is a newer version of XLink Kai: Evolution and update it.&#xD;
 &#xD;
 ATTENTION: This container must be run with the network set to 'Host' mode!&#xD;
-By default you must open the port 30000 to enable communications with the Orbs to play online.&#xD;
+By default you must open the port 30000 UDP to enable communications with the Orbs to play online.&#xD;
 &#xD;
 Please also check out the website of XLink Kai Evolution: https://www.teamxlink.co.uk/ huge thanks go to CrunchBite!</Overview>
   <Category>GameServers:</Category>
@@ -40,7 +40,7 @@ Please note that you need an XLink Kai: Evolution XTag (XLink Kai Gamertag) you 
 UPDATE NOTICE: The container will check on every start/restart if there is a newer version of XLink Kai: Evolution and update it.&#xD;
 &#xD;
 ATTENTION: This container must be run with the network set to 'Host' mode!&#xD;
-By default you must open the port 30000 to enable communications with the Orbs to play online.&#xD;
+By default you must open the port 30000 UDP to enable communications with the Orbs to play online.&#xD;
 &#xD;
 Please also check out the website of XLink Kai Evolution: https://www.teamxlink.co.uk/ huge thanks go to CrunchBite!</Description>
   <Networking>
