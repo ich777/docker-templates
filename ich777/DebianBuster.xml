@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DebianBuster</Name>
+  <Repository>ich777/debian-buster</Repository>
+  <Registry>https://hub.docker.com/r/ich777/debian-buster</Registry>
+  <Network>bridge</Network>
+  <Beta>True</Beta>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.debian.org/</Project>
+  <Overview>This Container is a full Debian Buster Xfce4 Desktop environment with a noVNC webGUI and all the basic tools pre-installed.&#xD;
+&#xD;
+If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
+&#xD;
+You also can reverse proxy this container with nginx or apache (for more info see the Github/Dockerhub page).&#xD;
+&#xD;
+Storage Note: All things that are saved in the container should be in the home or a subdirectory in your homefolder, all files that are store outside your homefolder are not persistant and will be wiped if there is an update of the container or you change something in the template.&#xD;
+&#xD;
+ATTENTION: This container is not finished yet and currently in alpha state.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://github.com/ich777/docker-templates/raw/master/ich777/images/debianbuster.png</Icon>
+  <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Container is a full Debian Buster Xfce4 Desktop environment with a noVNC webGUI and all the basic tools pre-installed.&#xD;
+&#xD;
+If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
+&#xD;
+You also can reverse proxy this container with nginx or apache (for more info see the Github/Dockerhub page).&#xD;
+&#xD;
+Storage Note: All things that are saved in the container should be in the home or a subdirectory in your homefolder, all files that are store outside your homefolder are not persistant and will be wiped if there is an update of the container or you change something in the template.&#xD;
+&#xD;
+ATTENTION: This container is not finished yet and currently in alpha state.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/debian-buster</HostDir>
+      <ContainerDir>/debian</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1800</Value>
+      <Name>CUSTOM_RES_W</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1000</Value>
+      <Name>CUSTOM_RES_H</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>superuser00.</Value>
+      <Name>ROOT_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>DEV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Home Directory" Target="/debian" Default="" Mode="rw" Description="All things that are saved in the container should be in the this or a subdirectory in of this folder, all files that are store outside this folder are not persistant and will be wiped if there is an update of the container or you change something in the template." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/debian-buster</Config>
+  <Config Name="TCP - VNC Port" Target="8080" Default="" Mode="tcp" Description="noVNC Port" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Custom Resolution Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Enter the preferred resolution width" Type="Variable" Display="always" Required="true" Mask="false">1800</Config>
+  <Config Name="Custom Resolution Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Enter the preferred resolution height" Type="Variable" Display="always" Required="true" Mask="false">1000</Config>
+  <Config Name="Root Password" Target="ROOT_PWD" Default="" Mode="" Description="Please choose a strong password for your root account!" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="DEV_LOG_OUTPUT" Target="DEV" Default="" Mode="" Description="Container Variable: DEV" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+</Container>
