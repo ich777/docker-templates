@@ -15,8 +15,6 @@ ATTENTION: First Startup can take very long since it downloads the gameserver fi
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
-CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Barotrauma' (without quotes), to disconnect from the console simply close the window.&#xD;
-&#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
@@ -33,8 +31,6 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
-&#xD;
-CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Barotrauma' (without quotes), to disconnect from the console simply close the window.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Description>
   <Networking>
