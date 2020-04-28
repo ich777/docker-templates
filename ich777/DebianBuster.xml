@@ -67,7 +67,7 @@ ATTENTION: This container is not finished yet and currently in alpha state.</Des
       <Mode/>
     </Variable>
     <Variable>
-      <Value>superuser00.</Value>
+      <Value/>
       <Name>ROOT_PWD</Name>
       <Mode/>
     </Variable>
@@ -82,7 +82,7 @@ ATTENTION: This container is not finished yet and currently in alpha state.</Des
       <Mode/>
     </Variable>
     <Variable>
-      <Value>en_US.utf8</Value>
+      <Value>en_US.UTF8 UTF-8</Value>
       <Name>USER_LOCALES</Name>
       <Mode/>
     </Variable>
