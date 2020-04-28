@@ -109,7 +109,7 @@ ATTENTION: This container is not finished yet and currently in alpha state.</Des
   <Config Name="Custom Resolution Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Enter the preferred resolution height" Type="Variable" Display="always" Required="true" Mask="false">1000</Config>
   <Config Name="Root Password" Target="ROOT_PWD" Default="" Mode="" Description="Please choose a strong password for your root account!" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
-  <Config Name="Locales" Target="USER_LOCALES" Default="" Mode="" Description="Enter your prefered locales (eg: 'en_US.utf8' or 'de_DE.UTF-8',...)" Type="Variable" Display="advanced" Required="false" Mask="false">en_US.utf8</Config>
+  <Config Name="Locales" Target="USER_LOCALES" Default="" Mode="" Description="Enter your prefered locales (eg: 'en_US.utf8' or 'de_DE.UTF-8',...)" Type="Variable" Display="advanced" Required="true" Mask="false">en_US.UTF-8</Config>
   <Config Name="DEV_LOG_OUTPUT" Target="DEV" Default="" Mode="" Description="Container Variable: DEV" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
