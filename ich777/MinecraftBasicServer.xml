@@ -72,6 +72,11 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>EXTRA_JVM_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>1024</Value>
       <Name>XMS_SIZE</Name>
       <Mode/>
@@ -106,6 +111,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/minecraft</Config>
   <Config Name="Serverfile name" Target="JAR_NAME" Default="" Mode="" Description="Enter your executable jar file (Minecraft Serverfile) withouat the .jar extension." Type="Variable" Display="always" Required="true" Mask="false">server</Config>
   <Config Name="Extra Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Extra JVM Parameters" Target="EXTRA_JVM_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters for the JVM otherwise leave blank! (Only change if you know what you are doing!!!)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="XMS Size" Target="XMS_SIZE" Default="" Mode="" Description="Enter your XMS size in MB (XMS=The initial and minimum heap size. It is recommended to set the minimum heap size equivalent to the maximum heap size in order to minimize the garbage collection.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
   <Config Name="XMX Size" Target="XMX_SIZE" Default="" Mode="" Description="Enter your XMX size in MB (XMX=The maximum heap size. The performance will decrease if the max heap value is set lower than the amount of live data. It will force frequent garbage collections in order to free up space.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
   <Config Name="TCP - Game Port" Target="25565" Default="" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
