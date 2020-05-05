@@ -4,6 +4,7 @@
   <Repository>ich777/debian-buster:nvidia-steam</Repository>
   <Registry>https://hub.docker.com/r/ich777/debian-buster</Registry>
   <Network>br0</Network>
+  <Beta>True</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
