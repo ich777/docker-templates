@@ -50,7 +50,7 @@ ATTENTION: Please ignore the socket errors after the server startup if you don't
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/stun-turn-server</HostDir>
+      <HostDir>/mnt/cache/appdata/stun-turn-server</HostDir>
       <ContainerDir>/stun-turn</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -178,7 +178,7 @@ ATTENTION: Please ignore the socket errors after the server startup if you don't
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Container Path" Target="/stun-turn" Default="" Mode="rw" Description="Container Path: /stun-turn" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stun-turn-server</Config>
+  <Config Name="Container Path" Target="/stun-turn" Default="" Mode="rw" Description="Container Path: /stun-turn" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/stun-turn-server</Config>
   <Config Name="TCP Port" Target="5349" Default="" Mode="tcp" Description="TCP Port" Type="Port" Display="always" Required="true" Mask="false">5349</Config>
   <Config Name="UDP Ports" Target="5349" Default="" Mode="udp" Description="UDP Port" Type="Port" Display="always" Required="true" Mask="false">5349</Config>
   <Config Name="Port Variable" Target="PORT" Default="" Mode="" Description="If you change this variable you have to create two new port forwardings with the corresponding ports one for TCP and one for UDP." Type="Variable" Display="always" Required="true" Mask="false">5349</Config>
