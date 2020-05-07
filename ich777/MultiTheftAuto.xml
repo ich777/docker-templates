@@ -51,7 +51,7 @@ UPDATE NOTICE: You can Force Update this Container (please note that you have to
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/multitheftauto</HostDir>
+      <HostDir>/mnt/cache/appdata/multitheftauto</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -94,7 +94,7 @@ UPDATE NOTICE: You can Force Update this Container (please note that you have to
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/multitheftauto</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/multitheftauto</Config>
   <Config Name="Extra Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UDP1 - Game Port" Target="22003" Default="" Mode="udp" Description="Container Port: 22003" Type="Port" Display="always" Required="true" Mask="false">22003</Config>
   <Config Name="UDP2 - ASE Port" Target="22126" Default="" Mode="udp" Description="Game Port +123" Type="Port" Display="always" Required="false" Mask="false">22126</Config>
