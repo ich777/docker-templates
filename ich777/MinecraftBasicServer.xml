@@ -55,7 +55,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/minecraft</HostDir>
+      <HostDir>/mnt/cache/appdata/minecraft</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -108,7 +108,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/minecraft</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/minecraft</Config>
   <Config Name="Serverfile name" Target="JAR_NAME" Default="" Mode="" Description="Enter your executable jar file (Minecraft Serverfile) withouat the .jar extension." Type="Variable" Display="always" Required="true" Mask="false">server</Config>
   <Config Name="Extra Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Extra JVM Parameters" Target="EXTRA_JVM_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters for the JVM otherwise leave blank! (Only change if you know what you are doing!!!)" Type="Variable" Display="always" Required="false" Mask="false"/>
