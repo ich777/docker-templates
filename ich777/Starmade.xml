@@ -37,7 +37,7 @@ UPDATE: The container will check on every restart if there is a newer version of
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/starmade</HostDir>
+      <HostDir>/mnt/cache/appdata/starmade</HostDir>
       <ContainerDir>/starmade</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -95,7 +95,7 @@ UPDATE: The container will check on every restart if there is a newer version of
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/starmade" Default="" Mode="rw" Description="Container Path: /starmade" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/starmade</Config>
+  <Config Name="ServerFiles" Target="/starmade" Default="" Mode="rw" Description="Container Path: /starmade" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/starmade</Config>
   <Config Name="Extra Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="XMS Size" Target="XMS_SIZE" Default="" Mode="" Description="Enter your XMS size in MB (XMS=The initial and minimum heap size. It is recommended to set the minimum heap size equivalent to the maximum heap size in order to minimize the garbage collection.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
   <Config Name="XMX Size" Target="XMX_SIZE" Default="" Mode="" Description="Enter your XMX size in MB (XMX=The maximum heap size. The performance will decrease if the max heap value is set lower than the amount of live data. It will force frequent garbage collections in order to free up space.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
