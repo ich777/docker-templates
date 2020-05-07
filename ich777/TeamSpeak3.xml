@@ -52,7 +52,7 @@ UPDATE NOTICE: The container will check on every start/restart if there is a new
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/teamspeak3</HostDir>
+      <HostDir>/mnt/cache/appdata/teamspeak3</HostDir>
       <ContainerDir>/teamspeak</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -85,7 +85,7 @@ UPDATE NOTICE: The container will check on every start/restart if there is a new
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/teamspeak" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/teamspeak3</Config>
+  <Config Name="Data Path" Target="/teamspeak" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/teamspeak3</Config>
   <Config Name="UDP - Voice" Target="9987" Default="9987" Mode="udp" Description="UDP Voice Port" Type="Port" Display="always" Required="true" Mask="false">9987</Config>
   <Config Name="TCP1 - Query Port" Target="10011" Default="10011" Mode="tcp" Description="TCP Query Port" Type="Port" Display="always" Required="true" Mask="false">10011</Config>
   <Config Name="TCP2 - File Transfer" Target="30033" Default="30033" Mode="tcp" Description="TCP File Transfer Port" Type="Port" Display="always" Required="true" Mask="false">30033</Config>
