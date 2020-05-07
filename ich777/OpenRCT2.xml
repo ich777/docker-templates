@@ -49,7 +49,7 @@ ATTENTION: The variables Admin Name &amp;amp; Admin Hash will only work on the f
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/openrct2</HostDir>
+      <HostDir>/mnt/cache/appdata/openrct2</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -97,7 +97,7 @@ ATTENTION: The variables Admin Name &amp;amp; Admin Hash will only work on the f
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/openrct2</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/openrct2</Config>
   <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Preferred game version to install or set to 'latest' to check on every start if there is a newer version available (If you want to install a custom version the version number must look like this: 'v0.2.3-develop-e4a2b1f9c' if the source file is named like this: 'OpenRCT2-0.2.3-develop-e4a2b1f9c-linux-x86_64.tar')" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Extra Startup Parameters" Target="GAME_CONFIG" Default="" Mode="" Description="Enter you Extra Startup Parameters if needed." Type="Variable" Display="always" Required="false" Mask="false">--password Docker</Config>
   <Config Name="Savegame Name" Target="GAME_SAVE_NAME" Default="" Mode="" Description="Enter here the name of the savegame to load (located for example: /saves/docker.sav)" Type="Variable" Display="always" Required="true" Mask="false">docker.sv6</Config>
