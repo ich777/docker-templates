@@ -41,7 +41,7 @@ All you data is stored in the jenkins/workdir folder in your appdata directory.<
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/jenkins</HostDir>
+      <HostDir>/mnt/cache/appdata/jenkins</HostDir>
       <ContainerDir>/jenkins</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -90,7 +90,7 @@ All you data is stored in the jenkins/workdir folder in your appdata directory.<
   </Environment>
   <Labels/>
   <Config Name="Webport" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Appdata Path" Target="/jenkins" Default="" Mode="rw" Description="Container Path: /jenkins" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/jenkins</Config>
+  <Config Name="Appdata Path" Target="/jenkins" Default="" Mode="rw" Description="Container Path: /jenkins" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jenkins</Config>
   <Config Name="Jenkins Version" Target="JENKINS_V" Default="" Mode="" Description="Enter the version wich you want to download or set to 'latest' (without quotes) to download the latest version and check on every restart if there is a newer version." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Jenkins Download URL" Target="JENKINS_URL" Default="" Mode="" Description="Mirror from wich to download jenkins you can get them from here: http://mirrors.jenkins-ci.org/status.html (Exemple for mirrors are: ftp://mirror.serverion.com | http://mirror.xmission.com | http://mirror.serverion.com | http://ftp-chi.osuosl.org/pub | ...)." Type="Variable" Display="always" Required="true" Mask="false">ftp://mirror.serverion.com</Config>
   <Config Name="Extra Jenkins Startup Paramaters" Target="EXTRA_JENKINS_PARAMS" Default="" Mode="" Description="Enter extra Jenkins startup parameters if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
