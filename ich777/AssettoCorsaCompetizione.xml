@@ -48,7 +48,7 @@ Notice: The initial servername and credentials are: 'ACC Docker Server' Password
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/assettocorsacompetizione</HostDir>
+      <HostDir>/mnt/cache/appdata/assettocorsacompetizione</HostDir>
       <ContainerDir>/acc</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -76,7 +76,7 @@ Notice: The initial servername and credentials are: 'ACC Docker Server' Password
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/acc" Default="" Mode="rw" Description="Container Path: /acc" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/assettocorsacompetizione</Config>
+  <Config Name="ServerFiles" Target="/acc" Default="" Mode="rw" Description="Container Path: /acc" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/assettocorsacompetizione</Config>
   <Config Name="TCP" Target="9201" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to change your 'configuration.json' file with the corresponding port number)" Type="Port" Display="always" Required="true" Mask="false">9201</Config>
   <Config Name="UDP" Target="9201" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to change your 'configuration.json' file with the corresponding port number)" Type="Port" Display="always" Required="true" Mask="false">9201</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
