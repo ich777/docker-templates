@@ -46,7 +46,7 @@ ATTENTION: !!!Only Install one game on one port otherwise your browser will mess
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/jsdos</HostDir>
+      <HostDir>/mnt/cache/appdata/jsdos</HostDir>
       <ContainerDir>/jsdos</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -94,7 +94,7 @@ ATTENTION: !!!Only Install one game on one port otherwise your browser will mess
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/jsdos" Default="" Mode="rw" Description="Container Path: /jsdos" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/jsdos</Config>
+  <Config Name="ServerFiles" Target="/jsdos" Default="" Mode="rw" Description="Container Path: /jsdos" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jsdos</Config>
   <Config Name="Web" Target="8080" Default="" Mode="tcp" Description="Install only one game to one port, even if you're installing a new game (your browser will mess up the paths and savefiles)" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="Application Name" Target="APP_NAME" Default="" Mode="" Description="Based on the application name the container creates a folder in your serverdirectory." Type="Variable" Display="always" Required="true" Mask="false">CivilisazionBI</Config>
   <Config Name="ZIP Name" Target="ZIP_NAME" Default="" Mode="" Description="The name of the zip file wich to install, place the zip file in the root of your serverdirectory (without the extension '.zip') !!!CASE SENSITIVE!!!" Type="Variable" Display="always" Required="true" Mask="false">civ</Config>
