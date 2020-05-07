@@ -41,7 +41,7 @@ In the Docker Hub description for the container is a example how to reverse prox
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/remmina</HostDir>
+      <HostDir>/mnt/cache/appdata/remmina</HostDir>
       <ContainerDir>/remmina</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -79,7 +79,7 @@ In the Docker Hub description for the container is a example how to reverse prox
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/remmina" Default="" Mode="rw" Description="Container Path: /remmina" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/remmina</Config>
+  <Config Name="Data Path" Target="/remmina" Default="" Mode="rw" Description="Container Path: /remmina" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/remmina</Config>
   <Config Name="TCP - noVNC Port" Target="8080" Default="" Mode="tcp" Description="TCP Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Custom Resolution Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Custom Resolution Width" Type="Variable" Display="always" Required="true" Mask="false">1280</Config>
   <Config Name="Custom Resolution Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Custom Resolution Height" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
