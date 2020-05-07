@@ -55,7 +55,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/hurtworld</HostDir>
+      <HostDir>/mnt/cache/appdata/hurtworld</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -119,7 +119,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   </Environment>
   <Labels/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/hurtworld</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/hurtworld</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">405100</Config>
   <Config Name="EXTRA_GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server starting with a ';' (without quotes e.g. ';afkkicktime 900;autosaveenabled 0). Don't forget to change the admin SteamID." Type="Variable" Display="always" Required="false" Mask="false">;autosaveenabled 1;addadmin 76561197963117432</Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
