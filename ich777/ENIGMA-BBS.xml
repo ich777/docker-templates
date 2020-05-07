@@ -48,7 +48,7 @@ Manual Page: https://nuskooler.github.io/enigma-bbs/</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/enigmabbs</HostDir>
+      <HostDir>/mnt/cache/appdata/enigmabbs</HostDir>
       <ContainerDir>/enigma-bbs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -91,7 +91,7 @@ Manual Page: https://nuskooler.github.io/enigma-bbs/</Description>
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Directory" Target="/enigma-bbs" Default="" Mode="rw" Description="Container Path: /enigma-bbs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/enigmabbs</Config>
+  <Config Name="Data Directory" Target="/enigma-bbs" Default="" Mode="rw" Description="Container Path: /enigma-bbs" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/enigmabbs</Config>
   <Config Name="TCP - Telnet" Target="8888" Default="8888" Mode="tcp" Description="Telnet" Type="Port" Display="always" Required="true" Mask="false">8888</Config>
   <Config Name="TCP - SSH" Target="8889" Default="" Mode="tcp" Description="SSH" Type="Port" Display="always" Required="true" Mask="false">8889</Config>
   <Config Name="NVM Download URL" Target="NVM_URI" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh</Config>
