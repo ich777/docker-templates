@@ -56,7 +56,7 @@ Console: To connect to the console open up the terminal on the host machine and 
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/fivem</HostDir>
+      <HostDir>/mnt/cache/appdata/fivem</HostDir>
       <ContainerDir>/serverdata/serverfiles</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -104,7 +104,7 @@ Console: To connect to the console open up the terminal on the host machine and 
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/fivem</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/fivem</Config>
   <Config Name="ConfigFile" Target="GAME_CONFIG" Default="" Mode="" Description="You can edit the server.cfg after the first start." Type="Variable" Display="always" Required="false" Mask="false">server.cfg</Config>
   <Config Name="Start Variables" Target="START_VARS" Default="" Mode="" Description="Extra start variables." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Server Name" Target="SRV_NAME" Default="" Mode="" Description="Your Servername" Type="Variable" Display="always" Required="true" Mask="false"/>
