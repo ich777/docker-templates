@@ -41,7 +41,7 @@ Update Notice: Updates will be handled through jDownloader2 directly, simply cli
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/jdownloader2/</HostDir>
+      <HostDir>/mnt/cache/appdata/jdownloader2/</HostDir>
       <ContainerDir>/jDownloader2</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -79,7 +79,7 @@ Update Notice: Updates will be handled through jDownloader2 directly, simply cli
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Dir" Target="/jDownloader2" Default="" Mode="rw" Description="Container Path: /jDownloader2" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/jdownloader2/</Config>
+  <Config Name="Data Dir" Target="/jDownloader2" Default="" Mode="rw" Description="Container Path: /jDownloader2" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jdownloader2/</Config>
   <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Download Path" Target="/mnt/jDownloader" Default="" Mode="rw" Description="Container Path: /mnt/jDownloader" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/jDownloader/</Config>
   <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
