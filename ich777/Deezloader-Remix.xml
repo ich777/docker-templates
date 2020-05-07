@@ -43,7 +43,7 @@ Update Notice: The container will check on every restart if there is a newer ver
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/deezloader-remix</HostDir>
+      <HostDir>/mnt/cache/appdata/deezloader-remix</HostDir>
       <ContainerDir>/deezloaderremix</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -76,7 +76,7 @@ Update Notice: The container will check on every restart if there is a newer ver
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Directory" Target="/deezloaderremix" Default="" Mode="rw" Description="Data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/deezloader-remix</Config>
+  <Config Name="Data Directory" Target="/deezloaderremix" Default="" Mode="rw" Description="Data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/deezloader-remix</Config>
   <Config Name="Download Directory" Target="/mnt/downloads" Default="" Mode="rw" Description="Container Path: /mnt/downloads" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Webinterface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
