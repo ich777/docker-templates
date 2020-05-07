@@ -31,7 +31,7 @@ VARIABLES: If you need other variables here is a complete list of all variables:
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/zabbix-web</HostDir>
+      <HostDir>/mnt/cache/appdata/zabbix-web</HostDir>
       <ContainerDir>/etc/ssl/nginx</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -93,5 +93,5 @@ VARIABLES: If you need other variables here is a complete list of all variables:
   <Config Name="Zabbix Server Port" Target="ZBX_SERVER_PORT" Default="" Mode="" Description="Your Zabbix Server Port goes here." Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="PHP Timezone" Target="PHP_TZ" Default="" Mode="" Description="Your timezone goes here (you can find a list of timezones at: https://www.php.net/manual/en/timezones.php )" Type="Variable" Display="always" Required="true" Mask="false">Europe/London</Config>
   <Config Name="Name of the Zabbix Server" Target="ZBX_SERVER_NAME" Default="" Mode="" Description="The name of the server that will show up in the webgui." Type="Variable" Display="always" Required="true" Mask="false">ZabbixServer</Config>
-  <Config Name="SSL Certificate" Target="/etc/ssl/nginx" Default="" Mode="rw" Description="The volume allows to enable HTTPS for the Zabbix web interface. The volume must contains two files ssl.crt, ssl.key and dhparam.pem prepared for Nginx SSL connections.&#13;&#10;Please follow official Nginx documentation to get more details about how to create certificate files.&#13;&#10;(If you allready got a webserver you also can reverse proxy this container)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/zabbix-web</Config>
+  <Config Name="SSL Certificate" Target="/etc/ssl/nginx" Default="" Mode="rw" Description="The volume allows to enable HTTPS for the Zabbix web interface. The volume must contains two files ssl.crt, ssl.key and dhparam.pem prepared for Nginx SSL connections.&#13;&#10;Please follow official Nginx documentation to get more details about how to create certificate files.&#13;&#10;(If you allready got a webserver you also can reverse proxy this container)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/zabbix-web</Config>
 </Container>
