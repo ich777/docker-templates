@@ -15,6 +15,8 @@
 I mainly created it for playing Steam games with In Home Streaming to my Raspberry Pi, an older laptop and my mobile phone (please not that In Home Streaming also works over the internet).&#xD;
 All games including windows games through Proton should just works fine, a few tested games where: Pikuniku, Dirt Rally, Broforce, Astroneer, CS: Source.&#xD;
 &#xD;
+ATTENTION: This container needs the Linuxserver.io Plugin installed correctly, please be sure that you dont't use the primary graphics card that is set in the BIOS with this contianer! If you have a monitor attached please leave the variable: 'Xorg Dsplay Output Port' empty!!!&#xD;
+&#xD;
 If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
 &#xD;
 Storage Note: All things that are saved in the container should be in the home or a subdirectory in your homefolder, all files that are store outside your homefolder are not persistant and will be wiped if there is an update of the container or you change something in the template.&#xD;
@@ -41,6 +43,8 @@ If you got any questions, suggestions for improvements or can help with the pass
 &#xD;
 I mainly created it for playing Steam games with In Home Streaming to my Raspberry Pi, an older laptop and my mobile phone (please not that In Home Streaming also works over the internet).&#xD;
 All games including windows games through Proton should just works fine, a few tested games where: Pikuniku, Dirt Rally, Broforce, Astroneer, CS: Source.&#xD;
+&#xD;
+ATTENTION: This container needs the Linuxserver.io Plugin installed correctly, please be sure that you dont't use the primary graphics card that is set in the BIOS with this contianer! If you have a monitor attached please leave the variable: 'Xorg Dsplay Output Port' empty!!!&#xD;
 &#xD;
 If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
 &#xD;
