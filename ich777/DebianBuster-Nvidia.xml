@@ -15,6 +15,8 @@
 I mainly created it for playing Steam games with In Home Streaming to my Raspberry Pi, an older laptop and my mobile phone (please not that In Home Streaming also works over the internet).&#xD;
 All games including windows games through Proton should just works fine, a few tested games where: Pikuniku, Dirt Rally, Broforce, Astroneer, CS: Source.&#xD;
 &#xD;
+ROOT ACCESS: 1. Open up your WebGUI 2. Open up a terminal 3. Type in 'su' 4. Type in your password that you've set (no screenoutput is shown if you type in passwords in Linux) 5. Press Enter 6. You should now be root.&#xD;
+&#xD;
 ATTENTION: This container needs the Linuxserver.io Plugin installed correctly, please be sure that you dont't use the primary graphics card that is set in the BIOS with this contianer! If you have a monitor attached please leave the variable: 'Xorg Dsplay Output Port' empty!!!&#xD;
 &#xD;
 If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
