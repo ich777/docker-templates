@@ -12,6 +12,8 @@
   <Project>https://www.debian.org/</Project>
   <Overview>This Container is a full Debian Buster Xfce4 Desktop environment with a noVNC webGUI and all the basic tools pre-installed.&#xD;
 &#xD;
+ROOT ACCESS: 1. Open up your WebGUI 2. Open up a terminal 3. Type in 'su' 4. Type in your password that you've set (no screenoutput is shown if you type in passwords in Linux) 5. Press Enter 6. You should now be root.&#xD;
+&#xD;
 If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
 &#xD;
 You also can reverse proxy this container with nginx or apache (for more info see the Github/Dockerhub page).&#xD;
@@ -30,6 +32,8 @@ ATTENTION: This container is not finished yet and currently in alpha state.</Ove
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This Container is a full Debian Buster Xfce4 Desktop environment with a noVNC webGUI and all the basic tools pre-installed.&#xD;
+&#xD;
+ROOT ACCESS: 1. Open up your WebGUI 2. Open up a terminal 3. Type in 'su' 4. Type in your password that you've set (no screenoutput is shown if you type in passwords in Linux) 5. Press Enter 6. You should now be root.&#xD;
 &#xD;
 If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
 &#xD;
