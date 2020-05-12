@@ -18,7 +18,7 @@ Please don't forget to also to edit your config.js!&#xD;
 **Update Notice:** This container will check on every restart if there is a newer version of MagicMirror&#xB2; available and will download and install it if so.</Overview>
   <Category/>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://github.com/ich777/docker-templates/raw/master/ich777/images/magicmirror2.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
@@ -63,8 +63,8 @@ Please don't forget to also to edit your config.js!&#xD;
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/magicmirror2" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/magicmirror2</Config>
-  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="Webinterface" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Data Path" Target="/magicmirror2" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/magicmirror2</Config>
+  <Config Name="Webinterface" Target="8080" Default="" Mode="tcp" Description="TCP - Webinterface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' (without quotes) to force an update - please don't forget to disable this afterwards since it will pull it every time you restart or start the container!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Force Modules Update" Target="FORCE_UPDATE_MODULES" Default="" Mode="" Description="Set to 'true' (without quotes) to force an update on every restart of the container." Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
