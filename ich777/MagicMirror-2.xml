@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MagicMirror-2</Name>
+  <Repository>ich777/magic-mirror2</Repository>
+  <Registry>https://hub.docker.com/r/ich777/magic-mirror2</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://magicmirror.builders/</Project>
+  <Overview>This Container will download and install MagicMirror&#xB2;.&#xD;
+&#xD;
+**MODULE INSTALLATION:** This container can pull modules from Github automatically, simply go to your server directory and in the 'modules' folder after the first startup, there you will find a file named 'modules.txt'.&#xD;
+Simply drop your links from Gitbub into the file (place a 'Y' in front of the link to run a automatic 'npm install' after the download, not every module will work with this automatic module installer) or simply delete the '#' in front of the premade modules in the file and then restart the container to download the modules.&#xD;
+Please don't forget to also to edit your config.js!&#xD;
+&#xD;
+**Update Notice:** This container will check on every restart if there is a newer version of MagicMirror&#xB2; available and will download and install it if so.</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://github.com/ich777/docker-templates/raw/master/ich777/images/magicmirror2.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Container will download and install MagicMirror&#xB2;.&#xD;
+&#xD;
+**MODULE INSTALLATION:** This container can pull modules from Github automatically, simply go to your server directory and in the 'modules' folder after the first startup, there you will find a file named 'modules.txt'.&#xD;
+Simply drop your links from Gitbub into the file (place a 'Y' in front of the link to run a automatic 'npm install' after the download, not every module will work with this automatic module installer) or simply delete the '#' in front of the premade modules in the file and then restart the container to download the modules.&#xD;
+Please don't forget to also to edit your config.js!&#xD;
+&#xD;
+**Update Notice:** This container will check on every restart if there is a newer version of MagicMirror&#xB2; available and will download and install it if so.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/magicmirror2</HostDir>
+      <ContainerDir>/magicmirror2</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>FORCE_UPDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>FORCE_UPDATE_MODULES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Path" Target="/magicmirror2" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/magicmirror2</Config>
+  <Config Name="Host Port 1" Target="8080" Default="" Mode="tcp" Description="Webinterface" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' (without quotes) to force an update - please don't forget to disable this afterwards since it will pull it every time you restart or start the container!" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Force Modules Update" Target="FORCE_UPDATE_MODULES" Default="" Mode="" Description="Set to 'true' (without quotes) to force an update on every restart of the container." Type="Variable" Display="always" Required="false" Mask="false"/>
+</Container>
