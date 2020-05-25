@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Unraid-Kernel-Helper</Name>
+  <Repository>ich777/unraid-kernel-helper:6.8.3</Repository>
+  <Registry>https://hub.docker.com/r/ich777/unraid-kernel-helper</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helper-docker/</Support>
+  <Project>https://unraid.net/</Project>
+  <Overview>With this container you can build your own customized Unraid Kernel.&#xD;
+&#xD;
+By default it will create the Kernel/Firmware/Modules/Rootfilesystem with the nVidia drivers and also DVB driver (currently DigitalDevices and LibreElec built in).&#xD;
+&#xD;
+nVidia Driver installation: If you build the container with the nVidia drivers please make sure that no other process is using the graphics card otherwise the installation will fail and no nVidia drivers will be installed.&#xD;
+&#xD;
+ATTENTION: Please read the discription of the variables carefully! If you started the container don't interrupt the build process, the container will automatically shut down if everything is finished. I recommend to open the log window, the build itself can take very long depending on your hardware but should be done in ~30minutes).&#xD;
+&#xD;
+THIS CONTAINER WILL NOT CHANGE ANYTHING TO YOUR EXISTING INSTALLATION OR ON YOUR USB KEY/DRIVE, YOU HAVE TO MANUALLY PUT THE CREATED FILES IN THE OUTPUT FOLDER TO YOUR USB KEY/DRIVE.&#xD;
+&#xD;
+UPDATE: If a new Update of Unraid is released you have to change the Repository to the corresponding build number (I will create the appropriate container as soon as possible) eg: 'ich777/unraid-kernel-helper:6.8.3' please also redownload the template from the CA App to keep the template up to date.&#xD;
+&#xD;
+ATTENTION: PLEASE BACKUP YOUR EXISTING USB DRIVE FILES TO YOUR LOCAL COMPUTER IN CASE SOMETHING GOES WRONG!&#xD;
+I AM NOT RESPONSIBLE IF YOU BREAK YOUR SERVER OR SOMETHING OTHER WITH THIS CONTAINER, THIS CONTAINER IS THERE TO HELP YOU EASILY BUILD A NEW IMAGE AND UNDERSTAND HOW THIS IS WORKING.&#xD;
+&#xD;
+Forum Notice: When something isn't working with your server and you make a post on the forum always note that you use a Kernel built by this container!</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/unraid-kernel.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>With this container you can build your own customized Unraid Kernel.&#xD;
+&#xD;
+By default it will create the Kernel/Firmware/Modules/Rootfilesystem with the nVidia drivers and also DVB driver (currently DigitalDevices and LibreElec built in).&#xD;
+&#xD;
+nVidia Driver installation: If you build the container with the nVidia drivers please make sure that no other process is using the graphics card otherwise the installation will fail and no nVidia drivers will be installed.&#xD;
+&#xD;
+ATTENTION: Please read the discription of the variables carefully! If you started the container don't interrupt the build process, the container will automatically shut down if everything is finished. I recommend to open the log window, the build itself can take very long depending on your hardware but should be done in ~30minutes).&#xD;
+&#xD;
+THIS CONTAINER WILL NOT CHANGE ANYTHING TO YOUR EXISTING INSTALLATION OR ON YOUR USB KEY/DRIVE, YOU HAVE TO MANUALLY PUT THE CREATED FILES IN THE OUTPUT FOLDER TO YOUR USB KEY/DRIVE.&#xD;
+&#xD;
+UPDATE: If a new Update of Unraid is released you have to change the Repository to the corresponding build number (I will create the appropriate container as soon as possible) eg: 'ich777/unraid-kernel-helper:6.8.3' please also redownload the template from the CA App to keep the template up to date.&#xD;
+&#xD;
+ATTENTION: PLEASE BACKUP YOUR EXISTING USB DRIVE FILES TO YOUR LOCAL COMPUTER IN CASE SOMETHING GOES WRONG!&#xD;
+I AM NOT RESPONSIBLE IF YOU BREAK YOUR SERVER OR SOMETHING OTHER WITH THIS CONTAINER, THIS CONTAINER IS THERE TO HELP YOU EASILY BUILD A NEW IMAGE AND UNDERSTAND HOW THIS IS WORKING.&#xD;
+&#xD;
+Forum Notice: When something isn't working with your server and you make a post on the forum always note that you use a Kernel built by this container!</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/kernel/</HostDir>
+      <ContainerDir>/usr/src</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/usr/src</HostDir>
+      <ContainerDir>/host/usr/src</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/boot</HostDir>
+      <ContainerDir>/host/boot</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>BUILD_NVIDIA</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>BUILD_DVB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>NV_DRV_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>DD_DRV_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>LE_DRV_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>SECCOMP_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>LIBNVIDIA_CONTAINER_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>CPU_COUNT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>moderate</Value>
+      <Name>CLEANUP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CREATE_BACKUP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CUSTOM_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/usr/src/stock</Value>
+      <Name>IMAGES_FILE_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3.1.4</Value>
+      <Name>NVIDIA_CONTAINER_RUNTIME_V</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Path" Target="/usr/src" Default="" Mode="rw" Description="Main Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/kernel/</Config>
+  <Config Name="Build with nVidia support" Target="BUILD_NVIDIA" Default="" Mode="" Description="Set to 'true' to build the images with with nVidia drivers (otherwise leave empty)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Build with DVB support" Target="BUILD_DVB" Default="" Mode="" Description="Set to 'true' to build the images with with DVB drivers (otherwise leave empty)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="nVidia Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="nVidia Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 440.82)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from github or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from Github or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="Cleanup" Target="CLEANUP" Default="" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderat' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always" Required="true" Mask="false">moderate</Config>
+  <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Custom Build Mode" Target="CUSTOM_MODE" Default="" Mode="" Description="This is only for Advanced users!&#13;&#10;In this mode the container will stop right at the beginning and will copy over the build script and the dependencies to build the kernel modules for DVB and joydev in the main directory (I highly recommend using this mode for changing things in the build script like adding patches or other modules to build, connect to the console of the container with: 'docker exec -ti NAMEOFYOURCONTAINER /bin/bash' and then go to the /usr/src directory, also the build script is executable)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="Image file path" Target="IMAGES_FILE_PATH" Default="" Mode="" Description="This is the default location where your Stock Unraid bzroot, bzimage, bzmodules &amp;amp; bzfirmware inside your container is located (only change if you are know what you are doing!)" Type="Variable" Display="advanced" Required="true" Mask="false">/usr/src/stock</Config>
+  <Config Name="nvidia-container-runtime Version" Target="NVIDIA_CONTAINER_RUNTIME_V" Default="" Mode="" Description="libnvidia-container Version (as time of writing please let it set to 3.1.4 since the build script have to be update to work with newer versions)" Type="Variable" Display="advanced" Required="true" Mask="false">3.1.4</Config>
+  <Config Name="src Path - ReadOnly" Target="/host/usr/src" Default="" Mode="ro" Description="src Path - ReadOnly (needed to get the .patch and .config files)" Type="Path" Display="advanced" Required="true" Mask="false">/usr/src</Config>
+  <Config Name="boot Path - ReadOnly" Target="/host/boot" Default="" Mode="ro" Description="boot Path - ReadOnly (needed if you enabled Backup of your bzroot, bzimage, bzmodules &amp;amp; bzfirmware)" Type="Path" Display="advanced" Required="true" Mask="false">/boot</Config>
+</Container>
