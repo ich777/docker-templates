@@ -104,11 +104,6 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>latest</Value>
-      <Name>LIBNVIDIA_CONTAINER_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>all</Value>
       <Name>CPU_COUNT</Name>
       <Mode/>
@@ -119,7 +114,7 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>true</Value>
       <Name>CREATE_BACKUP</Name>
       <Mode/>
     </Variable>
@@ -154,7 +149,17 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>3.1.4</Value>
+      <Value>latest</Value>
+      <Name>LIBNVIDIA_CONTAINER_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>CONTAINER_TOOLKIT_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
       <Name>NVIDIA_CONTAINER_RUNTIME_V</Name>
       <Mode/>
     </Variable>
@@ -167,8 +172,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from github or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from Github or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always" Required="false" Mask="false">all</Config>
+  <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always" Required="true" Mask="false">all</Config>
   <Config Name="Cleanup" Target="CLEANUP" Default="" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderat' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always" Required="true" Mask="false">moderate</Config>
   <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Custom Build Mode" Target="CUSTOM_MODE" Default="" Mode="" Description="This is only for Advanced users!&#13;&#10;In this mode the container will stop right at the beginning and will copy over the build script and the dependencies to build the kernel modules for DVB and joydev in the main directory (I highly recommend using this mode for changing things in the build script like adding patches or other modules to build, connect to the console of the container with: 'docker exec -ti NAMEOFYOURCONTAINER /bin/bash' and then go to the /usr/src directory, also the build script is executable)." Type="Variable" Display="always" Required="false" Mask="false"/>
@@ -177,7 +181,9 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
   <Config Name="Image file path" Target="IMAGES_FILE_PATH" Default="" Mode="" Description="This is the default location where your Stock Unraid bzroot, bzimage, bzmodules &amp;amp; bzfirmware inside your container is located (only change if you are know what you are doing!)" Type="Variable" Display="advanced" Required="true" Mask="false">/usr/src/stock</Config>
-  <Config Name="nvidia-container-runtime Version" Target="NVIDIA_CONTAINER_RUNTIME_V" Default="" Mode="" Description="libnvidia-container Version (as time of writing please let it set to 3.1.4 since the build script have to be update to work with newer versions)" Type="Variable" Display="advanced" Required="true" Mask="false">3.1.4</Config>
   <Config Name="src Path - ReadOnly" Target="/host/usr/src" Default="" Mode="ro" Description="src Path - ReadOnly (needed to get the .patch and .config files)" Type="Path" Display="advanced" Required="true" Mask="false">/usr/src</Config>
   <Config Name="boot Path - ReadOnly" Target="/host/boot" Default="" Mode="ro" Description="boot Path - ReadOnly (needed if you enabled Backup of your bzroot, bzimage, bzmodules &amp;amp; bzfirmware)" Type="Path" Display="advanced" Required="true" Mask="false">/boot</Config>
+  <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="container-toolkit Version" Target="CONTAINER_TOOLKIT_V" Default="" Mode="" Description="container-toolkit Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="nvidia-container-runtime Version" Target="NVIDIA_CONTAINER_RUNTIME_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 3.2.0)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
 </Container>
