@@ -27,7 +27,7 @@ I AM NOT RESPONSIBLE IF YOU BREAK YOUR SERVER OR SOMETHING OTHER WITH THIS CONTA
 Forum Notice: When something isn't working with your server and you make a post on the forum always note that you use a Kernel built by this container!</Overview>
   <Category>Productivity: Tools:Utilities</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/unraid-kernel.png</Icon>
   <ExtraParams/>
   <PostArgs/>
@@ -69,12 +69,12 @@ Forum Notice: When something isn't working with your server and you make a post 
   </Data>
   <Environment>
     <Variable>
-      <Value/>
+      <Value>true</Value>
       <Name>BUILD_NVIDIA</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>true</Value>
       <Name>BUILD_DVB</Name>
       <Mode/>
     </Variable>
