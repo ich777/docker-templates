@@ -25,9 +25,9 @@ ATTENTION: PLEASE BACKUP YOUR EXISTING USB DRIVE FILES TO YOUR LOCAL COMPUTER IN
 I AM NOT RESPONSIBLE IF YOU BREAK YOUR SERVER OR SOMETHING OTHER WITH THIS CONTAINER, THIS CONTAINER IS THERE TO HELP YOU EASILY BUILD A NEW IMAGE AND UNDERSTAND HOW THIS IS WORKING.&#xD;
 &#xD;
 Forum Notice: When something isn't working with your server and you make a post on the forum always note that you use a Kernel built by this container!</Overview>
-  <Category>Productivity: Tools:</Category>
+  <Category>Productivity: Tools:Utilities</Category>
   <WebUI/>
-  <TemplateURL>false</TemplateURL>
+  <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/unraid-kernel.png</Icon>
   <ExtraParams/>
   <PostArgs/>
@@ -62,11 +62,6 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/usr/src</HostDir>
-      <ContainerDir>/host/usr/src</ContainerDir>
-      <Mode>ro</Mode>
-    </Volume>
-    <Volume>
       <HostDir>/boot</HostDir>
       <ContainerDir>/host/boot</ContainerDir>
       <Mode>ro</Mode>
@@ -74,12 +69,12 @@ Forum Notice: When something isn't working with your server and you make a post 
   </Data>
   <Environment>
     <Variable>
-      <Value>true</Value>
+      <Value/>
       <Name>BUILD_NVIDIA</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
+      <Value/>
       <Name>BUILD_DVB</Name>
       <Mode/>
     </Variable>
@@ -114,13 +109,28 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
+      <Value/>
       <Name>CREATE_BACKUP</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
       <Name>CUSTOM_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>BUILD_ZFS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>ZFS_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>USER_PATCHES</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -166,22 +176,24 @@ Forum Notice: When something isn't working with your server and you make a post 
   </Environment>
   <Labels/>
   <Config Name="Data Path" Target="/usr/src" Default="" Mode="rw" Description="Main Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/kernel/</Config>
-  <Config Name="Build with nVidia support" Target="BUILD_NVIDIA" Default="" Mode="" Description="Set to 'true' to build the images with with nVidia drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
-  <Config Name="Build with DVB support" Target="BUILD_DVB" Default="" Mode="" Description="Set to 'true' to build the images with with DVB drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Build with nVidia support" Target="BUILD_NVIDIA" Default="" Mode="" Description="Set to 'true' to build the images with with nVidia drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Build with DVB support" Target="BUILD_DVB" Default="" Mode="" Description="Set to 'true' to build the images with with DVB drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Build with ZFS support" Target="BUILD_ZFS" Default="" Mode="" Description="Set to 'true' to build the images with with ZFS support (otherwise set to 'false').&#13;&#10;ATTENTION: you have to uninstall any Plugin that enables ZFS otherwise the kernel won't work right (This custom build will load all created ZFS Pools at startup)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="nVidia Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="nVidia Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 440.82)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from github or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from Github or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="ZFS Version" Target="ZFS_V" Default="" Mode="" Description="ZFS Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 0.8.4)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always" Required="true" Mask="false">all</Config>
   <Config Name="Cleanup" Target="CLEANUP" Default="" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderat' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always" Required="true" Mask="false">moderate</Config>
-  <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Apply User Patches" Target="USER_PATCHES" Default="" Mode="" Description="Set to 'true' and the container will create a folder in the main directory where you can past your Kernel patch files and will apply them automatically when building the Kernel (otherwise leave blank - the container will wait 120 seconds after the start to put your user patches in the patch folder - please backup your patch files since the folder will be deleted if 'Cleanup' is set to 'moderate' or 'full')." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Custom Build Mode" Target="CUSTOM_MODE" Default="" Mode="" Description="This is only for Advanced users!&#13;&#10;In this mode the container will stop right at the beginning and will copy over the build script and the dependencies to build the kernel modules for DVB and joydev in the main directory (I highly recommend using this mode for changing things in the build script like adding patches or other modules to build, connect to the console of the container with: 'docker exec -ti NAMEOFYOURCONTAINER /bin/bash' and then go to the /usr/src directory, also the build script is executable)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
   <Config Name="Image file path" Target="IMAGES_FILE_PATH" Default="" Mode="" Description="This is the default location where your Stock Unraid bzroot, bzimage, bzmodules &amp;amp; bzfirmware inside your container is located (only change if you are know what you are doing!)" Type="Variable" Display="advanced" Required="true" Mask="false">/usr/src/stock</Config>
-  <Config Name="src Path - ReadOnly" Target="/host/usr/src" Default="" Mode="ro" Description="src Path - ReadOnly (needed to get the .patch and .config files)" Type="Path" Display="advanced" Required="true" Mask="false">/usr/src</Config>
   <Config Name="boot Path - ReadOnly" Target="/host/boot" Default="" Mode="ro" Description="boot Path - ReadOnly (needed if you enabled Backup of your bzroot, bzimage, bzmodules &amp;amp; bzfirmware)" Type="Path" Display="advanced" Required="true" Mask="false">/boot</Config>
   <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="container-toolkit Version" Target="CONTAINER_TOOLKIT_V" Default="" Mode="" Description="container-toolkit Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
