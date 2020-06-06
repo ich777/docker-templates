@@ -11,7 +11,7 @@
   <Project>https://unraid.net/</Project>
   <Overview>With this container you can build your own customized Unraid Kernel.&#xD;
 &#xD;
-By default it will create the Kernel/Firmware/Modules/Rootfilesystem with the nVidia drivers and also DVB driver (currently DigitalDevices and LibreElec built in).&#xD;
+By default it will create the Kernel/Firmware/Modules/Rootfilesystem with the nVidia drivers and also DVB driver (DigitalDevices, LibreElec, XBOX One USB Adapter and TBS OpenSource drivers built in).&#xD;
 &#xD;
 nVidia Driver installation: If you build the container with the nVidia drivers please make sure that no other process is using the graphics card otherwise the installation will fail and no nVidia drivers will be installed.&#xD;
 &#xD;
@@ -37,7 +37,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>With this container you can build your own customized Unraid Kernel.&#xD;
 &#xD;
-By default it will create the Kernel/Firmware/Modules/Rootfilesystem with the nVidia drivers and also DVB driver (currently DigitalDevices and LibreElec built in).&#xD;
+By default it will create the Kernel/Firmware/Modules/Rootfilesystem with the nVidia drivers and also DVB driver (DigitalDevices, LibreElec, XBOX One USB Adapter and TBS OpenSource drivers built in).&#xD;
 &#xD;
 nVidia Driver installation: If you build the container with the nVidia drivers please make sure that no other process is using the graphics card otherwise the installation will fail and no nVidia drivers will be installed.&#xD;
 &#xD;
@@ -178,7 +178,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="Data Path" Target="/usr/src" Default="" Mode="rw" Description="Main Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/kernel/</Config>
   <Config Name="Build with nVidia support" Target="BUILD_NVIDIA" Default="" Mode="" Description="Set to 'true' to build the images with with nVidia drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Build with DVB support" Target="BUILD_DVB" Default="" Mode="" Description="Set to 'true' to build the images with with DVB drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
-  <Config Name="Build with ZFS support" Target="BUILD_ZFS" Default="" Mode="" Description="Set to 'true' to build the images with with ZFS support (otherwise set to 'false').&#13;&#10;ATTENTION: you have to uninstall any Plugin that enables ZFS otherwise the kernel won't work right (This custom build will load all created ZFS Pools at startup)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Build with ZFS support" Target="BUILD_ZFS" Default="" Mode="" Description="Set to 'true' to build the images with with ZFS support (otherwise set to 'false').&#13;&#10;ATTENTION: you have to uninstall any Plugin that enables ZFS otherwise the kernel won't work right (This custom build will load all created ZFS Pools at startup)." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="nVidia Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="nVidia Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 440.82)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from github or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
