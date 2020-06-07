@@ -57,7 +57,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/kernel/</HostDir>
+      <HostDir>/mnt/cache/appdata/kernel-beta/</HostDir>
       <ContainerDir>/usr/src</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -76,6 +76,11 @@ Forum Notice: When something isn't working with your server and you make a post 
     <Variable>
       <Value>true</Value>
       <Name>BUILD_DVB</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>BUILD_ZFS</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -99,18 +104,28 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
+      <Value>latest</Value>
+      <Name>ZFS_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>all</Value>
       <Name>CPU_COUNT</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>moderate</Value>
+      <Value>moderat</Value>
       <Name>CLEANUP</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>true</Value>
       <Name>CREATE_BACKUP</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>USER_PATCHES</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -120,17 +135,7 @@ Forum Notice: When something isn't working with your server and you make a post 
     </Variable>
     <Variable>
       <Value>true</Value>
-      <Name>BUILD_ZFS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>latest</Value>
-      <Name>ZFS_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>USER_PATCHES</Name>
+      <Name>BEEP</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -173,9 +178,14 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Name>NVIDIA_CONTAINER_RUNTIME_V</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>BETA_BUILD</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/usr/src" Default="" Mode="rw" Description="Main Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/kernel/</Config>
+  <Config Name="Data Path" Target="/usr/src" Default="" Mode="rw" Description="Main Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/kernel-beta/</Config>
   <Config Name="Build with nVidia support" Target="BUILD_NVIDIA" Default="" Mode="" Description="Set to 'true' to build the images with with nVidia drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Build with DVB support" Target="BUILD_DVB" Default="" Mode="" Description="Set to 'true' to build the images with with DVB drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Build with ZFS support" Target="BUILD_ZFS" Default="" Mode="" Description="Set to 'true' to build the images with with ZFS support (otherwise set to 'false').&#13;&#10;ATTENTION: you have to uninstall any Plugin that enables ZFS otherwise the kernel won't work right (This custom build will load all created ZFS Pools at startup)." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
@@ -185,10 +195,11 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from Github or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="ZFS Version" Target="ZFS_V" Default="" Mode="" Description="ZFS Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 0.8.4)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always" Required="true" Mask="false">all</Config>
-  <Config Name="Cleanup" Target="CLEANUP" Default="" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderat' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always" Required="true" Mask="false">moderate</Config>
+  <Config Name="Cleanup" Target="CLEANUP" Default="" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderat' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always" Required="true" Mask="false">moderat</Config>
   <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Apply User Patches" Target="USER_PATCHES" Default="" Mode="" Description="Set to 'true' and the container will create a folder in the main directory where you can past your Kernel patch files and will apply them automatically when building the Kernel (otherwise leave blank - the container will wait 120 seconds after the start to put your user patches in the patch folder - please backup your patch files since the folder will be deleted if 'Cleanup' is set to 'moderate' or 'full')." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Custom Build Mode" Target="CUSTOM_MODE" Default="" Mode="" Description="This is only for Advanced users!&#13;&#10;In this mode the container will stop right at the beginning and will copy over the build script and the dependencies to build the kernel modules for DVB and joydev in the main directory (I highly recommend using this mode for changing things in the build script like adding patches or other modules to build, connect to the console of the container with: 'docker exec -ti NAMEOFYOURCONTAINER /bin/bash' and then go to the /usr/src directory, also the build script is executable)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Ending Sound" Target="BEEP" Default="" Mode="" Description="Set to 'true' and your server will output a sound if the build process is finished (only works if you got a PC speaker installed on your motherboard)" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
@@ -198,4 +209,5 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="container-toolkit Version" Target="CONTAINER_TOOLKIT_V" Default="" Mode="" Description="container-toolkit Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="nvidia-container-runtime Version" Target="NVIDIA_CONTAINER_RUNTIME_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 3.2.0)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="Beta Build" Target="BETA_BUILD" Default="" Mode="" Description="This option is only for beta builds and if you know what you are doing. Set this option to 'true' and the container will create a folder in the root of the directory with the version number without the beta extension in this example 'stock/6.9.0' you have to plaste the files (bzimage, bzroot, bzmodules, bzfirmware) from the beta version that you want to build into this folder (you can get it from here for example this is the link to 6.9.0-beta1: https://s3.amazonaws.com/dnld.lime-technology.com/next/unRAIDServer-6.9.0-beta1-x86_64.zip)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
