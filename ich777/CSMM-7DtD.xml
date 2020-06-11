@@ -87,6 +87,11 @@ UPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container
       <Mode/>
     </Variable>
     <Variable>
+      <Value>info</Value>
+      <Name>CSMM_LOGLEVEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>https://github.com/CatalysmsServerManager/7-days-to-die-server-manager/archive/master.zip</Value>
       <Name>CSMM_DL_URL</Name>
       <Mode/>
@@ -111,6 +116,7 @@ UPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container
   <Config Name="Discord Client ID" Target="CLIENTID" Default="" Mode="" Description="Your Discord Client ID (you can get it from here: https://discordapp.com/developers/applications)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Database Backup Interval" Target="DB_BKP_INTERV" Default="" Mode="" Description="Specify the database backup interval in seconds (saved to the ../Database/7dtd.sql)." Type="Variable" Display="always" Required="true" Mask="false">90</Config>
   <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' to force an update." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Log Level" Target="CSMM_LOGLEVEL" Default="" Mode="" Description="Log level (valid are: ‘blank’, ‘error’, ‘warn’, ‘info’, ‘debug’, ‘verbose’, ‘silly’)" Type="Variable" Display="always" Required="false" Mask="false">info</Config>
   <Config Name="Web Port" Target="1337" Default="" Mode="tcp" Description="Please note that you should reverse proxy the server trough nginx, apache or any other reverse proxy software to your Hostname as filled in above." Type="Port" Display="always" Required="true" Mask="false">1337</Config>
   <Config Name="Maria DB Port" Target="3306" Default="" Mode="tcp" Description="Only needed if you want to connect to the database." Type="Port" Display="always" Required="false" Mask="false">3306</Config>
   <Config Name="CSMM Download URL" Target="CSMM_DL_URL" Default="" Mode="" Description="Only change if you are know what you are doing." Type="Variable" Display="advanced" Required="true" Mask="false">https://github.com/CatalysmsServerManager/7-days-to-die-server-manager/archive/master.zip</Config>
