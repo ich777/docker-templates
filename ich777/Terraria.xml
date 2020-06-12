@@ -13,7 +13,7 @@
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
 &#xD;
-Update Notice: The game will check on every restart if there is a newer version of the game and install it if so.&#xD;
+Update Notice: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#xD;
 CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Terraria' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
@@ -30,7 +30,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
 &#xD;
-Update Notice: The game will check on every restart if there is a newer version of the game and install it if so.&#xD;
+Update Notice: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#xD;
 CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS Terraria' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
   <Networking>
     <Mode>bridge</Mode>
