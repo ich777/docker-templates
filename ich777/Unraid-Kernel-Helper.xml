@@ -144,6 +144,11 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
+      <Value>false</Value>
+      <Name>BUILD_JOYDEV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>000</Value>
       <Name>UMASK</Name>
       <Mode/>
@@ -205,6 +210,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Apply User Patches" Target="USER_PATCHES" Default="" Mode="" Description="Set to 'true' and the container will create a folder in the main directory where you can past your Kernel patch files and will apply them automatically when building the Kernel (otherwise leave blank - the container will wait 120 seconds after the start to put your user patches in the patch folder - please backup your patch files since the folder will be deleted if 'Cleanup' is set to 'moderate' or 'full')." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Custom Build Mode" Target="CUSTOM_MODE" Default="" Mode="" Description="This is only for Advanced users!&#13;&#10;In this mode the container will stop right at the beginning and will copy over the build script and the dependencies to build the kernel modules for DVB and joydev in the main directory (I highly recommend using this mode for changing things in the build script like adding patches or other modules to build, connect to the console of the container with: 'docker exec -ti NAMEOFYOURCONTAINER /bin/bash' and then go to the /usr/src directory, also the build script is executable)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Build with Joydev Support" Target="BUILD_JOYDEV" Default="" Mode="" Description="Set to 'true to build the images with Joydev support (otherwise set to 'false')." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Ending Sound" Target="BEEP" Default="" Mode="" Description="Set to 'true' and your server will output a sound if the build process is finished (only works if you got a PC speaker installed on your motherboard)" Type="Variable" Display="advanced" Required="false" Mask="false">true</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
