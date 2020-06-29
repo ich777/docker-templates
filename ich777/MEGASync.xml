@@ -81,7 +81,7 @@ MEGAsync can synchronize all of your devices with your MEGA account. Access and 
   </Environment>
   <Labels/>
   <Config Name="Data Dir" Target="/megasync/.local/share/data/Mega Limited/MEGAsync" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/megasync</Config>
-  <Config Name="Host Path" Target="/mnt/host" Default="" Mode="ro" Description="Read only" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
+  <Config Name="Host Path" Target="/mnt/host" Default="" Mode="ro" Description="Read only (This container was mainly created to backup files to MEGA, if you also want to sync files from and to MEGA please create a new path entry to the preferred share on the server - it's strongly recommended to do that in /mnt/... within the container)" Type="Path" Display="always" Required="false" Mask="false">/mnt/user</Config>
   <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="WebGUI" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
