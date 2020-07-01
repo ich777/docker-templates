@@ -13,9 +13,7 @@
   <Overview>This Docker will download and install SteamCMD. It will also install The Forest and run it. SERVERNAME: 'The Forest Docker' SERVERPASSWORD: 'Docker' ADMINPASSWORD: 'adminDocker' (you can change this in your SERVERFOLDER/config/config.cfg)&#xD;
 &#xD;
 BETA Warning: Since this Docker runs with WINE it's marked as BETA, i can not guarantee if the server is running always as expected!&#xD;
-Also i recommend you to give this docker a Static IP (Custom Mode) and that you don't change any port unless you know what you are doing!&#xD;
 &#xD;
-PUBLIC PLAY: If you want that your server is public listed and easily accessable you must add '-serversteamaccount YOURTOKEN' to the GAME_PARAMS (without the quotes and replace YOURTOKEN with your token).&#xD;
 Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!)&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
@@ -36,9 +34,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Description>This Docker will download and install SteamCMD. It will also install The Forest and run it. SERVERNAME: 'The Forest Docker' SERVERPASSWORD: 'Docker' ADMINPASSWORD: 'adminDocker' (you can change this in your SERVERFOLDER/config/config.cfg)&#xD;
 &#xD;
 BETA Warning: Since this Docker runs with WINE it's marked as BETA, i can not guarantee if the server is running always as expected!&#xD;
-Also i recommend you to give this docker a Static IP (Custom Mode) and that you don't change any port unless you know what you are doing!&#xD;
 &#xD;
-PUBLIC PLAY: If you want that your server is public listed and easily accessable you must add '-serversteamaccount YOURTOKEN' to the GAME_PARAMS (without the quotes and replace YOURTOKEN with your token).&#xD;
 Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!)&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
@@ -52,27 +48,12 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Port>
         <HostPort>8766</HostPort>
         <ContainerPort>8766</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>8766</HostPort>
-        <ContainerPort>8766</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
       <Port>
         <HostPort>27015</HostPort>
         <ContainerPort>27015</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>27015</HostPort>
-        <ContainerPort>27015</ContainerPort>
         <Protocol>udp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>27016</HostPort>
-        <ContainerPort>27016</ContainerPort>
-        <Protocol>tcp</Protocol>
       </Port>
       <Port>
         <HostPort>27016</HostPort>
@@ -138,11 +119,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="true"/>
-  <Config Name="TCP1 - Steam Port" Target="8766" Default="" Mode="tcp" Description="Container Port: 8766" Type="Port" Display="always" Required="true" Mask="false">8766</Config>
   <Config Name="UDP1 - Steam Port" Target="8766" Default="" Mode="udp" Description="Container Port: 8766" Type="Port" Display="always" Required="true" Mask="false">8766</Config>
-  <Config Name="TCP2 - Game Port" Target="27015" Default="" Mode="tcp" Description="Container Port: 27015" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
   <Config Name="UDP2 - Game Port" Target="27015" Default="" Mode="udp" Description="Container Port: 27015" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
-  <Config Name="TCP3 - Steam Query Port" Target="27016" Default="" Mode="tcp" Description="Container Port: 27016" Type="Port" Display="always" Required="false" Mask="false">27016</Config>
   <Config Name="UDP3 - Steam Query Port" Target="27016" Default="" Mode="udp" Description="Container Port: 27016" Type="Port" Display="always" Required="false" Mask="false">27016</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
