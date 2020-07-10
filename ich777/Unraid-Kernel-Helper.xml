@@ -79,6 +79,11 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
+      <Value>true</Value>
+      <Name>BUILD_MLX_MFT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>false</Value>
       <Name>BUILD_ZFS</Name>
       <Mode/>
@@ -106,6 +111,11 @@ Forum Notice: When something isn't working with your server and you make a post 
     <Variable>
       <Value>latest</Value>
       <Name>SECCOMP_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>MLX_MFT_V</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -209,13 +219,15 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="Build with nVidia support" Target="BUILD_NVIDIA" Default="" Mode="" Description="Set to 'true' to build the images with nVidia drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Build with DVB support" Target="BUILD_DVB" Default="" Mode="" Description="Set to 'true' to build the images with DVB drivers (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="DVB Driver Type" Target="DVB_TYPE" Default="" Mode="" Description="Select which type of driver you want to build into the Images/Kernel. Valid choices currently are: 'libreelec' = LibreELEC DVB drivers (default), 'digitaldevices' = DigitalDevices DVB drivers, 'xboxoneusb' = Xbox One USB DVB drivers &amp;amp; 'tbsos' = TBS OpenSource DVB drivers (without quotes).&#13;&#10;If you set BUILD_DVB to 'false' you can ignore this entry.&#13;&#10;(Please note that can only choose one driver)" Type="Variable" Display="always" Required="false" Mask="false">libreelec</Config>
+  <Config Name="Melanox Firmware Tools" Target="BUILD_MLX_MFT" Default="" Mode="" Description="Set to 'true' to build the images with the Melanox Firmware Tools (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Build with ZFS support" Target="BUILD_ZFS" Default="" Mode="" Description="Set to 'true' to build the images with ZFS support (otherwise set to 'false').&#13;&#10;ATTENTION: you have to uninstall any Plugin that enables ZFS otherwise the kernel won't work right (This custom build will load all created ZFS Pools at startup)." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="Enable Intel Kernel Module" Target="ENABLE_i915" Default="" Mode="" Description="Set to 'true' to enable the Intel Drivers on boot (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="nVidia Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="nVidia Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 440.82)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="ZFS Version" Target="ZFS_V" Default="" Mode="" Description="ZFS Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 0.8.4 or if you are using the 6.9.0 repository you can set it to 'master' to build it from the 'master' branch from OpenZFS from Github)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Melanox Firmware Tools Version" Target="MLX_MFT_V" Default="" Mode="" Description="Melanox Firmware Tools Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 4.14.0-3)" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
+  <Config Name="ZFS Version" Target="ZFS_V" Default="" Mode="" Description="ZFS Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 0.8.4 or if you are using the 6.9.0 repository you can set it to 'master' to build it from the 'master' branch from OpenZFS from Github)" Type="Variable" Display="always" Required="true" Mask="false">master</Config>
   <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always" Required="true" Mask="false">all</Config>
   <Config Name="Clean-up" Target="CLEANUP" Default="" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderate' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always" Required="true" Mask="false">moderate</Config>
   <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
