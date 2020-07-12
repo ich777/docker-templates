@@ -3,8 +3,8 @@
   <Name>DoH-Client</Name>
   <Repository>ich777/doh-client</Repository>
   <Registry>https://hub.docker.com/r/ich777/doh-client</Registry>
-  <Network>br1</Network>
-  <MyIP>192.168.1.8</MyIP>
+  <Network>bridge</Network>
+  <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support/>
@@ -16,6 +16,8 @@ You easily can now hide your DNS querys from your ISP with this docker for your 
 You can also use this infront of your PiHole to also block Ad's and with DoH-Server to secure your mobile devices.&#xD;
 &#xD;
 If you got any questions please post it in the support thread on the Unraid forums.&#xD;
+&#xD;
+I strongly recommend you to run the container in custom mode and give it a static IP address so that you expose all ports from the container and to avoid any network problems.&#xD;
 &#xD;
 Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
@@ -41,13 +43,15 @@ You can also use this infront of your PiHole to also block Ad's and with DoH-Ser
 &#xD;
 If you got any questions please post it in the support thread on the Unraid forums.&#xD;
 &#xD;
+I strongly recommend you to run the container in custom mode and give it a static IP address so that you expose all ports from the container and to avoid any network problems.&#xD;
+&#xD;
 Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
 The Docker needs to be run in bridge mode and a Fixed IP address.&#xD;
 &#xD;
 This Docker is based on the DoH Client component from: https://github.com/m13253/dns-over-https</Description>
   <Networking>
-    <Mode>br1</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort>53</HostPort>
