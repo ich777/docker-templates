@@ -58,6 +58,11 @@ You can also run multiple servers with only one SteamCMD directory!</Description
         <ContainerPort>50041</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>8772</HostPort>
+        <ContainerPort>8772</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
@@ -99,6 +104,11 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
+      <Value>true</Value>
+      <Name>INSTALL_ASSETTO_SERVER_MANAGER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>99</Value>
       <Name>UID</Name>
       <Mode/>
@@ -119,8 +129,10 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="TCP" Target="9600" Default="" Mode="tcp" Description="Container Port: 9600" Type="Port" Display="always" Required="true" Mask="false">9600</Config>
   <Config Name="UDP" Target="9600" Default="" Mode="udp" Description="Container Port: 9600" Type="Port" Display="always" Required="true" Mask="false">9600</Config>
   <Config Name="TCP2" Target="8081" Default="" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8081</Config>
-  <Config Name="Install Stracker" Target="INSTALL_STRACKER" Default="" Mode="" Description="Set to 'true' (without quotes) to install Stacker, otherwise leave blank." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Install Stracker" Target="INSTALL_STRACKER" Default="" Mode="" Description="Set to 'true' (without quotes) to install Stacker, otherwise leave blank (Please note that you can only Stacker or Assetto-Server-Manager, not both at the same time)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP3 - Stracker" Target="50041" Default="" Mode="tcp" Description="Only needed if you installed Stacker (Webserver Address: http://[IPOFYOURSERVER]:50041)." Type="Port" Display="always" Required="false" Mask="false">50041</Config>
+  <Config Name="Install Assetto-Server-Manager" Target="INSTALL_ASSETTO_SERVER_MANAGER" Default="" Mode="" Description="Set to 'true' (without quotes) to install Assetto-Server-Manager, otherwise leave blank (Please note that you can only Stacker or Assetto-Server-Manager, not both at the same time)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="TCP4 - Assetto-Server-Manager" Target="8772" Default="" Mode="tcp" Description="Only needed if you installed Assetto-Server-Manager (Webserver Address: http://[IPOFYOURSERVER]:8771)." Type="Port" Display="always" Required="false" Mask="false">8772</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
