@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Pushover-On-Start</Name>
+  <Repository>ich777/pushover-on-start</Repository>
+  <Registry>https://hub.docker.com/r/ich777/pushover-on-start</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://hub.docker.com/r/ich777/online-check-pushover</Project>
+  <Overview>This is a simple container that sends a message when the container is started (needed this for a headless machine to know when I can connect or better speaking start up the VM's with WOL).</Overview>
+  <Category>Other:Uncategorized</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donegear.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This is a simple container that sends a message when the container is started (needed this for a headless machine to know when I can connect or better speaking start up the VM's with WOL).</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>PUSHOVER_APP_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PUSHOVER_USER_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Startup Complete</Value>
+      <Name>PUSHOVER_TITLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Server is now Online!</Value>
+      <Name>PUSHOVER_MESSAGE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0</Value>
+      <Name>PUSHOVER_PRIORITY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Pushover APP Token" Target="PUSHOVER_APP_TOKEN" Default="" Mode="" Description="Pushover APP Token goes here." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Pushover User Token" Target="PUSHOVER_USER_TOKEN" Default="" Mode="" Description="Pushover User Token goes here." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Pushover Message Title" Target="PUSHOVER_TITLE" Default="" Mode="" Description="Customized Pushover Message Title here." Type="Variable" Display="always" Required="true" Mask="false">Startup Complete</Config>
+  <Config Name="Pushover Message" Target="PUSHOVER_MESSAGE" Default="" Mode="" Description="Customized Pushover Message here." Type="Variable" Display="always" Required="true" Mask="false">Server is now Online!</Config>
+  <Config Name="Pushover Priority" Target="PUSHOVER_PRIORITY" Default="" Mode="" Description="Customize the Pushover Priority ('-2': Lowest priority | '-1': Low Priority | '0': Normal Priority | '1': High Priority | '2': Emergency Priority - without quotes)" Type="Variable" Display="always" Required="true" Mask="false">0</Config>
+</Container>
