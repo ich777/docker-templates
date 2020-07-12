@@ -3,7 +3,7 @@
   <Name>DoH-Server</Name>
   <Repository>ich777/doh-server</Repository>
   <Registry>https://hub.docker.com/r/ich777/doh-server</Registry>
-  <Network>br1</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -19,6 +19,8 @@ All you need is a PiHole, a Webserver with an SSL Certificate &amp;amp; this Doc
 A detailed guide is available on my github page for this project: https://github.com/ich777/docker-DoH&#xD;
 &#xD;
 If you got any questions please poste it in the support thread on the Unraid forums.&#xD;
+&#xD;
+I strongly recommend you to run the container in custom mode and give it a static IP address so that you expose all ports from the container and to avoid any network problems.&#xD;
 &#xD;
 Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
@@ -46,13 +48,15 @@ A detailed guide is available on my github page for this project: https://github
 &#xD;
 If you got any questions please poste it in the support thread on the Unraid forums.&#xD;
 &#xD;
+I strongly recommend you to run the container in custom mode and give it a static IP address so that you expose all ports from the container and to avoid any network problems.&#xD;
+&#xD;
 Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
 &#xD;
 The Docker runns by default on port: 8053 and handels querys in the directory /dns-query (eg: http://192.168.1.7:8053/dns-query)&#xD;
 &#xD;
 This Docker is based on the DoH Server component from: https://github.com/m13253/dns-over-https</Description>
   <Networking>
-    <Mode>br1</Mode>
+    <Mode>bridge</Mode>
     <Publish/>
   </Networking>
   <Data>
