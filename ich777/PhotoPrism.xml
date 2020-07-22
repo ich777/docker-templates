@@ -131,6 +131,16 @@ Please also support the developer of this superior project through a PayPal dona
       <Name>PHOTOPRISM_EXPERIMENTAL</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Data Dir" Target="/photoprism/storage" Default="" Mode="rw" Description="Storage PATH for generated files like cache and index (Keep cache, settings and database)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/photoprism</Config>
@@ -153,4 +163,6 @@ Please also support the developer of this superior project through a PayPal dona
   <Config Name="Darktable Presets" Target="PHOTOPRISM_DARKTABLE_PRESETS" Default="" Mode="" Description="Use darktable presets (disables concurrent raw to jpeg conversion - Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Resample Filter" Target="PHOTOPRISM_THUMB_FILTER" Default="" Mode="" Description="Resample filter, best to worst: blackman, lanczos, cubic, linear" Type="Variable" Display="advanced" Required="false" Mask="false">lanczos</Config>
   <Config Name="Enable Experimental Features" Target="PHOTOPRISM_EXPERIMENTAL" Default="" Mode="" Description="Enable experimental features (Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
 </Container>
