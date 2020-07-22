@@ -8,9 +8,10 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
-  <Project>https://hub.docker.com/r/ich777/doh-server</Project>
-  <Overview>PhotoPrism&#x2122; is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.</Overview>
-  <Category>Other:Uncategorized</Category>
+  <Project>https://github.com/photoprism/photoprism</Project>
+  <Overview>PhotoPrism&#x2122; is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.&#xD;
+&#xD;
+Please also support the developer of this superior project through a PayPal donation or even on Patreon.</Overview>  <Category>Other:Uncategorized</Category>
   <WebUI>http://[IP]:[PORT:2342]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/photoprism.png</Icon>
@@ -19,9 +20,10 @@
   <CPUset/>
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
-  <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>PhotoPrism&#x2122; is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.</Description>
-  <Networking>
+  <DonateLink>https://www.paypal.me/photoprism</DonateLink>
+  <Description>PhotoPrism&#x2122; is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.&#xD;
+&#xD;
+Please also support the developer of this superior project through a PayPal donation or even on Patreon.</Description>  <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
