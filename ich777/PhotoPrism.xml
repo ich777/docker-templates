@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PhotoPrism</Name>
+  <Repository>photoprism/photoprism</Repository>
+  <Registry>https://hub.docker.com/r/photoprism/photoprism</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://hub.docker.com/r/ich777/doh-server</Project>
+  <Overview>PhotoPrism&#x2122; is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.</Overview>
+  <Category>Other:Uncategorized</Category>
+  <WebUI>http://[IP]:[PORT:2342]/</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/photoprism.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>PhotoPrism&#x2122; is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2342</HostPort>
+        <ContainerPort>2342</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/photoprism</HostDir>
+      <ContainerDir>/photoprism/storage</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Pictures</HostDir>
+      <ContainerDir>/photoprism/originals</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/photoprism/import</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>true</Value>
+      <Name>PHOTOPRISM_UPLOAD_NSFW</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>PHOTOPRISM_DETECT_NSFW</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>PhotoPrism</Value>
+      <Name>PHOTOPRISM_SITE_TITLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Browse Your Life</Value>
+      <Name>PHOTOPRISM_SITE_CAPTION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PHOTOPRISM_SITE_DESCRIPTION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PHOTOPRISM_SITE_AUTHOR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PHOTOPRISM_ADMIN_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>PHOTOPRISM_SETTINGS_HIDDEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>PHOTOPRISM_THUMB_UNCACHED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2048</Value>
+      <Name>PHOTOPRISM_THUMB_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>7680</Value>
+      <Name>PHOTOPRISM_THUMB_SIZE_UNCACHED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>7680</Value>
+      <Name>PHOTOPRISM_JPEG_SIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>90</Value>
+      <Name>PHOTOPRISM_JPEG_QUALITY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>PHOTOPRISM_DARKTABLE_PRESETS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>lanczos</Value>
+      <Name>PHOTOPRISM_THUMB_FILTER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>PHOTOPRISM_EXPERIMENTAL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Dir" Target="/photoprism/storage" Default="" Mode="rw" Description="Storage PATH for generated files like cache and index (Keep cache, settings and database)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/photoprism</Config>
+  <Config Name="Storage Path" Target="/photoprism/originals" Default="" Mode="rw" Description="Path to your images and storage folder for your settings" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Pictures</Config>
+  <Config Name="Photo Import Folder" Target="/photoprism/import" Default="" Mode="rw" Description="Only if you want to use the Import function of PhotoPrism" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Offensive Uploads" Target="PHOTOPRISM_UPLOAD_NSFW" Default="" Mode="" Description="Allow uploads that MAY be offensive (Valid options: 'true' or 'false')" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Flag Offensive Photos" Target="PHOTOPRISM_DETECT_NSFW" Default="" Mode="" Description="Flag photos as private that MAY be offensive (Valid options: 'true' or 'false')" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Website Tile" Target="PHOTOPRISM_SITE_TITLE" Default="" Mode="" Description="Website Title" Type="Variable" Display="always" Required="false" Mask="false">PhotoPrism</Config>
+  <Config Name="Website Caption" Target="PHOTOPRISM_SITE_CAPTION" Default="" Mode="" Description="Website Caption" Type="Variable" Display="always" Required="false" Mask="false">Browse Your Life</Config>
+  <Config Name="Website Description" Target="PHOTOPRISM_SITE_DESCRIPTION" Default="" Mode="" Description="Website Description" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Website Author" Target="PHOTOPRISM_SITE_AUTHOR" Default="" Mode="" Description="Website Author" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Admin Password" Target="PHOTOPRISM_ADMIN_PASSWORD" Default="" Mode="" Description="Admin Password (If you don't want to use a password delete this entry and create another variable with the Key: 'PHOTOPRISM_PUBLIC' and the Value: 'true')" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="WebGUI Port" Target="2342" Default="" Mode="tcp" Description="WebGUI Port" Type="Port" Display="always" Required="false" Mask="false">2342</Config>
+  <Config Name="Settings Hidden" Target="PHOTOPRISM_SETTINGS_HIDDEN" Default="" Mode="" Description="Users can not view or change settings (Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="On-Demand Rendering" Target="PHOTOPRISM_THUMB_UNCACHED" Default="" Mode="" Description="Enable on-demand thumbnail rendering (high memory and cpu usage - Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Tumbnail Size Limit" Target="PHOTOPRISM_THUMB_SIZE" Default="" Mode="" Description="Pre-rendered thumbnail size limit (default 2048, min 720, max 7680)" Type="Variable" Display="advanced" Required="false" Mask="false">2048</Config>
+  <Config Name="On-demand Size Limit" Target="PHOTOPRISM_THUMB_SIZE_UNCACHED" Default="" Mode="" Description="On-demand rendering size limit (default 7680, min 720, max 7680)" Type="Variable" Display="advanced" Required="false" Mask="false">7680</Config>
+  <Config Name="Converted Image Size Limit" Target="PHOTOPRISM_JPEG_SIZE" Default="" Mode="" Description="Size limit for converted image files in pixels (720-30000)" Type="Variable" Display="advanced" Required="false" Mask="false">7680</Config>
+  <Config Name="Thumbnail Quality" Target="PHOTOPRISM_JPEG_QUALITY" Default="" Mode="" Description="Set to 95 for high-quality thumbnails (requires more storage)" Type="Variable" Display="advanced" Required="false" Mask="false">90</Config>
+  <Config Name="Darktable Presets" Target="PHOTOPRISM_DARKTABLE_PRESETS" Default="" Mode="" Description="Use darktable presets (disables concurrent raw to jpeg conversion - Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Resample Filter" Target="PHOTOPRISM_THUMB_FILTER" Default="" Mode="" Description="Resample filter, best to worst: blackman, lanczos, cubic, linear" Type="Variable" Display="advanced" Required="false" Mask="false">lanczos</Config>
+  <Config Name="Enable Experimental Features" Target="PHOTOPRISM_EXPERIMENTAL" Default="" Mode="" Description="Enable experimental features (Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+</Container>
