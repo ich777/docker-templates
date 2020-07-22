@@ -16,6 +16,8 @@ You can also install a FTB (FeedTheBeast), Bukkit, Spigot,... server.&#xD;
 Start the container for the first time let it do it's work and shut it down.&#xD;
 After that copy over your favorite server executable (don't forget to set the Serverfile name to the same as you copied over) and start the container again.&#xD;
 &#xD;
+UPDATE: If you set the variable GAME_V to 'latest' the container will check on every restart if there is a newer version available (if set to 'latest' the variable JAR_NAME has to be 'server').
+&#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
 CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
   <Category>GameServers:</Category>
@@ -35,6 +37,8 @@ You can also install a FTB (FeedTheBeast), Bukkit, Spigot,... server.&#xD;
 &#xD;
 Start the container for the first time let it do it's work and shut it down.&#xD;
 After that copy over your favorite server executable (don't forget to set the Serverfile name to the same as you copied over) and start the container again.&#xD;
+&#xD;
+UPDATE: If you set the variable GAME_V to 'latest' the container will check on every restart if there is a newer version available (if set to 'latest' the variable JAR_NAME has to be 'server').
 &#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
 CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
@@ -64,6 +68,11 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
     <Variable>
       <Value>server</Value>
       <Name>JAR_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>GAME_V</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -110,6 +119,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   <Labels/>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/minecraft</Config>
   <Config Name="Serverfile name" Target="JAR_NAME" Default="" Mode="" Description="Enter your executable jar file (Minecraft Serverfile) withouat the .jar extension." Type="Variable" Display="always" Required="true" Mask="false">server</Config>
+  <Config Name="Game version" Target="GAME_V" Default="" Mode="" Description="If you set the variable GAME_V to 'latest' the container will check on every restart if there is a newer version available (if set to 'latest' the variable JAR_NAME has to be 'server' - available options are 'latest', 'custom' or simply leave empty)." Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
   <Config Name="Extra Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Extra JVM Parameters" Target="EXTRA_JVM_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters for the JVM otherwise leave blank! (Only change if you know what you are doing!!!)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="XMS Size" Target="XMS_SIZE" Default="" Mode="" Description="Enter your XMS size in MB (XMS=The initial and minimum heap size. It is recommended to set the minimum heap size equivalent to the maximum heap size in order to minimize the garbage collection.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
