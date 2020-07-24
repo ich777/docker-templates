@@ -141,6 +141,11 @@ Please also support the developer of this superior project through a PayPal dona
       <Name>GID</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>/photoprism/storage</Value>
+      <Name>PHOTOPRISM_STORAGE_PATH</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Data Dir" Target="/photoprism/storage" Default="" Mode="rw" Description="Storage PATH for generated files like cache and index (Keep cache, settings and database)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/photoprism</Config>
@@ -165,4 +170,5 @@ Please also support the developer of this superior project through a PayPal dona
   <Config Name="Enable Experimental Features" Target="PHOTOPRISM_EXPERIMENTAL" Default="" Mode="" Description="Enable experimental features (Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="Storage Path" Target="PHOTOPRISM_STORAGE_PATH" Default="" Mode="" Description="Change only if you know what you are doing! (delete this value if you want to store your database and generated thumnails in the main directory)" Type="Variable" Display="advanced" Required="false" Mask="false">/photoprism/storage</Config>
 </Container>
