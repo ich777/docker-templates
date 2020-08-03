@@ -84,7 +84,7 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
+      <Value>master</Value>
       <Name>BUILD_ZFS</Name>
       <Mode/>
     </Variable>
