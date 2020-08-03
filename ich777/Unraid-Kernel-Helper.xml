@@ -124,6 +124,11 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
+      <Value>true</Value>
+      <Name>BUILD_ISCSI</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>all</Value>
       <Name>CPU_COUNT</Name>
       <Mode/>
@@ -209,6 +214,21 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
+      <Value>latest</Value>
+      <Name>TARGETCLI_FB_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>RTSLIB_FB_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>CONFIGSHELL_FB_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value/>
       <Name>BETA_BUILD</Name>
       <Mode/>
@@ -222,12 +242,13 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="Melanox Firmware Tools" Target="BUILD_MLX_MFT" Default="" Mode="" Description="Set to 'true' to build the images with the Melanox Firmware Tools (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="Build with ZFS support" Target="BUILD_ZFS" Default="" Mode="" Description="Set to 'true' to build the images with ZFS support (otherwise set to 'false').&#13;&#10;ATTENTION: you have to uninstall any Plugin that enables ZFS otherwise the kernel won't work right (This custom build will load all created ZFS Pools at startup)." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="Enable Intel Kernel Module" Target="ENABLE_i915" Default="" Mode="" Description="Set to 'true' to enable the Intel Drivers on boot (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
-  <Config Name="nVidia Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="nVidia Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 440.82)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="Melanox Firmware Tools Version" Target="MLX_MFT_V" Default="" Mode="" Description="Melanox Firmware Tools Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 4.14.0-3)" Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
+  <Config Name="nVidia Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="nVidia Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 440.82)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="Melanox Firmware Tools Version" Target="MLX_MFT_V" Default="" Mode="" Description="Melanox Firmware Tools Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 4.14.0-3)" Type="Variable" Display="aadvancedlways" Required="false" Mask="false">latest</Config>
   <Config Name="ZFS Version" Target="ZFS_V" Default="" Mode="" Description="ZFS Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 0.8.4 or if you are using the 6.9.0 repository you can set it to 'master' to build it from the 'master' branch from OpenZFS from Github)" Type="Variable" Display="always" Required="true" Mask="false">master</Config>
+  <Config Name="Build with iSCSI Target support" Target="BUILD_ISCSI" Default="" Mode="" Description="Set to 'true' to build the images with iSCSI Target Support (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always" Required="true" Mask="false">all</Config>
   <Config Name="Clean-up" Target="CLEANUP" Default="" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderate' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always" Required="true" Mask="false">moderate</Config>
   <Config Name="Create Backup" Target="CREATE_BACKUP" Default="" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
@@ -245,5 +266,8 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="container-toolkit Version" Target="CONTAINER_TOOLKIT_V" Default="" Mode="" Description="container-toolkit Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="nvidia-container-runtime Version" Target="NVIDIA_CONTAINER_RUNTIME_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 3.2.0)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="TargetCLI-FB Version" Target="TARGETCLI_FB_V" Default="" Mode="" Description="TargetCLI-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 2.1.53)" Type="Variable" Display="advanced" Required="false" Mask="false">latest</Config>
+  <Config Name="RTSlib-FB Version" Target="RTSLIB_FB_V" Default="" Mode="" Description="RTSlib-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 2.1.73)" Type="Variable" Display="advanced" Required="false" Mask="false">latest</Config>
+  <Config Name="Configshell-FB Version" Target="CONFIGSHELL_FB_V" Default="" Mode="" Description="Configshell-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.28)" Type="Variable" Display="advanced" Required="false" Mask="false">latest</Config>
   <Config Name="Beta Build" Target="BETA_BUILD" Default="" Mode="" Description="This option is only for beta builds and if you know what you are doing. Set this option to 'true' and the container will create a folder 'beta' in the 'stock' folder in the main directory 'stock/beta' you have to paste the files (bzimage, bzroot, bzmodules, bzfirmware) from the beta version that you want to build into this folder (I strongly recommend to upgrade first to the stock beta version that you want to build a Kernel for, reboot and after that begin building and placing the files from your '/boot' folder into the 'stock/beta' folder)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
