@@ -89,38 +89,13 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>false</Value>
-      <Name>ENABLE_i915</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>latest</Value>
-      <Name>NV_DRV_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>latest</Value>
-      <Name>DD_DRV_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>latest</Value>
-      <Name>LE_DRV_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>latest</Value>
-      <Name>SECCOMP_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>latest</Value>
-      <Name>MLX_MFT_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>latest</Value>
       <Name>ZFS_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>ENABLE_i915</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -200,6 +175,26 @@ Forum Notice: When something isn't working with your server and you make a post 
     </Variable>
     <Variable>
       <Value>latest</Value>
+      <Name>NV_DRV_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>DD_DRV_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>LE_DRV_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>SECCOMP_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
       <Name>LIBNVIDIA_CONTAINER_V</Name>
       <Mode/>
     </Variable>
@@ -211,6 +206,11 @@ Forum Notice: When something isn't working with your server and you make a post 
     <Variable>
       <Value>latest</Value>
       <Name>NVIDIA_CONTAINER_RUNTIME_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>latest</Value>
+      <Name>MLX_MFT_V</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -266,8 +266,8 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="container-toolkit Version" Target="CONTAINER_TOOLKIT_V" Default="" Mode="" Description="container-toolkit Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="nvidia-container-runtime Version" Target="NVIDIA_CONTAINER_RUNTIME_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 3.2.0)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
-  <Config Name="TargetCLI-FB Version" Target="TARGETCLI_FB_V" Default="" Mode="" Description="TargetCLI-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 2.1.53)" Type="Variable" Display="advanced" Required="false" Mask="false">latest</Config>
-  <Config Name="RTSlib-FB Version" Target="RTSLIB_FB_V" Default="" Mode="" Description="RTSlib-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 2.1.73)" Type="Variable" Display="advanced" Required="false" Mask="false">latest</Config>
-  <Config Name="Configshell-FB Version" Target="CONFIGSHELL_FB_V" Default="" Mode="" Description="Configshell-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.28)" Type="Variable" Display="advanced" Required="false" Mask="false">latest</Config>
+  <Config Name="TargetCLI-FB Version" Target="TARGETCLI_FB_V" Default="" Mode="" Description="TargetCLI-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 2.1.53)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="RTSlib-FB Version" Target="RTSLIB_FB_V" Default="" Mode="" Description="RTSlib-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 2.1.73)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="Configshell-FB Version" Target="CONFIGSHELL_FB_V" Default="" Mode="" Description="Configshell-FB Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.28)" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
   <Config Name="Beta Build" Target="BETA_BUILD" Default="" Mode="" Description="This option is only for beta builds and if you know what you are doing. Set this option to 'true' and the container will create a folder 'beta' in the 'stock' folder in the main directory 'stock/beta' you have to paste the files (bzimage, bzroot, bzmodules, bzfirmware) from the beta version that you want to build into this folder (I strongly recommend to upgrade first to the stock beta version that you want to build a Kernel for, reboot and after that begin building and placing the files from your '/boot' folder into the 'stock/beta' folder)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
