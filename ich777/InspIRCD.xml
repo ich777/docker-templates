@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>InspIRCd</Name>
+  <Repository>ich777/inspircd</Repository>
+  <Registry>https://hub.docker.com/r/ich777/inspircd</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.inspircd.org/</Project>
+  <Overview>InspIRCd is a modular Internet Relay Chat (IRC) server written in C++&#xD;
+&#xD;
+It was created from scratch to be stable, modern and lightweight. It provides a tunable number of features through the use of an advanced but well documented module system. By keeping core functionality to a minimum we hope to increase the stability, security and speed of InspIRCd while also making it customisable to the needs of many different users.&#xD;
+&#xD;
+NOTE: If you want to change the hostname turn on 'Advanced View' and at the 'Extra-Parameters' change '--hostname=YOURPREFERREDHOSTNAME'&#xD;
+&#xD;
+The container will create a TLS certificate at first start or if the certificate isn't found in the 'conf/' directory, after it is created you can import your own certificate.&#xD;
+&#xD;
+HASH CREATION NOTICE: Read the discription from the variable 'Operator Password Hash' how to create the hash from your password.</Overview>
+  <Category>Network:Other Productivity: Tools:Utilities </Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/inspircd.png</Icon>
+  <ExtraParams>--hostname=irc --restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>InspIRCd is a modular Internet Relay Chat (IRC) server written in C++&#xD;
+&#xD;
+It was created from scratch to be stable, modern and lightweight. It provides a tunable number of features through the use of an advanced but well documented module system. By keeping core functionality to a minimum we hope to increase the stability, security and speed of InspIRCd while also making it customisable to the needs of many different users.&#xD;
+&#xD;
+NOTE: If you want to change the hostname turn on 'Advanced View' and at the 'Extra-Parameters' change '--hostname=YOURPREFERREDHOSTNAME'&#xD;
+&#xD;
+The container will create a TLS certificate at first start or if the certificate isn't found in the 'conf/' directory, after it is created you can import your own certificate.&#xD;
+&#xD;
+HASH CREATION NOTICE: Read the discription from the variable 'Operator Password Hash' how to create the hash from your password.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6667</HostPort>
+        <ContainerPort>6667</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>6697</HostPort>
+        <ContainerPort>6697</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7000</HostPort>
+        <ContainerPort>7000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7001</HostPort>
+        <ContainerPort>7001</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/inspircd</HostDir>
+      <ContainerDir>/inspircd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>INSP_CONNECT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INSP_CONNECT_HASH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>.example.com</Value>
+      <Name>INSP_NET_SUFFIX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>InspIRCD</Value>
+      <Name>INSP_NET_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Jonny English</Value>
+      <Name>INSP_ADMIN_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>MI5</Value>
+      <Name>INSP_ADMIN_NICK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>jonny.english@example.com</Value>
+      <Name>INSP_ADMIN_EMAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>INSP_ENABLE_DNSBL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>oper</Value>
+      <Name>INSP_OPER_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>*@*</Value>
+      <Name>INSP_OPER_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INSP_OPER_PASSWORD_HASH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>hmac-sha256</Value>
+      <Name>INSP_OPER_HASH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>INSP_OPER_SSLONLY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>irc.example.com</Value>
+      <Name>INSP_TLS_CN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>nomail@example.com</Value>
+      <Name>INSP_TLS_MAIL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Server Admins</Value>
+      <Name>INSP_TLS_UNIT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Example IRC Network</Value>
+      <Name>INSP_TLS_ORG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Example City</Value>
+      <Name>INSP_TLS_LOC</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Example State</Value>
+      <Name>INSP_TLS_STATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>XZ</Value>
+      <Name>INSP_TLS_COUNTRY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>365</Value>
+      <Name>INSP_TLS_DURATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="TCP1 - Clients, Plaintext" Target="6667" Default="" Mode="tcp" Description="TCP Clients Connection Port (Unencrypted)" Type="Port" Display="always" Required="true" Mask="false">6667</Config>
+  <Config Name="TCP2 - Clients, TLS" Target="6697" Default="" Mode="tcp" Description="TCP Clients Connection Port (Encrypted)" Type="Port" Display="always" Required="true" Mask="false">6697</Config>
+  <Config Name="TCP3 - Server, Plaintext" Target="7000" Default="" Mode="tcp" Description="TCP Server Port (Unencrypted - You don't have to forward this port if you use this as a standalone IRC Server)" Type="Port" Display="always" Required="true" Mask="false">7000</Config>
+  <Config Name="TCP4 - Server, TLS" Target="7001" Default="" Mode="tcp" Description="TCP Server Port (Encrypted - You don't have to forward this port if you use this as a standalone IRC Server)" Type="Port" Display="always" Required="false" Mask="false">7001</Config>
+  <Config Name="Data Path" Target="/inspircd" Default="" Mode="rw" Description="Your configuration is located in '.../conf/' (WARNING: change the main configurations via the variables here and not the files which say that you should don't edit them)" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/inspircd</Config>
+  <Config Name="Domainname" Target="INSP_NET_SUFFIX" Default="" Mode="" Description="Suffix used behind the server name (in this format '.example.com')" Type="Variable" Display="always" Required="true" Mask="false">.example.com</Config>
+  <Config Name="IRC Network Name" Target="INSP_NET_NAME" Default="" Mode="" Description="Name advertised as network name" Type="Variable" Display="always" Required="true" Mask="false">InspIRCD</Config>
+  <Config Name="Admin Name" Target="INSP_ADMIN_NAME" Default="" Mode="" Description="Name showed by the /admin command" Type="Variable" Display="always" Required="true" Mask="false">Jonny English</Config>
+  <Config Name="Admin Nick" Target="INSP_ADMIN_NICK" Default="" Mode="" Description="Nick showed by the /admin command" Type="Variable" Display="always" Required="true" Mask="false">MI5</Config>
+  <Config Name="Admin Email" Target="INSP_ADMIN_EMAIL" Default="" Mode="" Description="E-mail shown by the /admin command" Type="Variable" Display="always" Required="true" Mask="false">jonny.english@example.com</Config>
+  <Config Name="DNSBLs" Target="INSP_ENABLE_DNSBL" Default="" Mode="" Description="Set to no to disable DNSBLs (DNS-based block list - set to 'yes' or 'no')" Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="Connection Password" Target="INSP_CONNECT_PASSWORD" Default="" Mode="" Description="Password either as plaintext, or hash value - if you don't want a password leave this variable empty&#13;&#10;(Make sure you escape special chars like $ or &amp;amp; if needed)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Connection Password Hashing algorithm" Target="INSP_CONNECT_HASH" Default="" Mode="" Description="Hashing algorithm for the Connection Password  - if you don't entered a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160, md5, ripemd160, sha256)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Operator Name" Target="INSP_OPER_NAME" Default="" Mode="" Description="Oper name" Type="Variable" Display="always" Required="true" Mask="false">oper</Config>
+  <Config Name="Operator Host" Target="INSP_OPER_HOST" Default="" Mode="" Description="Hosts allowed to oper up (If you don't want to connect OP's from outside change for example to '*@localhost' or what your hostname matches that the OP should connect)" Type="Variable" Display="always" Required="true" Mask="false">*@*</Config>
+  <Config Name="Operator Password Hash" Target="INSP_OPER_PASSWORD_HASH" Default="" Mode="" Description="Hash value for your oper password hash (to generate a password hash create the server without the hash, connect to the InspIRCd and type in: '/mkpasswd HASHMALGORITHM PASSORD' eg: '/mkpasswd hmac-sha256 superstronpassword')" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Operator Password Hashing algorithm" Target="INSP_OPER_HASH" Default="" Mode="" Description="Hashing algorithm for the Operator Password - if you don't entered a password leave this variable empty (e.g. hmac-sha256, hmac-md5, hmac-ripemd160, md5, ripemd160, sha256)" Type="Variable" Display="always" Required="true" Mask="false">hmac-sha256</Config>
+  <Config Name="Operator SSL Only" Target="INSP_OPER_SSLONLY" Default="" Mode="" Description="Allow oper up only while using TLS (set to 'yes' or 'no')" Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="Certificate - Name" Target="INSP_TLS_CN" Default="" Mode="" Description="Common name of the certificate" Type="Variable" Display="always" Required="true" Mask="false">irc.example.com</Config>
+  <Config Name="Certificate - Mail Adress" Target="INSP_TLS_MAIL" Default="" Mode="" Description="Mail address represented in the certificate" Type="Variable" Display="always" Required="true" Mask="false">nomail@example.com</Config>
+  <Config Name="Certificate - Unit Responsible" Target="INSP_TLS_UNIT" Default="" Mode="" Description="Unit responsible for the service" Type="Variable" Display="always" Required="true" Mask="false">Server Admins</Config>
+  <Config Name="Certificate - Organisation" Target="INSP_TLS_ORG" Default="" Mode="" Description="Organisation name" Type="Variable" Display="always" Required="true" Mask="false">Example IRC Network</Config>
+  <Config Name="Certificate - City Name" Target="INSP_TLS_LOC" Default="" Mode="" Description="City name" Type="Variable" Display="always" Required="true" Mask="false">Example City</Config>
+  <Config Name="Certificate - State" Target="INSP_TLS_STATE" Default="" Mode="" Description="State name" Type="Variable" Display="always" Required="true" Mask="false">Example State</Config>
+  <Config Name="Certificate - Contry" Target="INSP_TLS_COUNTRY" Default="" Mode="" Description="Country Code by ISO 3166-1 (to get the country code visit: https://en.wikipedia.org/wiki/ISO_3166-1)" Type="Variable" Display="always" Required="true" Mask="false">XZ</Config>
+  <Config Name="Certificate - Certificate Expiration" Target="INSP_TLS_DURATION" Default="" Mode="" Description="Duration until the certificate expires" Type="Variable" Display="always" Required="true" Mask="false">365</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+</Container>
