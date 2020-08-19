@@ -176,6 +176,31 @@ HASH CREATION NOTICE: Read the discription from the variable 'Operator Password 
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>INSP_SERVICES_IPADDR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INSP_SERVICES_ALLOWMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>no</Value>
+      <Name>INSP_SERVICES_HIDDEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>no</Value>
+      <Name>INSP_SERVICES_TLS_ON</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>INSP_SERVICES_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>000</Value>
       <Name>UMASK</Name>
       <Mode/>
@@ -223,6 +248,11 @@ HASH CREATION NOTICE: Read the discription from the variable 'Operator Password 
   <Config Name="Certificate - State" Target="INSP_TLS_STATE" Default="" Mode="" Description="State name" Type="Variable" Display="always" Required="true" Mask="false">Example State</Config>
   <Config Name="Certificate - Contry" Target="INSP_TLS_COUNTRY" Default="" Mode="" Description="Country Code by ISO 3166-1 (to get the country code visit: https://en.wikipedia.org/wiki/ISO_3166-1)" Type="Variable" Display="always" Required="true" Mask="false">XZ</Config>
   <Config Name="Certificate - Certificate Expiration" Target="INSP_TLS_DURATION" Default="" Mode="" Description="Duration until the certificate expires" Type="Variable" Display="always" Required="true" Mask="false">365</Config>
+  <Config Name="Services - Connection Address" Target="INSP_SERVICES_IPADDR" Default="" Mode="" Description="Specify the IP Address from where the Services are connecting (if you run Anope on the same Unraid machine it is usually the IP address of Unraid)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Services - CIDR Allow Mask" Target="INSP_SERVICES_ALLOWMASK" Default="" Mode="" Description="CIDR of services source IP (If you run your Services on the same Network as your IRCd you don't have to fill in this value)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Services - Hidden" Target="INSP_SERVICES_HIDDEN" Default="" Mode="" Description="Hide services from /MAP and /LINKS (valid options are: 'yes' or 'no', change only if you know what you are doing!)" Type="Variable" Display="advanced" Required="false" Mask="false">no</Config>
+  <Config Name="Services - TLS" Target="INSP_SERVICES_TLS_ON" Default="" Mode="" Description="Turn on TLS encryption for the Services link (this is be no proble if you connect it to your internal network since it only talks internally to your Services)." Type="Variable" Display="advanced" Required="false" Mask="false">no</Config>
+  <Config Name="Services - Password" Target="INSP_SERVICES_PASSWORD" Default="" Mode="" Description="Password send by this server and send by the services" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
