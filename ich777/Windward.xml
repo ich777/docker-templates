@@ -71,7 +71,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   </Environment>
   <Labels/>
   <Config Name="ServerFiles" Target="/windward" Default="" Mode="rw" Description="Container Path: /windward" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/windward</Config>
-  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="true" Mask="false"> -name "Docker Windward" -world "World" -tcp 5127 -public</Config>
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="true" Mask="false">-name "Docker Windward" -world "World" -tcp 5127 -public</Config>
   <Config Name="TCP - Game Port" Target="5127" Default="" Mode="tcp" Description="TCP Game Port (If you need another port delete this entry and create a new one with the required TCP port - also don't forget to change the port at the variable GAME_PARAMS)" Type="Port" Display="always" Required="true" Mask="false">5127</Config>
   <Config Name="SteamID" Target="ADMIN" Default="" Mode="" Description="Admin SteamID (leave empty if you don't know your SteamID yet, connect to the server once and the ID will show up in the log enter it here and restart the container)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' (without quotes) to force a update of WWServer.exe otherwise leave empty." Type="Variable" Display="advanced" Required="false" Mask="false"/>
