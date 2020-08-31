@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://electrum.org/</Project>
-  <Overview>Electrum's focus is speed and simplicity, with low resource usage. It uses remote servers that handle the most complicated parts of the Bitcoin system, and it allows you to recover your wallet from a secret phrase.&#xD;
+  <Overview>Electrum is a Bitcoin wallet focused on speed and simplicity, with low resource usage. It uses remote servers that handle the most complicated parts of the Bitcoin system, and it allows you to recover your wallet from a secret phrase.&#xD;
 &#xD;
 ATTENTION: Please keep in mind that your wallet is stored in the created folder in your appdata directory/.electrum/wallets/YOURWALLETNAME - I strongly recommend you to backup this file on a regular basis!&#xD;
 &#xD;
@@ -24,7 +24,7 @@ IMPORT: If you are already using Electrum you can import your existing wallet by
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>Electrum's focus is speed and simplicity, with low resource usage. It uses remote servers that handle the most complicated parts of the Bitcoin system, and it allows you to recover your wallet from a secret phrase.&#xD;
+  <Description>Electrum is a Bitcoin wallet focused on speed and simplicity, with low resource usage. It uses remote servers that handle the most complicated parts of the Bitcoin system, and it allows you to recover your wallet from a secret phrase.&#xD;
 &#xD;
 ATTENTION: Please keep in mind that your wallet is stored in the created folder in your appdata directory/.electrum/wallets/YOURWALLETNAME - I strongly recommend you to backup this file on a regular basis!&#xD;
 &#xD;
