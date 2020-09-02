@@ -15,7 +15,9 @@ First Start: Enter the Module name to load in the variable down below (without t
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.</Overview>
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u nwnee -ti NAMEOFYOURCONTAINER screen -xS nwnee' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>false</TemplateURL>
@@ -32,7 +34,9 @@ First Start: Enter the Module name to load in the variable down below (without t
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.</Description>
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u nwnee -ti NAMEOFYOURCONTAINER screen -xS nwnee' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
