@@ -16,7 +16,7 @@ UPDATE: The container will check on every restart if there is a newer version av
 ATTENTION: If you want to change the language, you have to delete every file in the 'firefox' directory except the 'profile' folder.&#xD;
 &#xD;
 RESOLUTION: You can also change the resolution from the WebGUI, to do that simply click on 'Show more settings...' (on a resolution change it can occour that the screen is not filled entirely with the Firefox window, simply restart the container and it will be fullscreen again).</Overview>
-  <Category>MediaApp:Photos Productivity: Tools: Backup:</Category>
+  <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/firefox.png</Icon>
