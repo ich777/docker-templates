@@ -4,7 +4,6 @@
   <Repository>ich777/steamcmd:eco</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
-  <Beta>true</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -20,9 +19,7 @@ ECO Management Window: You can connect to the ECO Management Window by going to:
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
-You can also run multiple servers with only one SteamCMD directory!&#xD;
-&#xD;
-BETA Warning: Since this container run's with MONO i can't garantee that everything works correctly or anything weird happens.</Overview>
+You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:3001]/</WebUI>
   <TemplateURL>false</TemplateURL>
@@ -43,9 +40,7 @@ ECO Management Window: You can connect to the ECO Management Window by going to:
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
-You can also run multiple servers with only one SteamCMD directory!&#xD;
-&#xD;
-BETA Warning: Since this container run's with MONO i can't garantee that everything works correctly or anything weird happens.</Description>
+You can also run multiple servers with only one SteamCMD directory!</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -57,11 +52,6 @@ BETA Warning: Since this container run's with MONO i can't garantee that everyth
       <Port>
         <HostPort>3001</HostPort>
         <ContainerPort>3001</ContainerPort>
-        <Protocol>tcp</Protocol>
-      </Port>
-      <Port>
-        <HostPort>8080</HostPort>
-        <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -105,11 +95,6 @@ BETA Warning: Since this container run's with MONO i can't garantee that everyth
       <Mode/>
     </Variable>
     <Variable>
-      <Value>true</Value>
-      <Name>START_SRV_MGMT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>770</Value>
       <Name>DATA_PERM</Name>
       <Mode/>
@@ -138,10 +123,8 @@ BETA Warning: Since this container run's with MONO i can't garantee that everyth
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="true"/>
-  <Config Name="Server Management" Target="START_SRV_MGMT" Default="" Mode="" Description="Set to 'true' (without quotes) to enable ECO Server Management window otherwise leave blank (You can connect to it by going to: 'http://YOURSERVERIP:8080/vnc_auto.html' without quotes)" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="UDP - Game Port" Target="3000" Default="3000" Mode="udp" Description="UDP Game Port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="TCP - Web Port" Target="3001" Default="3001" Mode="tcp" Description="TCP Web Port" Type="Port" Display="always" Required="true" Mask="false">3001</Config>
-  <Config Name="TCP - VNC Port" Target="8080" Default="8080" Mode="tcp" Description="TCP noVNC Port (You can connect to it by going to: 'http://YOURSERVERIP:8080/vnc_auto.html' without quotes)" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
