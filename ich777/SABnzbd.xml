@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
-  <Project>https://hub.docker.com/r/ich777/doh-server</Project>
+  <Project>https://sabnzbd.org/</Project>
   <Overview>SABnzbd is a program to download binary files from Usenet servers. Many people upload all sorts of interesting material to Usenet and you need a special program to get this material with the least effort.&#xD;
 &#xD;
 UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and prereleases and switch between them - keep in mind sometimes downgrading from a prerelease version could break your configuration).&#xD;
