@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
-  <Project>https://hub.docker.com/r/ich777/doh-server</Project>
+  <Project>https://radarr.video/</Project>
   <Overview>Radarr A fork of Sonarr to work with movies &#xE0; la Couchpotato.&#xD;
 &#xD;
 UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and nightly version - keep in mind that switching from a stable to a nightly version and vice versa can break the container).&#xD;
