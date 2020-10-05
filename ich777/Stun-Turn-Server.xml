@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project/>
   <Overview>This is a Basic STUN &amp;amp; TURN server that was mainly created for Nextcloud Talk.&#xD;
 &#xD;
