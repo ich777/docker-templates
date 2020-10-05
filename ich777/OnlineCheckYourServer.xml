@@ -12,7 +12,7 @@
   <Overview>This is a simple container that will check if a domain name or IP address is pingable and send you a message with Pushover if it goes offline.&#xD;
 &#xD;
 You can install it on your machine to get notified with Pushover if a site goes down, or you can install it on a remote machine to ping your server and get a notification if it's not reachable.</Overview>
-  <Category/>
+  <Category>Tools:Utilities</Category>
   <WebUI/>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/pushover.png</Icon>
