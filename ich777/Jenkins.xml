@@ -14,7 +14,7 @@
 Update Notice: If set to 'latest' the container will check on every startup if there is a newer version available).&#xD;
 &#xD;
 All you data is stored in the jenkins/workdir folder in your appdata directory.</Overview>
-  <Category/>
+    <Category>Productivity: Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jenkins.png</Icon>
