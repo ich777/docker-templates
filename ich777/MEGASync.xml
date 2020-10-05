@@ -12,7 +12,7 @@
   <Overview>MEGAsync is an intuitive application that enables you to effortlessly synchronize folders on several computers. You simply need to upload data in the cloud and, within seconds, you can explore the same documents on your own PC.&#xD;
 &#xD;
 MEGAsync can synchronize all of your devices with your MEGA account. Access and work with your data securely across different locations and devices.</Overview>
-  <Category>Other:Uncategorized</Category>
+  <Category>Network:Other Productivity: Tools:Utilities Backup:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/megasync.png</Icon>
