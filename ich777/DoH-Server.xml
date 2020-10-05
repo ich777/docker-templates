@@ -27,7 +27,7 @@ Update Notice: If you want to upgrade to a newer version of the DoH-Server just 
 The Docker runns by default on port: 8053 and handels querys in the directory /dns-query (eg: http://192.168.1.7:8053/dns-query)&#xD;
 &#xD;
 This Docker is based on the DoH Server component from: https://github.com/m13253/dns-over-https</Overview>
-  <Category/>
+    <Category>Network:Other</Category>
   <WebUI/>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/DoH.png</Icon>
