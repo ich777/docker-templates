@@ -14,7 +14,7 @@
 With this container you can connect through VNC to your RDP session, SSH,...&#xD;
 &#xD;
 In the Docker Hub description for the container is a example how to reverse proxy noVNC with nginx and secure it via http basic authentification.</Overview>
-  <Category/>
+  <Category>Network:Other Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/remmina.png</Icon>
