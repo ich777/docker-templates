@@ -11,7 +11,8 @@
   <Project>https://github.com/photoprism/photoprism</Project>
   <Overview>PhotoPrism&#x2122; is a server-based application for browsing, organizing and sharing your personal photo collection. It makes use of the latest technologies to automatically tag and find pictures without getting in your way. Say goodbye to solutions that force you to upload your visual memories to the cloud.&#xD;
 &#xD;
-Please also support the developer of this superior project through a PayPal donation or on Patreon.</Overview>  <Category>Other:Uncategorized</Category>
+Please also support the developer of this superior project through a PayPal donation or on Patreon.</Overview>
+  <Category>Productivity: MediaApp:Photos</Category>
   <WebUI>http://[IP]:[PORT:2342]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/photoprism.png</Icon>
