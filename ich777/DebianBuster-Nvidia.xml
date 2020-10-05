@@ -31,7 +31,7 @@ NETWORK MODE: If you want to use the container as a Steam In Home Streaming host
 ATTENTION: This container is not finished yet and currently in alpha state.&#xD;
 &#xD;
 If you got any questions, suggestions for improvements or can help with the password issue above please feel free to open an issue on my Github or write a forum post.</Overview>
-  <Category>Productivity: Tools:Utilities</Category>
+  <Category>Productivity: Tools:System</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/debian-nvidia.png</Icon>
