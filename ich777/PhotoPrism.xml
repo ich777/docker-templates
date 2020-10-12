@@ -4,6 +4,7 @@
   <Repository>photoprism/photoprism</Repository>
   <Registry>https://hub.docker.com/r/photoprism/photoprism</Registry>
   <Network>bridge</Network>
+  <Beta>True</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
