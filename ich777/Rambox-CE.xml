@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://rambox.pro/</Project>
-  <Overview>Rambox Community Edition is a Free, Open Source and Cross Platform messaging and emailing app that combines common web applications into one. A few of the supported platforms are Airdroid, Discord, Duo, Gmail, Hangouts, ICQ, Steam and many many more.&#xD;
+  <Overview>Rambox Community Edition is a Free, Open Source messaging and emailing app that combines common web applications into one. A few of the supported platforms are Airdroid, Discord, Duo, Gmail, Hangouts, ICQ, Steam and many many more.&#xD;
 &#xD;
 UPDATE: The container will check on every start/restart if there is a newer version available.</Overview>
   <Category>Productivity: Tools:Utilities</Category>
@@ -22,7 +22,7 @@ UPDATE: The container will check on every start/restart if there is a newer vers
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>Rambox Community Edition is a Free, Open Source and Cross Platform messaging and emailing app that combines common web applications into one. A few of the supported platforms are Airdroid, Discord, Duo, Gmail, Hangouts, ICQ, Steam and many many more.&#xD;
+  <Description>Rambox Community Edition is a Free, Open Source messaging and emailing app that combines common web applications into one. A few of the supported platforms are Airdroid, Discord, Duo, Gmail, Hangouts, ICQ, Steam and many many more.&#xD;
 &#xD;
 UPDATE: The container will check on every start/restart if there is a newer version available.</Description>
   <Networking>
