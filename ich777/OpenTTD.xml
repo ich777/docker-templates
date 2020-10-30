@@ -68,8 +68,8 @@ Update Notice: If there is a newer version if set to 'latest' simply restart the
       <Mode/>
     </Variable>
     <Variable>
-      <Value>http://bundles.openttdcoop.org/opengfx/releases/0.5.5/opengfx-0.5.5.zip</Value>
-      <Name>GFXPACK_URL</Name>
+      <Value>latest</Value>
+      <Name>GFX_PK_V</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -93,8 +93,8 @@ Update Notice: If there is a newer version if set to 'latest' simply restart the
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server if needed otherwise leave blank. To load the last autosavegame you MUST specifie the following '-D -g /serverdata/serverfiles/openttd/save/autosave/autosave0.sav' you can also customize the path begins always with '/serverdata/serverfiles/'" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP - Game Port" Target="3979" Default="" Mode="tcp" Description="Container Port: 3979" Type="Port" Display="always" Required="true" Mask="false">3979</Config>
   <Config Name="UDP - Game Port" Target="3979" Default="" Mode="udp" Description="Container Port: 3979" Type="Port" Display="always" Required="true" Mask="false">3979</Config>
-  <Config Name="Game Version to Install" Target="GAME_VERSION" Default="" Mode="" Description="Define the prefered game version (eg: '1.8.0' without quotes) or set to 'latest' (without quotes) to pull the newest build." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
-  <Config Name="OpenGFX Pack Url" Target="GFXPACK_URL" Default="" Mode="" Description="Enter here the OpenGFX url or leave it blank to install it manually (install it in /games/baseset).&#13;&#10;ATTENTION if you change the URL please enter the zip version of the OpenGFX pack!" Type="Variable" Display="always" Required="true" Mask="false">http://bundles.openttdcoop.org/opengfx/releases/0.5.5/opengfx-0.5.5.zip</Config>
+  <Config Name="Game Version to Install" Target="GAME_VERSION" Default="" Mode="" Description="Define the prefered game version (eg: '1.10.3' without quotes) or set to 'latest' (without quotes) to pull the newest build." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="OpenGFX Version" Target="GFX_PK_V" Default="" Mode="" Description="Define the prefered OpenGFX version (eg: '0.6.0' without quotes) or set to 'latest' (without quotes) to pull the newest build." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Compile Cores" Target="COMPILE_CORES" Default="" Mode="" Description="Leave blank if you want to use all cores otherwise define how many cores you want to assign for compiling (Please Note: Compiling is only needed for the first startup or if you change the Game Version to Install; ATTENTION: Assigning fewer cores results in slower compile speed)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
