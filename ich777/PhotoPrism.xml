@@ -95,12 +95,12 @@ Database lockups: If you got problems where the database lockes up you should sw
     </Variable>
     <Variable>
       <Value>sqlite</Value>
-      <Name>PHOTOPRISM_DATABASE_DRIVER </Name>
+      <Name>PHOTOPRISM_DATABASE_DRIVER</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name>PHOTOPRISM_DATABASE_DSN </Name>
+      <Name>PHOTOPRISM_DATABASE_DSN</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -176,8 +176,8 @@ Database lockups: If you got problems where the database lockes up you should sw
   <Config Name="Website Author" Target="PHOTOPRISM_SITE_AUTHOR" Default="" Mode="" Description="Website Author" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Initial Admin Password" Target="PHOTOPRISM_ADMIN_PASSWORD" Default="" Mode="" Description="Initial Admin Password - you can change the password on the settings page (If you don't want to use a password delete this entry and create another variable with the Key: 'PHOTOPRISM_PUBLIC' and the Value: 'true')" Type="Variable" Display="always" Required="true" Mask="true"/>
   <Config Name="WebGUI Port" Target="2342" Default="" Mode="tcp" Description="WebGUI Port" Type="Port" Display="always" Required="false" Mask="false">2342</Config>
-  <Config Name="Photoprims Database Type" Target="PHOTOPRISM_DATABASE_DRIVER " Default="" Mode="" Description="Choose if you want to use the builtin 'sqlite' database or a 'mysql' based database (If you got problems where the database lockes up you should switch to mysql but you have to also setup a dedicated database for that for example 'MariaDB' from Linuxserver.io)" Type="Variable" Display="always" Required="true" Mask="false">sqlite</Config>
-  <Config Name="MySQL Database Connection" Target="PHOTOPRISM_DATABASE_DSN " Default="" Mode="" Description="Needs to be filled out if you are using a 'mysql' based databyse type (it has to be filled in exact this format: 'DBUSER:DBPASSWORD@tcp(DBIP:DBPORT)/photoprism?parseTime=true' all values in CAPS have to be replaced with your credentials and without quotes)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Photoprims Database Type" Target="PHOTOPRISM_DATABASE_DRIVER" Default="" Mode="" Description="Choose if you want to use the builtin 'sqlite' database or a 'mysql' based database (If you got problems where the database lockes up you should switch to mysql but you have to also setup a dedicated database for that for example 'MariaDB' from Linuxserver.io)" Type="Variable" Display="always" Required="true" Mask="false">sqlite</Config>
+  <Config Name="MySQL Database Connection" Target="PHOTOPRISM_DATABASE_DSN" Default="" Mode="" Description="Needs to be filled out if you are using a 'mysql' based databyse type (it has to be filled in exact this format: 'DBUSER:DBPASSWORD@tcp(DBIP:DBPORT)/photoprism?parseTime=true' all values in CAPS have to be replaced with your credentials and without quotes)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Settings Hidden" Target="PHOTOPRISM_SETTINGS_HIDDEN" Default="" Mode="" Description="Users can not view or change settings (Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="On-Demand Rendering" Target="PHOTOPRISM_THUMB_UNCACHED" Default="" Mode="" Description="Enable on-demand thumbnail rendering (high memory and cpu usage - Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Tumbnail Size Limit" Target="PHOTOPRISM_THUMB_SIZE" Default="" Mode="" Description="Pre-rendered thumbnail size limit (default 2048, min 720, max 7680)" Type="Variable" Display="advanced" Required="false" Mask="false">2048</Config>
