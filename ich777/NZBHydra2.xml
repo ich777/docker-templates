@@ -14,7 +14,7 @@
 UPDATE: The container will check on every start/restart if there is a newer version available.&#xD;
 &#xD;
 MANUAL VERSION: You can also set a version manually by typing in the version number that you want to use for example: '3.4.3' (without quotes).</Overview>
-  <Category>Downloaders:</Category>
+  <Category>Downloaders: MediaApp:Video MediaApp:Music MediaApp:Books MediaApp:Photos Productivity:</Category>
   <WebUI>http://[IP]:[PORT:5076]/</WebUI>
   <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nzbhydra2.png</Icon>
