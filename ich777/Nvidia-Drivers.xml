@@ -5,7 +5,7 @@
   <Beta>False</Beta>
   <Category>Productivity: Tools:System</Category>
   <Name>Nvidia-Driver</Name>
-  <Description>This Plugin will install all necessary modules and dependencies for your Nvidia Graphcis Card. In the settings menu you find your UUID of your graphics card(s) and you can also choose between the version of the availabe drivers for the current Unraid build.</Description>
+  <Description>This Plugin will install all necessary modules and dependencies for your Nvidia Graphcis Card. In the settings/plugins menu you find your UUID of your graphics card(s). You can also choose your preferred version of the Nvidia drivers, by default it will always grab the latest driver version that is availabe for the current Unraid build.</Description>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nvidia-driver.png</Icon>
 </Containers>
