@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OpenVPN-Client</Name>
+  <Repository>dperson/openvpn-client</Repository>
+  <Registry>https://hub.docker.com/r/dperson/openvpn-client/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://hub.docker.com/r/dperson/openvpn-client</Project>
+  <Overview>This OpenVPN container was designed to be started first to provide a connection to other containers (using '--net=container:OpenVPN-Client'), see the documentation for further help here: https://hub.docker.com/r/dperson/openvpn-client&#xD;
+&#xD;
+The basic steps for a OpenVPN connection that requires a Username and Password are: 1) Rename your *.ovpn to 'vpn.ovpn' and place it in your OpenVPN-Client directory, 2) Create in the same directory a file named 'vpn.auth' and place your Username in the first line and the Password for the connection in the second line and save it 3) Restart the container open the logs and see if the connection to your VPN establishes successfully.&#xD;
+&#xD;
+To tunnel traffic from another container through this container edit the template from the other container, set the 'Network Type' to: 'None', enable the advanced view in the top right corner and at 'Extra Parameters' add the following: '--net=container:OpenVPN-Client' (replace 'OpenVPN-Client' with the name of this container if you choose a different name for it) and write down the port(s) that you need to connect to.&#xD;
+After that go back to edit this containers template and add the port that you have noted in the above step to this container and click 'Apply' now you can connect to the container that you tunneld the traffic though this container.&#xD;
+&#xD;
+You can route the traffic from multiple containers through this container with the steps above, if you need more ports then simply add more ports in this containers template.&#xD;
+&#xD;
+DNS: By default this container uses Googles DNS Server: 8.8.8.8 if you want to edit this enable the advanced view and edit this setting at 'Extra Parameters'.&#xD;
+&#xD;
+ADVANCED CONFIG: If you leave the appdata directory for this container empty it will start up and you have to manually configure it with the builtin comand: 'openvpn.sh', see: https://hub.docker.com/r/dperson/openvpn-client</Overview>
+  <Category>Network:VPN</Category>
+  <WebUI/>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openvpn-client.png</Icon>
+  <ExtraParams>--cap-add=NET_ADMIN --dns=8.8.8.8</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This OpenVPN container was designed to be started first to provide a connection to other containers (using '--net=container:OpenVPN-Client'), see the documentation for further help here: https://hub.docker.com/r/dperson/openvpn-client&#xD;
+&#xD;
+The basic steps for a OpenVPN connection that requires a Username and Password are: 1) Rename your *.ovpn to 'vpn.ovpn' and place it in your OpenVPN-Client directory, 2) Create in the same directory a file named 'vpn.auth' and place your Username in the first line and the Password for the connection in the second line and save it 3) Restart the container open the logs and see if the connection to your VPN establishes successfully.&#xD;
+&#xD;
+To tunnel traffic from another container through this container edit the template from the other container, set the 'Network Type' to: 'None', enable the advanced view in the top right corner and at 'Extra Parameters' add the following: '--net=container:OpenVPN-Client' (replace 'OpenVPN-Client' with the name of this container if you choose a different name for it) and write down the port(s) that you need to connect to.&#xD;
+After that go back to edit this containers template and add the port that you have noted in the above step to this container and click 'Apply' now you can connect to the container that you tunneld the traffic though this container.&#xD;
+&#xD;
+You can route the traffic from multiple containers through this container with the steps above, if you need more ports then simply add more ports in this containers template.&#xD;
+&#xD;
+DNS: By default this container uses Googles DNS Server: 8.8.8.8 if you want to edit this enable the advanced view and edit this setting at 'Extra Parameters'.&#xD;
+&#xD;
+ADVANCED CONFIG: If you leave the appdata directory for this container empty it will start up and you have to manually configure it with the builtin comand: 'openvpn.sh', see: https://hub.docker.com/r/dperson/openvpn-client</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/openvpn-client</HostDir>
+      <ContainerDir>/vpn</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Data Path" Target="/vpn" Default="" Mode="rw" Description="Data Path for your 'vpn.ovpn' and your certificates or your 'vpn.auth'." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/openvpn-client</Config>
+  <Config Name="TUN device" Target="" Default="" Mode="" Description="TUN device that is needed to run the container." Type="Device" Display="advanced" Required="true" Mask="false">/dev/net/tun</Config>
+</Container>

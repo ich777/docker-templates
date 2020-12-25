@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>FlutterCoin-Wallet</Name>
+  <Repository>ich777/fluttercoin</Repository>
+  <Registry>https://hub.docker.com/r/ich777/fluttercoin</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://fluttercoin.me/</Project>
+  <Overview>FlutterCoin may be a coin with the tried and true algorithm of scrypt, but it's definitely anything but ordinary.&#xD;
+&#xD;
+This is a community driven triple hybrid coin and the very first to offer a highly secure network through: Proof of Work (Mining), Proof of Stake (Investing), and it's own highly innovative Proof of Transaction (Using).&#xD;
+&#xD;
+ATTENTION: Please keep in mind that your wallet is stored in the created folder in your appdata directory/.fluttercoin/wallet.dat - I strongly recommend you to backup this file on a regular basis!&#xD;
+&#xD;
+IMPORT: If you are already using FlutterCoin you can import your existing wallet by placing the 'wallet.dat' in the appdata directory for fluttercoin/.fluttercoin/wallet.dat (please let the container fully startup if you are using it for the first time and then shut it down before replacing the wallet.dat).&#xD;
+&#xD;
+UPDATED NOTICE: The container will check on every start/restart if there is a newer version available.</Overview>
+  <Category>Network:Other Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fluttercoin.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>FlutterCoin may be a coin with the tried and true algorithm of scrypt, but it's definitely anything but ordinary.&#xD;
+&#xD;
+This is a community driven triple hybrid coin and the very first to offer a highly secure network through: Proof of Work (Mining), Proof of Stake (Investing), and it's own highly innovative Proof of Transaction (Using).&#xD;
+&#xD;
+ATTENTION: Please keep in mind that your wallet is stored in the created folder in your appdata directory/.fluttercoin/wallet.dat - I strongly recommend you to backup this file on a regular basis!&#xD;
+&#xD;
+IMPORT: If you are already using FlutterCoin you can import your existing wallet by placing the 'wallet.dat' in the appdata directory for fluttercoin/.fluttercoin/wallet.dat (please let the container fully startup if you are using it for the first time and then shut it down before replacing the wallet.dat).&#xD;
+&#xD;
+UPDATED NOTICE: The container will check on every start/restart if there is a newer version available.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7408</HostPort>
+        <ContainerPort>7408</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>7474</HostPort>
+        <ContainerPort>7474</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/fluttercoin</HostDir>
+      <ContainerDir>/fluttercoin</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>-bind=0.0.0.0</Value>
+      <Name>EXTRA_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>768</Value>
+      <Name>CUSTOM_RES_H</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1024</Value>
+      <Name>CUSTOM_RES_W</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Path" Target="/fluttercoin" Default="" Mode="rw" Description="Please keep in mind that your wallet is stored there and I strongly recommend you to backup that path (the wallet is stored in your FlutterCoin appdata directory/.fluttercoin/wallet.dat)." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/fluttercoin</Config>
+  <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="TCP noVNC WebGUI Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Peer to Peer connection" Target="7408" Default="" Mode="tcp" Description="TCP Port for Peer to Peer connection" Type="Port" Display="always" Required="false" Mask="false">7408</Config>
+  <Config Name="JSON Remote Port" Target="7474" Default="" Mode="tcp" Description="TCP Port for Remote Connections" Type="Port" Display="always" Required="false" Mask="false">7474</Config>
+  <Config Name="Extra Startup Parameters" Target="EXTRA_PARAMS" Default="" Mode="" Description="Leave empty if not needed (eg: '-upnp', '-dns',... without quotes)" Type="Variable" Display="advanced" Required="false" Mask="false">-bind=0.0.0.0</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 768 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">768</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1024 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1024</Config>
+</Container>

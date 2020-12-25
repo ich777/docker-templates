@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/79530-support-ich777-steamcmd-dockers/</Support>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://www.teeworlds.com/</Project>
   <Overview>This Docker will download and install a simple Teeworlds Dedicated server with a autoexec.cfg, dm.cfg, tdm.cfg &amp;amp; ctf.cfg preconfigured (the only thing that need to be changed is the Server Name and the RCON Password in the autoexec.cfg).&#xD;
 &#xD;
@@ -16,14 +16,15 @@ ATTENTION: Please don't delete the tar.gz file in the main directory!&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available and the container will download and install it.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Teeworlds.xml</TemplateURL>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/teeworlds.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install a simple Teeworlds Dedicated server with a autoexec.cfg, dm.cfg, tdm.cfg &amp;amp; ctf.cfg preconfigured (the only thing that need to be changed is the Server Name and the RCON Password in the autoexec.cfg).&#xD;
 &#xD;
 ATTENTION: Please don't delete the tar.gz file in the main directory!&#xD;
@@ -46,7 +47,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/teeworlds/</HostDir>
+      <HostDir>/mnt/cache/appdata/teeworlds/</HostDir>
       <ContainerDir>/serverdata/serverfiles/</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -69,7 +70,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles/" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/teeworlds/</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles/" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/teeworlds/</Config>
   <Config Name="UDP" Target="8303" Default="" Mode="udp" Description="Container Port: 8303" Type="Port" Display="always" Required="true" Mask="false">8303</Config>
   <Config Name="ConfigFile" Target="GAME_CONFIG" Default="" Mode="" Description="Container Variable: GAME_CONFIG" Type="Variable" Display="always" Required="false" Mask="false">dm.cfg</Config>
   <Config Name="TCP" Target="8303" Default="" Mode="tcp" Description="Container Port: 8303" Type="Port" Display="always" Required="false" Mask="false">8303</Config>

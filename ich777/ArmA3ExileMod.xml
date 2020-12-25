@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ArmA3ExileMod</Name>
+  <Repository>ich777/steamcmd:arma3exilemod</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>http://www.exilemod.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install ArmA III including ExileMod 1.0.4 and run it (You can also change the download URL so that you can install older builds of ExileMod).&#xD;
+&#xD;
+To run this container you must provide a valid Steam username and password since the game needs a valid account to download (NOTICE: You must disable Steam Guard otherwise this container will not work, Steam recommens  to make a new Steam account for dedicated servers).&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/arma3exilemod.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will download and install SteamCMD. It will also install ArmA III including ExileMod 1.0.4 and run it (You can also change the download URL so that you can install older builds of ExileMod).&#xD;
+&#xD;
+To run this container you must provide a valid Steam username and password since the game needs a valid account to download (NOTICE: You must disable Steam Guard otherwise this container will not work, Steam recommens  to make a new Steam account for dedicated servers).&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>2302</HostPort>
+        <ContainerPort>2302</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2302</HostPort>
+        <ContainerPort>2302</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2303</HostPort>
+        <ContainerPort>2303</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2304</HostPort>
+        <ContainerPort>2304</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2305</HostPort>
+        <ContainerPort>2305</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>2306</HostPort>
+        <ContainerPort>2306</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
+      <ContainerDir>/serverdata/steamcmd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/arma3exilemod/gamefiles</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/arma3exilemod/profiles</HostDir>
+      <ContainerDir>/serverdata/.local/share</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>233780</Value>
+      <Name>GAME_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PASSWRD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VALIDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>ExileMod</Value>
+      <Name>MARIA_DB_ROOT_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>WORKSHOP_MAN_INST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>2302</Value>
+      <Name>GAME_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>http://www.exilemod.com/ExileServer-1.0.4a.zip</Value>
+      <Name>EXILEMOD_SERVER_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/arma3exilemod/gamefiles</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">233780</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server.&#13;&#10;Note: To change the Port of the server please click on 'Show more settings' button, don't forget to change the other ports." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TCP GamePort" Target="2302" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number, never forget that ArmA III uses the starting port number with TCP and UDP and the following 4 ascendant port numbers UDP)" Type="Port" Display="always" Required="true" Mask="false">2302</Config>
+  <Config Name="UDP Game Port" Target="2302" Default="" Mode="udp" Description="Same as TCP Game Port" Type="Port" Display="always" Required="true" Mask="false">2302</Config>
+  <Config Name="UDP Steam Querry Port" Target="2303" Default="" Mode="udp" Description="UDP Game Port +1" Type="Port" Display="always" Required="true" Mask="false">2303</Config>
+  <Config Name="UDP Steam Master Port" Target="2304" Default="" Mode="udp" Description="UDP Game Port +2" Type="Port" Display="always" Required="true" Mask="false">2304</Config>
+  <Config Name="UDP VON Port" Target="2305" Default="" Mode="udp" Description="UDP Game Port +3" Type="Port" Display="always" Required="true" Mask="false">2305</Config>
+  <Config Name="UDP BattlEye Traffic" Target="2306" Default="" Mode="udp" Description="UDP Game Port +4" Type="Port" Display="always" Required="true" Mask="false">2306</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="true"/>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Profiles" Target="/serverdata/.local/share" Default="" Mode="rw" Description="/serverdata/.local/share" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/arma3exilemod/profiles</Config>
+  <Config Name="TCP MariaDB" Target="3306" Default="" Mode="tcp" Description="Not required, only if you want to connect to the database from outside. Delete if you allready have a MariaDB container running." Type="Port" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="MariaDB Root Password" Target="MARIA_DB_ROOT_PWD" Default="" Mode="" Description="Enter the preffered root password of the database." Type="Variable" Display="always" Required="true" Mask="false">ExileMod</Config>
+  <Config Name="Workshop Item Manual Installation" Target="WORKSHOP_MAN_INST" Default="" Mode="" Description="Please set to 'true' (without quotes) if you want to install the Workshopcontent for ExileMod manually since the account you specified above must have a valid game purchase for ArmA3 (you could also use one account to download the dedicated server files and another to install the Workshop files).&#13;&#10;A COMPLETE HOW TO WILL BE IN THE CONSOLE&#13;&#10;WARNING: Please let this variable set to 'true' if you initially set it to 'true'." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">2302</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="ExileMod Server URL" Target="EXILEMOD_SERVER_URL" Default="" Mode="" Description="Change only if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">http://www.exilemod.com/ExileServer-1.0.4a.zip</Config>
+</Container>

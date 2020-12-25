@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ProjectZomboid</Name>
+  <Repository>ich777/steamcmd:projectzomboid</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Project Zomboid and run it.&#xD;
+&#xD;
+Servername: 'Docker ProjectZomboid' Password: 'Docker' AdminPassword: 'adminDocker'&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u steam -ti NAMEOFYOURCONTAINER screen -xS PZ' (without quotes), to disconnect from the console simply close the window.&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/projectzomboid.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will download and install SteamCMD. It will also install Project Zomboid and run it.&#xD;
+&#xD;
+Servername: 'Docker ProjectZomboid' Password: 'Docker' AdminPassword: 'adminDocker'&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER steam -xS PZ' (without quotes), to disconnect from the console simply close the window.&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>16261</HostPort>
+        <ContainerPort>16261</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>16262-16326</HostPort>
+        <ContainerPort>16262-16326</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>27015</HostPort>
+        <ContainerPort>27015</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
+      <ContainerDir>/serverdata/steamcmd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/projectzomboid</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>380870</Value>
+      <Name>GAME_ID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VALIDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PASSWRD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>adminDocker</Value>
+      <Name>ADMIN_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/projectzomboid</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">380870</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="true"/>
+  <Config Name="UDP - Game Port" Target="16261" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to change your server settings)" Type="Port" Display="always" Required="true" Mask="false">16261</Config>
+  <Config Name="TCP - Player Ports" Target="16262-16326" Default="" Mode="tcp" Description="Every player that connects to your server need's it's own port (if you don't need that many ports you can also delete this entry and create a new Port for TCP eg: 16 players 16262-16278)" Type="Port" Display="always" Required="true" Mask="false">16262-16326</Config>
+  <Config Name="TCP - RCON Port" Target="27015" Default="" Mode="tcp" Description="Not required" Type="Port" Display="always" Required="false" Mask="false">27015</Config>
+  <Config Name="Admin Password" Target="ADMIN_PWD" Default="" Mode="" Description="Initial Admin password, change bevor the first start!" Type="Variable" Display="advanced" Required="true" Mask="false">adminDocker</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>

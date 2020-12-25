@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>SABnzbd</Name>
+  <Repository>ich777/sabnzbd</Repository>
+  <Registry>https://hub.docker.com/r/ich777/sabnzbd</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://sabnzbd.org/</Project>
+  <Overview>SABnzbd is a program to download binary files from Usenet servers. Many people upload all sorts of interesting material to Usenet and you need a special program to get this material with the least effort.&#xD;
+&#xD;
+UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and prereleases and switch between them - keep in mind sometimes downgrading from a prerelease version could break your configuration).&#xD;
+&#xD;
+MANUAL VERSION: You can also set a version manually by typing in the version number that you want to use for example: '3.0.1' (without quotes) - you can also change it to 'latest' or 'prerelease' like described above.&#xD;
+&#xD;
+ATTENTION: Don't change the IP adress or the port in the SABnzbd config itself - please also note if you change the WebGUI port from 8080 to anything else that it can happen that you have close and reopen the webpage since SABnzbd want's to redirect you to the wrong port after the initial setup.</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/sabnzbd.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>SABnzbd is a program to download binary files from Usenet servers. Many people upload all sorts of interesting material to Usenet and you need a special program to get this material with the least effort.&#xD;
+&#xD;
+UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and prereleases and switch between them - keep in mind sometimes downgrading from a prerelease version could break your configuration).&#xD;
+&#xD;
+MANUAL VERSION: You can also set a version manually by typing in the version number that you want to use for example: '3.0.1' (without quotes) - you can also change it to 'latest' or 'prerelease' like described above.&#xD;
+&#xD;
+ATTENTION: Don't change the IP adress or the port in the SABnzbd config itself - please also note if you change the WebGUI port from 8080 to anything else that it can happen that you have close and reopen the webpage since SABnzbd want's to redirect you to the wrong port after the initial setup.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9090</HostPort>
+        <ContainerPort>9090</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/sabnzbd</HostDir>
+      <ContainerDir>/sabnzbd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/</HostDir>
+      <ContainerDir>/mnt/downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Downloads/incomplete/</HostDir>
+      <ContainerDir>/mnt/incomplete</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>SABNZBD_REL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Dir" Target="/sabnzbd" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/sabnzbd</Config>
+  <Config Name="Dowloads" Target="/mnt/downloads" Default="" Mode="rw" Description="Main download directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
+  <Config Name="Incomplete" Target="/mnt/incomplete" Default="" Mode="rw" Description="Directory for incomplete downloads (could be a subfolder in the download directory)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/incomplete/</Config>
+  <Config Name="SABnzbd Release" Target="SABNZBD_REL" Default="" Mode="" Description="Select if you want to download a stable or prerelease (valid options are 'lastest' and 'prerelease' without quotes - you can also set the version manual in this format: '3.0.1' or '3.0.0' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="TCP - WebGUI http" Target="8080" Default="" Mode="tcp" Description="WebGUI port http (don't change the IP adress or the port in the SABnzbd config itself - please note that if you change this value that it can happen that you have close and reopen the webpage after the initial setup)." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="TCP - WebGUI https" Target="9090" Default="" Mode="tcp" Description="WebGUI port for https - you can delete this value if you don't connect through https (don't change the IP adress or the port in the SABnzbd config itself - please note that if you change this value that it can happen that you have close and reopen the webpage after the initial setup)." Type="Port" Display="always" Required="false" Mask="false">9090</Config>
+  <Config Name="Data Permissions" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
+</Container>

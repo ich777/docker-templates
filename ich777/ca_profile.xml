@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Maintainer>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/avatar.jpg</Icon>
+  <Profile>
+    Creating Docker containers with a little different approach than most developers, the container only has the dependencies installed and also the start script and downloads the application itself on the first start and updates the application on every start/restart of the container.
+  </Profile>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <DonateText>If you like my work please consider Donating.</DonateText>
+</Maintainer>

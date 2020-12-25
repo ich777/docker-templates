@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DoH-Client</Name>
+  <Repository>ich777/doh-client</Repository>
+  <Registry>https://hub.docker.com/r/ich777/doh-client</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project/>
+  <Overview>This Container will create a DNS Server wich connects by default to Goole's &amp;amp; DNS.SB's DoH resolver with ECS disabled (you can change that simply by editing the 'doh-client.conf' in your root directory of the container)&#xD;
+&#xD;
+You easily can now hide your DNS querys from your ISP with this docker for your whole internal network, you can use it in combination with DoH-Server to protect even your mobile devices and encrypt all your querys.&#xD;
+&#xD;
+You can also use this infront of your PiHole to also block Ad's and with DoH-Server to secure your mobile devices.&#xD;
+&#xD;
+If you got any questions please post it in the support thread on the Unraid forums.&#xD;
+&#xD;
+I strongly recommend you to run the container in custom mode and give it a static IP address so that you expose all ports from the container and to avoid any network problems.&#xD;
+&#xD;
+Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
+&#xD;
+The Docker needs to be run in bridge mode and a Fixed IP address.&#xD;
+&#xD;
+This Docker is based on the DoH Client component from: https://github.com/m13253/dns-over-https</Overview>
+    <Category>Network:Other</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/DoH-Client.png</Icon>
+  <ExtraParams>--restart=unless-stopped --cap-add=NET_ADMIN --sysctl net.ipv4.ip_unprivileged_port_start=0</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
+  <Description>This Container will create a DNS Server wich connects by default to Goole's &amp;amp; DNS.SB's DoH resolver with ECS disabled (you can change that simply by editing the 'doh-client.conf' in your root directory of the container)&#xD;
+&#xD;
+You easily can now hide your DNS querys from your ISP with this docker for your whole internal network, you can use it in combination with DoH-Server to protect even your mobile devices and encrypt all your querys.&#xD;
+&#xD;
+You can also use this infront of your PiHole to also block Ad's and with DoH-Server to secure your mobile devices.&#xD;
+&#xD;
+If you got any questions please post it in the support thread on the Unraid forums.&#xD;
+&#xD;
+I strongly recommend you to run the container in custom mode and give it a static IP address so that you expose all ports from the container and to avoid any network problems.&#xD;
+&#xD;
+Update Notice: If you want to upgrade to a newer version of the DoH-Server just enter the preferred version number (eg. '2.1.2' without quotes, get them from here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to check on each container start if there is a new version available)&#xD;
+&#xD;
+The Docker needs to be run in bridge mode and a Fixed IP address.&#xD;
+&#xD;
+This Docker is based on the DoH Client component from: https://github.com/m13253/dns-over-https</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/doh-client</HostDir>
+      <ContainerDir>/DoH</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>DoH_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz</Value>
+      <Name>GO_DL_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Container Path" Target="/DoH" Default="" Mode="rw" Description="Container Path: /DoH" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/doh-client</Config>
+  <Config Name="DoH Version" Target="DoH_V" Default="" Mode="" Description="Find the versions here: https://github.com/m13253/dns-over-https/releases or set to 'latest' without quotes to download the latest version" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Golang Download URL" Target="GO_DL_URL" Default="" Mode="" Description="Container Variable: GO_DL_URL" Type="Variable" Display="advanced" Required="true" Mask="false">https://dl.google.com/go/go1.13.1.linux-amd64.tar.gz</Config>
+  <Config Name="UDP DNS Query Port" Target="53" Default="" Mode="udp" Description="UDP DNS Query Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">53</Config>
+  <Config Name="TCP DNS Query Port" Target="53" Default="" Mode="tcp" Description="TCP DNS Query Port" Type="Port" Display="advanced-hide" Required="true" Mask="false">53</Config>
+</Container>

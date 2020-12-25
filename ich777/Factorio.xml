@@ -1,37 +1,38 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Factorio</Name>
-  <Repository>dtandersen/factorio:stable</Repository>
-  <Registry>https://hub.docker.com/r/dtandersen/factorio/</Registry>
+  <Repository>factoriotools/factorio:stable</Repository>
+  <Registry>https://hub.docker.com/r/factoriotools/factorio/</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/79530-support-ich777-steamcmd-dockers/</Support>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://www.factorio.com/</Project>
   <Overview>This Docker Container will download the latest stable release of the game, generate the map and you're ready to play.&#xD;
 &#xD;
-If you want to play the latest beta release of the game change the repository to "dtandersen/factorio:latest" in Advanced View.&#xD;
+If you want to play the latest beta release of the game change the repository to "factoriotools/factorio:latest" in Advanced View.&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.
 &#xD;
-The Docker Container is originaly created by dtandersen.</Overview>
+The Docker Container is originaly created by dtandersen and now moved to factoriotools.</Overview>
   <Beta>False</Beta>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/Factorio.xml</TemplateURL>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/factorio.png</Icon>
-  <ExtraParams>--restart=always</ExtraParams>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
-  <DonateText/>
-  <DonateLink/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker Container will download the latest stable release of the game, generate the map and you're ready to play.&#xD;
 &#xD;
-If you want to play the latest beta release of the game change the repository to "dtandersen/factorio:latest" in Advanced View.&#xD;
+If you want to play the latest beta release of the game change the repository to "factoriotools/factorio:latest" in Advanced View.&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.
 &#xD;
-The Docker Container is originaly created by dtandersen.</Description>
+The Docker Container is originaly created by dtandersen and now moved to factoriotools.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -44,7 +45,7 @@ The Docker Container is originaly created by dtandersen.</Description>
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/factorio/</HostDir>
+      <HostDir>/mnt/cache/appdata/factorio/</HostDir>
       <ContainerDir>/factorio</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -63,7 +64,7 @@ The Docker Container is originaly created by dtandersen.</Description>
   </Environment>
   <Labels/>
   <Config Name="UDP" Target="34197" Default="" Mode="udp" Description="Container Port: 34197" Type="Port" Display="always" Required="false" Mask="false">34197</Config>
-  <Config Name="Path" Target="/factorio" Default="" Mode="rw" Description="Container Path: /factorio" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/factorio/</Config>
+  <Config Name="Path" Target="/factorio" Default="" Mode="rw" Description="Container Path: /factorio" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/factorio/</Config>
   <Config Name="PUID" Target="PUID" Default="" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced-hide" Required="false" Mask="false">100</Config>
 </Container>

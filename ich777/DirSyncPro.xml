@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DirSyncPro</Name>
+  <Repository>ich777/dirsyncpro</Repository>
+  <Registry>https://hub.docker.com/r/ich777/dirsyncpro/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.dirsyncpro.org/</Project>
+  <Overview>This Docker will download and install the Runtime and also DirSyncPro with optional encryption by CryFS.&#xD;
+You can sync your files to another offsite SMB (is removed in the latest version, please use Unassigned Devices Plugin in Unraid and mount the share with the 'local' option), FTP or WebDAV share also don't forget to specify a path where your source files are.&#xD;
+You can also use this tool to duplicate your files on the server to another directory.&#xD;
+ENCRYPTION: If you want to use encryption by CryFS you can enable it in the variables below and the mounted folder will be automaticaly encrypted (smb: '/mnt/smb' - ftp: '/mnt/ftp' - webdav: '/mnt/webdav' - local: if you set the type to 'local' you must set the container mountpoint to: '/mnt/local'). Please also note if you set up a encrypted share for the first time the destination folder should be empty since CryFS will create a folder with the basic information for the encryption and all the split files (don't delete any folder since it can corrupt files). The docker will automaticaly create a directory named 'cryfs' in the main directory of DirSyncPro, please copy the 'cryfs.cfg' to a save place since you will need this file and your selected password for CryFS to decrypt the files.&#xD;
+Restoring of encrypted files on another computer/server with this Docker: start the container once with CryFS enabled but set no password, the container will start and create the 'cryfs' directory, stop the container copy your cryfs.cfg in the 'cryfs' folder edit the Docker and set the apropriate password and blocksize for the cryfs.cfg and restart the Docker. Now you can sync from/or to your encrypted share again.&#xD;
+&#xD;
+Also there is a commandline mode without the GUI if you configured all right under the 'Show more settings' section, please be sure that you put your config file in the main directory of the Docker and specify it.</Overview>
+  <Category>Backup: Network:Other Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/dirsyncpro.png</Icon>
+  <ExtraParams>--restart=unless-stopped --cap-add SYS_ADMIN --cap-add DAC_READ_SEARCH</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will download and install the Runtime and also DirSyncPro with optional encryption by CryFS.&#xD;
+You can sync your files to another offsite SMB (is removed in the latest version, please use Unassigned Devices Plugin in Unraid and mount the share with the 'local' option), FTP or WebDAV share also don't forget to specify a path where your source files are.&#xD;
+You can also use this tool to duplicate your files on the server to another directory.&#xD;
+ENCRYPTION: If you want to use encryption by CryFS you can enable it in the variables below and the mounted folder will be automaticaly encrypted (smb: '/mnt/smb' - ftp: '/mnt/ftp' - webdav: '/mnt/webdav' - local: if you set the type to 'local' you must set the container mountpoint to: '/mnt/local'). Please also note if you set up a encrypted share for the first time the destination folder should be empty since CryFS will create a folder with the basic information for the encryption and all the split files (don't delete any folder since it can corrupt files). The docker will automaticaly create a directory named 'cryfs' in the main directory of DirSyncPro, please copy the 'cryfs.cfg' to a save place since you will need this file and your selected password for CryFS to decrypt the files.&#xD;
+Restoring of encrypted files on another computer/server with this Docker: start the container once with CryFS enabled but set no password, the container will start and create the 'cryfs' directory, stop the container copy your cryfs.cfg in the 'cryfs' folder edit the Docker and set the apropriate password and blocksize for the cryfs.cfg and restart the Docker. Now you can sync from/or to your encrypted share again.&#xD;
+&#xD;
+Also there is a commandline mode without the GUI if you configured all right under the 'Show more settings' section, please be sure that you put your config file in the main directory of the Docker and specify it.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/dirsyncpro</HostDir>
+      <ContainerDir>/dirsyncpro</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/</HostDir>
+      <ContainerDir>/mnt/sourcefiles</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>local</Value>
+      <Name>REMOTE_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REMOTE_DIR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REMOTE_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>REMOTE_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CRYFS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CRYFS_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>262144</Value>
+      <Name>CRYFS_BLOCKSIZE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>basicjre</Value>
+      <Name>RUNTIME_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://sourceforge.net/projects/directorysync/files/DirSync Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz</Value>
+      <Name>DL_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CMD_MODE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CMD_FILE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CRYFS_EXTRA_PARAMETERS</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Remote Type" Target="REMOTE_TYPE" Default="" Mode="" Description="Valid options are: local, smb (is removed in the latest version, please use Unassigned Devices Plugin in Unraid and mount the share with the 'local' option), ftp, webdav&#13;&#10;Note: if you enabled encryption with CryFS and set the type to 'local' you must set the container mountpoint to: '/mnt/local'" Type="Variable" Display="always" Required="true" Mask="false">local</Config>
+  <Config Name="Remote Adress" Target="REMOTE_DIR" Default="" Mode="" Description="Server to connect and eventually the subdirectory (for ftp: '192.168.0.1' or for webdav: 'https://nextcloud.host.com/remote.php/webdav' without quotes)&#13;&#10;The sahres are mounted inside the conatainer to '/mnt/ftp'&#13;&#10;(must be provided if ftp is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Remote Username" Target="REMOTE_USER" Default="" Mode="" Description="Username for the share (must be provided if ftp or webdav is used)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Remote Password" Target="REMOTE_PWD" Default="" Mode="" Description="Password for the share (must be provided if ftp or webdav is used)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Data Directory" Target="/dirsyncpro" Default="" Mode="rw" Description="Data directory for the container" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/dirsyncpro</Config>
+  <Config Name="Source Directory - Read Only" Target="/mnt/sourcefiles" Default="" Mode="ro" Description="You can change the Acces Mode from Read Only to Read/Write if you want to sync files back and forth." Type="Path" Display="always" Required="false" Mask="false">/</Config>
+  <Config Name="Webinterface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Enable CryFS Encryption" Target="CRYFS" Default="" Mode="" Description="Set to 'true' (without quotes) if you want to enable CryFS encryption." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CryFS Password" Target="CRYFS_PWD" Default="" Mode="" Description="Password for the Encryption/Decryption." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="CryFS Blocksize" Target="CRYFS_BLOCKSIZE" Default="32768" Mode="" Description="Set your blocksize for the encryped files in bytes (262144 Byte = 256 KiB)" Type="Variable" Display="always" Required="true" Mask="false">262144</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Container Variable: RUNTIME_NAME" Type="Variable" Display="advanced-hide" Required="true" Mask="false">basicjre</Config>
+  <Config Name="DirSyncPro Download URL" Target="DL_URL" Default="" Mode="" Description="Change only if you know what you are doing" Type="Variable" Display="advanced" Required="true" Mask="false">https://sourceforge.net/projects/directorysync/files/DirSync Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz</Config>
+  <Config Name="CMD Mode" Target="CMD_MODE" Default="" Mode="" Description="Set to 'true' (without quotes) if you want to enable the command line mode without the GUI, otherwise leave blank." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="CMD File" Target="CMD_FILE" Default="" Mode="" Description="Please be sure to put the CMD file in the main directory of the Docker and only specify it without the extension for example if the file is named: 'Unraid.dsc' put in 'Unraid' (without quotes)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="CryFS Extra Parameters" Target="CRYFS_EXTRA_PARAMETERS" Default="" Mode="" Description="Extra parameters for CrFS if needed (eg: '--unmount-idle 30' without quotes)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

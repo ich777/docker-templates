@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Xonotic</Name>
+  <Repository>ich777/xonotic</Repository>
+  <Registry>https://hub.docker.com/r/ich777/xonotic/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.xonotic.org/</Project>
+  <Overview>This Docker will download and install the preferred version of Xonotic.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: If you want to update the game simply change the version number.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/xonotic.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will download and install the preferred version of Xonotic.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: If you want to update the game simply change the version number.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>26000</HostPort>
+        <ContainerPort>26000</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/xonotic</HostDir>
+      <ContainerDir>/serverdata/serverfiles</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0.8.2</Value>
+      <Name>GAME_VERSION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://dl.xonotic.org/</Value>
+      <Name>BASIC_URL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/xonotic</Config>
+  <Config Name="EXTRA_GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UDP - Game Port" Target="26000" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">26000</Config>
+  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the preferred game version to download or update." Type="Variable" Display="always" Required="true" Mask="false">0.8.2</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Basic Download URL" Target="BASIC_URL" Default="" Mode="" Description="Looks something like this: https://dl.xonotic.org/" Type="Variable" Display="advanced" Required="true" Mask="false">https://dl.xonotic.org/</Config>
+</Container>

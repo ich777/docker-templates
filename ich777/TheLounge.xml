@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TheLounge</Name>
+  <Repository>ich777/thelounge</Repository>
+  <Registry>https://hub.docker.com/r/ich777/thelounge</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://thelounge.chat/</Project>
+  <Overview>TheLonge is the self-hosted web IRC client.&#xD;
+Modern features brought to IRC, Always connected, Responsive interface, Synchronized experience&#xD;
+The Lounge is the official and community-managed fork of Shout, by Mattias Erming.&#xD;
+&#xD;
+Multiple Users: If you want to create a new user simply change the name in the 'Username' variable and also the 'Password' variable, this will have no impact to existing users (the 'Username' variable can't be empty and should always have a username in it that is available on the server).</Overview>
+  <Category>Network:Other Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:9000]</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/thelounge.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>TheLonge is the self-hosted web IRC client.&#xD;
+Modern features brought to IRC, Always connected, Responsive interface, Synchronized experience&#xD;
+The Lounge is the official and community-managed fork of Shout, by Mattias Erming.&#xD;
+&#xD;
+Multiple Users: If you want to create a new user simply change the name in the 'Username' variable and also the 'Password' variable, this will have no impact to existing users (the 'Username' variable can't be empty and should always have a username in it that is available on the server).</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>9000</HostPort>
+        <ContainerPort>9000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/thelounge</HostDir>
+      <ContainerDir>/thelounge</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>USERPASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>yes</Value>
+      <Name>SAVELOG</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Path" Target="/thelounge" Default="" Mode="rw" Description="Path where the configuration, users, logs are located." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/thelounge</Config>
+  <Config Name="Username" Target="USERNAME" Default="" Mode="" Description="Username (this field creates the user, if you want to create another user just change this field and it creates a new user - don't forget to change the password). NOTE: This field can't be empty, it should always have a user in it that is available for login. No spaces or special characters allowed!" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Password" Target="USERPASSWORD" Default="" Mode="" Description="User Password (the initial password of the user, a change of the password in this variable will not change the password if it was already changed through the WebUI)." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Save Log to Disk" Target="SAVELOG" Default="" Mode="" Description="Choose if the log should be saved to disk or not (valid options are: 'yes' or 'no')" Type="Variable" Display="always" Required="true" Mask="false">yes</Config>
+  <Config Name="Web UI" Target="9000" Default="" Mode="tcp" Description="TCP WebUI Port" Type="Port" Display="always" Required="true" Mask="false">9000</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+</Container>

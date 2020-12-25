@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>DebianBuster-Nvidia</Name>
+  <Repository>ich777/debian-buster:nvidia-steam</Repository>
+  <Registry>https://hub.docker.com/r/ich777/debian-buster</Registry>
+  <Network>br0</Network>
+  <Beta>True</Beta>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.debian.org/</Project>
+  <Overview>This Container is a full Debian Buster Xfce4 Desktop environment with Nvidia Drivers installed also it has a noVNC webGUI and all the basic tools pre-installed.&#xD;
+&#xD;
+I mainly created it for playing Steam games with In Home Streaming to my Raspberry Pi, an older laptop and my mobile phone (please not that In Home Streaming also works over the internet).&#xD;
+All games including windows games through Proton should just works fine, a few tested games where: Pikuniku, Dirt Rally, Broforce, Astroneer, CS: Source.&#xD;
+&#xD;
+ROOT ACCESS: 1. Open up your WebGUI 2. Open up a terminal 3. Type in 'su' 4. Type in your password that you've set (no screenoutput is shown if you type in passwords in Linux) 5. Press Enter 6. You should now be root.&#xD;
+&#xD;
+ATTENTION: This container needs the Linuxserver.io Plugin installed correctly, please be sure that you dont't use the primary graphics card that is set in the BIOS with this contianer! If you have a monitor attached please leave the variable: 'Xorg Dsplay Output Port' empty!!!&#xD;
+&#xD;
+If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
+&#xD;
+Storage Note: All things that are saved in the container should be in the home or a subdirectory in your homefolder, all files that are store outside your homefolder are not persistant and will be wiped if there is an update of the container or you change something in the template.&#xD;
+You can also mount any directory from your server to /mnt/... (I recommend you to do this if you got a big Steam Library and save everything there).&#xD;
+&#xD;
+CONTROLLER: Note that the controller works in Big Picture mode but will not work in the games since Unraid doesn't have the kernel modules 'joydev' and 'uinput' loaded/available. If you want to use the controller please map the buttons to key inputs and everything works just fine.&#xD;
+&#xD;
+NETWORK MODE: If you want to use the container as a Steam In Home Streaming host device you should set the network type to bridge and assign it it's own IP, if you don't do this the traffic will be routed through the internet since Steam thinks you are on a different network.&#xD;
+&#xD;
+ATTENTION: This container is not finished yet and currently in alpha state.&#xD;
+&#xD;
+If you got any questions, suggestions for improvements or can help with the password issue above please feel free to open an issue on my Github or write a forum post.</Overview>
+  <Category>Productivity: Tools:System</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/debian-nvidia.png</Icon>
+  <ExtraParams>--restart=unless-stopped --shm-size=2G --runtime=nvidia --device=/dev/tty35:/dev/tty0 --device=/dev/tty36:/dev/tty1 --device=/dev/input:/dev/input</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Container is a full Debian Buster Xfce4 Desktop environment with Nvidia Drivers installed also it has a noVNC webGUI and all the basic tools pre-installed.&#xD;
+&#xD;
+I mainly created it for playing Steam games with In Home Streaming to my Raspberry Pi, an older laptop and my mobile phone (please not that In Home Streaming also works over the internet).&#xD;
+All games including windows games through Proton should just works fine, a few tested games where: Pikuniku, Dirt Rally, Broforce, Astroneer, CS: Source.&#xD;
+&#xD;
+ROOT ACCESS: 1. Open up your WebGUI 2. Open up a terminal 3. Type in 'su' 4. Type in your password that you've set (no screenoutput is shown if you type in passwords in Linux) 5. Press Enter 6. You should now be root.&#xD;
+&#xD;
+ATTENTION: This container needs the Linuxserver.io Plugin installed correctly, please be sure that you dont't use the primary graphics card that is set in the BIOS with this contianer! If you have a monitor attached please leave the variable: 'Xorg Dsplay Output Port' empty!!!&#xD;
+&#xD;
+If you want to install some other application you can do that by creating a user.sh and mounting it to the container to /opt/scripts/user.sh (a standard bash script should do the trick).&#xD;
+&#xD;
+Storage Note: All things that are saved in the container should be in the home or a subdirectory in your homefolder, all files that are store outside your homefolder are not persistant and will be wiped if there is an update of the container or you change something in the template.&#xD;
+You can also mount any directory from your server to /mnt/... (I recommend you to do this if you got a big Steam Library and save everything there).&#xD;
+&#xD;
+CONTROLLER: Note that the controller works in Big Picture mode but will not work in the games since Unraid doesn't have the kernel modules 'joydev' and 'uinput' loaded/available. If you want to use the controller please map the buttons to key inputs and everything works just fine.&#xD;
+&#xD;
+NETWORK MODE: If you want to use the container as a Steam In Home Streaming host device you should set the network type to bridge and assign it it's own IP, if you don't do this the traffic will be routed through the internet since Steam thinks you are on a different network.&#xD;
+&#xD;
+ATTENTION: This container is not finished yet and currently in alpha state.&#xD;
+&#xD;
+If you got any questions, suggestions for improvements or can help with the password issue above please feel free to open an issue on my Github or write a forum post.</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/debian-buster-nvidia</HostDir>
+      <ContainerDir>/debian</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>ROOT_PWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NV_DRV_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>-a -N -q --install-libglvnd --ui=none --no-kernel-module</Value>
+      <Name>NVIDIA_BUILD_OPTS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>:0</Value>
+      <Name>DISPLAY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>true</Value>
+      <Name>ENABLE_VNC_SRV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>DFP_NR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>V_TERM_NR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PCI_ADDR</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>en_US.UTF-8 UTF-8</Value>
+      <Name>USER_LOCALES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Home Directory" Target="/debian" Default="" Mode="rw" Description="All things that are saved in the container should be in the this or a subdirectory in of this folder, all files that are store outside this folder are not persistant and will be wiped if there is an update of the container or you change something in the template." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/debian-buster-nvidia</Config>
+  <Config Name="TCP - VNC Port" Target="8080" Default="" Mode="tcp" Description="noVNC Port" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="Root Password" Target="ROOT_PWD" Default="" Mode="" Description="Please choose a strong password for your root account!" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="GPU UUID" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Enter the GPU UUID here." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Driver Capabilities" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="always" Required="true" Mask="false">all</Config>
+  <Config Name="Host NV Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="Leave empty and the container tries to get your driver version that is installed on the Host." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Device PCI Address" Target="PCI_ADDR" Default="" Mode="" Description="Leave empty and the container tries to get your PCI Address (works only if you got one GPU installed - if you enter it manually put it in this format 'PCI:01:00:0' or 'PCI:03:00:0')." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Nvidia Driver Build Options" Target="NVIDIA_BUILD_OPTS" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="always" Required="true" Mask="false">-a -N -q --install-libglvnd --ui=none --no-kernel-module</Config>
+  <Config Name="Main Display" Target="DISPLAY" Default="" Mode="" Description="Change only if you know what you are doing!" Type="Variable" Display="always" Required="true" Mask="false">:0</Config>
+  <Config Name="Enable VNC Server" Target="ENABLE_VNC_SRV" Default="" Mode="" Description="Set to 'true' if you want to enable the VNC Server and the WebGUI otherwise leave empty." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+  <Config Name="Xorg Display Output Port" Target="DFP_NR" Default="" Mode="" Description="Change only if you know what you are doing (If the container doesn't start up propperly try a different number 0, 1, 2, 3 - on my GTX1650Ti: '0', on my GTX1050Ti '1', leave empty if you got a monitor attached to the used GPU also please note that you are not using the primary GPU set in BIOS with this container)." Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="Xorg VTerminal" Target="V_TERM_NR" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="Locales" Target="USER_LOCALES" Default="" Mode="" Description="Enter your prefered locales, you can find a full list of supported languages in: '/usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8',...)" Type="Variable" Display="advanced" Required="true" Mask="false">en_US.UTF-8 UTF-8</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+</Container>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-mft-tools/master/mft-tools.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Category>Productivity: Tools:System</Category>
+  <Name>Mellanox-Firmware-Tools</Name>
+  <Description>This Plugin will install all necessary modules and dependencies for your Mellanox network card. With this tool you can flash/modify your Mellanox network card (command line only) and also read out the current temperature on the settings/plugin page.</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mft-tools.png</Icon>
+</Containers>

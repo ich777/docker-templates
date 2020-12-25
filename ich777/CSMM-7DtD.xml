@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>CSMM-7DtD</Name>
+  <Repository>ich777/csmm-7dtd</Repository>
+  <Registry>https://hub.docker.com/r/ich777/csmm-7dtd/</Registry>
+  <Network>bridge</Network>
+  <Beta>True</Beta>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.csmm.app/</Project>
+  <Overview>This Docker will install and download CSMM for 7DtD (CatalysmsServerManager).&#xD;
+It's a powerfull Server Manager with Server automation, Discord notifications, High ping kicker, Country ban, Player tracking, Ingame commands, Economy system, Discord integration, Support ticket system, Server analytics,... for 7DtD.&#xD;
+&#xD;
+UPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container (don't forget to turn it off after the update).</Overview>
+  <Category>GameServers: Network:Other Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:1337]/</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/csmm.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will install and download CSMM for 7DtD (CatalysmsServerManager).&#xD;
+It's a powerfull Server Manager with Server automation, Discord notifications, High ping kicker, Country ban, Player tracking, Ingame commands, Economy system, Discord integration, Support ticket system, Server analytics,... for 7DtD.&#xD;
+&#xD;
+UPDATE NOTICE: Simply set the 'Force Update' to 'true' and restart the container (don't forget to turn it off after the update).</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>1337</HostPort>
+        <ContainerPort>1337</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3306</HostPort>
+        <ContainerPort>3306</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/csmm-7dtd</HostDir>
+      <ContainerDir>/csmm-7dtd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>HOSTNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>STEAM_API_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>BOTTOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CLIENTSECRET</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>CLIENTID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>90</Value>
+      <Name>DB_BKP_INTERV</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>FORCE_UPDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>info</Value>
+      <Name>CSMM_LOGLEVEL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://github.com/CatalysmsServerManager/7-days-to-die-server-manager/archive/master.zip</Value>
+      <Name>CSMM_DL_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="ServerFiles" Target="/csmm-7dtd" Default="" Mode="rw" Description="Container Path: /csmm-7dtd" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/csmm-7dtd</Config>
+  <Config Name="Hostname" Target="HOSTNAME" Default="" Mode="" Description="Must be in this exact format: 'https://www.server.org' (without quotes, no path or locations allowed only subdomains and with no trailing '/')." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Steam API Key" Target="STEAM_API_KEY" Default="" Mode="" Description="Steam API Key goes here (you can get it from: https://steamcommunity.com/dev/apikey)." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Dicord Bot Token" Target="BOTTOKEN" Default="" Mode="" Description="Your Discord Bot Token (you can get it from here: https://discordapp.com/developers/applications)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Discord Client Secret" Target="CLIENTSECRET" Default="" Mode="" Description="Your Discord Client Secret (you can get it from here: https://discordapp.com/developers/applications)" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Discord Client ID" Target="CLIENTID" Default="" Mode="" Description="Your Discord Client ID (you can get it from here: https://discordapp.com/developers/applications)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Backup Interval" Target="DB_BKP_INTERV" Default="" Mode="" Description="Specify the database backup interval in seconds (saved to the ../Database/7dtd.sql)." Type="Variable" Display="always" Required="true" Mask="false">90</Config>
+  <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' to force an update." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Log Level" Target="CSMM_LOGLEVEL" Default="" Mode="" Description="Log level (valid are: ‘blank’, ‘error’, ‘warn’, ‘info’, ‘debug’, ‘verbose’, ‘silly’)" Type="Variable" Display="always" Required="false" Mask="false">info</Config>
+  <Config Name="Web Port" Target="1337" Default="" Mode="tcp" Description="Please note that you should reverse proxy the server trough nginx, apache or any other reverse proxy software to your Hostname as filled in above." Type="Port" Display="always" Required="true" Mask="false">1337</Config>
+  <Config Name="Maria DB Port" Target="3306" Default="" Mode="tcp" Description="Only needed if you want to connect to the database." Type="Port" Display="always" Required="false" Mask="false">3306</Config>
+  <Config Name="CSMM Download URL" Target="CSMM_DL_URL" Default="" Mode="" Description="Only change if you are know what you are doing." Type="Variable" Display="advanced" Required="true" Mask="false">https://github.com/CatalysmsServerManager/7-days-to-die-server-manager/archive/master.zip</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
