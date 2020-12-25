@@ -3,7 +3,7 @@
   <PluginURL>https://raw.githubusercontent.com/ich777/unraid-nvidia-driver/master/nvidia-driver.plg</PluginURL>
   <PluginAuthor>ich777</PluginAuthor>
   <Beta>False</Beta>
-  <Category>Productivity: Tools:System</Category>
+  <Category>Productivity: Tools:System Drivers:</Category>
   <Name>Nvidia-Driver</Name>
   <Description>This Plugin will install all necessary modules and dependencies for your Nvidia Graphcis Card so that you can make use of it in your Docker containers. In the settings/plugins menu you find your UUID of your graphics card(s). You can also choose your preferred version of the Nvidia drivers, by default it will always grab the latest driver version that is availabe for the current Unraid build.</Description>
   <Support>https://forums.unraid.net/topic/98978-plugin-nvidia-driver/</Support>
