@@ -104,12 +104,12 @@ Database lockups: If you got problems where the database lockes up you should sw
       <Mode/>
     </Variable>
     <Variable>
-      <Value>0</Value
+      <Value>180</Value
       <Name>PHOTOPRISM_AUTO_INDEX</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>0</Value
+      <Value>180</Value
       <Name>PHOTOPRISM_AUTO_IMPORT</Name>
       <Mode/>
     </Variable>
@@ -188,8 +188,8 @@ Database lockups: If you got problems where the database lockes up you should sw
   <Config Name="WebGUI Port" Target="2342" Default="" Mode="tcp" Description="WebGUI Port" Type="Port" Display="always" Required="false" Mask="false">2342</Config>
   <Config Name="Photoprims Database Type" Target="PHOTOPRISM_DATABASE_DRIVER" Default="" Mode="" Description="Choose if you want to use the builtin 'sqlite' database or a 'mysql' based database (If you got problems where the database lockes up you should switch to mysql but you have to also setup a dedicated database for that for example 'MariaDB' from Linuxserver.io)" Type="Variable" Display="always" Required="true" Mask="false">sqlite</Config>
   <Config Name="MySQL Database Connection" Target="PHOTOPRISM_DATABASE_DSN" Default="" Mode="" Description="Needs to be filled out if you are using a 'mysql' based databyse type (it has to be filled in exact this format: 'DBUSER:DBPASSWORD@tcp(DBIP:DBPORT)/photoprism?parseTime=true' all values in CAPS have to be replaced with your credentials and without quotes)" Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Webdav Autoindex - Safety Delay" Target="PHOTOPRISM_AUTO_INDEX" Default="" Mode="" Description="Set the safety delay for the Webdav Autoindexing in seconds (set to '-1' to disable set to '0' to enable the default value of 15 minutes or your preferred value in seconds)" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
-  <Config Name="Webdav Autoimport- Safety Delay" Target="PHOTOPRISM_AUTO_IMPORT" Default="" Mode="" Description="Set the safety delay for the Webdav Autoimport in seconds (set to '-1' to disable set to '0' to enable the default value of 15 minutes or your preferred value in seconds)" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+  <Config Name="Webdav Autoindex - Safety Delay" Target="PHOTOPRISM_AUTO_INDEX" Default="" Mode="" Description="Set the safety delay for the Webdav Autoindexing in seconds (set to '-1' to disable set to '0' to enable the default value of 15 minutes or your preferred value in seconds)" Type="Variable" Display="always" Required="false" Mask="false">180</Config>
+  <Config Name="Webdav Autoimport- Safety Delay" Target="PHOTOPRISM_AUTO_IMPORT" Default="" Mode="" Description="Set the safety delay for the Webdav Autoimport in seconds (set to '-1' to disable set to '0' to enable the default value of 15 minutes or your preferred value in seconds)" Type="Variable" Display="always" Required="false" Mask="false">180</Config>
   <Config Name="Settings Hidden" Target="PHOTOPRISM_SETTINGS_HIDDEN" Default="" Mode="" Description="Users can not view or change settings (Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="On-Demand Rendering" Target="PHOTOPRISM_THUMB_UNCACHED" Default="" Mode="" Description="Enable on-demand thumbnail rendering (high memory and cpu usage - Valid options: 'true' or 'false')" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
   <Config Name="Tumbnail Size Limit" Target="PHOTOPRISM_THUMB_SIZE" Default="" Mode="" Description="Pre-rendered thumbnail size limit (default 2048, min 720, max 7680)" Type="Variable" Display="advanced" Required="false" Mask="false">2048</Config>
