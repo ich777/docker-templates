@@ -104,12 +104,12 @@ Database lockups: If you got problems where the database lockes up you should sw
       <Mode/>
     </Variable>
     <Variable>
-      <Value>180</Value
+      <Value>180</Value>
       <Name>PHOTOPRISM_AUTO_INDEX</Name>
       <Mode/>
     </Variable>
     <Variable>
-      <Value>180</Value
+      <Value>180</Value>
       <Name>PHOTOPRISM_AUTO_IMPORT</Name>
       <Mode/>
     </Variable>
