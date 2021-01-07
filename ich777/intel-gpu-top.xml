@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/intel-gpu-top/master/intel-gpu-top.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Category>Productivity: Tools:System</Category>
+  <Name>Intel-GPU-TOP</Name>
+  <Description>This Plugin adds the tool 'intel_gpu_top' to your unRAID server and also enables your Intel iGPU from the installation of this plugin, so no editis to the 'go' file or creation of other files are necessary.&#xD;
+To see the usage of your iGPU open up the unRAID Terminal and type in 'intel_gpu_top' (without quotes).&#xD;
+This Plugin is based on parts of the Intel-GPU-Tools package and containes only 'intel_gpu_top' to monitor your iGPU usage natively in a unRAID Terminal.</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/intel.png</Icon>
+</Containers>
