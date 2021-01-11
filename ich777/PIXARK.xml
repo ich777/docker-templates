@@ -97,7 +97,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
-      <Value>PIXARK Docker</Value>
+      <Value>PIXARKDocker</Value>
       <Name>SERVER_NAME</Name>
       <Mode/>
     </Variable>
@@ -143,7 +143,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="UDP2 - Cube Port" Target="27018" Default="" Mode="udp" Description="UDP Cube Port (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">27018</Config>
   <Config Name="UDP3 - Query Port" Target="27016" Default="" Mode="udp" Description="UDP Query Port (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">27016</Config>
   <Config Name="Map" Target="MAP" Default="TheIsland" Mode="" Description="Container Variable: MAP" Type="Variable" Display="always-hide" Required="true" Mask="false">CubeWorld_Light</Config>
-  <Config Name="Server Name" Target="SERVER_NAME" Default="" Mode="" Description="Leave empty if you want to use the settings from GameUserSettings.ini (this field accepts no spaces)" Type="Variable" Display="always-hide" Required="false" Mask="false">PIXARK Docker</Config>
+  <Config Name="Server Name" Target="SERVER_NAME" Default="" Mode="" Description="Leave empty if you want to use the settings from GameUserSettings.ini (this field accepts no spaces)" Type="Variable" Display="always-hide" Required="false" Mask="false">PIXARKDocker</Config>
   <Config Name="Server Password" Target="SRV_PWD" Default="" Mode="" Description="Leave empty if you want to use the settings from GameUserSettings.ini (this field accepts no spaces)" Type="Variable" Display="always-hide" Required="false" Mask="false">Docker</Config>
   <Config Name="Server Admin Password" Target="SRV_ADMIN_PWD" Default="" Mode="" Description="Leave empty if you want to use the settings from GameUserSettings.ini (this field accepts no spaces)" Type="Variable" Display="always-hide" Required="false" Mask="false">adminDocker</Config>
   <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters seperated with ? and start with a ? (don't put spaces in between eg: ?MaxPlayers=40?FastDecayUnsnappedCoreStructures=true)" Type="Variable" Display="always-hide" Required="false" Mask="false">?MaxPlayers=10</Config>
