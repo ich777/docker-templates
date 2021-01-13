@@ -257,6 +257,11 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Name>DONTWAIT</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>master</Value>
+      <Name>GNIF_BRANCH</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Data Path" Target="/usr/src" Default="" Mode="rw" Description="Main Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/kernel</Config>
@@ -283,6 +288,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="nVidia Driver Version" Target="NV_DRV_V" Default="" Mode="" Description="nVidia Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 440.82)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">latest</Config>
   <Config Name="DigitalDevices Driver Version" Target="DD_DRV_V" Default="" Mode="" Description="DigitalDevices Driver Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 0.9.37)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">latest</Config>
   <Config Name="LibreELEC Driver Version" Target="LE_DRV_V" Default="" Mode="" Description="LibreELEC Driver Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.4.0)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">latest</Config>
+  <Config Name="gnif/vendor-reset Branch" Target="GNIF_BRANCH" Default="" Mode="" Description="Enter the preferred branch that you want to install (eg: 'master', 'feature/audio_reset',... source and branches here: https://github.com/gnif/vendor-reset/tree/master)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">master</Config>
   <Config Name="Seccomp Version" Target="SECCOMP_V" Default="" Mode="" Description="Seccomp Version (set to 'latest' and the container tries to get the latest version from GitHub or enter you preferred version number eg: 2.4.3)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">latest</Config>
   <Config Name="libnvidia-container Version" Target="LIBNVIDIA_CONTAINER_V" Default="" Mode="" Description="libnvidia-container Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">latest</Config>
   <Config Name="container-toolkit Version" Target="CONTAINER_TOOLKIT_V" Default="" Mode="" Description="container-toolkit Version (set to 'latest' and the container tries to get the latest version or enter you preferred version number eg: 1.1.1)" Type="Variable" Display="advanced-hide" Required="true" Mask="false">latest</Config>
