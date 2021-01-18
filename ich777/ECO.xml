@@ -15,8 +15,6 @@ ATTENTION: First Startup can take very long since it downloads the gameserver fi
 &#xD;
 PASSWORD: The initial password is 'Docker'.&#xD;
 &#xD;
-ECO Management Window: You can connect to the ECO Management Window by going to: 'http://YOURSERVERIP:8080/vnc_auto.html' (without quotes - note that you must enable set 'Server Management' to 'true')&#xD;
-&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
@@ -35,8 +33,6 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 PASSWORD: The initial password is 'Docker'.&#xD;
-&#xD;
-ECO Management Window: You can connect to the ECO Management Window by going to: 'http://YOURSERVERIP:8080/vnc_auto.html' (without quotes - note that you must enable set 'Server Management' to 'true')&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
