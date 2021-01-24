@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Chrome</Name>
+  <Name>Chromium</Name>
   <Repository>ich777/chrome</Repository>
   <Registry>https://hub.docker.com/r/ich777/chrome/</Registry>
   <Network>bridge</Network>
@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://www.google.com/chrome/</Project>
-  <Overview>Google Chrome is a web browser developed by Google.</Overview>
+  <Overview>Chromium is a free and open-source software project developed by the Google-sponsored Chromium project.</Overview>
   <Category>Productivity: Tools:Utilities</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>false</TemplateURL>
@@ -20,7 +20,7 @@
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>Google Chrome is a web browser developed by Google.</Description>
+  <Description>Chromium is a free and open-source software project developed by the Google-sponsored Chromium project.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
