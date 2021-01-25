@@ -25,7 +25,7 @@ BETA Warning: Debian Bullseye is currently in the "testing" branch.</Overview>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/debian-bullseye.png</Icon>
-  <ExtraParams>--restart=unless-stopped --shm-size=2G --dns=10.0.0.3 </ExtraParams>
+  <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
