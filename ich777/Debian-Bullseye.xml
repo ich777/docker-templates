@@ -20,7 +20,7 @@ You also can reverse proxy this container with nginx or apache (for more info se
 &#xD;
 Storage Note: All things that are saved in the container should be in the home or a subdirectory in your homefolder, all files that are store outside your homefolder are not persistant and will be wiped if there is an update of the container or you change something in the template.&#xD;
 &#xD;
-ATTENTION: This container is not finished yet and currently in alpha state.</Overview>
+BETA Warning: Debian Bullseye is currently in the "testin" branch.</Overview>
   <Category>Productivity: Tools:System</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL/>
@@ -41,7 +41,7 @@ You also can reverse proxy this container with nginx or apache (for more info se
 &#xD;
 Storage Note: All things that are saved in the container should be in the home or a subdirectory in your homefolder, all files that are store outside your homefolder are not persistant and will be wiped if there is an update of the container or you change something in the template.&#xD;
 &#xD;
-ATTENTION: This container is not finished yet and currently in alpha state.</Description>
+BETA Warning: Debian Bullseye is currently in the "testin" branch.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
