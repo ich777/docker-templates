@@ -105,7 +105,7 @@ Console: To connect to the console open up the terminal on the host machine and 
   </Environment>
   <Labels/>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/fivem</Config>
-  <Config Name="ConfigFile" Target="GAME_CONFIG" Default="" Mode="" Description="You can edit the server.cfg after the first start." Type="Variable" Display="always" Required="false" Mask="false">server.cfg</Config>
+  <Config Name="ConfigFile" Target="GAME_CONFIG" Default="" Mode="" Description="You can edit the server.cfg after the first start (if you don't want to use the server.cfg then leave this field empty. For exampele: if you plan to use txAdmin you have to add another port in the template with the host and container port 40120, you then can connect to txAdmin with YOURSERVERIP:40120)." Type="Variable" Display="always" Required="false" Mask="false">server.cfg</Config>
   <Config Name="Start Variables" Target="START_VARS" Default="" Mode="" Description="Extra start variables." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Server Name" Target="SRV_NAME" Default="" Mode="" Description="Your Servername" Type="Variable" Display="always" Required="true" Mask="false"/>
   <Config Name="Server Key" Target="SERVER_KEY" Default="" Mode="" Description="Your Server Key from: https://keymaster.fivem.net/" Type="Variable" Display="always" Required="true" Mask="true"/>
