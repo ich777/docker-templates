@@ -5,19 +5,19 @@
   <Beta>True</Beta>
   <Category>Productivity: Tools:System Drivers:</Category>
   <Name>hpsahba</Name>
-  <Description>This Plugin enables/disables HBA mode on some HP Smart Array controllers and installs the tool 'hpsahba'.  
-As mentioned in the Github Repo: _CAUTION: This tool will destroy your data and may damage your hardware!_  
-For further information go to the source Github repository: https://github.com/im-0/hpsahba.  
-  
-Warning, this "workaround" comes with a few downsides:  
-- You have to set the controller type to SAT to get temperature readings.  
-- TRIM might now work (needs further testing).  
-  
-Tested on following hardware so far:  
-HP Smart Array P410i  
-HP Smart Array P420i Firmware Version 6.0  
-HP Smart Array P812  
-Hewlett-Packard Company Smart Array G6 controllers / P410 (PCI ID: 103c:323a, board ID: 0x3243103c, firmware: 6.64)  
+  <Description>This Plugin enables/disables HBA mode on some HP Smart Array controllers and installs the tool 'hpsahba'.&#xD;
+As mentioned in the Github Repo: CAUTION: This tool will destroy your data and may damage your hardware!&#xD;
+For further information go to the source Github repository: https://github.com/im-0/hpsahba.&#xD;
+&#xD;
+Warning, this "workaround" comes with a few downsides:&#xD;
+- You have to set the controller type to SAT to get temperature readings.&#xD;
+- TRIM might now work (needs further testing).&#xD;
+&#xD;
+Tested on following hardware so far:&#xD;
+HP Smart Array P410i&#xD;
+HP Smart Array P420i Firmware Version 6.0&#xD;
+HP Smart Array P812&#xD;
+Hewlett-Packard Company Smart Array G6 controllers / P410 (PCI ID: 103c:323a, board ID: 0x3243103c, firmware: 6.64)&#xD;
 Hewlett-Packard Company Smart Array G6 controllers / P212 (PCI ID: 103c:323a, board ID: 0x3241103c, firmware: 6.64)</Description>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/hdd.png</Icon>
