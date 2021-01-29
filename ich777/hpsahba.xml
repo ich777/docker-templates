@@ -20,5 +20,5 @@ HP Smart Array P812
 Hewlett-Packard Company Smart Array G6 controllers / P410 (PCI ID: 103c:323a, board ID: 0x3243103c, firmware: 6.64)  
 Hewlett-Packard Company Smart Array G6 controllers / P212 (PCI ID: 103c:323a, board ID: 0x3241103c, firmware: 6.64)</Description>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
-  <Icon>fa-hdd-o</Icon>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/hdd.png</Icon>
 </Containers>
