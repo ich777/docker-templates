@@ -126,6 +126,11 @@ Also there is a commandline mode without the GUI if you configured all right und
       <Name>CRYFS_EXTRA_PARAMETERS</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>START_PARAMS</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Remote Type" Target="REMOTE_TYPE" Default="" Mode="" Description="Valid options are: local, smb (is removed in the latest version, please use Unassigned Devices Plugin in Unraid and mount the share with the 'local' option), ftp, webdav&#13;&#10;Note: if you enabled encryption with CryFS and set the type to 'local' you must set the container mountpoint to: '/mnt/local'" Type="Variable" Display="always" Required="true" Mask="false">local</Config>
@@ -135,7 +140,7 @@ Also there is a commandline mode without the GUI if you configured all right und
   <Config Name="Data Directory" Target="/dirsyncpro" Default="" Mode="rw" Description="Data directory for the container" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/dirsyncpro</Config>
   <Config Name="Source Directory - Read Only" Target="/mnt/sourcefiles" Default="" Mode="ro" Description="You can change the Acces Mode from Read Only to Read/Write if you want to sync files back and forth." Type="Path" Display="always" Required="false" Mask="false">/</Config>
   <Config Name="Webinterface Port" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Enable CryFS Encryption" Target="CRYFS" Default="" Mode="" Description="Set to 'true' (without quotes) if you want to enable CryFS encryption." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Extra Start Parameters" Target="START_PARAMS" Default="" Mode="" Description="Set extra start parameters for DirSyncPro if needed otherwise leave empty (eg: '-schedule' to start the schedule engine automatically on start - keep in mind that you have to configure a job first for this to work otherwise you get a error message that no job for a schedule is configured)" Type="Variable" Display="always" Required="false" Mask="false"/>  <Config Name="Enable CryFS Encryption" Target="CRYFS" Default="" Mode="" Description="Set to 'true' (without quotes) if you want to enable CryFS encryption." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="CryFS Password" Target="CRYFS_PWD" Default="" Mode="" Description="Password for the Encryption/Decryption." Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="CryFS Blocksize" Target="CRYFS_BLOCKSIZE" Default="32768" Mode="" Description="Set your blocksize for the encryped files in bytes (262144 Byte = 256 KiB)" Type="Variable" Display="always" Required="true" Mask="false">262144</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
