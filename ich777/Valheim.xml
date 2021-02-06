@@ -13,7 +13,7 @@
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-SERVER BROWSER: It could take really long that the server shows up in the in game server list, if you want to connect directly simply go to the Steam Server Browser (View -> Servers -> Favourites -> Add Server -> SERVERIP:SERVERPORT+1 (eg: if the server port is 2456 then you have to enter something like: 192.168.0.1:2457) -> click on Add -> click on more time on Refresh, after that you can connect to the server.&#xD;
+SERVER BROWSER: It could take really long that the server shows up in the in game server list, if you want to connect directly simply go to the Steam Server Browser - View -> Servers -> Favourites -> Add Server -> SERVERIP:SERVERPORT+1 (eg: if the server port is 2456 then you have to enter something like: 192.168.0.1:2457) -> click on Add -> click on more time on Refresh, after that you can connect to the server with a double click.&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -32,7 +32,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
-SERVER BROWSER: It could take really long that the server shows up in the in game server list, if you want to connect directly simply go to the Steam Server Browser (View -> Servers -> Favourites -> Add Server -> SERVERIP:SERVERPORT+1 (eg: if the server port is 2456 then you have to enter something like: 192.168.0.1:2457) -> click on Add -> click on more time on Refresh, after that you can connect to the server.&#xD;
+SERVER BROWSER: It could take really long that the server shows up in the in game server list, if you want to connect directly simply go to the Steam Server Browser - View -> Servers -> Favourites -> Add Server -> SERVERIP:SERVERPORT+1 (eg: if the server port is 2456 then you have to enter something like: 192.168.0.1:2457) -> click on Add -> click on more time on Refresh, after that you can connect to the server with a double click.&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
