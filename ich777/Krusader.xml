@@ -13,7 +13,8 @@
 &#xD;
 Language Notice: Enter your prefered locales, you can find a full list of supported languages in: '/usr/share/i18n/SUPPORTED' simply open up a console from the Container and type in 'cat /usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8', 'fr_FR.UTF-8 UTF-8'...)&#xD;
 &#xD;
-ATTENTION: Wronge usage of this tool can lead to data loss, be carefull when using Krusader with Unraid, you can delete your whole array with a single button press if you don't be carefull!!!</Overview>
+ATTENTION: Wronge usage of this tool can lead to data loss, be carefull when using Krusader with Unraid.&#xD;
+You can delete your whole Array with a single button press if you don't be carefull!!!</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL/>
@@ -28,7 +29,8 @@ ATTENTION: Wronge usage of this tool can lead to data loss, be carefull when usi
 &#xD;
 Language Notice: Enter your prefered locales, you can find a full list of supported languages in: '/usr/share/i18n/SUPPORTED' simply open up a console from the Container and type in 'cat /usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8', 'fr_FR.UTF-8 UTF-8'...)&#xD;
 &#xD;
-ATTENTION: Wronge usage of this tool can lead to data loss, be carefull when using Krusader with Unraid, you can delete your whole array with a single button press if you don't be carefull!!!</Description>
+ATTENTION: Wronge usage of this tool can lead to data loss, be carefull when using Krusader with Unraid.&#xD;
+You can delete your whole Array with a single button press if you don't be carefull!!!</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
