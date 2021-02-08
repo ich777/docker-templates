@@ -65,7 +65,7 @@ You can delete your whole Array with a single button press if you don't be caref
       <Mode/>
     </Variable>
     <Variable>
-      <Value>1024</Value>
+      <Value>768</Value>
       <Name>CUSTOM_RES_H</Name>
       <Mode/>
     </Variable>
@@ -81,6 +81,6 @@ You can delete your whole Array with a single button press if you don't be caref
   <Config Name="TCP - VNC Port" Target="8080" Default="" Mode="tcp" Description="noVNC Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Locales - Language" Target="USER_LOCALES" Default="" Mode="" Description="Enter your prefered locales, you can find a full list of supported languages in: '/usr/share/i18n/SUPPORTED' simply open up a console from the Container and type in 'cat /usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8', 'fr_FR.UTF-8 UTF-8'...)" Type="Variable" Display="always" Required="true" Mask="false">en_US.UTF-8 UTF-8</Config>
   <Config Name="Custom Resolution Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Enter the preferred resolution width" Type="Variable" Display="always" Required="true" Mask="false">1280</Config>
-  <Config Name="Custom Resolution Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Enter the preferred resolution height" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
+  <Config Name="Custom Resolution Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Enter the preferred resolution height" Type="Variable" Display="always" Required="true" Mask="false">768</Config>
   <Config Name="Local Scaling" Target="NOVNC_RESIZE" Default="" Mode="" Description="Delete this value if you don't want local scaling." Type="Variable" Display="advanced" Required="true" Mask="false">scale</Config>
 </Container>
