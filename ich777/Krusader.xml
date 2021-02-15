@@ -17,7 +17,7 @@ ATTENTION: Wronge usage of this tool can lead to data loss, be carefull when usi
 You can delete your whole Array with a single button press if you don't be carefull!!!</Overview>
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/krusader.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
