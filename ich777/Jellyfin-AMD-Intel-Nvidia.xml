@@ -114,9 +114,9 @@ Nvidia Hardware transcoding:&#xD;
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/config" Default="/mnt/cache/appdata/Jellyfin-AMD-Nvidia" Mode="rw" Description="Data path where the configurations is saved" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jellyfin</Config>
-  <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Path to your Movie library." Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="TV Shows" Target="/tv" Default="" Mode="rw" Description="Path to your TV-Shows library." Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data Path" Target="/config" Default="" Mode="rw" Description="Main data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jellyfin</Config>
+  <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Path to your Movie library." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="TV Shows" Target="/tv" Default="" Mode="rw" Description="Path to your TV-Shows library." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Path to your Music library." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Cache path (strongly recommended to use)." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Device" Target="" Default="" Mode="" Description="Path to AMD or Intel device (fill in with '/dev/dri' without quotes if you want to use AMD or Intel hardware transcoding, otherwise delete this value)." Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
