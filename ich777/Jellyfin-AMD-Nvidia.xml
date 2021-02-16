@@ -4,6 +4,7 @@
   <Repository>ich777/jellyfin</Repository>
   <Registry>https://hub.docker.com/r/ich777/jellyfin</Registry>
   <Network>bridge</Network>
+  <Beta>True</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
