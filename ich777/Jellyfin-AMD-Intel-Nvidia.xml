@@ -96,7 +96,7 @@ Nvidia Hardware transcoding:&#xD;
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir/>
+      <HostDir>/mnt/cache/appdata/jellyfin/cache</HostDir>
       <ContainerDir>/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -118,7 +118,7 @@ Nvidia Hardware transcoding:&#xD;
   <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Path to your Movie library." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="TV Shows" Target="/tv" Default="" Mode="rw" Description="Path to your TV-Shows library." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Path to your Music library." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Cache path (strongly recommended to use)." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Metadata Cache" Target="/cache" Default="" Mode="rw" Description="Cache path (strongly recommended to use)." Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/jellyfin/cache</Config>
   <Config Name="Device" Target="" Default="" Mode="" Description="Path to AMD or Intel device (fill in with '/dev/dri' without quotes if you want to use AMD or Intel hardware transcoding, otherwise delete this value)." Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
   <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices - enter your GPU UUID here (only required if you plan to use Nvidia hardware transcoding otherwise leave empty, don't forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="http - WebGUI" Target="8096" Default="" Mode="tcp" Description="WebGUI Port http." Type="Port" Display="always" Required="false" Mask="false">8096</Config>
