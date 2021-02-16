@@ -15,7 +15,7 @@
 This version of Jellyfin is optimized for hardware transcoding on AMD Ryzen APU Platforms and also for Nvidia hardware transcoding - Nvidia-Driver Plugin needed (Intel hardware transcoding is only supported up to Coffe Lake 9th gen. for now).&#xD;
 &#xD;
 &#xD;
-AMD Hardware transcoding:&#xD;
+AMD Hardware transcoding (Please note that you have to be on Unraid 6.9.0beta35 to enable the moduel for AMD):&#xD;
 - Open up a Terminal from Unraid and type in: 'modprobe amdgpu' (without quotes or you edit your 'go' file to load it on every restart of Unraid - refer to the support thread)&#xD;
 - At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
 - In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
@@ -40,7 +40,7 @@ Nvidia Hardware transcoding:&#xD;
 This version of Jellyfin is optimized for hardware transcoding on AMD Ryzen APU Platforms and also for Nvidia hardware transcoding - Nvidia-Driver Plugin needed (Intel hardware transcoding is only supported up to Coffe Lake 9th gen. for now).&#xD;
 &#xD;
 &#xD;
-AMD Hardware transcoding:&#xD;
+AMD Hardware transcoding (Please note that you have to be on Unraid 6.9.0beta35 to enable the moduel for AMD):&#xD;
 - Open up a Terminal from Unraid and type in: 'modprobe amdgpu' (without quotes or you edit your 'go' file to load it on every restart of Unraid - refer to the support thread)&#xD;
 - At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
 - In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
