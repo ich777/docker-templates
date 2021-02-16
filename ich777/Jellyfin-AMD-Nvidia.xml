@@ -25,7 +25,7 @@ Nvidia Hardware transcoding:&#xD;
 - Turn on the 'Advanced View' here in the template and at 'Extra Parameters' add: '--runtime=nvidia'.&#xD;
 - At 'Nvidia Visible Devices' at the bottom here in the template add your GPU UUID.&#xD;
 - In Jellyfin select the NVENC Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8' (depending on the capabilities of your card), at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;</Overview>
-  <Category>Productivity: Tools:Utilities</Category>
+  <Category>MediaApp:Video MediaApp:Music</Category>
   <WebUI>http://[IP]:[PORT:8096]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jellyfin.png</Icon>
