@@ -1,10 +1,9 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>Jellyfin-AMD-Nvidia</Name>
+  <Name>Jellyfin-AMD-Intel-Nvidia</Name>
   <Repository>ich777/jellyfin</Repository>
   <Registry>https://hub.docker.com/r/ich777/jellyfin</Registry>
   <Network>bridge</Network>
-  <Beta>True</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
@@ -20,11 +19,16 @@ AMD Hardware transcoding (Please note that you have to be on Unraid 6.9.0beta35 
 - At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
 - In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
 &#xD;
+Intel Hardware transcoding:&#xD;
+- Download and install the Intel-GPU-TOP Plugin from the CA App&#xD;
+- At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
+- In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
+&#xD;
 Nvidia Hardware transcoding:&#xD;
 - Download and install the Nvidia-Driver Plugin from the CA App&#xD;
 - Turn on the 'Advanced View' here in the template and at 'Extra Parameters' add: '--runtime=nvidia'.&#xD;
 - At 'Nvidia Visible Devices' at the bottom here in the template add your GPU UUID.&#xD;
-- In Jellyfin select the NVENC Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8' (depending on the capabilities of your card), at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;</Overview>
+- In Jellyfin select the NVENC Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8' (depending on the capabilities of your card), at the bottom 'Throttle Transcoding' and click 'Save'.</Overview>
   <Category>MediaApp:Video MediaApp:Music</Category>
   <WebUI>http://[IP]:[PORT:8096]/</WebUI>
   <TemplateURL>false</TemplateURL>
@@ -45,11 +49,16 @@ AMD Hardware transcoding (Please note that you have to be on Unraid 6.9.0beta35 
 - At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
 - In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
 &#xD;
+Intel Hardware transcoding:&#xD;
+- Download and install the Intel-GPU-TOP Plugin from the CA App&#xD;
+- At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
+- In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
+&#xD;
 Nvidia Hardware transcoding:&#xD;
 - Download and install the Nvidia-Driver Plugin from the CA App&#xD;
 - Turn on the 'Advanced View' here in the template and at 'Extra Parameters' add: '--runtime=nvidia'.&#xD;
 - At 'Nvidia Visible Devices' at the bottom here in the template add your GPU UUID.&#xD;
-- In Jellyfin select the NVENC Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8' (depending on the capabilities of your card), at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;</Description>
+- In Jellyfin select the NVENC Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8' (depending on the capabilities of your card), at the bottom 'Throttle Transcoding' and click 'Save'.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -105,12 +114,12 @@ Nvidia Hardware transcoding:&#xD;
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/config" Default="" Mode="rw" Description="Data path where the configurations is saved" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jellyfin</Config>
+  <Config Name="Data Path" Target="/config" Default="/mnt/cache/appdata/Jellyfin-AMD-Nvidia" Mode="rw" Description="Data path where the configurations is saved" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jellyfin</Config>
   <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Path to your Movie library." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="TV Shows" Target="/tv" Default="" Mode="rw" Description="Path to your TV-Shows library." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Path to your Music library." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Cache path (strongly recommended to use)." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Device" Target="" Default="" Mode="" Description="Path for AMD (fill in with '/dev/dri' without quotes if you want to use AMD hardware transcoding, otherwise delete this value)." Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
+  <Config Name="Device" Target="" Default="" Mode="" Description="Path to AMD or Intel device (fill in with '/dev/dri' without quotes if you want to use AMD or Intel hardware transcoding, otherwise delete this value)." Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
   <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices - enter your GPU UUID here (only required if you plan to use Nvidia hardware transcoding otherwise leave empty, don't forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="http - WebGUI" Target="8096" Default="" Mode="tcp" Description="WebGUI Port http." Type="Port" Display="always" Required="false" Mask="false">8096</Config>
   <Config Name="https - WebGUI" Target="8920" Default="" Mode="tcp" Description="WebGUI Port https." Type="Port" Display="always" Required="false" Mask="false">8920</Config>
