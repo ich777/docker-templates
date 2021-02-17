@@ -22,7 +22,7 @@ AMD Hardware transcoding (Please note that you have to be on Unraid 6.9.0beta35 
 Intel Hardware transcoding:&#xD;
 - Download and install the Intel-GPU-TOP Plugin from the CA App&#xD;
 - At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
-- In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
+- In Jellyfin select the Intel Quick Sync Transcoder at 'Playback' in the Admin section and enable: 'h264', 'MPEG2', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
 &#xD;
 Nvidia Hardware transcoding:&#xD;
 - Download and install the Nvidia-Driver Plugin from the CA App&#xD;
@@ -52,7 +52,7 @@ AMD Hardware transcoding (Please note that you have to be on Unraid 6.9.0beta35 
 Intel Hardware transcoding:&#xD;
 - Download and install the Intel-GPU-TOP Plugin from the CA App&#xD;
 - At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
-- In Jellyfin select the VA-API Transcoder at 'Playback' in the Admin section and enable: 'h264', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
+- In Jellyfin select the Intel Quick Sync Transcoder at 'Playback' in the Admin section and enable: 'h264', 'MPEG2', 'HEVC', 'VC1', 'VP9', 'VP8', at the bottom 'Throttle Transcoding' and click 'Save'.&#xD;
 &#xD;
 Nvidia Hardware transcoding:&#xD;
 - Download and install the Nvidia-Driver Plugin from the CA App&#xD;
