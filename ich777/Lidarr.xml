@@ -17,7 +17,7 @@ MANUAL VERSION: You can also set a version manually by typing in the version num
 &#xD;
 ATTENTION: Don't change the port in the Lidarr config itself.&#xD;
 &#xD;
-MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs' and 'config.xml', don't forget to change the root folder for your music and select 'No, I'll Move the Files Myself'!!&#xD;
+MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs' and 'config.xml', don't forget to change the root folder for your music and select 'No, I'll Move the Files Myself'!&#xD;
 &#xD;
 WARNING: The main configuration of the paths has a performance and disk usage impact: slow, I/O intensive moves and wasted disk space. For a detailed guide to change that see https://trash-guides.info/hardlinks/#unraid .</Overview>
 </Overview>
@@ -39,7 +39,7 @@ MANUAL VERSION: You can also set a version manually by typing in the version num
 &#xD;
 ATTENTION: Don't change the port in the Lidarr config itself.&#xD;
 &#xD;
-MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs' and 'config.xml', don't forget to change the root folder for your music and select 'No, I'll Move the Files Myself'!!&#xD;
+MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs' and 'config.xml', don't forget to change the root folder for your music and select 'No, I'll Move the Files Myself'!&#xD;
 &#xD;
 WARNING: The main configuration of the paths has a performance and disk usage impact: slow, I/O intensive moves and wasted disk space. For a detailed guide to change that see https://trash-guides.info/hardlinks/#unraid .</Overview>
 </Description>
