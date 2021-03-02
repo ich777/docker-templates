@@ -163,7 +163,7 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>rc2</Value>
+      <Value/>
       <Name>BETA_BUILD</Name>
       <Mode/>
     </Variable>
@@ -280,7 +280,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   </Environment>
   <Labels/>
   <Config Name="Data Path" Target="/usr/src" Default="" Mode="rw" Description="Main Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/kernel</Config>
-  <Config Name="Beta Build" Target="BETA_BUILD" Default="" Mode="" Description="Enter here for which 'beta' or 'rc' you want to build eg: 'beta35', 'rc1', 'rc2'. If you are building for a stable release leave this value empty." Type="Variable" Display="always-hide" Required="false" Mask="false">rc2</Config>
+  <Config Name="Beta Build" Target="BETA_BUILD" Default="" Mode="" Description="Enter here for which 'beta' or 'rc' you want to build eg: 'beta35', 'rc1', 'rc2'. If you are building for a stable release leave this value empty." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Build with nVidia support" Target="BUILD_NVIDIA" Default="true|false" Mode="" Description="Set to 'true' to build the images with nVidia drivers (otherwise set to 'false')." Type="Variable" Display="always-hide" Required="false" Mask="false">true</Config>
   <Config Name="Build with DVB support" Target="BUILD_DVB" Default="false|true" Mode="" Description="Set to 'true' to build the images with DVB drivers (otherwise set to 'false')." Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
   <Config Name="DVB Driver Type" Target="DVB_TYPE" Default="libreelec|digitaldevices|tbsos" Mode="" Description="Select which type of driver you want to build into the Images/Kernel. Valid choices currently are: 'libreelec' = LibreELEC DVB drivers (default), 'digitaldevices' = DigitalDevices DVB drivers &amp;amp; 'tbsos' = TBS OpenSource DVB drivers (without quotes).&#13;&#10;If you set BUILD_DVB to 'false' you can ignore this entry.&#13;&#10;(Please note that can only choose one driver)" Type="Variable" Display="always-hide" Required="false" Mask="false">libreelec</Config>
