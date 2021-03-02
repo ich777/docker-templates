@@ -13,11 +13,13 @@
 &#xD;
 UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and nightly version - keep in mind that switching from a stable to a nightly version and vice versa can break the container).&#xD;
 &#xD;
-MANUAL VERSION: You can also set a version manually by typing in the version number that you want to use for example: '0.2.0.1480' (without quotes) - you can also change it to 'latest' or 'nightly' like described above.&#xD;
+MANUAL VERSION: You can change the version by setting the variable Radarr Release to 'latest' or 'nightly'.&#xD;
 &#xD;
 ATTENTION: Don't change the port in the Radarr config itself.&#xD;
 &#xD;
-MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs', 'xdg' and 'config.xml', don't forget to change the root folder for your movies to '/mnt/movies' and select 'No, I'll Move the Files Myself'!</Overview>
+MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs', 'xdg' and 'config.xml', don't forget to change the root folder for your movies and select 'No, I'll Move the Files Myself'!&#xD;
+&#xD;
+WARNING: The main configuration of the paths has a performance and disk usage impact: slow, I/O intensive moves and wasted disk space. For a detailed guide to change that see https://trash-guides.info/hardlinks/#unraid for details.</Overview>
   <Category>Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:7878]/</WebUI>
   <TemplateURL>False</TemplateURL>
@@ -32,11 +34,13 @@ MIGRATION: If you are migrating from another Container please be sure to deltete
 &#xD;
 UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and nightly version - keep in mind that switching from a stable to a nightly version and vice versa can break the container).&#xD;
 &#xD;
-MANUAL VERSION: You can also set a version manually by typing in the version number that you want to use for example: '0.2.0.1480' (without quotes) - you can also change it to 'latest' or 'nightly' like described above.&#xD;
+MANUAL VERSION: You can change the version by setting the variable Radarr Release to 'latest' or 'nightly'.&#xD;
 &#xD;
 ATTENTION: Don't change the port in the Radarr config itself.&#xD;
 &#xD;
-MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs', 'xdg' and 'config.xml', don't forget to change the root folder for your movies to '/mnt/movies' and select 'No, I'll Move the Files Myself'!</Description>
+MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs', 'xdg' and 'config.xml', don't forget to change the root folder for your movies and select 'No, I'll Move the Files Myself'!&#xD;
+&#xD;
+WARNING: The main configuration of the paths has a performance and disk usage impact: slow, I/O intensive moves and wasted disk space. For a detailed guide to change that see https://trash-guides.info/hardlinks/#unraid for details.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -66,7 +70,7 @@ MIGRATION: If you are migrating from another Container please be sure to deltete
   </Data>
   <Environment>
     <Variable>
-      <Value>nightly</Value>
+      <Value>latest</Value>
       <Name>RADARR_REL</Name>
       <Mode/>
     </Variable>
@@ -86,11 +90,6 @@ MIGRATION: If you are migrating from another Container please be sure to deltete
       <Mode/>
     </Variable>
     <Variable>
-      <Value>--debug</Value>
-      <Name>MONO_START_PARAMS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>770</Value>
       <Name>DATA_PERM</Name>
       <Mode/>
@@ -98,13 +97,12 @@ MIGRATION: If you are migrating from another Container please be sure to deltete
   </Environment>
   <Labels/>
   <Config Name="Data Dir" Target="/radarr" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/radarr</Config>
-  <Config Name="Movies" Target="/mnt/movies" Default="" Mode="rw" Description="Path to your Movies" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Movies/</Config>
-  <Config Name="Dowloads" Target="/mnt/downloads" Default="" Mode="rw" Description="Main download directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
-  <Config Name="Radarr Release" Target="RADARR_REL" Default="" Mode="" Description="Select if you want to download a stable or prerelease (valid options are 'lastest' and 'nightly' without quotes - you can also set the version manual in this format: '0.2.0.1480' or '0.2.0.1450' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">nightly</Config>
+  <Config Name="Movies" Target="/mnt/movies" Default="" Mode="rw" Description="Path to your Movies&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;b&amp;gt;WARNING:&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;&#13;&#10;This style of paths has a performance and disk usage impact: &amp;lt;b&amp;gt;slow, I/O intensive moves&amp;lt;/b&amp;gt; and &amp;lt;b&amp;gt;wasted disk space&amp;lt;/b&amp;gt;.&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;See https://trash-guides.info/hardlinks/#unraid for details." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Movies/</Config>
+  <Config Name="Dowloads" Target="/mnt/downloads" Default="" Mode="rw" Description="Main download directory&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;b&amp;gt;WARNING:&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;&#13;&#10;This style of paths has a performance and disk usage impact: &amp;lt;b&amp;gt;slow, I/O intensive moves&amp;lt;/b&amp;gt; and &amp;lt;b&amp;gt;wasted disk space&amp;lt;/b&amp;gt;.&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;See https://trash-guides.info/hardlinks/#unraid for details." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
+  <Config Name="Radarr Release" Target="RADARR_REL" Default="" Mode="" Description="Select if you want to download a stable or prerelease (valid options are 'lastest' and 'nightly' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="TCP - WebGUI http" Target="7878" Default="" Mode="tcp" Description="WebGUI port http" Type="Port" Display="always" Required="true" Mask="false">7878</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
-  <Config Name="Mono Start Parameters" Target="MONO_START_PARAMS" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="false" Mask="false">--debug</Config>
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
 </Container>
