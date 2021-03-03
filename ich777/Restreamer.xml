@@ -22,7 +22,7 @@ Features:&#xD;
 To get a full list of available Variables for the container refert to this page: https://datarhei.github.io/restreamer/docs/references-environment-vars.html</Overview>
   <Category>Network:Other MediaApp:Video Productivity:</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/restreamer.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
