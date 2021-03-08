@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-firewire/master/firewire.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>Firewire Drivers</Name>
+  <Description>This package contains the Firewire Drivers and installs them to utilize them.</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/firewire.png</Icon>
+</Containers>
