@@ -133,6 +133,11 @@ Forum Notice: When something isn't working with your server and you make a post 
       <Mode/>
     </Variable>
     <Variable>
+      <Value>false</Value>
+      <Name>BUILD_FIREWIRE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>all</Value>
       <Name>CPU_COUNT</Name>
       <Mode/>
@@ -295,6 +300,7 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="Enable Intel i915 and 'intel_gpu_top'" Target="ENABLE_i915" Default="false|true" Mode="" Description="Set to 'true' to install 'intel_gpu_top' and enable the Intel Kernel Modules on boot (otherwise set to 'false')." Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
   <Config Name="Build GVT-g Support" Target="BUILD_GVTG" Default="false|true" Mode="" Description="Set to 'true' to build and enable the Intel GVT-g Support on boot (otherwise set to 'false'). Please refer to the support thread of this container." Type="Variable" Display="always-hide" Required="true" Mask="false">false</Config>
   <Config Name="Build Coral Acceleration Module Drivers" Target="BUILD_CORAL" Default="false|true" Mode="" Description="Set to 'true' to install the Coral Acceleration Module Drivers and enable them on boot to utilize your Module(s) in Docker containers." Type="Variable" Display="always-hide" Required="true" Mask="false">false</Config>
+  <Config Name="Build with Firewire support" Target="BUILD_FIREWIRE" Default="false|true" Mode="" Description="Set to 'true' to build the Firewire modules (otherwise set to 'false')." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always-hide" Required="true" Mask="false">all</Config>
   <Config Name="Clean-up" Target="CLEANUP" Default="moderate|full|false" Mode="" Description="Cleanup after finishing the build (set to 'full' and everything except for the output folder will be deleted, set to 'moderate' and everything except for the downloads and the output folder will be deleted, leave empty or set to 'false' to let everything as it is and don't clean up)." Type="Variable" Display="always-hide" Required="true" Mask="false">moderate</Config>
   <Config Name="Create Backup" Target="CREATE_BACKUP" Default="true|false" Mode="" Description="Set to 'true' if you want to create a backup of your existing bzroot, bzimage, bzmodules &amp;amp; bzfirmware files in the main directory of the container (Please make sure that you always backup all your files also to a local computer bevor you copy over the new files)." Type="Variable" Display="always-hide" Required="false" Mask="false">true</Config>
