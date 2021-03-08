@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/ich777/unraid-kernel-helper</Registry>
   <Network>bridge</Network>
   <MyIP/>
-  <MinVer>6.9.0-rc2</MinVer> 
+  <MinVer>6.9.0</MinVer> 
   <Shell>bash</Shell>
   <Privileged>true</Privileged>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helper-docker/</Support>
