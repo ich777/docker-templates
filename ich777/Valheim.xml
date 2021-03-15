@@ -121,6 +121,11 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>ENABLE_BEPINEX</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>true</Value>
       <Name>BACKUP_FILES</Name>
       <Mode/>
@@ -166,6 +171,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="UDP - Game Port Range" Target="2456-2458" Default="" Mode="udp" Description="UDP Game Ports (If you need another port delete this Entry and create a new UDP port mapping with the corresponding port range | GAME_PORT +2 | also don't forget to click on show more and change the GAME_PORT)" Type="Port" Display="always" Required="false" Mask="false">2456-2458</Config>
   <Config Name="Automatically Update Game" Target="UPDATE_CHECK" Default="" Mode="" Description="If set to 'true' (without quotes) the container will automatically check every 60 minuts if there is an update available and restart the container if a update is found (please keep in mind if you enable the auto update function the container will automatically restart if a newer version is found, set to 'false' without quotes to disable the update check)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="ValheimPlus" Target="ENABLE_VALHEIMPLUS" Default="" Mode="" Description="If you want to enable ValheimPlus set this variable to 'true' (without quotes). For more help please refer to this site: https://github.com/nxPublic/ValheimPlus" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="BepInEx for Valheim" Target="ENABLE_BEPINEX" Default="" Mode="" Description="If you want to enable BepInEx for Valheim set this variable to 'true' (without quotes). For more help please refer to this site: https://valheim.thunderstore.io/package/denikson/BepInExPack_Valheim/" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Backup" Target="BACKUP_FILES" Default="" Mode="" Description="Set this value to 'true' (without quotes) to enable the automated backup function from the container, you find the Backups in '.../valheim/Backups/'. Set to 'false' (without quotes) to disable the backup function." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Backup Interval (in minutes)" Target="BACKUP_INTERVAL" Default="" Mode="" Description="The backup interval in minutes (set to 62 minutes because the game automatically saves the database every 30 minutes)&#13;&#10;ATTENTION: The first backup will be triggered after the set interval in this variable after the start/restart of the container)." Type="Variable" Display="always" Required="true" Mask="false">62</Config>
   <Config Name="Backups to keep" Target="BACKUP_TO_KEEP" Default="" Mode="" Description="Number of backups to keep (by default set to 24 to keep the last backups of the last 24 hours)." Type="Variable" Display="always" Required="true" Mask="false">24</Config>
