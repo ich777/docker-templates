@@ -124,6 +124,11 @@ Forum Notice: When something isn't working with your server and you make a post 
     </Variable>
     <Variable>
       <Value>false</Value>
+      <Name>ENABLE_AMDGPU</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
       <Name>BUILD_GVTG</Name>
       <Mode/>
     </Variable>
@@ -297,8 +302,9 @@ Forum Notice: When something isn't working with your server and you make a post 
   <Config Name="gnif Vendor-Reset Patch" Target="BUILD_GNIF_VENDOR_RESET" Default="false|true" Mode="" Description="Set this value to 'true' to build the images with the gnif/vendor-reset patch (Source: https://github.com/gnif/vendor-reset)" Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
   <Config Name="RMRR Relax Patch" Target="APPLY_RMRR_PATCH" Default="false|true" Mode="" Description="Set to 'true' to build the images with the Relax Intel patch. You have to append your syslinux.cfg with: 'intel_iommu=relax_rmrr' to enable this patch (Source: https://github.com/kiler129/relax-intel-rmrr)" Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
   <Config Name="hpsahba Patch" Target="BUILD_HPSAHBA" Default="false|true" Mode="" Description="Set this value to 'true' to build the images with the hpsahba patch (Source: https://github.com/im-0/hpsahba)" Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
-  <Config Name="Enable Intel i915 and 'intel_gpu_top'" Target="ENABLE_i915" Default="false|true" Mode="" Description="Set to 'true' to install 'intel_gpu_top' and enable the Intel Kernel Modules on boot (otherwise set to 'false')." Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
+  <Config Name="Enable Intel i915 and 'intel_gpu_top'" Target="ENABLE_i915" Default="false|true" Mode="" Description="Set to 'true' to install 'intel_gpu_top' and enable the Intel 'i915' Kernel Modules on boot (otherwise set to 'false')." Type="Variable" Display="always-hide" Required="false" Mask="false">false</Config>
   <Config Name="Build GVT-g Support" Target="BUILD_GVTG" Default="false|true" Mode="" Description="Set to 'true' to build and enable the Intel GVT-g Support on boot (otherwise set to 'false'). Please refer to the support thread of this container." Type="Variable" Display="always-hide" Required="true" Mask="false">false</Config>
+  <Config Name="Enable AMD amdgpu and 'radeontop'" Target="ENABLE_AMDGPU" Default="false|true" Mode="" Description="Set to 'true' to install 'radeontop' and enable the AMD 'amdgpu' Kernel Module on boot (otherwise set to 'false')." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
   <Config Name="Build Coral Acceleration Module Drivers" Target="BUILD_CORAL" Default="false|true" Mode="" Description="Set to 'true' to install the Coral Acceleration Module Drivers and enable them on boot to utilize your Module(s) in Docker containers." Type="Variable" Display="always-hide" Required="true" Mask="false">false</Config>
   <Config Name="Build with Firewire support" Target="BUILD_FIREWIRE" Default="false|true" Mode="" Description="Set to 'true' to build the Firewire modules (otherwise set to 'false')." Type="Variable" Display="always-hide" Required="true" Mask="false">false</Config>
   <Config Name="Compile CPU Count" Target="CPU_COUNT" Default="" Mode="" Description="Compile CPU Count (assign as many cores of your CPU you want or set to 'all' if you want to use all)." Type="Variable" Display="always-hide" Required="true" Mask="false">all</Config>
