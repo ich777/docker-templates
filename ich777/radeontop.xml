@@ -5,7 +5,8 @@
   <Category>Productivity: Tools:System</Category>
   <Name>Radeon-TOP</Name>
   <Description>This Plugin adds the tool 'radeontop' to your unRAID server and also enables your AMD GPU from the installation of this plugin on, so no editis to the 'go' file or creation of other files are necessary (please not that this Plugin only enables the 'amdgpu' Kernel module and not the 'radeon' Kernel module).&#xD;
-To see the usage of your GPU open up the unRAID Terminal and type in 'radeontop' (without quotes).</Description>
+To see the usage of your GPU open up the unRAID Terminal and type in 'radeontop' (without quotes).&#xD;
+This plugin satisfies installation prerequisites of the GPU Statistics plugin from Community Apps. With both plugins installed you can display AMD GPU utilization on the unRAID Dashboard.</Description>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/radeontop.png</Icon>
 </Containers>
