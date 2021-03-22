@@ -76,7 +76,7 @@ Nvidia Hardware transcoding:&#xD;
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/cache/appdata/jellyfin</HostDir>
+      <HostDir>/mnt/user/appdata/jellyfin</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -96,7 +96,7 @@ Nvidia Hardware transcoding:&#xD;
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir/>
+      <HostDir>/mnt/user/appdata/jellyfin/cache</HostDir>
       <ContainerDir>/cache</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
@@ -114,12 +114,12 @@ Nvidia Hardware transcoding:&#xD;
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Data Path" Target="/config" Default="" Mode="rw" Description="Main data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jellyfin</Config>
+  <Config Name="Data Path" Target="/config" Default="/mnt/user/appdata/Jellyfin-AMD-Intel-Nvidia" Mode="rw" Description="Main data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/jellyfin</Config>
   <Config Name="Movies" Target="/movies" Default="" Mode="rw" Description="Path to your Movie library." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="TV Shows" Target="/tv" Default="" Mode="rw" Description="Path to your TV-Shows library." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Music" Target="/music" Default="" Mode="rw" Description="Path to your Music library." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Cache path (strongly recommended to use)." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Device" Target="" Default="" Mode="" Description="Path to AMD or Intel device (fill in with '/dev/dri' without quotes if you want to use AMD or Intel hardware transcoding, otherwise delete this value)." Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
+  <Config Name="Cache" Target="/cache" Default="" Mode="rw" Description="Cache path (strongly recommended to use)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/jellyfin/cache</Config>
+  <Config Name="Device" Target="" Default="" Mode="" Description="Path to AMD or Intel device (ATTENTION: Delete this value if you don't want to use Intel or AMD hardware transcoding otherwise the container won't start)." Type="Device" Display="always" Required="true" Mask="false">/dev/dri</Config>
   <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices - enter your GPU UUID here (only required if you plan to use Nvidia hardware transcoding otherwise leave empty, don't forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="http - WebGUI" Target="8096" Default="" Mode="tcp" Description="WebGUI Port http." Type="Port" Display="always" Required="false" Mask="false">8096</Config>
   <Config Name="https - WebGUI" Target="8920" Default="" Mode="tcp" Description="WebGUI Port https." Type="Port" Display="always" Required="false" Mask="false">8920</Config>
