@@ -70,7 +70,7 @@ WARNING: The main configuration of the paths has a performance and disk usage im
   </Data>
   <Environment>
     <Variable>
-      <Value>nightly</Value>
+      <Value>latest</Value>
       <Name>SONARR_REL</Name>
       <Mode/>
     </Variable>
@@ -104,7 +104,7 @@ WARNING: The main configuration of the paths has a performance and disk usage im
   <Config Name="Data Dir" Target="/sonarr" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/sonarr</Config>
   <Config Name="TV Shows" Target="/mnt/tv" Default="" Mode="rw" Description="Path to your TV Shows&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;b&amp;gt;WARNING:&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;&#13;&#10;This style of paths has a performance and disk usage impact: &amp;lt;b&amp;gt;slow, I/O intensive moves&amp;lt;/b&amp;gt; and &amp;lt;b&amp;gt;wasted disk space&amp;lt;/b&amp;gt;.&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;See https://trash-guides.info/hardlinks/#unraid for details." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/TV-Shows/</Config>
   <Config Name="Dowloads" Target="/mnt/downloads" Default="" Mode="rw" Description="Main download directory&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;&amp;lt;b&amp;gt;WARNING:&amp;lt;/b&amp;gt; &amp;lt;br&amp;gt;&#13;&#10;This style of paths has a performance and disk usage impact: &amp;lt;b&amp;gt;slow, I/O intensive moves&amp;lt;/b&amp;gt; and &amp;lt;b&amp;gt;wasted disk space&amp;lt;/b&amp;gt;.&#13;&#10;&amp;lt;br&amp;gt;&#13;&#10;See https://trash-guides.info/hardlinks/#unraid for details." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
-  <Config Name="Sonarr Release" Target="SONARR_REL" Default="" Mode="" Description="Select if you want to download a stable or prerelease (valid options are 'lastest' and 'nightly' without quotes - you can also set the version manual in this format: '2.0.0.5250' or '2.0.0.5228' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">nightly</Config>
+  <Config Name="Sonarr Release" Target="SONARR_REL" Default="" Mode="" Description="Select if you want to download a stable or prerelease (valid options are 'lastest' and 'nightly' without quotes - you can also set the version manual in this format: '2.0.0.5250' or '2.0.0.5228' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="TCP - WebGUI http" Target="8989" Default="" Mode="tcp" Description="WebGUI port http" Type="Port" Display="always" Required="true" Mask="false">8989</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
