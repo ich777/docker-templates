@@ -18,7 +18,7 @@ Remaining gameplay problems mostly relate to AI and the synchronization of clien
 Update Notice: Simply restart the container if a newer version of the game is available.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>False<TemplateURL/>
+  <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openmwtes3mp.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
