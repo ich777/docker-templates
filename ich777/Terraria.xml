@@ -31,7 +31,7 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
 &#xD;
 Update Notice: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#xD;
-WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9010 (eg: 192.168.1.1:9010) or click on WebUI on the Docker page within Unraid.</Description>
+WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9012 (eg: 192.168.1.1:9012) or click on WebUI on the Docker page within Unraid.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
