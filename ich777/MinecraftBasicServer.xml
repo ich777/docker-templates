@@ -21,7 +21,7 @@ JAVA RUNTIME: Enter your prefered Runtime 'basicjre'=jre8, 'jre11'=jre11, 'jre15
 UPDATE: If you set the variable GAME_V to 'latest' the container will check on every restart if there is a newer version available (if set to 'latest' the variable JAR_NAME has to be 'server').
 &#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
+WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9011 (eg: 192.168.1.1:9011) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>false</TemplateURL>
@@ -43,7 +43,7 @@ After that copy over your favorite server executable (don't forget to set the Se
 UPDATE: If you set the variable GAME_V to 'latest' the container will check on every restart if there is a newer version available (if set to 'latest' the variable JAR_NAME has to be 'server').
 &#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
+WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9011 (eg: 192.168.1.1:9011) or click on WebUI on the Docker page within Unraid.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -55,6 +55,11 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
       <Port>
         <HostPort>25575</HostPort>
         <ContainerPort>25575</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9011</HostPort>
+        <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -128,6 +133,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   <Config Name="XMX Size" Target="XMX_SIZE" Default="" Mode="" Description="Enter your XMX size in MB (XMX=The maximum heap size. The performance will decrease if the max heap value is set lower than the amount of live data. It will force frequent garbage collections in order to free up space.)" Type="Variable" Display="always" Required="true" Mask="false">1024</Config>
   <Config Name="TCP - Game Port" Target="25565" Default="" Mode="tcp" Description="Container Port: 25565" Type="Port" Display="always" Required="true" Mask="false">25565</Config>
   <Config Name="TCP2 - RCON" Target="25575" Default="" Mode="tcp" Description="Not required if not needed" Type="Port" Display="always" Required="false" Mask="false">25575</Config>
+  <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Minecraft console by opening your browser and go to HOSTIP:9010 - eg: 192.168.1.1:9010 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9011</Config>
   <Config Name="Accept EULA" Target="ACCEPT_EULA" Default="false" Mode="" Description="Head over to: https://account.mojang.com/documents/minecraft_eula to read the EULA. (If you accept the EULA change the value to 'true' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Enter your prefered Runtime: 'basicjre'=jre8, 'jre11'=jre11, 'jre15'=jre15 Don't change unless you are knowing what you are doing! Please keep in mind if you change the runtime you have to delete the old runtime before!" Type="Variable" Display="advanced" Required="true" Mask="false">basicjre</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
