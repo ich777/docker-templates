@@ -15,7 +15,7 @@ This container downloads Minecraft Bedrock Edition Server in the specified versi
 &#xD;
 UPDATE NOTICE: If you set the GAME_VERSION to ‘latest’ the container will check on every start/restart if there is a newer version available, otherwise enter the preferred version number that you want to install, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
 &#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Overview>
+WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9010 (eg: 192.168.1.1:9010) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
   <TemplateURL>false</TemplateURL>
@@ -32,7 +32,7 @@ This container downloads Minecraft Bedrock Edition Server in the specified versi
 &#xD;
 UPDATE NOTICE: If you set the GAME_VERSION to ‘latest’ the container will check on every start/restart if there is a newer version available, otherwise enter the preferred version number that you want to install, you also can downgrade your server (no guarantee that it works if you downgrade much versions).&#xD;
 &#xD;
-CONSOLE: To connect to the console open up the terminal on the host machine and type in: 'docker exec -u minecraft -ti NAMEOFYOURCONTAINER screen -xS Minecraft' (without quotes) to exit the screen session press CTRL+A and then CTRL+D or simply close the terminal window in the first place.</Description>
+WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9010 (eg: 192.168.1.1:9010) or click on WebUI on the Docker page within Unraid.</Overview>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -45,6 +45,11 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
         <HostPort>19132</HostPort>
         <ContainerPort>19132</ContainerPort>
         <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>9010</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
@@ -82,6 +87,7 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra startup parameters otherwise leave blank!" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP - Game Port" Target="19132" Default="" Mode="tcp" Description="TCP Gameport (if you need another port, please delete this entry and create a new TCP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
   <Config Name="UDP - Game Port" Target="19132" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">19132</Config>
+  <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Minecraft console by opening your browser and go to HOSTIP:9010 - eg: 192.168.1.1:9010 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9010</Config>
   <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the prefered version to install." Type="Variable" Display="always" Required="false" Mask="false">latest</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
