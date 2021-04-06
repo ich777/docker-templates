@@ -5,7 +5,7 @@
   <Beta>True</Beta>
   <Category>Productivity: Tools:System Drivers:</Category>
   <Name>DVB-Drivers</Name>
-  <Description>This Plugin will install all necessary modules and dependencies to get your DVB Cards working (currently you have the choice between DigitalDevices, LibreELEC and XboxOne-USB DVB drivers on the settings page). ATTENTION: Please update your 'go' file if the plugin doesn't load the Kernel Module correctly for you DVB card, for more information see the DVB Plugin page.</Description>
+  <Description>This Plugin will install all necessary modules and dependencies to get your DVB Cards working (currently you have the choice between DigitalDevices, TBS-OpenSource and LibreELEC DVB drivers on the settings page).</Description>
   <Support>https://forums.unraid.net/topic/99027-plugin-dvb-driver/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/dvb-driver.png</Icon>
 </Containers>
