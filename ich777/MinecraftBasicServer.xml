@@ -23,7 +23,7 @@ UPDATE: If you set the variable GAME_V to 'latest' the container will check on e
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
 WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9011 (eg: 192.168.1.1:9011) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:9011]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mc.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
