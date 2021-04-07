@@ -14,6 +14,7 @@
 ATTENTION: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#xD;
 &#xD;
 Update Notice: Change the game version to whatever version do you want and restart the container.&#xD;
+&#xD;
 WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9013 (eg: 192.168.1.1:9013) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:9013]/</WebUI>
@@ -30,6 +31,7 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
 ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
 &#xD;
 Update Notice: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#xD;
+&#xD;
 WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9013 (eg: 192.168.1.1:9013) or click on WebUI on the Docker page within Unraid.</Description>
   <Networking>
     <Mode>bridge</Mode>
