@@ -21,6 +21,7 @@ JAVA RUNTIME: Enter your prefered Runtime 'basicjre'=jre8, 'jre11'=jre11, 'jre15
 UPDATE: If you set the variable GAME_V to 'latest' the container will check on every restart if there is a newer version available (if set to 'latest' the variable JAR_NAME has to be 'server').
 &#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
+&#xD;
 WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9011 (eg: 192.168.1.1:9011) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
   <WebUI>http://[IP]:[PORT:9011]/</WebUI>
@@ -43,6 +44,7 @@ After that copy over your favorite server executable (don't forget to set the Se
 UPDATE: If you set the variable GAME_V to 'latest' the container will check on every restart if there is a newer version available (if set to 'latest' the variable JAR_NAME has to be 'server').
 &#xD;
 ATTENTION: Don't forget to accept the EULA down below and don't forget to edit the 'server.properties' file the server is by default configured to be a LAN server and to be not snooped.&#xD;
+&#xD;
 WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9011 (eg: 192.168.1.1:9011) or click on WebUI on the Docker page within Unraid.</Description>
   <Networking>
     <Mode>bridge</Mode>
