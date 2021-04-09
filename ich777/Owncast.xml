@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Owncast</Name>
+  <Repository>ich777/owncast</Repository>
+  <Registry>https://hub.docker.com/r/ich777/owncast/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://owncast.online/</Project>
+  <Overview>Owncast is a self-hosted live video and web chat server for use with existing popular broadcasting software.  &#xD;
+  &#xD;
+Admin login: The credentials for the admin site: 'http://SERVERIP:PORT/admin' are Username: 'admin' and Password: 'abc123' (please note that the password is also your streaming key and should be changed to something very strong).  &#xD;
+  &#xD;
+Streaming URL: The default streaming URL for example for OBS is: rtmp://SERVERIP (the stream key is the admin password).  &#xD;
+  &#xD;
+Update Notice: Simply restart the container if a newer version from Owncast is available.  &#xD;
+  &#xD;
+Also visit the Homepage of the creator and consider Donating: https://owncast.online/</Overview>
+  <Category>Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/owncast.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>Owncast is a self-hosted live video and web chat server for use with existing popular broadcasting software.  &#xD;
+  &#xD;
+Admin login: The credentials for the admin site: 'http://SERVERIP:PORT/admin' are Username: 'admin' and Password: 'abc123' (please note that the password is also your streaming key and should be changed to something very strong).  &#xD;
+  &#xD;
+Streaming URL: The default streaming URL for example for OBS is: rtmp://SERVERIP (the stream key is the admin password).  &#xD;
+  &#xD;
+Update Notice: Simply restart the container if a newer version from Owncast is available.  &#xD;
+  &#xD;
+Also visit the Homepage of the creator and consider Donating: https://owncast.online/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>1935</HostPort>
+        <ContainerPort>1935</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/owncast/</HostDir>
+      <ContainerDir>/owncast</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>latest</Value>
+      <Name>OWNCAST_V</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>START_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>0000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data Dir" Target="/owncast" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/owncast/</Config>
+  <Config Name="Preferred Version" Target="OWNCAST_V" Default="" Mode="" Description="Preferred Owncast version goes here (set to &#x2018;latest&#x2019; to download the latest and check on every startup if there is a newer version available)" Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="TCP1 - WebInterface" Target="8080" Default="" Mode="tcp" Description="TCP Port - WebInterface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="TCP2 - RTMP" Target="1935" Default="" Mode="tcp" Description="TCP Port - RTMP Streaming port" Type="Port" Display="always" Required="true" Mask="false">1935</Config>
+  <Config Name="Extra Startup Parameters" Target="START_PARAMS" Default="" Mode="" Description="Enter extra startup parameters if needed here (leave empty if not needed)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Umask" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
+</Container>
