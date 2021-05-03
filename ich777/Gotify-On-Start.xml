@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Gotify-On-Start</Name>
+  <Repository>ich777/gotify-on-start</Repository>
+  <Registry>https://hub.docker.com/r/ich777/gotify-on-start</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://hub.docker.com/r/ich777/gotify-on-start</Project>
+  <Overview>This is a simple container that sends a message when the container is started (needed this for a headless machine to know when I can connect or better speaking start up the VM's with WOL).</Overview>
+  <Category>Tools:Utilities</Category>
+  <WebUI/>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donegear.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This is a simple container that sends a message when the container is started (needed this for a headless machine to know when I can connect or better speaking start up the VM's with WOL).</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>GOTIFY_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>GOTIFY_TOKEN</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Startup Complete</Value>
+      <Name>GOTIFY_TITLE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>Server is now Online!</Value>
+      <Name>GOTIFY_MESSAGE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>5</Value>
+      <Name>GOTIFY_PRIORITY</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Gotify Server URL" Target="GOTIFY_URL" Default="" Mode="" Description="Your Gotify Server URL goes here (please note that you have to enter the URL in this format: 'https://push.example.net/' without quotes and with a trailing slash '/')." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Gotify App Token" Target="GOTIFY_TOKEN" Default="" Mode="" Description="Gotify App Token goes here." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Gotify Message Title" Target="GOTIFY_TITLE" Default="" Mode="" Description="Customized Gotify Message Title here." Type="Variable" Display="always" Required="true" Mask="false">Startup Complete</Config>
+  <Config Name="Gotify Message" Target="GOTIFY_MESSAGE" Default="" Mode="" Description="Customized Gotify Message here." Type="Variable" Display="always" Required="true" Mask="false">Server is now Online!</Config>
+  <Config Name="Gotify Priority" Target="GOTIFY_PRIORITY" Default="" Mode="" Description="Customize the Gotify Priority ('0': Low Priority ; '5': Normal Priority ; '9': High Priority)" Type="Variable" Display="always" Required="true" Mask="false">5</Config>
+</Container>
