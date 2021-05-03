@@ -8,11 +8,11 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
-  <Project>https://hub.docker.com/r/ich777/online-check-pushover</Project>
+  <Project>https://hub.docker.com/r/ich777/pushover-on-start</Project>
   <Overview>This is a simple container that sends a message when the container is started (needed this for a headless machine to know when I can connect or better speaking start up the VM's with WOL).</Overview>
   <Category>Tools:Utilities</Category>
   <WebUI/>
-  <TemplateURL>false</TemplateURL>
+  <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donegear.png</Icon>
   <ExtraParams/>
   <PostArgs/>
