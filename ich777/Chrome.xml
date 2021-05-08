@@ -76,7 +76,7 @@
   <Config Name="Extra Parameters" Target="EXTRA_PARAMETERS" Default="" Mode="" Description="If needed enter extra startup parameters here otherwise leave empty." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1000 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
-  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 880 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">768</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1024 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 768 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">768</Config>
   <Config Name="Umask" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
 </Container>
