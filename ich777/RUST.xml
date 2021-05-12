@@ -93,6 +93,11 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>OXIDE_MOD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>28015</Value>
       <Name>GAME_PORT</Name>
       <Mode/>
@@ -119,6 +124,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="UDP" Target="28015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...)" Type="Port" Display="always" Required="false" Mask="false">28015</Config>
   <Config Name="Server Name" Target="SERVER_NAME" Default="" Mode="" Description="Name of the Server goes here" Type="Variable" Display="always" Required="true" Mask="false">RustDockerServer</Config>
   <Config Name="Server Description" Target="SERVER_DISCRIPTION" Default="" Mode="" Description="Server Description goes here" Type="Variable" Display="always" Required="true" Mask="false">Simple Unraid Rust Docker Server</Config>
+  <Config Name="Enable Oxide Mod" Target="OXIDE_MOD" Default="" Mode="" Description="Set to 'true' (without quotes) to enable Oxide Mod, otherwise leave empty (the container will check on every start/restart if there is a newer version available)." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Container Variable: GAME_PORT" Type="Variable" Display="advanced" Required="true" Mask="false">28015</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
