@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/intel-gvt-g/master/intel-gvt-g.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>True</Beta>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>Intel-GVT-g</Name>
+  <Description>Intel-GVT-g is a technology that provides mediated device passthrough for Intel iGPUs (Broadwell and newer). It can be used to virtualize the iGPU for multiple guest virtual machines and also in Docker containers, effectively providing near-native graphics performance in the virtual machine and still letting your host use the virtualized iGPU normally. This is useful if you want accelerated graphics in Windows virtual machines running without dedicated GPUs for full device passthrough.
+
+This means less power consumption, less heat output and better performance for your VM's.</Description>
+  <Support>https://forums.unraid.net/topic/108650-plugin-intel-gvt-g/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/intel-gvt-d.png</Icon>
+</Containers>
