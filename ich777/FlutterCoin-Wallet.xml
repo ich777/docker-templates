@@ -18,7 +18,7 @@ ATTENTION: Please keep in mind that your wallet is stored in the created folder 
 IMPORT: If you are already using FlutterCoin you can import your existing wallet by placing the 'wallet.dat' in the appdata directory for fluttercoin/.fluttercoin/wallet.dat (please let the container fully startup if you are using it for the first time and then shut it down before replacing the wallet.dat).&#xD;
 &#xD;
 UPDATED NOTICE: The container will check on every start/restart if there is a newer version available.</Overview>
-  <Category>Network:Other Productivity: Tools:Utilities</Category>
+  <Category>Network:Other Productivity: Tools:Utilities Crypto:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fluttercoin.png</Icon>
