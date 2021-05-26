@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-corefreq/master/corefreq.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Category>Productivity: Tools:System</Category>
+  <Name>CoreFreq</Name>
+  <Description>CoreFreq is a CPU low level monitoring software designed for x86_64-Processors. You can show Package and Core temps, Hot sensor, Vcore, RAM,...&#xD;
+You can also toggle SpeedStep, Clock modulation, Turbo boost, C-States demotion, C1E,...&#xD;
+It has also a built in stress test and much, much more.&#xD;
+Open up a unRAID Terminal and type in 'corefreq-cli' (without quotes), hit "F2" or "SPACE" to open up the menu inside CoreFreq.&#xD;
+&#xD;
+Please note that not every combination of CPU and motherboard is supported!&#xD;
+Intel Systems: It is recommended that you append 'nmi_watchdog=0' (without qutoes) for better accuracy to your syslinux configuration (this is only recommended if you are using it directly on Unraid with a physical monitor and keyboard attached, if are using it over SSH it's not necessary because of the added network delay).&#xD;
+You can get more details here: https://github.com/cyring/CoreFreq&#xD;
+&#xD;
+WARNING: KEEP IN MIND, FREQUENCIES/CORE RATIOS ARE APPLIED IN REAL TIME, PLEASE ONLY CHANGE THE VALUES IF YOU KNOW WHAT YOU ARE DOING!!!</Description>
+  <Support>https://forums.unraid.net/topic/109314-plugin-corefreq/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/corefreq.png</Icon>
+</Containers>
