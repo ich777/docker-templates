@@ -3,7 +3,7 @@
   <PluginURL>https://raw.githubusercontent.com/ich777/unraid-prometheus_wireguard_exporter/master/prometheus_wireguard_exporter.plg</PluginURL>
   <PluginAuthor>ich777</PluginAuthor>
   <Beta>False</Beta>
-  <Category>Productivity: Tools:System Drivers:</Category>
+  <Category>Productivity: Tools:System</Category>
   <Name>Prometheus-Wireguard-Exporter</Name>
   <Description>This plugin takes informations gathered from the wireguard API and provides it to a Prometheus database. Usage is not limited to Prometheus only. Data can be formated and displayed to any database or graphical node.
 Export URL: The URL for the exportet metrics is: 'http://YOURunRAIDIP:9586/metrics' (to use it in Prometheus add the target: 'YOURunRAIDIP:9586' to your Prometheus yaml).
