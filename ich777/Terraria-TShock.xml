@@ -17,7 +17,7 @@ Update Notice: The Container will check on every start/restart if there is a new
 &#xD;
 WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9014 (eg: 192.168.1.1:9014) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
-  <WebUI>http://[IP]:[PORT:9014]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria-tshock.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
