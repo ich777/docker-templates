@@ -17,7 +17,7 @@ ATTENTION: First start and updates can take very long time (Also note: Assigning
 &#xD;
 Update Notice: If there is a newer version if set to 'latest' simply restart the container to update it to the latest version. If you want to update from an older build simply set the new build number or set to latest. You can also downgrade to another version.</Overview>
   <Category>GameServers:</Category>
-  <WebUI>http://[IP]:[PORT:9015]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openttd.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
