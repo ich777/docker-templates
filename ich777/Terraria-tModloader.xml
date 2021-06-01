@@ -17,7 +17,7 @@ Update Notice: Change the game version to whatever version do you want and resta
 &#xD;
 WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9013 (eg: 192.168.1.1:9013) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
-  <WebUI>http://[IP]:[PORT:9013]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria-tmodloader.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
