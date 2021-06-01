@@ -24,7 +24,7 @@ ATTENTION: Don't forget to accept the EULA down below and don't forget to edit t
 &#xD;
 WEB CONSOLE: You can connect to the Minecraft console by opening your browser and go to HOSTIP:9011 (eg: 192.168.1.1:9011) or click on WebUI on the Docker page within Unraid.</Overview>
   <Category>GameServers:</Category>
-  <WebUI>http://[IP]:[PORT:9011]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/mc.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
