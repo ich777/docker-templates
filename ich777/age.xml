@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-age/master/age.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Category>Productivity: Security: Tools:System</Category>
+  <Name>age</Name>
+  <Description>age is a simple, modern and secure file encryption tool. It features small explicit keys, no config options, and UNIX-style composability. You can get more details here: https://github.com/FiloSottile/age
+You can find examples how to use age in the Support Thread or on the official Github page from age.</Description>
+  <Support>https://forums.unraid.net/topic/110023-plugin-age/</Support>
+    <IconFA>lock</IconFA>
+</Containers>
