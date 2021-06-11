@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Checkmk-RAW</Name>
-  <Repository>checkmk/check-mk-raw</Repository>
+  <Repository>checkmk/check-mk-raw:2.0.0-latest</Repository>
   <Registry>https://hub.docker.com/r/checkmk/check-mk-raw/</Registry>
   <Network>bridge</Network>
   <MyIP/>
