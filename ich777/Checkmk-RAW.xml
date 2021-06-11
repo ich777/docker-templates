@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://checkmk.com/</Project>
-  <Overview>This is the official container of checkmk. Checkmk is a leading tool for Infrastructure &amp;amp; Application Monitoring. Simple configuration, scaleable, flexible. Open Source and Enterprise.  &#xD;
+  <Overview>This is the official container of checkmk. Checkmk is a leading tool for Infrastructure &amp;amp; Application Monitoring. Simple configuration, scalable, flexible. Open Source and Enterprise.  &#xD;
   &#xD;
 Password: The initial password of the initial administrative account 'cmkadmin' will be written to the container logs.&#xD;
 You can also create a variable with the key: 'CMK_PASSWORD' and as value enter: 'YOURSUPERSECRETPASSWORD' (this will only work on the first container start).</Overview>
@@ -24,7 +24,7 @@ You can also create a variable with the key: 'CMK_PASSWORD' and as value enter: 
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
 <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
-  <Description>This is the official container of checkmk. Checkmk is a leading tool for Infrastructure &amp;amp; Application Monitoring. Simple configuration, scaleable, flexible. Open Source and Enterprise.  &#xD;
+  <Description>This is the official container of checkmk. Checkmk is a leading tool for Infrastructure &amp;amp; Application Monitoring. Simple configuration, scalable, flexible. Open Source and Enterprise.  &#xD;
   &#xD;
 Password: The initial password of the initial administrative account 'cmkadmin' will be written to the container logs.&#xD;
 You can also create a variable with the key: 'CMK_PASSWORD' and as value enter: 'YOURSUPERSECRETPASSWORD' (this will only work on the first container start).</Description>
