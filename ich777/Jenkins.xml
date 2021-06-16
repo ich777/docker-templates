@@ -83,7 +83,7 @@ All you data is stored in the jenkins/workdir folder in your appdata directory.<
       <Mode/>
     </Variable>
     <Variable>
-      <Value>basicjre</Value>
+      <Value>jre11</Value>
       <Name>RUNTIME_NAME</Name>
       <Mode/>
     </Variable>
@@ -98,5 +98,5 @@ All you data is stored in the jenkins/workdir folder in your appdata directory.<
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="Host Key 1" Target="uid" Default="" Mode="" Description="Container Variable: uid" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="Host Key 2" Target="gid" Default="" Mode="" Description="Container Variable: gid" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
-  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="The name of the runtime (only change if you know what you are doing)." Type="Variable" Display="advanced" Required="true" Mask="false">basicjre</Config>
+  <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="The name of the runtime (only change if you know what you are doing)." Type="Variable" Display="advanced" Required="true" Mask="false">jre11</Config>
 </Container>
