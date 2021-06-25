@@ -66,11 +66,6 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>latest</Value>
-      <Name>NWNEE_V</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>4</Value>
       <Name>MAX_CLIENTS</Name>
       <Mode/>
@@ -176,7 +171,6 @@ CONSOLE: To connect to the console open up the terminal on the host machine and 
   <Config Name="Log Level" Target="LOG_LVL" Default="" Mode="" Description="Set the log level (from 2=only fatal errors to 7=very verbose)" Type="Variable" Display="always" Required="true" Mask="false">4</Config>
   <Config Name="UDP - Game Port" Target="5121" Default="" Mode="udp" Description="UDP Game Port" Type="Port" Display="always" Required="true" Mask="false">5121</Config>
   <Config Name="Module Name" Target="MOD_NAME" Default="" Mode="" Description="Enter the module name to load here (located in your serverdirectory 'Neverwinter Nights/modules' without the .mod extension)" Type="Variable" Display="always" Required="true" Mask="false"/>
-  <Config Name="Game Version" Target="NWNEE_V" Default="" Mode="" Description="Enter your preferred game version or set to 'latest' (without quotes) to check for the latest version on every restart." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Maximum Clients" Target="MAX_CLIENTS" Default="" Mode="" Description="Set the maximum number of connections to the game server." Type="Variable" Display="always" Required="true" Mask="false">4</Config>
   <Config Name="Minimum Character Level" Target="MINLEVEL" Default="" Mode="" Description="Set the minimum character level required by the server." Type="Variable" Display="always" Required="true" Mask="false">1</Config>
   <Config Name="Maximum Character Level" Target="MAXLEVEL" Default="" Mode="" Description="Set the maximum character level allowed by the server." Type="Variable" Display="always" Required="true" Mask="false">40</Config>
