@@ -44,7 +44,7 @@ UPDATE: The container will check on every start/restart if there is a newer vers
   </Data>
   <Environment>
     <Variable>
-      <Value>latest</Value>
+      <Value>stable</Value>
       <Name>FERDI_V</Name>
       <Mode/>
     </Variable>
@@ -77,7 +77,7 @@ UPDATE: The container will check on every start/restart if there is a newer vers
   <Labels/>
   <Config Name="Data Dir" Target="/ferdi" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/ferdi-client/</Config>
   <Config Name="noVNC WebGUI" Target="8080" Default="" Mode="tcp" Description="TCP noVNC WebGUI" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Ferdi Version" Target="FERDI_V" Default="" Mode="" Description="Define your preferred Ferdi version here (valid options are " Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Ferdi Version" Target="FERDI_V" Default="" Mode="" Description="Define your preferred Ferdi version here (valid options are " Type="Variable" Display="always" Required="true" Mask="false">stable</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1000 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
