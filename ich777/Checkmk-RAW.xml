@@ -17,7 +17,7 @@ You can also create a variable with the key: 'CMK_PASSWORD' and as value enter: 
   <WebUI>http://[IP]:[PORT:5000]//cmk/check_mk/</WebUI>
   <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/checkmk.png</Icon>
-  <ExtraParams>--restart=unless-stopped --ulimit nofile=1024</ExtraParams>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
