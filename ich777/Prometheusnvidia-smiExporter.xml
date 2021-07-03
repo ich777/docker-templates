@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-prometheus_nvidia_smi_exporter/master/prometheus_nvidia_smi_exporter.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Category>Productivity: Tools:System</Category>
+  <Name>Prometheus nvidia-smi Exporter</Name>
+  <Description>Is a slim plugin, that takes informations gathered from nvidia-smi and provides it to a Prometheus database. Usage is not limited to Prometheus only. Data can be formated and displayed to any database or graphical node.
+Export URL: The URL for the exportet metrics is: 'http://YOURunRAIDIP:9202/metrics' (to use it in Prometheus add the target: 'YOURunRAIDIP:9202' to your Prometheus yaml).
+This Plugin is based on: https://github.com/e7d/docker-prometheus-nvidiasmi</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvbzfsiscsimft-kernel-helperbuilder-docker/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nvidia-driver.png</Icon>
+</Containers>
