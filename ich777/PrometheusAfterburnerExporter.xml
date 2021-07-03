@@ -8,7 +8,7 @@
   <Description>Is a slim plugin, that takes informations gathered form the MSI Afterburner Remote Server API and provides it to a Prometheus database. Usage is not limited to Prometheus only. Data can be formated and displayed to any database or graphical node.
 This plugin requires the MSI Afterburner Remote Server on the machine that you want to watch, please configure the IP address of your local MSI Afterburner Remote Server on the Settings page from the plugin!
 Export URL: The URL for the exportet metrics is: 'http://YOURunRAIDIP:9091/metrics' (to use it in Prometheus add the target: 'YOURunRAIDIP:9091' to your Prometheus yaml).
-This Plugin is based on node_exporter: https://github.com/kennedyoliveira/prometheus-msi-afterburner-exporter</Description>
+This Plugin is based on: https://github.com/kennedyoliveira/prometheus-msi-afterburner-exporter</Description>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvbzfsiscsimft-kernel-helperbuilder-docker/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/msi_afterburner.png</Icon>
 </Containers>
