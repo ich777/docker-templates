@@ -11,7 +11,7 @@
   <Project>https://www.zabbix.com/</Project>
   <Overview>Zabbix server is the central process of Zabbix software.&#xD;
 The server performs the polling and trapping of data, it calculates triggers, sends notifications to users. It is the central component to which Zabbix agents and proxies report data on availability and integrity of systems. The server can itself remotely check networked services (such as web servers and mail servers) using simple service checks.&#xD;
-ATTENTION: If you want to reload the configuration please type in your unRAID terminal: 'docker exec -ti [NAME_OF_YOUR_ZABBIXSERVERCONTAINTER] zabbix_server -R config_cache_reload' (without quotes eg: docker exec -ti Zabbix-Server zabbix_server -R config_cache_reload).&#xD;
+ATTENTION: If you want to reload the configuration please type in your unRAID terminal: 'docker exec -ti NAME_OF_YOUR_ZABBIXSERVERCONTAINTER zabbix_server -R config_cache_reload' (without quotes eg: docker exec -ti Zabbix-Server zabbix_server -R config_cache_reload).&#xD;
 VARIABLES: If you need other variables here is a complete list of all variables: https://hub.docker.com/r/zabbix/zabbix-server-mysql</Overview>
   <Category>Network:Other Productivity: Tools:System</Category>
   <WebUI/>
@@ -25,7 +25,7 @@ VARIABLES: If you need other variables here is a complete list of all variables:
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>Zabbix server is the central process of Zabbix software.&#xD;
 The server performs the polling and trapping of data, it calculates triggers, sends notifications to users. It is the central component to which Zabbix agents and proxies report data on availability and integrity of systems. The server can itself remotely check networked services (such as web servers and mail servers) using simple service checks.&#xD;
-ATTENTION: If you want to reload the configuration please type in your unRAID terminal: 'docker exec -ti [NAME_OF_YOUR_ZABBIXSERVERCONTAINTER] zabbix_server -R config_cache_reload' (without quotes eg: docker exec -ti Zabbix-Server zabbix_server -R config_cache_reload).&#xD;
+ATTENTION: If you want to reload the configuration please type in your unRAID terminal: 'docker exec -ti NAME_OF_YOUR_ZABBIXSERVERCONTAINTER zabbix_server -R config_cache_reload' (without quotes eg: docker exec -ti Zabbix-Server zabbix_server -R config_cache_reload).&#xD;
 VARIABLES: If you need other variables here is a complete list of all variables: https://hub.docker.com/r/zabbix/zabbix-server-mysql</Description>
   <Networking>
     <Mode>br0</Mode>
