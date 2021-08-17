@@ -11,7 +11,9 @@
   <Project>https://sourceforge.net/projects/luckybackup/</Project>
   <Overview>LuckyBackup is a very user-friendly GUI backup program. It uses rsync as a backend and transfers over only changes made rather than all data.&#xD;
 &#xD;
-Update: The container will check on every start/restart if there is a newer version available</Overview>
+Update: The container will check on every start/restart if there is a newer version available&#xD;
+&#xD;
+Cron: If you create a cron job please be sure to tick the "Console Mode" checkbox, otherwise the cron jobs will not work.</Overview>
   <Category>Backup:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>False</TemplateURL>
@@ -24,7 +26,9 @@ Update: The container will check on every start/restart if there is a newer vers
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>LuckyBackup is a very user-friendly GUI backup program. It uses rsync as a backend and transfers over only changes made rather than all data.&#xD;
 &#xD;
-Update: The container will check on every start/restart if there is a newer version available</Description>
+Update: The container will check on every start/restart if there is a newer version available&#xD;
+&#xD;
+Cron: If you create a cron job please be sure to tick the "Console Mode" checkbox, otherwise the cron jobs will not work.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -48,6 +52,11 @@ Update: The container will check on every start/restart if there is a newer vers
     </Volume>
   </Data>
   <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>ROOT</Name>
+      <Mode/>
+    </Variable>
     <Variable>
       <Value>770</Value>
       <Name>DATA_PERM</Name>
@@ -83,6 +92,7 @@ Update: The container will check on every start/restart if there is a newer vers
   <Config Name="Data Dir" Target="/luckybackup" Default="" Mode="rw" Description="Config path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/luckybackup/</Config>
   <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="WebGUI http Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Shares" Target="/mnt/user" Default="" Mode="rw" Description="Container Path: /mnt/user" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
+  <Config Name="Run as root user" Target="ROOT" Default="false|true" Mode="" Description="This is only needed if you want to create backups from your /boot drive or other directories that require root privileges." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="Data Permissions" Target="DATA_PERM" Default="" Mode="" Description="Data Permissions for config directory" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
   <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
