@@ -13,7 +13,9 @@
 &#xD;
 Update: The container will check on every start/restart if there is a newer version available&#xD;
 &#xD;
-Cron: If you create a cron job please be sure to tick the "Console Mode" checkbox, otherwise the cron jobs will not work.</Overview>
+Cron: If you create a cron job please be sure to tick the "Console Mode" checkbox, otherwise the cron jobs will not work.&#xD;
+&#xD;
+Language: If you want to change the language make sure to exit luckyBackup from within the WebGUI by clicking 'Profile -&amp;gt; Quit' or CTRL +X otherwise the language change isn't saved.</Overview>
   <Category>Backup:</Category>
   <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
   <TemplateURL>False</TemplateURL>
@@ -28,7 +30,9 @@ Cron: If you create a cron job please be sure to tick the "Console Mode" checkbo
 &#xD;
 Update: The container will check on every start/restart if there is a newer version available&#xD;
 &#xD;
-Cron: If you create a cron job please be sure to tick the "Console Mode" checkbox, otherwise the cron jobs will not work.</Description>
+Cron: If you create a cron job please be sure to tick the "Console Mode" checkbox, otherwise the cron jobs will not work.&#xD;
+&#xD;
+Language: If you want to change the language make sure to exit luckyBackup from within the WebGUI by clicking 'Profile -&amp;gt; Quit' or CTRL +X otherwise the language change isn't saved.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -92,7 +96,7 @@ Cron: If you create a cron job please be sure to tick the "Console Mode" checkbo
   <Config Name="Data Dir" Target="/luckybackup" Default="" Mode="rw" Description="Config path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/luckybackup/</Config>
   <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="WebGUI http Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Shares" Target="/mnt/user" Default="" Mode="rw" Description="Container Path: /mnt/user" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/</Config>
-  <Config Name="Run as root user" Target="ROOT" Default="false|true" Mode="" Description="This is only needed if you want to create backups from your /boot drive or other directories that require root privileges." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Run as root user" Target="ROOT" Default="false|true" Mode="" Description="This is only needed if you want to create backups from your /boot drive or other directories that require root privileges (please don't forget to change the Shares Host path to / otherwise you can't see it in /mnt in the container)." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="Data Permissions" Target="DATA_PERM" Default="" Mode="" Description="Data Permissions for config directory" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
   <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
