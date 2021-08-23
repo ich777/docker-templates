@@ -13,9 +13,23 @@
   &#xD;
 Admin login: The credentials for the admin site: 'http://SERVERIP:PORT/admin' are Username: 'admin' and Password: 'abc123' (please note that the password is also your streaming key and should be changed to something very strong).  &#xD;
   &#xD;
-Streaming URL: The default streaming URL for example for OBS is: rtmp://SERVERIP (the stream key is the admin password).  &#xD;
-  &#xD;
 Update Notice: Simply restart the container if a newer version from Owncast is available.  &#xD;
+&#xD;
+AMD Hardware transcoding (Please note that you have to be on Unraid 6.9.0beta35 to enable the moduel for AMD):&#xD;
+ - Open up a Terminal from Unraid and type in: 'modprobe amdgpu' (without quotes or you edit your 'go' file to load it on every restart of Unraid - refer to the support thread)&#xD;
+ - At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
+ - In Owncast open the admin page and go to 'Configuration' -&amp;gt; 'Video Configuration' -&amp;gt; 'Advanced Settins', select 'VA-API hardware encoding' from the dropdown and click 'Yes'&#xD;
+&#xD;
+Intel Hardware transcoding:&#xD;
+- Download and install the Intel-GPU-TOP Plugin from the CA App&#xD;
+- At 'Device' at the bottom here in the template add '/dev/dri'&#xD;
+- In Owncast open the admin page and go to 'Configuration' -&amp;gt; 'Video Configuration' -&amp;gt; 'Advanced Settins', select 'VA-API hardware encoding' from the dropdown and click 'Yes'&#xD;
+&#xD;
+Nvidia Hardware transcoding:&#xD;
+- Download and install the Nvidia-Driver Plugin from the CA App&#xD;
+- Turn on the 'Advanced View' here in the template and at 'Extra Parameters' add: '--runtime=nvidia'.&#xD;
+- At 'Nvidia Visible Devices' at the bottom here in the template add your GPU UUID.&#xD;
+- In Owncast open the admin page and go to 'Configuration' -&amp;gt; 'Video Configuration' -&amp;gt; 'Advanced Settins', select 'NVIDIA GPU acceleration' from the dropdown and click 'Yes'&#xD;
   &#xD;
 Also visit the Homepage of the creator and consider Donating: https://owncast.online/</Overview>
   <Category>Productivity: Tools:Utilities</Category>
@@ -28,7 +42,7 @@ Also visit the Homepage of the creator and consider Donating: https://owncast.on
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>Owncast is a self-hosted live video and web chat server for use with existing popular broadcasting software.  &#xD;
+  <Description>Owncast is a self-hosted live video and web chat server for use with existing popular broadcasting software (supports encoding with VA-API - Intel & AMD and NVENC - Nvidia GPUs).  &#xD;
   &#xD;
 Admin login: The credentials for the admin site: 'http://SERVERIP:PORT/admin' are Username: 'admin' and Password: 'abc123' (please note that the password is also your streaming key and should be changed to something very strong).  &#xD;
   &#xD;
@@ -71,6 +85,16 @@ Also visit the Homepage of the creator and consider Donating: https://owncast.on
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>all</Value>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>99</Value>
       <Name>UID</Name>
       <Mode/>
@@ -92,6 +116,8 @@ Also visit the Homepage of the creator and consider Donating: https://owncast.on
   <Config Name="TCP1 - WebInterface" Target="8080" Default="" Mode="tcp" Description="TCP Port - WebInterface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="TCP2 - RTMP" Target="1935" Default="" Mode="tcp" Description="TCP Port - RTMP Streaming port" Type="Port" Display="always" Required="true" Mask="false">1935</Config>
   <Config Name="Extra Startup Parameters" Target="START_PARAMS" Default="" Mode="" Description="Enter extra startup parameters if needed here (leave empty if not needed)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Nvidia Visible Devices" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Nvidia Visible Devices - enter your GPU UUID here (only required if you plan to use Nvidia hardware transcoding otherwise leave empty, don't forget to add '--runtime=nvidia' to your 'Extra Parameters' in the template)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Nvidia Driver Capabilities" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Nvidia Driver Capabilities (This value can be left in the template even if you don't want to use Nvidia hardware transcoding)." Type="Variable" Display="advanced" Required="false" Mask="false">all</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Umask" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
