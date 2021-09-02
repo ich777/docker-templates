@@ -6,6 +6,6 @@
   <Category>Productivity: Tools:System Drivers:</Category>
   <Name>iSCSI-Initiator</Name>
   <Description>This Plugin allows you to connect to one or more iSCSI Target(s) and mount the Volume(s) to unRAID.</Description>
-  <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
+  <Support>https://forums.unraid.net/topic/113270-plugin-iscsi-initiator/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/iscsi-initiator.png</Icon>
 </Containers>
