@@ -2,7 +2,7 @@
 <Containers>
   <PluginURL>https://raw.githubusercontent.com/ich777/iscsi-initiator/master/iscsi-initiator.plg</PluginURL>
   <PluginAuthor>ich777</PluginAuthor>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <Category>Productivity: Tools:System Drivers:</Category>
   <Name>iSCSI-Initiator</Name>
   <Description>This Plugin allows you to connect to one or more iSCSI Target(s) and mount the Volume(s) to unRAID.</Description>
