@@ -48,8 +48,8 @@ You can delete your whole Array with a single button press if you don't be caref
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user</HostDir>
-      <ContainerDir>/mnt/user</ContainerDir>
+      <HostDir>/mnt</HostDir>
+      <ContainerDir>/mnt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
@@ -77,7 +77,7 @@ You can delete your whole Array with a single button press if you don't be caref
   </Environment>
   <Labels/>
   <Config Name="Container Path" Target="/krusader" Default="" Mode="rw" Description="Container Path: /krusader" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/krusader</Config>
-  <Config Name="Data Path" Target="/mnt/user" Default="" Mode="rw" Description="Main data path to your unraid shares." Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <Config Name="Data Path" Target="/mnt" Default="" Mode="rw" Description="Main data path to your unraid shares." Type="Path" Display="always" Required="true" Mask="false">/mnt</Config>
   <Config Name="TCP - VNC Port" Target="8080" Default="" Mode="tcp" Description="noVNC Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Locales - Language" Target="USER_LOCALES" Default="" Mode="" Description="Enter your prefered locales, you can find a full list of supported languages in: '/usr/share/i18n/SUPPORTED' simply open up a console from the Container and type in 'cat /usr/share/i18n/SUPPORTED' (eg: 'en_US.UTF-8 UTF8' or 'de_DE.UTF-8 UTF-8', 'fr_FR.UTF-8 UTF-8'...)" Type="Variable" Display="always" Required="true" Mask="false">en_US.UTF-8 UTF-8</Config>
   <Config Name="Custom Resolution Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Enter the preferred resolution width" Type="Variable" Display="always" Required="true" Mask="false">1280</Config>
