@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MoneroD</Name>
+  <Repository>sethsimmons/simple-monerod</Repository>
+  <Registry>https://registry.hub.docker.com/r/sethsimmons/simple-monerod</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://www.getmonero.org/</Project>
+  <Overview>Monerod - The monero node is a p2p program which keeps the blockchain in sync with the network at large.&#xD;
+     &#xD;
+Which Ports should i open?&#xD;
+https://www.reddit.com/r/Monero/comments/kkr04n/infographic_running_a_node_which_ports_should_i/</Overview>
+  <Category>Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.getmonero.org/press-kit/symbols/monero-symbol-480.png</Icon>
+  <ExtraParams>--restart unless-stopped</ExtraParams>
+  <PostArgs>--rpc-restricted-bind-ip=0.0.0.0 --rpc-restricted-bind-port=18089 --no-igd --no-zmq --enable-dns-blocklist --data-dir /var/lib/monero</PostArgs>
+  <CPUset/>
+  <DateInstalled>1631469301</DateInstalled>
+  <Description>Monerod - The monero node is a p2p program which keeps the blockchain in sync with the network at large.&#xD;
+     &#xD;
+Which Ports should i open?&#xD;
+https://www.reddit.com/r/Monero/comments/kkr04n/infographic_running_a_node_which_ports_should_i/
+Other help / options:
+https://sethforprivacy.com/guides/run-a-monero-node/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>18080</HostPort>
+        <ContainerPort>18080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>18081</HostPort>
+        <ContainerPort>18081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Monero</HostDir>
+      <ContainerDir>/var/lib/monero</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="P2P Port" Target="18080" Default="18080" Mode="tcp" Description="P2P: 18080 for the mainnet, 28080 for the testnet." Type="Port" Display="yes" Required="true" Mask="{8}">18080</Config>
+  <Config Name="RPC Port" Target="18081" Default="18081" Mode="tcp" Description="RPC: 18081 for the mainnet, 28081 for the testnet." Type="Port" Display="yes" Required="true" Mask="{8}">18081</Config>
+  <Config Name="Blockchain Storage Path" Target="/var/lib/monero" Default="/mnt/user/Monero" Mode="rw" Description="Monero Blockchain Location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Monero</Config>
+</Container>
