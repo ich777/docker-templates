@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
   <PluginURL>https://raw.githubusercontent.com/ich777/unraid-nvtop/master/nvtop.plg</PluginURL>
+  <Requires>Nvidia Driver Installed</Requires>
   <PluginAuthor>ich777</PluginAuthor>
   <Category>Productivity: Tools:System</Category>
   <Name>NVTOP</Name>
