@@ -7,5 +7,6 @@
   <Description>Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs for the CLI. It can handle multiple GPUs and print information about them in a htop familiar way.&#xD;
 This Plugin is based on: https://github.com/Syllo/nvtop&#xD;</Description>
     <Support>https://forums.unraid.net/topic/98978-plugin-nvidia-driver/</Support>
+  <Requires>nVidia Driver Installed</Requires>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nvidia-driver.png</Icon>
 </Containers>
