@@ -101,8 +101,8 @@ Update Notice: Simply restart the container and it will download the newest vers
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
-      <Name/>
+      <Value></Value>
+      <Name>MANUAL_UPDATES</Name>
       <Mode/>
     </Variable>
   </Environment>
@@ -120,5 +120,5 @@ Update Notice: Simply restart the container and it will download the newest vers
   <Config Name="FiveM Artifacts Server Adress" Target="SRV_ADR" Default="" Mode="" Description="Looks something like this: https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/" Type="Variable" Display="advanced-hide" Required="true" Mask="false">https://runtime.fivem.net/artifacts/fivem/build_proot_linux/master/</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="Manual Updates" Target="" Default="" Mode="" Description="Set this to 'true' without quotes to update your server manually (otherwise leave blank)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Manual Updates" Target="MANUAL_UPDATES" Default="" Mode="" Description="Set this to 'true' without quotes to update your server manually (otherwise leave blank)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
