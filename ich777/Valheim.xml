@@ -155,6 +155,11 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Name>DEBUG_OUTPUT</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>LOG_OUTPUT</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
@@ -179,4 +184,5 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Debug Log Output" Target="DEBUG_OUTPUT" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Write Log to File" Target="LOG_OUTPUT" Default="" Mode="" Description="This will write the log output to a file, by default to 'valheim.log' to the main directory.&amp;lt;br/&amp;gt;&#13;&#10;ATTENTION: Keep in mind this option will force Debug Log Output no matter what you choose in the above variable." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
 </Container>
