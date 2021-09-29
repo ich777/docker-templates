@@ -104,7 +104,7 @@ WEB CONSOLE: You can connect to the RedM console by opening your browser and go 
       <Mode/>
     </Variable>
     <Variable>
-      <Value/><Value>
+      <Value></Value>
       <Name>MANUAL_UPDATES</Name>
       <Mode/>
     </Variable>
