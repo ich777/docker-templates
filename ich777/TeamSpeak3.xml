@@ -64,6 +64,11 @@ UPDATE NOTICE: The container will check on every start/restart if there is a new
       <Mode/>
     </Variable>
     <Variable>
+      <Value/>
+      <Name>ENABLE_TSDNS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value>000</Value>
       <Name>UMASK</Name>
       <Mode/>
@@ -90,6 +95,7 @@ UPDATE NOTICE: The container will check on every start/restart if there is a new
   <Config Name="TCP1 - Query Port" Target="10011" Default="10011" Mode="tcp" Description="TCP Query Port" Type="Port" Display="always" Required="true" Mask="false">10011</Config>
   <Config Name="TCP2 - File Transfer" Target="30033" Default="30033" Mode="tcp" Description="TCP File Transfer Port" Type="Port" Display="always" Required="true" Mask="false">30033</Config>
   <Config Name="License agreement" Target="TS3SERVER_LICENSE" Default="" Mode="" Description="Set to 'accept' if you agree the license agreement (you can find the license after the first start of the container in the main directory of the container or you can set it also to 'view' to read it in the terminal - without quotes)." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Enable TSDNS" Target="ENABLE_TSDNS" Default="" Mode="" Description="If you enable the TSDNS service please also add a new TCP Port to the template with the Container and Host port: 41144" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
