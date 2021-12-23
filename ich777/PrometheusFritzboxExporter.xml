@@ -6,7 +6,7 @@
   <Category>Productivity: Tools:System</Category>
   <Name>Prometheus-Fritzbox-Exporter</Name>
   <Description>Is a slim plugin, that takes informations gathered from your Fritzbox and provides it to a Prometheus database. Usage is not limited to Prometheus only. Data can be formated and displayed to any database or graphical node. Export URL: The URL for the exportet metrics is: 'http://YOURunRAIDIP:9042/metrics' (to use it in Prometheus add the target: 'YOURunRAIDIP:9042' to your Prometheus yaml).
-This Plugin is based on fritzbox-exporter from sberk42: https://github.com/ebrianne/adguard-exporter</Description>
+This Plugin is based on fritzbox-exporter from sberk42: https://github.com/sberk42/fritzbox_exporter</Description>
   <Support>https://forums.unraid.net/topic/110995-plugin-prometheus-unraid-plugins/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/fritz.png</Icon>
 </Containers>
