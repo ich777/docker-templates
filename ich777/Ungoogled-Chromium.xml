@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Ungoogled-Chromium</Name>
+  <Repository>ich777/ungoogled-chromium</Repository>
+  <Registry>https://hub.docker.com/r/ich777/ungoogled-chromium/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.google.com/chrome/</Project>
+  <Overview>Ungoogled-Chromium is a lightweight approach to removing Google web service dependency from the Chromium project web browser.&#xD;
+- Ungoogled Chromium is Google Chromium, sans dependency on Google web services.&#xD;
+- Ungoogled Chromium retains the default Chromium experience as closely as possible. Unlike other Chromium forks that have their own visions of a web browser, Ungoogled Chromium is essentially a drop-in replacement for Chromium.&#xD;
+- Ungoogled Chromium features tweaks to enhance privacy, control, and transparency. However, almost all of these features must be manually activated or enabled. For more details, see Feature Overview.&#xD;
+&#xD;
+&#xD;
+You can find the full source code here: https://github.com/Eloston/ungoogled-chromium</Overview>
+  <Category>Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/chromium.png</Icon>
+  <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="Data Dir" Target="/ungoogledchromium" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/ungoogled-chromium/</Config>
+  <Config Name="noVNC WebGUI" Target="8080" Default="" Mode="tcp" Description="TCP noVNC WebGUI" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Extra Parameters" Target="EXTRA_PARAMETERS" Default="" Mode="" Description="If needed enter extra startup parameters here otherwise leave empty." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Ungoogled Chromium Version" Target="UG_CHROMIUM_V" Default="" Mode="" Description="You can find a full list of availabel versions here if you don't want to install the latest version: https://ungoogled-software.github.io/ungoogled-chromium-binaries/releases/linux_portable/64bit/" Type="Variable" Display="advanced" Required="true" Mask="false">latest</Config>
+  <Config Name="noVNC Resizing" Target="NOVNC_RESIZE" Default="" Mode="" Description="Valid options are 'off', 'scale', 'remote'." Type="Variable" Display="advanced" Required="false" Mask="false">remote</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1024 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 768 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">768</Config>
+  <Config Name="Umask" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+</Container>
