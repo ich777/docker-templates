@@ -150,6 +150,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="TCP2 - Web base control" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
   <Config Name="TCP3 - Web Panel" Target="8082" Default="" Mode="tcp" Description="Container Port: 8082" Type="Port" Display="always" Required="false" Mask="false">8082</Config>
   <Config Name="UDP5 - Registering at server list" Target="27015" Default="" Mode="udp" Description="Should be in the range 27015 - 27030, don't forget to set also a different Container Port if you change this value." Type="Port" Display="always" Required="true" Mask="false">27015</Config>
+  <Config Name="BepInEx" Target="ENABLE_BEPINEX" Default="" Mode="" Description="If you want to enable BepInEx set this variable to 'true' (without quotes)." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
 </Container>
