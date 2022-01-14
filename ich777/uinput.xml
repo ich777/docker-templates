@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-uinput/master/uinput.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>uinput</Name>
+  <Description>This Plugin adds uinput to unRAID.</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-nvidiadvb-kernel-helperbuilder-docker/</Support>
+  <IconFA>gamepad</IconFA>
+</Containers>
