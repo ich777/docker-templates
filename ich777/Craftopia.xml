@@ -4,6 +4,7 @@
   <Repository>ich777/steamcmd:craftopia</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
+  <Beta>True</Beta>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
