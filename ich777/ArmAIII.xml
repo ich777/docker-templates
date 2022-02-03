@@ -10,7 +10,8 @@
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://arma3.com/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install ArmA III and run it.&#xD;
-To run this container you must provide a valid Steam username and password since the game needs a valid account to download (NOTICE: You must disable Steam Guard otherwise this container will not work, Steam recommens  to make a new Steam account for dedicated servers).&#xD;
+&#xD;
+Install Note: You must provide a valid Steam username and password with Steam Guard disabled (the user dosen't have to have the game in the library).&#xD;
 &#xD;
 Password Notice: The Docker will automaticly download a server.cfg preconfigured with ServerName: Docker Server and Password: Docker&#xD;
 &#xD;
@@ -31,7 +32,8 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
   <Description>This Docker will download and install SteamCMD. It will also install ArmA III and run it.&#xD;
-To run this container you must provide a valid Steam username and password since the game needs a valid account to download (NOTICE: You must disable Steam Guard otherwise this container will not work, Steam recommens  to make a new Steam account for dedicated servers).&#xD;
+&#xD;
+Install Note: You must provide a valid Steam username and password with Steam Guard disabled (the user dosen't have to have the game in the library).&#xD;
 &#xD;
 Password Notice: The Docker will automaticly download a server.cfg preconfigured with ServerName: Docker Server and Password: Docker&#xD;
 &#xD;
