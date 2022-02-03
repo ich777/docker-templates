@@ -11,7 +11,7 @@
   <Project>https://www.minecraft.net/</Project>
   <Overview>This Docker will download and install Multi Theft Auto SERVERNAME: Docker MTA Server SERVERPASSWORD: Docker.&#xD;
 &#xD;
-If you want to connect to the console open a terminal and enter 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS MTA' (without quotes), to disconnect close the window.&#xD;
+If you want to connect to the console open a terminal and enter 'docker exec -u mta -ti NAMEOFYOURCONTAINER screen -xS MTA' (without quotes), to disconnect close the window.&#xD;
 &#xD;
 UPDATE NOTICE: You can Force Update this Container (please note that you have to set Download Resources to 'true' and leave Skip Basicconfiguration blank to download everything new). </Overview>
   <Category>GameServers:</Category>
