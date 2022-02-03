@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>http://www.exilemod.com/</Project>
-  <Overview>This Docker will download and install SteamCMD. It will also install ArmA III including ExileMod 1.0.4 and run it (You can also change the download URL so that you can install older builds of ExileMod).&#xD;
+  <Overview>This Docker will download and install SteamCMD. It will also install ArmA III including ExileMod and run it.&#xD;
 &#xD;
 Install Note: You must provide a valid Steam username and password with Steam Guard disabled (the user MUST have to have the game in the library, otherwise the download from Exile Mod will fail!).&#xD;
 &#xD;
@@ -28,7 +28,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>This Docker will download and install SteamCMD. It will also install ArmA III including ExileMod 1.0.4 and run it (You can also change the download URL so that you can install older builds of ExileMod).&#xD;
+  <Description>This Docker will download and install SteamCMD. It will also install ArmA III including ExileMod and run it.&#xD;
 &#xD;
 Install Note: You must provide a valid Steam username and password with Steam Guard disabled (the user MUST have to have the game in the library, otherwise the download from Exile Mod will fail!).&#xD;
 &#xD;
