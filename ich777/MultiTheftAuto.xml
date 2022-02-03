@@ -63,18 +63,13 @@ UPDATE NOTICE: You can Force Update this Container (please note that you have to
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
-      <Name/>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>true</Value>
       <Name>DOWNLOAD_RESOURCES</Name>
       <Mode/>
     </Variable>
     <Variable>
       <Value/>
-      <Name/>
+      <Name>SKIP_BASECONFIG_CHK</Name>
       <Mode/>
     </Variable>
     <Variable>
@@ -99,7 +94,7 @@ UPDATE NOTICE: You can Force Update this Container (please note that you have to
   <Config Name="UDP1 - Game Port" Target="22003" Default="" Mode="udp" Description="Container Port: 22003" Type="Port" Display="always" Required="true" Mask="false">22003</Config>
   <Config Name="UDP2 - ASE Port" Target="22126" Default="" Mode="udp" Description="Game Port +123" Type="Port" Display="always" Required="false" Mask="false">22126</Config>
   <Config Name="TCP - http Port" Target="22005" Default="" Mode="tcp" Description="Container Port: 22005" Type="Port" Display="always" Required="true" Mask="false">22005</Config>
-  <Config Name="Skip Baseconfig" Target="" Default="" Mode="" Description="Set to 'true' (without quotes) to skip the download of the Basic Configuration files." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Skip Baseconfig" Target="SKIP_BASECONFIG_CHK" Default="" Mode="" Description="Set to 'true' (without quotes) to skip the download of the Basic Configuration files." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Download Resources" Target="DOWNLOAD_RESOURCES" Default="" Mode="" Description="Set to 'true' (without quotes) to download the resources, otherwise leave blank." Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="Force Update" Target="" Default="" Mode="" Description="Set to 'true' (without quotes) to redownload the whole server (please note that you have to set Download Resources to 'true' and leave Skip Basicconfiguration blank to download everything new). " Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Logfile" Target="LOGFILE_DIR" Default="" Mode="" Description="Change only if you know what you are doing." Type="Variable" Display="always" Required="false" Mask="false">multitheftauto_linux_x64/mods/deathmatch/logs/server.log</Config>
