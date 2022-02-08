@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-rcon/master/rcon.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Category>GameServers: Network:Management Productivity: Tools:</Category>
+  <Name>RCON</Name>
+  <Description>This plugin adds RCON to your unRAID server and enables your to connecto to various servers who are following the RCON protocol standard.
+Simply issue 'rcon -h' from an unRAID Terminal and you get an overview on how to connect. A basic connection command will look like this: 'rcon -H RCONIP -p PORT -P PASSWORD' to end the connection press CTRL + C.
+
+ATTENTION: The RCON protocol transmits everything un-encrypted (including your password!). Therefore it is strongly recommended to not connect to RCON over the internet rather it is recommended to use a VPN or SSH if you want to connect to a foreign server over the internet.
+
+Source: https://github.com/n0la/rcon</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/rcon.png</Icon>
+</Containers>
