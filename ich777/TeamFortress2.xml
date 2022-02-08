@@ -14,6 +14,8 @@
 It will also install SteamCMD (you can have multiple installations with only one steamcmd directory, check out my other containers).&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the game server files!&#xD;
+PUBLIC PLAY: If you want that your server is public listed you must add '+sv_setsteamaccount YOURTOKEN' to the GAME_PARAMS (without the quotes and replace YOURTOKEN with your token).&#xD;
+Create your token here: https://steamcommunity.com/dev/managegameservers (every gameserver needs it's own token!!!)&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -34,6 +36,8 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
 It will also install SteamCMD (you can have multiple installations with only one steamcmd directory, check out my other containers).&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the game server files!&#xD;
+PUBLIC PLAY: If you want that your server is public listed you must add '+sv_setsteamaccount YOURTOKEN' to the GAME_PARAMS (without the quotes and replace YOURTOKEN with your token).&#xD;
+Create your token here: https://steamcommunity.com/dev/managegameservers (every gameserver needs it's own token!!!)&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
