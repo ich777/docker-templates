@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Longvinter</Name>
+  <Repository>ich777/steamcmd:longvinter</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Longvinter and run it.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/longvinter.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="Server Files" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/longvinter/</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server here otherwise leave empty." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UDP - Game Port" Target="27016" Default="" Mode="udp" Description="UDP Game Port (If you need another port delete this Entry and create a new UDP port mapping with the corresponding port | also don't forget to click on show more and change the variable GAME_PORT)" Type="Port" Display="always" Required="true" Mask="false">27016</Config>
+  <Config Name="GAME_PORT" Target="27016" Default="" Mode="udp" Description="Only change if you know what you are doing (intital GAME_PORT | Don't forget to create create a new UDP port mapping with the corresponding port and to delete the old port from the template)" Type="Port" Display="advanced-hide" Required="true" Mask="false">27016</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
