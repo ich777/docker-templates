@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ioquake3</Name>
+  <Repository>ich777/ioquake3</Repository>
+  <Registry>https://hub.docker.com/r/ich777/ioquake3</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://ioquake3.org/</Project>
+  <Overview>This Docker will download and install ioquake3 Server (You have to copy your pak0.pk3 file from your game directory to your server).&#xD;
+&#xD;
+PK3 Files: After the container started the first time you have to copy your pak0.pk3 file from your Quake III Arena directory into your server directory: .../.q3a/baseq3/ (i strongly recommend you to place all your pak*.pk3 files into it) after that simply restart the container to start the server.&#xD;
+&#xD;
+WEB CONSOLE: You can connect to the ioquake3 console by opening your browser and go to HOSTIP:9029 (eg: 192.168.1.1:9029) or click on WebUI on the Docker page within Unraid.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ioquake3.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please consider donating</DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="ServerFiles" Target="/ioquake3" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/ioquake3</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="The startup parameters for the server (only change if you know what you are doing!)" Type="Variable" Display="always" Required="true" Mask="false">+set dedicated 2 +set sv_allowDownload 1 +set com_hunkmegs 64</Config>
+  <Config Name="Q3_MAP" Target="Q3_MAP" Default="" Mode="" Description="The initial map wich the server would start." Type="Variable" Display="always" Required="true" Mask="false">q3dm1</Config>
+  <Config Name="UDP - Game Port" Target="27960" Default="" Mode="udp" Description="Game Port (If you want to change the game port please click on more settings here in the template, change the port, then delete this entry and create a new one with the corresponding port number and UDP only!)." Type="Port" Display="always" Required="false" Mask="false">27960</Config>
+  <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the ioquake3 console by opening your browser and go to HOSTIP:9021 - eg: 192.168.1.1:9029 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9029</Config>
+  <Config Name="ioquake 3 Base Port" Target="IOQ3_PORT" Default="" Mode="" Description="Base Port" Type="Variable" Display="advanced" Required="true" Mask="false">27960</Config>
+  <Config Name="ioquake3 Download URL" Target="DL_URL" Default="" Mode="" Description="Only change if you know what you're doing!" Type="Variable" Display="advanced" Required="true" Mask="false">https://files.ioquake3.org/Linux.zip</Config>
+  <Config Name="Patch URL" Target="DL_URL_PATCH" Default="" Mode="" Description="Only change if you know what you're doing!" Type="Variable" Display="advanced" Required="true" Mask="false">https://files.ioquake3.org/quake3-latest-pk3s.zip</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
