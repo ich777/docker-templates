@@ -58,7 +58,7 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
   </Data>
   <Environment>
     <Variable>
-      <Value>1.4.3.2</Value>
+      <Value>1.4.3.6</Value>
       <Name>TERRARIA_SRV_V</Name>
       <Mode/>
     </Variable>
@@ -80,7 +80,7 @@ WEB CONSOLE: You can connect to the Terraria console by opening your browser and
   </Environment>
   <Labels/>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/terraria</Config>
-  <Config Name="Preferred Terraria version" Target="TERRARIA_SRV_V" Default="" Mode="" Description="Enter your prefered Terraria version (you can get the latest version number for example here: https://terraria.fandom.com/wiki/Server#Downloads)" Type="Variable" Display="always" Required="true" Mask="false">1.4.3.2</Config>
+  <Config Name="Preferred Terraria version" Target="TERRARIA_SRV_V" Default="" Mode="" Description="Enter your prefered Terraria version (you can get the latest version number for example here: https://terraria.fandom.com/wiki/Server#Downloads)" Type="Variable" Display="always" Required="true" Mask="false">1.4.3.6</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-config serverconfig.txt</Config>
   <Config Name="TCP" Target="7777" Default="" Mode="tcp" Description="Container Port: 7777" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Terraria console by opening your browser and go to HOSTIP:9012 - eg: 192.168.1.1:9012 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9012</Config>
