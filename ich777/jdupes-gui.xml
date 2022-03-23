@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>jdupes-gui</Name>
+  <Repository>ich777/jdupes-gui</Repository>
+  <Registry>https://hub.docker.com/r/ich777/jdupes-gui/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://github.com/jbruchon/jdupes</Project>
+  <Overview>jdupes is a command line program for identifying and taking actions upon duplicate files combined with jdupes-gui it becomes a usefull tool for identifying duplicated files on your server.&#xD;
+&#xD;
+**A WORD OF WARNING:** jdupes IS NOT a drop-in compatible replacement for fdupes!&#xD;
+&#xD;
+**ATTENTION:** A minor inconvenience is caused by the fact that the jdupes-gui script is single-threaded. This causes the application to seemingly hang when running long jobs like searching through large folders or deleting large batches of files. Please be patient, it is still working.&#xD;
+&#xD;
+See the official GitHub repository for jdupes here: https://github.com/jbruchon/jdupes and jdupes-gui here: https://github.com/Pesc0/jdupes-gui</Overview>
+  <Category>Backup:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/jdupes.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.jodybruchon.com/</DonateLink>
+  <Requires/>
+  <Config Name="Data Dir" Target="/jdupes" Default="" Mode="rw" Description="Can be deleted if you don't need a VNC password" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/jdupes/</Config>
+  <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="WebGUI http Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Path to files" Target="/mnt/user" Default="" Mode="rw" Description="Data Path for your files (ATTENTION: Please always double check what you are deleting in the containers since this affects the files on your Server and you won't be able to recover them!!!&#13;&#10;The recommended default path is /mnt/user)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data Permissions" Target="DATA_PERM" Default="" Mode="" Description="Data Permissions for config directory" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1280 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 850 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">850</Config>
+</Container>
