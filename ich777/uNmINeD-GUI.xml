@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>uNmINeD-GUI</Name>
+  <Repository>ich777/unmined</Repository>
+  <Registry>https://hub.docker.com/r/ich777/unmined/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://unmined.net/</Project>
+  <Overview>uNmINeD is an easy to use and fast Minecraft world viewer and mapper tool. It can read Minecraft Java and Bedrock Edition world files and renders a browseable 2D overview map that you can export.&#xD;
+&#xD;
+**ATTENTION:** Please always mount your world files as read only and it is strongly recommended to mount your worlds to the path /unmined/worlds/... in the container.</Overview>
+  <Category>Backup:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/unmined.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you want to support the developer from uNmINeD, please </DonateText>
+  <DonateLink>https://www.patreon.com/bePatron?u=543858&amp;redirect_uri=https%3A%2F%2Funmined.net%2Fdownloads%2F&amp;utm_medium=widget</DonateLink>
+  <Requires/>
+  <Config Name="Data Dir" Target="/unmined" Default="" Mode="rw" Description="Can be deleted if you don't need a VNC password" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/unmined/</Config>
+  <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="WebGUI http Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Minecraft world" Target="/unmined/worlds" Default="" Mode="ro" Description="Path to your Minecraft world folder (You can also create multiple mappings but it is strongly recommended to mount it as Read Only and to the path /unmined/worlds/...)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data Permissions" Target="DATA_PERM" Default="" Mode="" Description="Data Permissions for config directory" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1280 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 850 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">850</Config>
+</Container>
