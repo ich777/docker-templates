@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://unmined.net/</Project>
-  <Overview>uNmINeD is an easy to use and fast Minecraft world viewer and mapper tool. It can read Minecraft Java and Bedrock Edition world files and renders a browseable 2D overview map that you can export.&#xD;
+  <Overview>uNmINeD-GUI is an easy to use and fast Minecraft world viewer and mapper tool. It can read Minecraft Java and Bedrock Edition world files and renders a browseable 2D overview map that you can export.&#xD;
 &#xD;
 **ATTENTION:** Please always mount your world files as read only and it is strongly recommended to mount your worlds to the path /unmined/worlds/... in the container.</Overview>
   <Category>Backup:</Category>
