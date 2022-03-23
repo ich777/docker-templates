@@ -23,7 +23,7 @@
   <DonateText>If you want to support the developer from uNmINeD, please </DonateText>
   <DonateLink>https://www.patreon.com/bePatron?u=543858&amp;redirect_uri=https%3A%2F%2Funmined.net%2Fdownloads%2F&amp;utm_medium=widget</DonateLink>
   <Requires/>
-  <Config Name="Data Dir" Target="/unmined" Default="" Mode="rw" Description="Main Data directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/unmined/</Config>
+  <Config Name="Data Dir" Target="/unmined" Default="" Mode="rw" Description="Main Data directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/unmined/</Config>
   <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="WebGUI http Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Minecraft World" Target="/unmined/worlds" Default="" Mode="ro" Description="Path to your Minecraft world folder (You can also create multiple mappings but it is strongly recommended to mount it as Read Only and to the path /unmined/worlds/...)" Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Data Permissions" Target="DATA_PERM" Default="" Mode="" Description="Data Permissions for config directory" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
