@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Necesse</Name>
+  <Repository>ich777/steamcmd:necesse</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Necesse and run it.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/necesse.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="Server Files" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/necesse/</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server here otherwise leave empty." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container downloads at startup. If you want to install a static or beta version of the game change the value to: '1169370 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">1169370</Config>
+  <Config Name="UDP - Game Port" Target="14159" Default="" Mode="udp" Description="UDP Game Port (If you need another port delete this Entry and create a new UDP port mapping with the corresponding port | also don't forget to click on show more and change the variable GAME_PORT)" Type="Port" Display="always" Required="true" Mask="false">14159</Config>
+  <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Necesse console by opening your browser and go to HOSTIP:9023 - eg: 192.168.1.1:9023 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="true" Mask="false">9023</Config>
+  <Config Name="World Name" Target="WORLD_NAME" Default="" Mode="" Description="Specify the world name here (your worlds are saved in .../.config/Necesse/saves/)" Type="Variable" Display="always" Required="true" Mask="false">World</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
