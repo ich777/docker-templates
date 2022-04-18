@@ -11,7 +11,7 @@
   <Project>https://www.steampowered.com/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install Colony Survival and run it.&#xD;
 &#xD;
-CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS ColonySurvival' (without quotes),&#xD;
+CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u steam -ti NAMEOFYOURCONTAINER screen -xS ColonySurvival' (without quotes),&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
@@ -30,7 +30,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This Docker will download and install SteamCMD. It will also install Colony Survival and run it.&#xD;
 &#xD;
-CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u terraria -ti NAMEOFYOURCONTAINER screen -xS ColonySurvival' (without quotes),&#xD;
+CONSOLE: To connect to the console open up a terminal and type in: 'docker exec -u steam -ti NAMEOFYOURCONTAINER screen -xS ColonySurvival' (without quotes),&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
@@ -116,9 +116,9 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/colonysurvival</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">748090</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server (If you want a password on your server please add for example: '+server.password Docker' without quotes. In this case 'Docker' is the password. You can also enter multiple commands like: '+server.maxplayers +server.password Docker' without quotes)" Type="Variable" Display="always" Required="false" Mask="false">+server.gameport 27016</Config>
-  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="true"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
   <Config Name="UDP - Game Port" Target="27016" Default="" Mode="udp" Description="UDP Game Port (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to add the entry for example: '+server.gameport 27016' without quotes and the right port number in the GAME_PARAMS)" Type="Port" Display="always" Required="true" Mask="false">27016</Config>
   <Config Name="Server Name" Target="SRV_NAME" Default="" Mode="" Description="Enter you preferred servername." Type="Variable" Display="always" Required="true" Mask="false">Colony Survival Docker</Config>
   <Config Name="Wold Name" Target="SRV_WORLDNAME" Default="" Mode="" Description="Enter your preferred world name." Type="Variable" Display="always" Required="true" Mask="false">ColonySurvival</Config>
