@@ -13,6 +13,8 @@
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
+WARNING: I would strongly recommend that you mount a path to the /tmp directory inside the container because maps will be downloaded to the /tmp directory and can fill up your Docker image!&#xD;
+&#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
@@ -29,6 +31,8 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Description>This Docker will download and install SteamCMD. It will also install Pavlov VR and run it.&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+WARNING: I would strongly recommend that you mount a path to the /tmp directory inside the container because maps will be downloaded to the /tmp directory and can fill up your Docker image!&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
