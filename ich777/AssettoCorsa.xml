@@ -10,7 +10,6 @@
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://www.assettocorsa.net/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install AssettoCorsa and run it.&#xD;
-To run this container you must provide a valid Steam username and password since the game needs a valid account to download (NOTICE: You must disable Steam Guard otherwise this container will not work, Steam recommens  to make a new Steam account for dedicated servers).&#xD;
 &#xD;
 ATTENTION: You MUST provide a Steam User account with SteFirst Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
@@ -28,7 +27,6 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This Docker will download and install SteamCMD. It will also install AssettoCorsa and run it.&#xD;
-To run this container you must provide a valid Steam username and password since the game needs a valid account to download (NOTICE: You must disable Steam Guard otherwise this container will not work, Steam recommens  to make a new Steam account for dedicated servers).&#xD;
 &#xD;
 ATTENTION: You MUST provide a Steam User account with SteFirst Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
