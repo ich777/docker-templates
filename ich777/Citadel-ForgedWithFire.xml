@@ -18,7 +18,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
 You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>
+  <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/citadelfwf.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
@@ -37,7 +37,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>7777</HostPort>
+        <HostPort>7777</HostPort>Enter your start up commands for the server (for example the server admin: --admin [YOURsteamID64] e.g: '--admin 123456789123456789' without quotes).
         <ContainerPort>7777</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
@@ -107,9 +107,9 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/citadelfwf</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">489650 </Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server (for example the server admin: --admin [YOURsteamID64] e.g: '--admin 123456789123456789' without quotes)." Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="false" Mask="true"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
   <Config Name="UDP1 - Game Port" Target="7777" Default="" Mode="udp" Description="UDP Game Port (if you need another port, please delete this entry and create a new UDP Port with the corresponding port number, also don't forget to change the port in your game settings file)" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="UDP2 - Query Port" Target="27015" Default="" Mode="udp" Description="UDP Query Port (if you need another port, please delete this entry and create a new UDP Port with the corresponding port number, also don't forget to change the port in your game settings file)" Type="Port" Display="always" Required="false" Mask="false">27015</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
