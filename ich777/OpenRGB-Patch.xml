@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>True</Beta>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>OpenRGB Patch</Name>
+  <Description>This package contains and installs the OpenRGB Patch that needs to be installed in conjunction with the OpenRGB Docker container to take full controll over your RGB lightning.  
+To see all the RGB devices you have to pass through the devices /sys/bus/i2c/device and /dev/i2c-0 to the OpenRGB Docker container and maybe all other /dev/i2c-X devices (where you have to replace X with the number from the device to pass through).</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openrgb.png</Icon>
+</Containers>
