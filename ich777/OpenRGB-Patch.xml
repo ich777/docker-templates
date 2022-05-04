@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <PluginURL>https://github.com/ich777/unraid-openrgb-patch/raw/master/openrgb-patch.plg</PluginURL>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-openrgb-patch/master/openrgb-patch.plg</PluginURL>
   <PluginAuthor>ich777</PluginAuthor>
   <Beta>True</Beta>
   <Category>Productivity: Tools:System Drivers:</Category>
