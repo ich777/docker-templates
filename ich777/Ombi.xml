@@ -24,7 +24,7 @@
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Requires/>
   <Config Name="Data Dir" Target="/ombi" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/ombi</Config>
-  <Config Name="Ombi Release" Target="OMBI_REL" Default="" Mode="" Description="Enter if you want to download the " Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Ombi Release" Target="OMBI_REL" Default="" Mode="" Description="Enter if you want to download the latest or develop version." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="WebGUI" Target="5000" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">5000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
