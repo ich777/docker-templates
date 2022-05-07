@@ -124,4 +124,5 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="UDP3 - Authentication" Target="8766" Default="" Mode="udp" Description="Container Port: 8766" Type="Port" Display="always" Required="true" Mask="false">8766</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Force 64bit mode" Target="FORCE_X64" Default="" Mode="" Description="Set to true if you want to run the game in 64bit mode or leave empty to run it in 32bit mode." Type="Variable" Display="advanced" Required="true" Mask="false">true</Config>
 </Container>
