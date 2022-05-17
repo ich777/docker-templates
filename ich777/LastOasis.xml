@@ -14,7 +14,7 @@
 **Customer &amp;amp; Provider Key:** You have to first create your own Provider Key here: https://myrealm.lastoasis.gg and fill in the generated Provider Key and Custom Key in the template.&#xD;
 &#xD;
 **After the first server start:** After the first sever start you can mange your server at: https://myrealm.lastoasis.gg you should see your server there.&#xD;
-Create a Realm, Add and Activate a Tile and wait for the server to load it, after that you can join your dedicated server (keep in mind that every Tile needs it's own dedicated server!).&#xD;
+Create a Realm, Add and Activate a Tile and wait for the server to load it, after that you can join your dedicated server (keep in mind that every Tile needs it's own dedicated server and each dedicated server needs it's own Provider Key!).&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
