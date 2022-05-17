@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>LastOasis</Name>
+  <Repository>ich777/steamcmd:lastoasis</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://store.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Last Oasis and run it.&#xD;
+&#xD;
+**Customer &amp;amp; Provider Key:** You have to first create your own Provider Key here: https://myrealm.lastoasis.gg and fill in the generated Provider Key and Custom Key in the template.&#xD;
+&#xD;
+**After the first server start:** After the first sever start you can mange your server at: https://myrealm.lastoasis.gg you should see your server there.&#xD;
+Create a Realm, Add and Activate a Tile and wait for the server to load it, after that you can join your dedicated server (keep in mind that every Tile needs it's own dedicated server!).&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/lastoasis.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/lastoasis</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '920720 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">920720</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Identifier" Target="IDENTIFIER" Default="" Mode="" Description="Enter your preferred server identifier." Type="Variable" Display="always" Required="true" Mask="false">dockeroasis</Config>
+  <Config Name="Server Slots" Target="SLOTS" Default="" Mode="" Description="Enter the maximum server slots." Type="Variable" Display="always" Required="true" Mask="false">20</Config>
+  <Config Name="Customer Key" Target="CUSTOMER_KEY" Default="" Mode="" Description="Your Customer Key goes here (You can get your Customer Key here: https://myrealm.lastoasis.gg  &#13;&#10;Log in -&amp;gt; click on the Hosting drop down and select Providers)." Type="Variable" Display="always" Required="true" Mask="false">pwHB3mLCOUWscFi7</Config>
+  <Config Name="Provider Key" Target="PROVIDER_KEY" Default="" Mode="" Description="Your Provider Key goes here (You can get your Provider Key here: https://myrealm.lastoasis.gg  &#13;&#10;Log in -&amp;gt; click on the Hosting drop down -&amp;gt; select Providers -&amp;gt; click Add Key -&amp;gt; enter a Name and click Add)." Type="Variable" Display="always" Required="true" Mask="false"> 8IhohaMRZIJJubv5 </Config>
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters." Type="Variable" Display="always" Required="true" Mask="false">-port=5555 -QueryPort=27015 -NoLiveServer -EnableCheats</Config>
+  <Config Name="UDP1 - Game Port" Target="5555" Default="" Mode="udp" Description="UDP Game Port (if you need another port delete this entry and create a new Port mapping with the same Port for the Host and Container Port, also don't forget to change the port value in the Game Parameters!)" Type="Port" Display="always" Required="false" Mask="false">5555</Config>
+  <Config Name="UDP2 - Query Port" Target="27015" Default="" Mode="udp" Description="UDP Query Port (if you need another port delete this entry and create a new Port mapping with the same Port for the Host and Container Port, also don't forget to change the QueryPort value in the Game Parameters!)" Type="Port" Display="always" Required="false" Mask="false">27015</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
