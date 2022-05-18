@@ -12,7 +12,8 @@
   <Project>https://steampowered.com/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install V Rising and run it.&#xD;
 &#xD;
-**Config Files:** The config files are located in: .../vrising/VRisingServer_Data/StreamingAssets/Settings!&#xD;
+**Save Files:** The save files are located in: .../vrising/save-data&#xD;
+**Config Files:** The config files are located in: .../vrising/VRisingServer_Data/StreamingAssets/Settings&#xD;
 &#xD;
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
