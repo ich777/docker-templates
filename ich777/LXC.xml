@@ -4,7 +4,7 @@
   <PluginAuthor>ich777</PluginAuthor>
   <Beta>True</Beta>
   <Category>Productivity: Tools:System</Category>
-  <Name>LXC-Plugin</Name>
+  <Name>LXC</Name>
   <Description>LXC is a well-known Linux container runtime that consists of tools, templates, and library and language bindings. It's pretty low level, very flexible and covers just about every containment feature supported by the upstream kernel.
     
 ATTENTION: This plugin is currently in development and currently meant for advanced users only, please visit the support thread first! Not all features/distributions are supported currently!</Description>
