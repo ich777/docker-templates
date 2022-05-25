@@ -115,8 +115,8 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
   <Config Name="UDP - Game Port" Target="7777" Default="" Mode="udp" Description="If you specify another game port then delete this entry and create a new UDP entry with your desired port number (also don't forget to set it in the GAME_PARAMS)." Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+  <Config Name="UDP2 - ServerPort" Target="7000" Default="" Mode="udp" Description="Container Port: 7000" Type="Port" Display="always" Required="true" Mask="false">7000</Config>
+  <Config Name="UDP3 - ServerPort" Target="7200" Default="" Mode="udp" Description="Container Port: 7200" Type="Port" Display="always" Required="true" Mask="false">7200</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
-  <Config Name="UDP2 - ServerPort" Target="7000" Default="" Mode="udp" Description="Container Port: 7000" Type="Port" Display="advanced" Required="true" Mask="false">7000</Config>
-  <Config Name="UDP3 - ServerPort" Target="7200" Default="" Mode="udp" Description="Container Port: 7200" Type="Port" Display="advanced" Required="true" Mask="false">7200</Config>
 </Container>
