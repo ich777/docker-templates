@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/76749-support-fithwum-teamspeakalpine/</Support>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://www.teamspeak.com/</Project>
   <Overview>This container will download and install TeamSpeak3 Server.&#xD;
 &#xD;
