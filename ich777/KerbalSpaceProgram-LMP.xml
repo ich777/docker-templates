@@ -13,8 +13,8 @@
 &#xD;
 Luna Multiplayer is a mod to enable Multiplayer for Kerbal Space Program, you can find more information here: https://github.com/LunaMultiplayer/LunaMultiplayer&#xD;
 &#xD;
-ATTENTION: Please also don't forget that you have to install the client mod too from here: https://github.com/LunaMultiplayer/LunaMultiplayer/releases&#xD;
-You can get instructions on how to do that on the Wiki: https://github.com/LunaMultiplayer/LunaMultiplayer/wiki&#xD;
+**ATTENTION:** Please also don't forget that you have to install the mod for your Client too: https://github.com/LunaMultiplayer/LunaMultiplayer/releases
+You can get detailed instructions on how to do that on the Wiki: https://github.com/LunaMultiplayer/LunaMultiplayer/wiki&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available and the container will download and install it.</Overview>
   <Category>GameServers:</Category>
