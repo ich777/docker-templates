@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>KerbalSpaceProgram-LMP</Name>
+  <Repository>ich777/lunamultiplayer-ksp</Repository>
+  <Registry>https://hub.docker.com/r/ich777/lunamultiplayer-ksp/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://github.com/LunaMultiplayer/LunaMultiplayer</Project>
+  <Overview>This container will download and run Luna Multiplayer for Kerbal Space Program (KSP).&#xD;
+&#xD;
+Luna Multiplayer is a mod to enable Multiplayer for Kerbal Space Program, you can find more information here: https://github.com/LunaMultiplayer/LunaMultiplayer&#xD;
+&#xD;
+ATTENTION: Please also don't forget that you have to install the client mod too from here: https://github.com/LunaMultiplayer/LunaMultiplayer/releases&#xD;
+You can get instructions on how to do that on the Wiki: https://github.com/LunaMultiplayer/LunaMultiplayer/wiki&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available and the container will download and install it.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/lmp.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="ServerFiles" Target="/lunamultiplayer" Default="" Mode="rw" Description="Data Directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/lunamultiplayer/</Config>
+  <Config Name="Luna Multiplayer Version" Target="LMP_V" Default="" Mode="" Description="Enter the prefered version (valid options are 'latest' and 'nightly' both without quotes)." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>  <Config Name="UDP - GamePort" Target="8800" Default="" Mode="udp" Description="UDP Game Port (If you need another port delete this entry and create a new entry with the same Container and Host port, also don't forget to change the port in your game settings file)." Type="Port" Display="always" Required="true" Mask="false">8800</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+</Container>
