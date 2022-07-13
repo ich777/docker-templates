@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TerrariaMobile</Name>
+  <Repository>ich777/terrariaserver:mobile</Repository>
+  <Registry>https://hub.docker.com/r/ich777/terrariaserver/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://terraria.org/</Project>
+  <Overview>This Docker will download and install Terraria Mobile and run it.&#xD;
+&#xD;
+SERVER PASSWORD: Docker&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files and creates the map!&#xD;
+&#xD;
+Update Notice: The Container will check on every start/restart if there is a newer version of the game available and install it if so.&#xD;
+&#xD;
+WEB CONSOLE: You can connect to the Terraria console by opening your browser and go to HOSTIP:9013 (eg: 192.168.1.1:9013) or click on WebUI on the Docker page within Unraid.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/terraria.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/terrariamobile</Config>
+  <Config Name="Preferred Terraria Mobile version" Target="TERRARIA_MOBILE_SRV_V" Default="" Mode="" Description="Enter your prefered Terraria Mobile Server version (you can get the latest version number for example here: https://terraria.fandom.com/wiki/Mobile_version)" Type="Variable" Display="always" Required="true" Mask="false">1.4.3.2</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-config serverconfig.txt</Config>
+  <Config Name="TCP" Target="7777" Default="" Mode="tcp" Description="" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+  <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the Terraria console by opening your browser and go to HOSTIP:9013 - eg: 192.168.1.1:9013 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9013</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
