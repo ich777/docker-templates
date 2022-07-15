@@ -64,11 +64,6 @@ MEGAsync can synchronize all of your devices with your MEGA account. Access and 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>000</Value>
-      <Name>UMASK</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
       <Value>800</Value>
       <Name>CUSTOM_RES_W</Name>
       <Mode/>
@@ -86,7 +81,6 @@ MEGAsync can synchronize all of your devices with your MEGA account. Access and 
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
-  <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Container Variable: CUSTOM_RES_W" Type="Variable" Display="advanced" Required="false" Mask="false">800</Config>
   <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Container Variable: CUSTOM_RES_H" Type="Variable" Display="advanced" Required="false" Mask="false">600</Config>
 </Container>
