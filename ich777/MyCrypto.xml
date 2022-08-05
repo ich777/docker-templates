@@ -8,7 +8,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
-  <Project>https://electrum.org/</Project>
+  <Project>https://mycrypto.com/</Project>
   <Overview>MyCrypto is an open-source tool that allows you to manage your Ethereum accounts privately and securely. Developed by and for the community since 2015!&#xD;
 &#xD;
 **ATTENTION:** Please don't store your keyfile in the .../bin folder since this folder get's deleted if a update from MyCrypto is released, use the Home directory instead!&#xD;
