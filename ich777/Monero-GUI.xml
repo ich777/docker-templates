@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://www.getmonero.org/</Project>
-  <Overview>Monero-GUI is a Dockerized GUI Monero Wallet.&#xD;
+  <Overview>Monero-GUI is a simple but yet powerfull Monero Wallet.&#xD;
 &#xD;
 **ATTENTION:** By default your wallet is saved in ../Monero/wallet (please don't store your Wallet in the .../bin directory since it get's deleted after a update is released)&#xD;
 I strongly recommend you to backup your keyfile on a regular basis!&#xD;
