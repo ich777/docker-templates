@@ -53,7 +53,7 @@ Update Notice: If you want to update the game simply change the version number.<
       <Mode/>
     </Variable>
     <Variable>
-      <Value>0.8.2</Value>
+      <Value>0.8.5</Value>
       <Name>GAME_VERSION</Name>
       <Mode/>
     </Variable>
@@ -77,7 +77,7 @@ Update Notice: If you want to update the game simply change the version number.<
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/xonotic</Config>
   <Config Name="EXTRA_GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up commands for the server if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UDP - Game Port" Target="26000" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number)" Type="Port" Display="always" Required="true" Mask="false">26000</Config>
-  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the preferred game version to download or update." Type="Variable" Display="always" Required="true" Mask="false">0.8.2</Config>
+  <Config Name="Game Version" Target="GAME_VERSION" Default="" Mode="" Description="Enter the preferred game version to download or update." Type="Variable" Display="always" Required="true" Mask="false">0.8.5</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Basic Download URL" Target="BASIC_URL" Default="" Mode="" Description="Looks something like this: https://dl.xonotic.org/" Type="Variable" Display="advanced" Required="true" Mask="false">https://dl.xonotic.org/</Config>
