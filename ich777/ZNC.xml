@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ZNC</Name>
+  <Repository>ich777/znc</Repository>
+  <Registry>https://hub.docker.com/r/ich777/znc</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Beta>False</Beta>
+  <Shell>sh</Shell>
+  <Privileged>False</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://wiki.znc.in/</Project>
+  <Overview>ZNC is an IRC network bouncer or BNC. It can detach the client from the actual IRC server, and also from selected channels. Multiple clients from different locations can connect to a single ZNC account simultaneously and therefore appear under the same nickname on IRC. It supports Transport Layer Security connections and IPv6. &#xD;
+&#xD;
+**DEFAULT CREDENTIALS:**&#xD;
+Username: admin&#xD;
+Password: admin</Overview>
+  <Category>Network:Messenger Network:Privacy</Category>
+  <WebUI>http://[IP]:[PORT:6698]</WebUI>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/znc.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Data Path" Target="/znc" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/znc</Config>
+  <Config Name="WebAdmin" Target="6698" Default="" Mode="tcp" Description="WebAdmin Port to configurer the server" Type="Port" Display="always" Required="true" Mask="false">6698</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
+</Container>
