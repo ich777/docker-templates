@@ -2,7 +2,7 @@
 <Containers>
   <PluginURL>https://raw.githubusercontent.com/ich777/unraid-corefreq/master/corefreq.plg</PluginURL>
   <PluginAuthor>ich777</PluginAuthor>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <Category>Productivity: Tools:System</Category>
   <Name>CoreFreq</Name>
   <Description>CoreFreq is a CPU low level monitoring software designed for x86_64-Processors. You can show Package and Core temps, Hot sensor, Vcore, RAM,...&#xD;
