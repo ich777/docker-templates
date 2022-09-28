@@ -7,6 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
+  <PrivilegedReq>true</PrivilegedReq>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://www.zabbix.com/</Project>
   <Overview>Zabbix server is the central process of Zabbix software.&#xD;
