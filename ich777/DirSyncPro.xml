@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://www.dirsyncpro.org/</Project>
   <Overview>This Docker will download and install the Runtime and also DirSyncPro with optional encryption by CryFS.&#xD;
