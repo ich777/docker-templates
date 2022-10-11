@@ -11,7 +11,7 @@
   <Project>https://radarr.video/</Project>
   <Overview>Radarr A fork of Sonarr to work with movies &#xE0; la Couchpotato.&#xD;
 &#xD;
-UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and nightly version - keep in mind that switching from a stable to a nightly version and vice versa can break the container).&#xD;
+UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stable and nightly version - keep in mind that switching from a stable to a nightly version and vice versa can break the container).&#xD;
 &#xD;
 MANUAL VERSION: You can change the version by setting the variable Radarr Release to 'latest' or 'nightly'.&#xD;
 &#xD;
@@ -32,7 +32,7 @@ WARNING: The main configuration of the paths has a performance and disk usage im
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>Radarr A fork of Sonarr to work with movies &#xE0; la Couchpotato.&#xD;
 &#xD;
-UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stabel and nightly version - keep in mind that switching from a stable to a nightly version and vice versa can break the container).&#xD;
+UPDATE: The container will check on every start/restart if there is a newer version available (you can also choose between stable and nightly version - keep in mind that switching from a stable to a nightly version and vice versa can break the container).&#xD;
 &#xD;
 MANUAL VERSION: You can change the version by setting the variable Radarr Release to 'latest' or 'nightly'.&#xD;
 &#xD;
