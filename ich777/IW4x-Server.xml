@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>IW4x-Server</Name>
+  <Repository>ich777/iw4x-server</Repository>
+  <Registry>https://hub.docker.com/r/ich777/iw4x-server/</Registry>
+  <Network>bridge</Network>
+  <Beta>true</Beta>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://iw4x.org/</Project>
+  <Overview>This Docker will download and install a simple IW4x Server.&#xD;
+&#xD;
+ATTENTION: You need to copy over the files from your CoD:MW2 folder to the server directory otherwise the server will not start.&#xD;
+&#xD;
+DOWNLOAD NOTICE: If a download fails or is not available you can simply put the .zip files in the server directory and the container will extract the files and start the server.&#xD;
+&#xD;
+WINE NOTICE: Since this container runs with WINE i can't guarantee that it will not crash or other weird behavior.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/iw4x.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Description>This Docker will download and install a simple IW4x Server.&#xD;
+&#xD;
+ATTENTION: You need to copy over the files from your CoD:MW2 folder to the server directory otherwise the server will not start.&#xD;
+&#xD;
+DOWNLOAD NOTICE: If a download fails or is not available you can simply put the .zip files in the server directory and the container will extract the files and start the server.&#xD;
+&#xD;
+WINE NOTICE: Since this container runs with WINE i can't guarantee that it will not crash or other weird behavior.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>28960</HostPort>
+        <ContainerPort>28960</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>28960</HostPort>
+        <ContainerPort>28960</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/iw4x</HostDir>
+      <ContainerDir>/iw4x</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>+exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename playlists.info</Value>
+      <Name>GAME_PARAMS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>FORCE_UPDATE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://dss0.cc/updater/iw4x_files.zip</Value>
+      <Name>IW4X_DL_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&amp;download=1</Value>
+      <Name>IW4X_DLC_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>000</Value>
+      <Name>UMASK</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>770</Value>
+      <Name>DATA_PERM</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>99</Value>
+      <Name>UID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>100</Value>
+      <Name>GID</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>28960</Value>
+      <Name>GAME_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="ServerFiles" Target="/iw4x" Default="" Mode="rw" Description="Server Files" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/iw4x</Config>
+  <Config Name="TCP - Game Port" Target="28960" Default="" Mode="tcp" Description="TCP Game Port same as UDP (if you need another port, please delete this entry and create a new TCP Port with the corresponding port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="false" Mask="false">28960</Config>
+  <Config Name="UDP - Game Port" Target="28960" Default="" Mode="udp" Description="UDP Game Port same as TCP (if you need another port, please delete this entry and create a new UDP Port with the corresponding port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="false" Mask="false">28960</Config>
+  <Config Name="Startup Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Specify your Startup Parameters here." Type="Variable" Display="always" Required="true" Mask="false">+exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename playlists.info</Config>
+  <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' (without quotes) to force an update." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Main IW4x Download URL" Target="IW4X_DL_URL" Default="" Mode="" Description="Main IW4x Download URL (only change if you know what you are doing)" Type="Variable" Display="advanced" Required="true" Mask="false">https://dss0.cc/updater/iw4x_files.zip</Config>
+  <Config Name="IW4x DLC Download URL" Target="IW4X_DLC_URL" Default="" Mode="" Description="IW4x DLC Download URL (only change if you know what you are doing)" Type="Variable" Display="advanced" Required="true" Mask="false">https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&amp;download=1</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Change if you need another Game Port (please create a new TCP and UDP Port with the corresponding port number)" Type="Variable" Display="advanced" Required="true" Mask="false">28960</Config>
+</Container>
