@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Portfolio-Performance</Name>
+  <Repository>ich777/portfolio-performance</Repository>
+  <Registry>https://hub.docker.com/r/ich777/portfolio-performance</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.portfolio-performance.info/en/</Project>
+  <Overview>Portfolio Performance is an open source tool to calculate the overall performance of an investment portfolio - across all accounts - using True-Time Weighted Return or Internal Rate of Return.&#xD;
+&#xD;
+**Update:** The container will check on every start/restart if there is a newer version available&#xD;
+&#xD;
+**ATTENTION:** Please save your documents only in the Home directory! Don't save or modify anything inside the 'bin' and 'runtime' folders.&#xD;
+&#xD;
+**INFO:** If the last view is not saved accross container restarts it is recommended to exit the container once after you've configured it to your likings through the WebGUI by clicking File -&amp;gt; Quit, this will ensure that the last view is saved properly.</Overview>
+  <Category>Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/portfolio-performance.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="Data Path" Target="/portfolio" Default="" Mode="rw" Description="Data Directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/portfolio-performance</Config>
+  <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="TCP noVNC WebGUI Port" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1280 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 1024 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1024</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+</Container>
