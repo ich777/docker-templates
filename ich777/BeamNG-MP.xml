@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>BeamNG-MP</Name>
+  <Repository>ich777/beamng-mp-server</Repository>
+  <Registry>https://hub.docker.com/r/ich777/beamng-mp-server/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://beammp.com/</Project>
+  <Overview>This Docker will download and install BeamNG.drive-MP-Server.&#xD;
+&#xD;
+ATTENTION: To get the server working please generate a Key over here: https://beammp.com/keymaster (you can get a full tutorial on how to obtain a key here: https://wiki.beammp.com/en/home/server-installation) and put it in your ServerConfig.toml at the entry "AuthKey".&#xD;
+&#xD;
+ServerConfig.toml: Please head over to https://wiki.beammp.com/en/home/server-maintenance to see all available options and descriptions from the ServerConfig.toml&#xD;
+&#xD;
+Web Server: The web server for http/https requests is turned off by default and you need to enable it in the ServerConfig.toml if you want too - it is strongly recommended that you reverse proxy the Web Server if possible.&#xD;
+&#xD;
+Update Notice: The container will check for a new version on each start/restart.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/beamngmp.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="ServerFiles" Target="/beamngmp" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/beamng-mp</Config>
+  <Config Name="Extra Startup Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up parameters for the server if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TCP - GamePort" Target="30814" Default="" Mode="tcp" Description="TCP Game Port (If you want to change the game port please change it in the ServerConfig.toml file first, then delete this entry and create new Port entries in the template with the Host and Container port set to the same as in the ServerConfig.toml)" Type="Port" Display="always" Required="true" Mask="false">30814</Config>
+  <Config Name="UDP - GamePort" Target="30814" Default="" Mode="udp" Description="UDP Game Port (If you want to change the game port please change it in the ServerConfig.toml file first, then delete this entry and create new Port entries in the template with the Host and Container port set to the same as in the ServerConfig.toml)" Type="Port" Display="always" Required="true" Mask="false">30814</Config>
+  <Config Name="TCP - Internal http Server" Target="8080" Default="" Mode="tcp" Description="Intel http Server port (the web server isn't enabled by default, if you don't need it delete this entry, otherwise enable it in the ServerConfig.toml)" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">0000</Config>
+</Container>
