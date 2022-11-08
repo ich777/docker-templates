@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Unreal-Tournament-99</Name>
+  <Repository>ich777/unreal-tournament-99</Repository>
+  <Registry>https://hub.docker.com/r/ich777/unreal-tournament-99/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://ut99.org/</Project>
+  <Overview>This Docker will download and install Unreal Tournament 99 with the patch v.451&#xD;
+&#xD;
+**ATTENTION:** It is strongly recommended to change the maps and game modes from the web server!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:5080]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ut99.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="ServerFiles" Target="/ut99" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/unrealtournament99</Config>
+  <Config Name="TCP - WebServer" Target="5080" Default="" Mode="tcp" Description="TCP WebServer Port" Type="Port" Display="always" Required="false" Mask="false">5080</Config>
+  <Config Name="UDP - Game &amp;amp; Query Port" Target="7777-7778" Default="" Mode="udp" Description="UDP Game &amp;amp; Query Port (If you want to change the game/query port please change it in the UnrealTournament.ini file first, then delete this entry and create a new Port range in the template with the Host and Container port set to the same as in the UnrealTournament.ini)" Type="Port" Display="always" Required="true" Mask="false">7777-7778</Config>
+  <Config Name="Inital Map" Target="MAP" Default="" Mode="" Description="Map which is loaded at server start (you can find a list of maps in the /Maps folder - it is recommended to change the map from the web server)." Type="Variable" Display="always" Required="true" Mask="false">DM-Gothic</Config>
+  <Config Name="Game Type" Target="GAME" Default="" Mode="" Description="Intial game type (valid options are: 'Botpack.DeathMatchPlus', 'BotPack.TeamGamePlus', 'BotPack.Assault', 'BotPack.Domination', 'BotPack.CTFGame' &amp;amp; 'BotPack.LastManStanding' - it is recommended to change the game type from the web server!)" Type="Variable" Display="always" Required="true" Mask="false">Botpack.DeathMatchPlus</Config>
+  <Config Name="Enable Web Server" Target="WEBSERVER" Default="" Mode="" Description="Set this value to 'true' to enable or to 'false' to disable the web server." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="WebServer Username" Target="WEB_USERNAME" Default="" Mode="" Description="Specify your prefered login name for the web server." Type="Variable" Display="always" Required="false" Mask="false">admin</Config>
+  <Config Name="WebServer Password" Target="WEB_PASSWORD" Default="" Mode="" Description="Specify your prefered password for the web server (initial password 'Docker' without quotes)." Type="Variable" Display="always" Required="false" Mask="true">Docker</Config>
+  <Config Name="Startup Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up parameters for the server if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Extra Startup Parameters" Target="EXTRA_GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up parameters seperated with ? and start with a ? (don't put spaces in between eg: ?MaxPlayers=20)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="User.ini" Target="USER_INI" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced-hide" Required="true" Mask="false">User.ini</Config>
+  <Config Name="Server.ini" Target="SERVER_INI" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced-hide" Required="true" Mask="false">UnrealTournament.ini</Config>
+  <Config Name="Server DL URL" Target="SRV_DL_URL" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced-hide" Required="true" Mask="false">http://ut-files.com/Entire_Server_Download/ut-server-436.tar.gz</Config>
+  <Config Name="Server Patch DL URL" Target="SRV_PATCH_DL_URL" Default="" Mode="" Description="Only change if you know what you are doing!" Type="Variable" Display="advanced-hide" Required="true" Mask="false">http://ut-files.com/Entire_Server_Download/UTPGPatch451LINUX.tar.gz</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">0000</Config>
+</Container>
