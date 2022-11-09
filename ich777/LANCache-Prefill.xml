@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>LANCache-Prefill</Name>
+  <Repository>ich777/lancache-prefill</Repository>
+  <Registry>https://github.com/ich777/lancache-prefill</Registry>
+  <Network>br0</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://github.com/tpill90/steam-lancache-prefill</Project>
+  <Overview>This container will download and install BattleNetPrefill and/or SteamPrefill and run the prefill on a cron schedule.&#xD;
+&#xD;
+**Network:** It is recommended to run this container in the same network mode as the LANCache-DNS if used, by default it is set to br0 please change that if you have your LANCache server configured to work network wide on your LAN to the correct network type for your configuration.&#xD;
+&#xD;
+**DNS:** I would strongly recommend that you set the DNS manually to the LANCache-DNS if you haven't it configured to be network wide on your LAN, to do that turn on the advanced view (toggle switch in the top right corner) and at the extra parameters append: --dns=yourLANcacheSERVER (of course replace 'yourLANcacheSERVER' with the address of your LANCache-DNS).&#xD;
+&#xD;
+**Update Notice:** The container will check by default on each start/restart on new updates for BattleNetPrefill and/or SteamPrefill, this can be disabled if really wanted.</Overview>
+  <Category>Downloaders: Other:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/prefill.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="Data Path" Target="/lancacheprefill" Default="" Mode="rw" Description="Main data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/lancache-prefill</Config>
+  <Config Name="Enable BattleNetPrefill" Target="ENABLE_BN" Default="false|true" Mode="" Description="Set to 'true' or 'false' to enable or disable BattleNetPrefill" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="BattleNetPrefill Parameters" Target="PREFILL_PARAMS_BN" Default="" Mode="" Description="You can get a full list of parameters over here: https://github.com/tpill90/battlenet-lancache-prefill#detailed-command-usage" Type="Variable" Display="always" Required="true" Mask="false">--products s1 d3 wow_classic</Config>
+  <Config Name="BattleNetPrefill Schedule" Target="CRON_SCHED_BN" Default="" Mode="" Description="Set your cron schedule for BattleNetPrefill if enabled (by default it is set to 05:00 - head over to https://crontab.guru/ to create your own if you want to customize it)" Type="Variable" Display="always" Required="true" Mask="false">0 5 * * *</Config>
+  <Config Name="Enable SteamPrefill" Target="ENABLE_STEAM" Default="true|false" Mode="" Description="Set to 'true' or 'false' to enable or disable SteamPrefill (please note that you have to configure SteamPrefill first - to get a tutorial on how to do that please open up the container console after the first start and follow the on screen instructions)." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="SteamPrefill Parameters" Target="PREFILL_PARAMS_STEAM" Default="" Mode="" Description="You can get a full list of parameters over here: https://tpill90.github.io/steam-lancache-prefill/Detailed-Command-Usage/ (if you want to only prefill your selected apps then leave this variable empty)" Type="Variable" Display="always" Required="false" Mask="false">--recent</Config>
+  <Config Name="SteamPrefill Schedule" Target="CRON_SCHED_STEAM" Default="" Mode="" Description="Set your cron schedule for SteamPrefill if enabled (by default it is set to 05:00 - head over to https://crontab.guru/ to create your own if you want to customize it)" Type="Variable" Display="always" Required="true" Mask="false">0 2 * * *</Config>
+  <Config Name="Check for Prefill updates" Target="UPDATES" Default="true|false" Mode="" Description="Set to 'true' to enable to check for updates from BattleNetPrefill/SteamPrefill on container start/restart or disable it by setting it to 'false'." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Force update" Target="FORCE_UPDATE" Default="false|true" Mode="" Description="Set to 'true' to force a Prefill on every container start/restart (please be carefull with this option and enable only when you know what you are doing!)" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Log cleanup" Target="LOGCLEANUP" Default="true|false" Mode="" Description="Set to 'true' to clean up the .../logs directory on each start/restart from the container." Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">770</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">000</Config>
+</Container>
