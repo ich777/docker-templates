@@ -26,7 +26,7 @@
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://paypal.me/chips777</DonateLink>
-  <Requires/>
+  <Requires>LANCache Server</Requires>
   <Config Name="Data Path" Target="/lancacheprefill" Default="" Mode="rw" Description="Main data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/lancache-prefill</Config>
   <Config Name="Enable BattleNetPrefill" Target="ENABLE_BN" Default="false|true" Mode="" Description="Set to 'true' or 'false' to enable or disable BattleNetPrefill" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="BattleNetPrefill Parameters" Target="PREFILL_PARAMS_BN" Default="" Mode="" Description="You can get a full list of parameters over here: https://github.com/tpill90/battlenet-lancache-prefill#detailed-command-usage" Type="Variable" Display="always" Required="true" Mask="false">--products s1 d3 wow_classic</Config>
