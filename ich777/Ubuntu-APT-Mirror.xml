@@ -19,7 +19,7 @@ Restart the container afterwards (keep an eye on the logs the container will tel
 **Update from the mirror files:** By default a cron job will run every day at 01:00 which will update your mirror.&#xD;
 &#xD;
 **Mirror address:** The default address for the mirror is 'http://ipFROMtheCONTAINER:980'&#xD;
-Add something like this to your '/etc/apt/sources.list': 'deb http://ipFROMtheCONTAINER:980/jammy main restricted universe multiverse'</Overview>
+Add something like this to your '/etc/apt/sources.list': 'deb http://ipFROMtheCONTAINER:980/ubuntu jammy main restricted universe multiverse'</Overview>
   <Category>Network:Other Productivity: Tools:Utilities Drivers:</Category>
   <WebUI>http://[IP]:[PORT:980]/</WebUI>
   <TemplateURL/>
