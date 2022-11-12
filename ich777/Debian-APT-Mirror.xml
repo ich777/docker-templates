@@ -3,7 +3,7 @@
   <Name>Debian-APT-Mirror</Name>
   <Repository>ich777/debian-mirror</Repository>
   <Registry>https://hub.docker.com/r/ich777/debian-mirror</Registry>
-  <Network>proxy</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
