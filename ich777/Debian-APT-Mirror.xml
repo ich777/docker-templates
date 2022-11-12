@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://www.debian.org/</Project>
-This container will run apt-mirror and Apache2. This allows you to create a local apt mirror for Debian packages.&#xD;
+  <Overview>This container will run apt-mirror and Apache2. This allows you to create a local apt mirror for Debian packages.&#xD;
 &#xD;
 On first run you will have to edit the mirror.list file that lives in your CONFIG_DIR which repositories you want to sync and other settings like how many threads to use for downloading,...&#xD;
 Restart the container afterwards (keep an eye on the logs the container will tell you what to do).&#xD;
