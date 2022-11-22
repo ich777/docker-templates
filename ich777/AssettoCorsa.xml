@@ -11,7 +11,7 @@
   <Project>https://www.assettocorsa.net/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install AssettoCorsa and run it.&#xD;
 &#xD;
-ATTENTION: You MUST provide a Steam User account with SteFirst Startup can take very long since it downloads the gameserver files!&#xD;
+ATTENTION: You must provide a valid Steam username and password with Steam Guard disabled (the user dosen't have to have the game in the library).&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -28,7 +28,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This Docker will download and install SteamCMD. It will also install AssettoCorsa and run it.&#xD;
 &#xD;
-ATTENTION: You MUST provide a Steam User account with SteFirst Startup can take very long since it downloads the gameserver files!&#xD;
+ATTENTION: You must provide a valid Steam username and password with Steam Guard disabled (the user dosen't have to have the game in the library).&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
