@@ -21,7 +21,7 @@ Your Game.ini file is located at: ".../frozenflame/FrozenFlame/Saved/Config/Linu
 You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL/>False</TemplateURL>
+  <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/frozenflame.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
