@@ -15,7 +15,7 @@
 &#xD;
 **Update Notice:** Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
-**Configuration:** You can find a example configuration Game.ini over at: &amp;lt;https://github.com/DreamsideInteractive/FrozenFlameServer/blob/main/Game.ini&amp;gt; if you want to customize your server even more.&#xD;
+**Configuration:** You can find a example configuration Game.ini over at: https://github.com/DreamsideInteractive/FrozenFlameServer/blob/main/Game.ini if you want to customize your server even more.&#xD;
 Your Game.ini file is located at: ".../frozenflame/FrozenFlame/Saved/Config/LinuxServer" (Note: this file is created after the first server start).&#xD;
 &#xD;
 You can also run multiple servers with only one SteamCMD directory!</Overview>
