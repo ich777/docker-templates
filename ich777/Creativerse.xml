@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Creativerse</Name>
+  <Repository>ich777/steamcmd:creativerse</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Creativerse and run it.&#xD;
+&#xD;
+**ATTENTION:** First Startup can take very long since it downloads the gameserver files and the world template!&#xD;
+&#xD;
+**Update Notice:** Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+**ServerAdmin:** To become server admin please open up the file '.../PlayfulCorp/CreativerseServer/worlddata/worlds/unraid_world/config_world.json' and change the value from 'WorldOwnerSteamId' to your SteamID64 (you can get your SteamID here: https://steamid.io/).&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!&#xD;
+&#xD;
+**Note:** As time of creating the container the WebGUI isn't working but you should be able to do all things from in game. The developers from the game will implement this later on.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI>http://[IP]:[PORT:26902]/admin/admin.html</WebUI>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/creativerse.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/creativerse</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '1098260 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">1098260</Config>
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters (only change the worldId if you know what you are doing!)." Type="Variable" Display="always-hide" Required="true" Mask="false">-worldId=unraid_world</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="UDP 1 - Game Port" Target="26900" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to change the port number in your game config)" Type="Port" Display="always" Required="true" Mask="false">26900</Config>
+  <Config Name="UDP 2 - Steam Query" Target="26901" Default="" Mode="udp" Description="UDP Gameport +1 (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to change the port number in your game config)" Type="Port" Display="always" Required="true" Mask="false">26901</Config>
+  <Config Name="TCP - WebAdmin" Target="26902" Default="" Mode="tcp" Description="TCP Gameport +2 (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to change the port number in your game config)" Type="Port" Display="always" Required="true" Mask="false">26902</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
