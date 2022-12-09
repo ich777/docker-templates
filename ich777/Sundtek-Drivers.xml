@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-sundtek-driver/master/sundtek-driver.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta> 
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>Sundtek-Drivers</Name>
+  <Description>This Plugin will install the Sundtek DVB Drivers to Unraid. Please visit the Plugin page after installing the plugin to configure your TVHeadend instance for use with this plugin.</Description>
+  <Support>https://forums.unraid.net/topic/99027-plugin-dvb-driver/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/sundtek.png</Icon>
+</Containers>
