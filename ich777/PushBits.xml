@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PushBits</Name>
+  <Repository>ghcr.io/pushbits/server</Repository>
+  <Registry>https://github.com/pushbits/server/pkgs/container/server</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://github.com/pushbits/server</Project>
+  <Overview>Receive your important notifications immediately, over Matrix.&#xD;
+It enables you to send push notifications via a simple web API, and delivers them to your users.&#xD;
+&#xD;
+PushBits is a relay server for push notifications. It enables you to send notifications via a simple web API, and delivers them to you through Matrix. This is similar to what Pushover and Gotify offer, but it does not require an additional app.&#xD;
+&#xD;
+**Config File:** After the first start you have to download the config example file from here: https://github.com/pushbits/server/blob/main/config.example.yml rename it to 'config.yml' and place it in your '.../appdata/pushbits' folder. Of course configure it to your likings with the appropriate usernames and passwords.&#xD;
+You can get more information over https://github.com/pushbits/server&#xD;
+&#xD;
+**API**: You can set up notifications through 'pbcli' which is included in this container, for more information head over to: https://github.com/pushbits/cli/blob/main/README.md</Overview>
+  <Category>Network:Messenger Productivity:</Category>
+  <WebUI/>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/pushbits/logo/main/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="Data Path" Target="/data" Default="" Mode="rw" Description="Main Data Path (where your config.yml needs to go and the database is located)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/pushbits</Config>
+  <Config Name="TCP - Listen port" Target="8080" Default="" Mode="tcp" Description="This is the port on which PushBits will listen (it is strongly recommended to use a reverse proxy to expose the service to the Internet - please remember if you change the port in the config.yml you also have to change the Container port too!)." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+</Container>
