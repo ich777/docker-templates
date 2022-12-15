@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-aquacomputer-d5next/master/aquacomputer-d5next-hwmon.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>Aquacomputer D5Next</Name>
+  <Description>This package contains a hwmon Linux Kernel driver for exposing sensors from various Aquacomputer devices (D5 Next, Quadro, Aquastream XT,...).  
+You can get more details here: https://github.com/aleksamagicka/aquacomputer_d5next-hwmon</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/aquacomputer.png</Icon>
+</Containers>
