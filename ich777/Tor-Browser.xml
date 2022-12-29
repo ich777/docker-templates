@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tor-Browser</Name>
+  <Repository>ich777/torbrowser</Repository>
+  <Registry>https://hub.docker.com/r/ich777/torbrowser/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://www.torproject.org/</Project>
+  <Overview>This container will download and install Tor-Browser.&#xD;
+&#xD;
+RESOLUTION: You can also change the resolution from the WebGUI, to do that simply click on 'Show more settings...' (on a resolution change it can occour that the screen is not filled entirely with the Tor Browser window, simply restart the container and it will be fullscreen again).</Overview>
+  <Category>Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8080]/vnc.html?autoconnect=true</WebUI>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/tor.png</Icon>
+  <ExtraParams>--restart=unless-stopped --shm-size=2G</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="Data Dir" Target="/torbrowser" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/torbrowser/</Config>
+  <Config Name="noVNC WebGUI" Target="8080" Default="" Mode="tcp" Description="TCP noVNC WebGUI" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Preferred Tor Browser Version" Target="TOR_V" Default="" Mode="" Description="Enter your preferred version or 'latest' (without quotes) to grab the latest version." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1000 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
+  <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 880 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">768</Config>
+  <Config Name="Extra Parameters" Target="EXTRA_PARAMETERS" Default="" Mode="" Description="If needed enter extra startup parameters here otherwise leave empty." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Umask" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+</Container>
