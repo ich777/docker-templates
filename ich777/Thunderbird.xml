@@ -11,8 +11,6 @@
   <Project>https://www.thunderbird.net/</Project>
   <Overview>This container will download and install Thunderbird in the preferred version and language.&#xD;
 &#xD;
-UPDATE: The container will check on every restart if there is a newer version available.&#xD;
-&#xD;
 ATTENTION: If you want to change the language, you have to delete every file in the 'thunderbird' directory except the 'profile' folder.&#xD;
 &#xD;
 RESOLUTION: You can also change the resolution from the WebGUI, to do that simply click on 'Show more settings...' (on a resolution change it can occour that the screen is not filled entirely with the Thunderbird window, simply restart the container and it will be fullscreen again).</Overview>
@@ -27,8 +25,6 @@ RESOLUTION: You can also change the resolution from the WebGUI, to do that simpl
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Description>This container will download and install Thunderbird in the preferred version and language.&#xD;
-&#xD;
-UPDATE: The container will check on every restart if there is a newer version available.&#xD;
 &#xD;
 ATTENTION: If you want to change the language, you have to delete every file in the 'thunderbird' directory except the 'profile' folder.&#xD;
 &#xD;
