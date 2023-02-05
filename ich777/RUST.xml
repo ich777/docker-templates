@@ -18,7 +18,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
 You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Category>GameServers:</Category>
   <WebUI/>
-  <TemplateURL>false</TemplateURL>
+  <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/rust.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <PostArgs/>
@@ -26,106 +26,25 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <DonateImg>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/donate.png</DonateImg>
-  <Description>This Docker will download and install SteamCMD. It will also install RUST and run it.&#xD;
-&#xD;
-ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
-&#xD;
-Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
-&#xD;
-You can also run multiple servers with only one SteamCMD directory!</Description>
-  <Networking>
-    <Mode>bridge</Mode>
-    <Publish>
-      <Port>
-        <HostPort>28015</HostPort>
-        <ContainerPort>28015</ContainerPort>
-        <Protocol>udp</Protocol>
-      </Port>
-    </Publish>
-  </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/appdata/steamcmd</HostDir>
-      <ContainerDir>/serverdata/steamcmd</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/rust</HostDir>
-      <ContainerDir>/serverdata/serverfiles</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value/>
-      <Name>USERNAME</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>VALIDATE</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>PASSWRD</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>+server.maxplayers 10</Value>
-      <Name>GAME_PARAMS</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>258550</Value>
-      <Name>GAME_ID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>RustDockerServer</Value>
-      <Name>SERVER_NAME</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>Simple Unraid Rust Docker Server</Value>
-      <Name>SERVER_DISCRIPTION</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value/>
-      <Name>OXIDE_MOD</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>28015</Value>
-      <Name>GAME_PORT</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>99</Value>
-      <Name>UID</Name>
-      <Mode/>
-    </Variable>
-    <Variable>
-      <Value>100</Value>
-      <Name>GID</Name>
-      <Mode/>
-    </Variable>
-  </Environment>
-  <Labels/>
-  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/rust</Config>
-  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/rust</Config>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
-  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
   <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter here your extra game startup parameters if needed starting with (eg: '+rcon.port 27016 +rcon.password YOURPASSWORD' don't forget to add also a new port here on the template page with container and host port set to the corresponding RCON port)" Type="Variable" Display="always" Required="false" Mask="false">+server.maxplayers 10</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container downloads at startup. If you want to use a beta version of the game enter this: '258550 -beta staging' or '258550 -beta prerelease' (without quotes)." Type="Variable" Display="always" Required="true" Mask="false">258550</Config>
-  <Config Name="UDP" Target="28015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...)" Type="Port" Display="always" Required="false" Mask="false">28015</Config>
+  <Config Name="UDP1 - Game Port" Target="28015" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...)" Type="Port" Display="always" Required="false" Mask="false">28015</Config>
+  <Config Name="UDP2 - Query Port" Target="28016" Default="" Mode="udp" Description="UDP - Query Port (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...)" Type="Port" Display="always" Required="true" Mask="false">28016</Config>
+  <Config Name="TCP1 - RCON Port" Target="28017" Default="" Mode="tcp" Description="TCP RCON Port - not needed (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to click an 'Show more settings ...)" Type="Port" Display="always" Required="false" Mask="false">28017</Config>
+  <Config Name="TCP2 - App Port" Target="28018" Default="" Mode="tcp" Description="TCP App Port (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to click an 'Show more settings ...)" Type="Port" Display="always" Required="true" Mask="false">28018</Config>
   <Config Name="Server Name" Target="SERVER_NAME" Default="" Mode="" Description="Name of the Server goes here" Type="Variable" Display="always" Required="true" Mask="false">RustDockerServer</Config>
   <Config Name="Server Description" Target="SERVER_DISCRIPTION" Default="" Mode="" Description="Server Description goes here" Type="Variable" Display="always" Required="true" Mask="false">Simple Unraid Rust Docker Server</Config>
   <Config Name="Enable Oxide Mod" Target="OXIDE_MOD" Default="" Mode="" Description="Set to 'true' (without quotes) to enable Oxide Mod, otherwise leave empty (the container will check on every start/restart if there is a newer version available)." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="GAME_PORT" Target="GAME_PORT" Default="" Mode="" Description="Game port on which the server is running (has to match the port mapping in your container)." Type="Variable" Display="advanced" Required="true" Mask="false">28015</Config>
-  <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
-  <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="QUERY_PORT" Target="QUERY_PORT" Default="" Mode="" Description="Query port on which the server is running (has to match the port mapping in your container)." Type="Variable" Display="advanced" Required="true" Mask="false">28016</Config>
+  <Config Name="RCON_PORT" Target="RCON_PORT" Default="" Mode="" Description="RCON port on which the server is running (has to match the port mapping in your container)." Type="Variable" Display="advanced" Required="true" Mask="false">28017</Config>
+  <Config Name="APP_PORT" Target="APP_PORT" Default="" Mode="" Description="App port on which the server is running (has to match the port mapping in your container)." Type="Variable" Display="advanced" Required="true" Mask="false">28018</Config>
 </Container>
