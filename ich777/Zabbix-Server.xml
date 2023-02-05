@@ -17,7 +17,7 @@ VARIABLES: If you need other variables here is a complete list of all variables:
   <Category>Network:Other Productivity: Tools:System</Category>
   <WebUI/>
   <TemplateURL>false</TemplateURL>
-  <Icon>https://github.com/Conmyster/unraid-docker-templates/raw/master/zabbix-agent/images/Zabbix-Logo.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/Zabbix-Logo.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
