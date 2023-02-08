@@ -6,6 +6,7 @@
   <Category>Productivity: Tools:System Drivers:</Category>
   <Name>RTL8152/3/4/6 USB Drivers</Name>
   <Description>This package contains the Realtek OOT Drivers and installs them, a reboot is required after installing the plugin (upgrading to a newer Unraid version maybe needs a second reboot too).  
+ATTENTION: To utilize 2.5Gbit/s speeds you have to add this line at the bottom to your 'go' file: 'ethtool -s eth0 autoneg on advertise 0x80000000002f' (without quotes)!  
   
 The following Chipsets are supported by this driver: RTL8152B, RTL8153/RTL8153B, RTL8154/RTL8154B, RTL8156/RTL8156B(S)(G)  
   
