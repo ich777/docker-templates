@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
   <PluginURL>https://raw.githubusercontent.com/ich777/unraid-nvtop/master/nvtop.plg</PluginURL>
-  <Requires>Nvidia Driver Installed</Requires>
+  <Requires>Radeon-TOP, Intel-GPU-TOP or Nvidia Driver Installed</Requires>
   <PluginAuthor>ich777</PluginAuthor>
   <Category>Productivity: Tools:System</Category>
   <Name>NVTOP</Name>
-  <Description>Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs for the CLI. It can handle multiple GPUs and print information about them in a htop familiar way.&#xD;
+  <Description>NVTOP stands for Neat Videocard TOP, a (h)top like task monitor for AMD, Intel and NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.&#xD;
 This Plugin is based on: https://github.com/Syllo/nvtop&#xD;</Description>
     <Support>https://forums.unraid.net/topic/98978-plugin-nvidia-driver/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nvtop.png</Icon>
