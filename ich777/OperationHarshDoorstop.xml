@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>OperationHarshDoorstop</Name>
+  <Repository>ich777/steamcmd:ohds</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.operationharshdoorstop.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Operation: Harsh Doorstop and run it.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>False<TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ohds.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/ohds</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '950900 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">950900</Config>
+  <Config Name="UDP1 - Game Ports" Target="7777-7778" Default="" Mode="udp" Description="UDP Game Ports (if you need another port, please delete this entry and create new UDP Ports with the appropriate port numbers, also don't forget to change your server settings to these new ports or specify it in the GAME_PARAMS)" Type="Port" Display="always" Required="true" Mask="false">7777-7778</Config>
+  <Config Name="UDP2 - Query Port" Target="27005" Default="" Mode="udp" Description="UDP Query Port (if you need another port, please delete this entry and create a new UDP Port with the appropriate port number, also don't forget to change your server settings to the new port or specify it in the GAME_PARAMS)" Type="Port" Display="always" Required="true" Mask="false">27005</Config>
+  <Config Name="TCP - RCON" Target="7779" Default="" Mode="tcp" Description="TCP RCON Port (if you need another port, please delete this entry and create a new TCP Port with the appropriate port number, also don't forget to change your server settings to the new port or specify it in the GAME_PARAMS)" Type="Port" Display="always" Required="true" Mask="false">7779</Config>    
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters seperated with ? (don't put spaces in between eg: MaxPlayers=24?AutoAssignHuman=1?bBotAutofill)" Type="Variable" Display="always-hide" Required="true" Mask="false">LamDong?MaxPlayers=34?AutoAssignHuman=1?bBotAutofill?bBalanceTeams=1?BluforNumBots=6?Game.AutoBalanceTeamsOverride=1</Config>
+  <Config Name="Extra Game Parameters" Target="GAME_PARAMS_EXTRA" Default="" Mode="" Description="Type in your Extra Game Parameters seperated with a space and - (eg: -DisableDeathSpectator -UseBattlEye)" Type="Variable" Display="always-hide" Required="true" Mask="false">-server -log -SteamServerName="Docker OHDs"</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
