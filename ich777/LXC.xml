@@ -2,7 +2,7 @@
 <Containers>
   <PluginURL>https://raw.githubusercontent.com/ich777/unraid-lxc-plugin/master/lxc.plg</PluginURL>
   <PluginAuthor>ich777</PluginAuthor>
-  <Beta>True</Beta>
+  <Beta>False</Beta>
   <Category>Productivity: Tools:System</Category>
   <Name>LXC</Name>
   <Description>LXC is a well-known Linux container runtime that consists of tools, templates, and library and language bindings. It's pretty low level, very flexible and covers just about every containment feature supported by the upstream kernel.
