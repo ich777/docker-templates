@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/zabbix/zabbix-server-mysql/</Registry>
   <Network>br0</Network>
   <MyIP/>
-  <Shell>sh</Shell>
+  <Shell>bash</Shell>
   <Privileged>true</Privileged>
   <PrivilegedReq>true</PrivilegedReq>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>

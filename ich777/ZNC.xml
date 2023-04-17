@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Beta>False</Beta>
-  <Shell>sh</Shell>
+  <Shell>bash</Shell>
   <Privileged>False</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://wiki.znc.in/</Project>

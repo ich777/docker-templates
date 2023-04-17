@@ -5,7 +5,7 @@
   <Registry>https://hub.docker.com/r/ich777/openrct2server/</Registry>
   <Network>bridge</Network>
   <MyIP/>
-  <Shell>sh</Shell>
+  <Shell>bash</Shell>
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://openrct2.org/</Project>
