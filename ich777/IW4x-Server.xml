@@ -68,7 +68,7 @@ WINE NOTICE: Since this container runs with WINE i can't guarantee that it will 
       <Mode/>
     </Variable>
     <Variable>
-      <Value>https://dss0.cc/updater/iw4x_files.zip</Value>
+      <Value>https://github.com/XLabsProject/iw4x-rawfiles/releases/download/v0.1.9/release.zip</Value>
       <Name>IW4X_DL_URL</Name>
       <Mode/>
     </Variable>
@@ -109,7 +109,7 @@ WINE NOTICE: Since this container runs with WINE i can't guarantee that it will 
   <Config Name="UDP - Game Port" Target="28960" Default="" Mode="udp" Description="UDP Game Port same as TCP (if you need another port, please delete this entry and create a new UDP Port with the corresponding port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="false" Mask="false">28960</Config>
   <Config Name="Startup Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Specify your Startup Parameters here." Type="Variable" Display="always" Required="true" Mask="false">+exec server.cfg +sv_maxclients 12 +set fs_game mods/bots +set playlistFilename playlists.info</Config>
   <Config Name="Force Update" Target="FORCE_UPDATE" Default="" Mode="" Description="Set to 'true' (without quotes) to force an update." Type="Variable" Display="always" Required="false" Mask="false"/>
-  <Config Name="Main IW4x Download URL" Target="IW4X_DL_URL" Default="" Mode="" Description="Main IW4x Download URL (only change if you know what you are doing)" Type="Variable" Display="advanced" Required="true" Mask="false">https://dss0.cc/updater/iw4x_files.zip</Config>
+  <Config Name="Main IW4x Download URL" Target="IW4X_DL_URL" Default="" Mode="" Description="Main IW4x Download URL (only change if you know what you are doing)" Type="Variable" Display="advanced" Required="true" Mask="false">https://github.com/XLabsProject/iw4x-rawfiles/releases/download/v0.1.9/release.zip</Config>
   <Config Name="IW4x DLC Download URL" Target="IW4X_DLC_URL" Default="" Mode="" Description="IW4x DLC Download URL (only change if you know what you are doing)" Type="Variable" Display="advanced" Required="true" Mask="false">https://iw4x-my.sharepoint.com/:u:/g/personal/emosewaj_iw4x_onmicrosoft_com/EYnWYmCXExpEvn-bL2262Q0BSy0jVZF0FXslvpJEDPE5Fw?e=gPx8RF&amp;download=1</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
