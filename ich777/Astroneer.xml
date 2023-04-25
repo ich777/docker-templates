@@ -12,6 +12,8 @@
   <Project>https://www.steampowered.com/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install Astroneer and run it.&#xD;
 &#xD;
+**Notice:** This is a highly experimental server and you maybe have to restart the container after you left the server it in order to be able to connect again, other than that everything should work as expected.&#xD;
+&#xD;
 **ATTENTION:** You have to add this entry to the Engine.ini from the clients which are going to connecting to this dedicated server:&#xD;
 ```&#xD;
 net.AllowEncryption=False&#xD;
