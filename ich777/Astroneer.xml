@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Astroneer</Name>
+  <Repository>ich777/steamcmd:astroneer</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Beta>True</Beta>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Astroneer and run it.&#xD;
+&#xD;
+**ATTENTION:** You have to add this entry to the Engine.ini from the clients which are going to connecting to this dedicated server:&#xD;
+```
+net.AllowEncryption=False&#xD;
+```&#xD;
+You'll find the file on your local Windows machine at: `%localappdata%AstroSavedConfigWindowsNoEditor`&#xD;
+&#xD;
+**WARNING:** If a client tries to connect to the Dedicated Server which don't has this entry in the Engine.ini the server will be left in a semi bricked state and you have to restart the Docker container.&#xD;
+&#xD;
+**Servername:** 'AstroneerDocker' Password: 'Docker' ConsolePassword: 'adminDocker'&#xD;
+&#xD;
+**Serveradmin:** If you want to become a server admin then stop the container and edit the file ../Astro/Saved/Config/WindowsServer/AstroServerSettings.ini and add your Steam name after `OwnerName=` eg: `OwnerName=YourSteamName`, after that start the container and connect to the Dedicated Server.&#xD;
+&#xD;
+**Update Notice:** Simply restart the container if a newer version of the game is available.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/astroneer.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/astroneer</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">728470</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UDP - Game Port" Target="8777" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">8777</Config>
+  <Config Name="Update Public IP" Target="UPDATE_PUBLIC_IP" Default="" Mode="" Description="If set to 'true' the container will check on each container start if the Public IP is still valid." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+</Container>
