@@ -13,7 +13,7 @@
   <Overview>This Docker will download and install SteamCMD. It will also install Astroneer and run it.&#xD;
 &#xD;
 **ATTENTION:** You have to add this entry to the Engine.ini from the clients which are going to connecting to this dedicated server:&#xD;
-```
+```&#xD;
 net.AllowEncryption=False&#xD;
 ```&#xD;
 You'll find the file on your local Windows machine at: `%localappdata%AstroSavedConfigWindowsNoEditor`&#xD;
