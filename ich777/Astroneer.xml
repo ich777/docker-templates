@@ -14,9 +14,9 @@
 &#xD;
 **Notice:** This is a highly experimental server and you maybe have to restart the container after you left the server it in order to be able to connect again, other than that everything should work as expected.&#xD;
 &#xD;
-**ATTENTION:** You have to add this entry to the Engine.ini from the clients which are going to connecting to this dedicated server:&#xD;
+**ATTENTION:** You have to add a entry to the Engine.ini from the clients which are going to connecting to this dedicated server:&#xD;
 ```&#xD;
-net.AllowEncryption=False&#xD;
+Please wait for the container to fully start an then look at the log which entry to add or you can simply navigate to the Readme.md over here to see the entry too: https://github.com/ich777/docker-steamcmd-server/blob/astroneer/README.md&#xD;
 ```&#xD;
 You'll find the file on your local Windows machine at: `%localappdata%AstroSavedConfigWindowsNoEditor`&#xD;
 &#xD;
