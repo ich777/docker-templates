@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>RustDeskServer-AiO</Name>
+  <Repository>ich777/rustdesk-server-aio</Repository>
+  <Registry>https://hub.docker.com/r/ich777/rustdesk-server-aio/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://rustdesk.com/</Project>
+  <Overview>Self-host your own RustDesk Server, it is free and open source.&#xD;
+&#xD;
+This container includes both the RustDesk Server and the RustDesk Relay in one and starts it.</Overview>
+  <Category>Network:Other Other: Productivity: Tools:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/rustdesk.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="Data Path" Target="/rustdesk-server" Default="" Mode="rw" Description="Default data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/nvme/appdata/rustdeskserver-aio</Config>
+  <Config Name="Enable RustDesk Server" Target="HBBS_ENABLED" Default="true|false" Mode="" Description="The server needs by default the following ports to work properly:&#13;&#10;TCP: 21115, 21116, 21118&#13;&#10;UDP: 21116" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Rust Desk Server Parameters" Target="HBBS_PARAMS" Default="" Mode="" Description="Enter your extra start up parameters for the server here if necessary." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Enabel RustDesk Relay" Target="HBBR_ENABLED" Default="true|false" Mode="" Description="The relay needs by default the following ports to work properly:&#13;&#10;TCP: 21117, 21119" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
+  <Config Name="Rust Desk Relay Parameters" Target="HBBR_PARAMS" Default="" Mode="" Description="Enter your extra start up parameters for the relay here if necessary." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="TCP - RustDesk Server/Relay" Target="21115-21119" Default="" Mode="tcp" Description="Necessary default ports for the server:&#13;&#10;TCP: 21115, 21116, 21118&#13;&#10;UDP: 21116&#13;&#10;Necessary default ports for the relay:&#13;&#10;TCP: 21117, 21119" Type="Port" Display="always" Required="true" Mask="false">21115-21119</Config>
+  <Config Name="UDP - RustDesk Server" Target="21116" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">21116</Config>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="Only change when you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="Only change when you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="Only change when you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="Only change when you know what you are doing!" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
+</Container>
