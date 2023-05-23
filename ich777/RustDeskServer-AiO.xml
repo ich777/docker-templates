@@ -23,7 +23,7 @@ This container includes both the RustDesk Server and the RustDesk Relay in one a
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Requires/>
-  <Config Name="Data Path" Target="/rustdesk-server" Default="" Mode="rw" Description="Default data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/nvme/appdata/rustdeskserver-aio</Config>
+  <Config Name="Data Path" Target="/rustdesk-server" Default="" Mode="rw" Description="Default data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/rustdeskserver-aio</Config>
   <Config Name="Enable RustDesk Server" Target="HBBS_ENABLED" Default="true|false" Mode="" Description="The server needs by default the following ports to work properly:&#13;&#10;TCP: 21115, 21116, 21118&#13;&#10;UDP: 21116" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
   <Config Name="Rust Desk Server Parameters" Target="HBBS_PARAMS" Default="" Mode="" Description="Enter your extra start up parameters for the server here if necessary." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Enabel RustDesk Relay" Target="HBBR_ENABLED" Default="true|false" Mode="" Description="The relay needs by default the following ports to work properly:&#13;&#10;TCP: 21117, 21119" Type="Variable" Display="always" Required="true" Mask="false">true</Config>
