@@ -17,16 +17,16 @@
 &#xD;
 Update Notice: The container will check by default on each start/restart on new updates for BattleNetPrefill and/or EpicPrefill and/or SteamPrefill, this can be disabled if really wanted.&#xD;
 &#xD;
-**Steam Prefill Notice:** Steam Prefill needs to be configured to work properly, please enter the following commands and follow the prompts afterwards, you can close the window when you are finished:&#xD;
+**BattleNet|Epic|Steam Prefill Notice:** Steam Prefill needs to be configured to work properly, please enter the following commands and/or follow the prompts afterwards, you can close the window when you are finished:&#xD;
 1. Open up a container console&#xD;
-2. Type in 'cd ${DATA_DIR}/(Steam|Epic)Prefill' and press ENTER&#xD;
-3. Type in './(Steam|Epic)Prefill select-apps' and press ENTER&#xD;
-4. Type in './SteamPrefill select-apps' and press ENTER&#xD;
-5. Enter your Steam credentials and follow the steps displayed&#xD;
-6. Select the apps you want to prefill (you don't have to select any)&#xD;
+2. Type in 'cd ${DATA_DIR}/(BattleNet|Epic|Steam)Prefill' and press ENTER&#xD;
+3. Type in './(BattleNet|Epic|Steam)Prefill select-apps' and press ENTER&#xD;
+4. Type in './(BattleNet|Epic|Steam)Prefill select-apps' and press ENTER&#xD;
+5. Enter your credentials and/or follow the steps displayed&#xD;
+6. Select the apps you want to prefill and press ENTER&#xD;
 7. Done&#xD;
 &#xD;
-_Notice:_ In the above example you have to choose between Steam or Epic so that it says SteamPrefill or EpicPrefill instead of (Steam|Epic)Prefill. (these stepps are also displayed in the container log when Steam isn't configured yet)&#xD;
+_Notice:_ In the above example you have to choose between BattleNet, Epic or Steam so that it says BattleNetPrefill, EpicPrefill or SteamPrefill instead of (BattleNet|Epic|Steam)Prefill. (these stepps are also displayed in the container log when BatteNet/Epic/Steam isn't/aren't configured yet)&#xD;
 &#xD;
 If you ever want to change the apps you've selected then follow these steps again.</Overview>
   <Category>Downloaders: Other:</Category>
@@ -42,7 +42,6 @@ If you ever want to change the apps you've selected then follow these steps agai
   <Requires>LANCache Server</Requires>
   <Config Name="Data Path" Target="/lancacheprefill" Default="" Mode="rw" Description="Main data path" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/lancache-prefill</Config>
   <Config Name="Enable BattleNetPrefill" Target="ENABLE_BN" Default="false|true" Mode="" Description="Set to 'true' or 'false' to enable or disable BattleNetPrefill" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
-  <Config Name="BattleNetPrefill Parameters" Target="PREFILL_PARAMS_BN" Default="" Mode="" Description="You can get a full list of parameters over here: https://github.com/tpill90/battlenet-lancache-prefill#detailed-command-usage" Type="Variable" Display="always" Required="true" Mask="false">--products d3 s1 wow_classic </Config>
   <Config Name="BattleNetPrefill Schedule" Target="CRON_SCHED_BN" Default="" Mode="" Description="Set your cron schedule for BattleNetPrefill if enabled (by default it is set to 02:00 - head over to https://crontab.guru/ to create your own if you want to customize it)" Type="Variable" Display="always" Required="true" Mask="false">0 5 * * *</Config>
   <Config Name="Enable EpicPrefill" Target="ENABLE_EPIC" Default="false|true" Mode="" Description="Set to 'true' or 'false' to enable or disable EpicPrefill" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
   <Config Name="EpicPrefill Parameters" Target="PREFILL_PARAMS_EPIC" Default="" Mode="" Description="You can get a full list of parameters over here: https://github.com/tpill90/epic-lancache-prefill#getting-started" Type="Variable" Display="always" Required="false" Mask="false"/>
