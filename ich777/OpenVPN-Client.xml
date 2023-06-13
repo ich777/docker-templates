@@ -20,14 +20,14 @@ You can route the traffic from multiple containers through this container with t
 &#xD;
 DNS: By default this container uses Googles DNS Server: 8.8.8.8 if you want to edit this turn on 'Advanced View' and edit this setting at 'Extra Parameters'.&#xD;
 &#xD;
-IPv6: By default IPv6 is disabled in this container. If you want to enable it turn on 'Advanced View' and delete the entry: '--sysctl net.ipv6.conf.all.disable_ipv6=0' from the 'Extra Parameters'.&#xD;
+IPv6: By default IPv6 is disabled in this container. If you want to enable it turn on 'Advanced View' and delete the entry: '--sysctl net.ipv6.conf.all.disable_ipv6=1' from the 'Extra Parameters' or simply set it to: '--sysctl net.ipv6.conf.all.disable_ipv6=0'.&#xD;
 &#xD;
 ADVANCED CONFIG: If you leave the appdata directory for this container empty it will start up and you have to manually configure it with the builtin comand: 'openvpn.sh', see: https://github.com/ich777/docker-openvpn-client</Overview>
   <Category>Network:VPN</Category>
   <WebUI/>
   <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openvpn-client.png</Icon>
-  <ExtraParams>--cap-add=NET_ADMIN --dns=8.8.8.8 --sysctl net.ipv6.conf.all.disable_ipv6=0</ExtraParams>
+  <ExtraParams>--cap-add=NET_ADMIN --dns=8.8.8.8 --sysctl net.ipv6.conf.all.disable_ipv6=1</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
@@ -44,7 +44,7 @@ You can route the traffic from multiple containers through this container with t
 &#xD;
 DNS: By default this container uses Googles DNS Server: 8.8.8.8 if you want to edit this turn on 'Advanced View' and edit this setting at 'Extra Parameters'.&#xD;
 &#xD;
-IPv6: By default IPv6 is disabled in this container. If you want to enable it turn on 'Advanced View' and delete the entry: '--sysctl net.ipv6.conf.all.disable_ipv6=0' from the 'Extra Parameters'.&#xD;
+IPv6: By default IPv6 is disabled in this container. If you want to enable it turn on 'Advanced View' and delete the entry: '--sysctl net.ipv6.conf.all.disable_ipv6=1' from the 'Extra Parameters' or simply set it to: '--sysctl net.ipv6.conf.all.disable_ipv6=0'.&#xD;
 &#xD;
 ADVANCED CONFIG: If you leave the appdata directory for this container empty it will start up and you have to manually configure it with the builtin comand: 'openvpn.sh', see: https://github.com/ich777/docker-openvpn-client</Description>
   <Networking>
