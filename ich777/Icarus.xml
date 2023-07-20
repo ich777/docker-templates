@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Icarus</Name>
+  <Repository>ich777/steamcmd:icarus</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Beta>True</Beta>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Icarus and run it.&#xD;
+&#xD;
+Initial server configuration:  &#xD;
+**Servername:** Icarus Docker **Password:** Docker  **AdminPassword:** adminDocker  &#xD;
+&#xD;
+**ATTENTION:** First startup can take very long since it downloads the gameserver files and it also installs the runtimes which can take quite some time! &#xD;
+&#xD;
+**First Start Notice:** On First startup the container installs the necessary runtimes and it might seem that the container hangs but please be patient since the installation can take very long on some systems (5 minutes+).&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/icarus.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="Server Files" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/icarus</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">2089300</Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false">-SteamServerName="Icarus Docker" -Port=17777 -QueryPort=27015</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="UDP1 - GamePort" Target="17777" Default="" Mode="udp" Description="UDP GamePort (If you need another port delete this entry and create a new UDP port mapping here in the template with the Container and Host port set to the same as in your GAME_PARAMS)." Type="Port" Display="always" Required="true" Mask="false">17777</Config>
+  <Config Name="UDP2 - SteamPort" Target="27015" Default="" Mode="udp" Description="UDP SteamPort (If you need another port delete this entry and create a new UDP port mapping here in the template with the Container and Host port set to the same as in your GAME_PARAMS)." Type="Port" Display="always" Required="true" Mask="false">27015</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+</Container>
