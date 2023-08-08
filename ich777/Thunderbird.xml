@@ -9,7 +9,7 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
   <Project>https://www.thunderbird.net/</Project>
-  <Overview>This container will download and install Thunderbird in the preferred version and language.&#xD;
+  <Overview>This container will download and install Thunderbird from the preferred branch and language.&#xD;
 &#xD;
 ATTENTION: If you want to change the language, you have to delete every file in the 'thunderbird' directory except the 'profile' folder.&#xD;
 &#xD;
@@ -24,7 +24,7 @@ RESOLUTION: You can also change the resolution from the WebGUI, to do that simpl
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Description>This container will download and install Thunderbird in the preferred version and language.&#xD;
+  <Description>This container will download and install Thunderbird from the preferred branch and language.&#xD;
 &#xD;
 ATTENTION: If you want to change the language, you have to delete every file in the 'thunderbird' directory except the 'profile' folder.&#xD;
 &#xD;
@@ -91,7 +91,7 @@ RESOLUTION: You can also change the resolution from the WebGUI, to do that simpl
   <Labels/>
   <Config Name="Data Dir" Target="/thunderbird" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/thunderbird/</Config>
   <Config Name="noVNC WebGUI" Target="8080" Default="" Mode="tcp" Description="TCP noVNC WebGUI" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Preferred Thunderbird Version" Target="THUNDERBIRD_V" Default="" Mode="" Description="Enter your preferred version or 'latest' (without quotes) to grab the latest version." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
+  <Config Name="Preferred Thunderbird Version" Target="THUNDERBIRD_V" Default="" Mode="" Description="Enter your preferred Thunderbird branch 'latest' or 'beta' are allowed." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="Preferred Thunderbird Language" Target="THUNDERBIRD_LANG" Default="" Mode="" Description="Enter your preferred language here (eg: 'en-US', 'de', 'fr', 'en-GB',... you can get a full list here: https://archive.mozilla.org/pub/thunderbird/releases/latest/README.txt)" Type="Variable" Display="always" Required="true" Mask="false">en-US</Config>
   <Config Name="Custom Screen Width" Target="CUSTOM_RES_W" Default="" Mode="" Description="Minimum screen width 1000 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">1280</Config>
   <Config Name="Custom Screen Height" Target="CUSTOM_RES_H" Default="" Mode="" Description="Minimum screen hight 880 pixels" Type="Variable" Display="advanced" Required="true" Mask="false">768</Config>
