@@ -62,4 +62,5 @@ ADVANCED CONFIG: If you leave the appdata directory for this container empty it 
   <Labels/>
   <Config Name="Data Path" Target="/vpn" Default="" Mode="rw" Description="Data Path for your 'vpn.ovpn' and your certificates or your 'vpn.auth'." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/openvpn-client</Config>
   <Config Name="TUN device" Target="" Default="" Mode="" Description="TUN device that is needed to run the container." Type="Device" Display="advanced" Required="true" Mask="false">/dev/net/tun</Config>
+  <Config Name="FIREWALL" Target="FIREWALL" Default="" Mode="" Description="This variable enables the firewall and blocks any connection when the VPN connection is not established (you don't have to specify anything here, if you want to disable the Firewall then simply delete this entry)" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
