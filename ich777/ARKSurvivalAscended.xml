@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ARKSurvivalAscended</Name>
+  <Repository>ich777/steamcmd:asa</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <Beta>true</Beta>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://survivetheark.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install ARK:SurvivalAscended and run it (Normal server startup of ARK can take a long time!).&#xD;
+&#xD;
+**WARNING:** You have to set the value vm.max_map_count to at least 256000 on the host as root with the command:  &#xD;
+`echo 265000 &amp;gt; /proc/sys/vm/max_map_count`&#xD;
+To make that value persistent on Unraid please use a User Script that runs on startup or with the command from above or put it in your `go` file.&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>false</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/asa.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/ark-sa</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '2430930 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">2430930</Config>
+  <Config Name="Map Name" Target="MAP" Default="" Mode="" Description="Enter your preferred map" Type="Variable" Display="always" Required="false" Mask="false">TheIsland_WP</Config>
+  <Config Name="Server Name" Target="SERVER_NAME" Default="" Mode="" Description="Your server name goes here" Type="Variable" Display="always" Required="true" Mask="false">ASA Docker</Config>
+  <Config Name="Password" Target="SRV_PWD" Default="" Mode="" Description="Your server password goes here" Type="Variable" Display="always" Required="false" Mask="false">Docker</Config>
+  <Config Name="Admin Password" Target="SRV_ADMIN_PWD" Default="" Mode="" Description="Your server admin password goes here" Type="Variable" Display="always" Required="false" Mask="false">adminDocker</Config>
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters seperated with ? and start with a ? (don't put spaces in between eg: ?MaxPlayers=40?FastDecayUnsnappedCoreStructures=true)" Type="Variable" Display="always-hide" Required="false" Mask="false">?Port=7777?MaxPlayers=20</Config>
+  <Config Name="Extra Game Parameters" Target="GAME_PARAMS_EXTRA" Default="" Mode="" Description="Enter your Extra Game Parameters seperated with a space and - (eg: -DisableDeathSpectator -UseBattlEye)" Type="Variable" Display="always-hide" Required="true" Mask="false">-server -log -NoBattlEye</Config>
+  <Config Name="UDP 1" Target="7777" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+</Container>
