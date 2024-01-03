@@ -2,7 +2,7 @@
 <Container version="2">
   <Name>LANCache-Prefill</Name>
   <Repository>ich777/lancache-prefill</Repository>
-  <Registry>https://github.com/ich777/lancache-prefill</Registry>
+  <Registry>https://hub.docker.com/r/ich777/lancache-prefill</Registry>
   <Network>br0</Network>
   <MyIP/>
   <Shell>bash</Shell>
