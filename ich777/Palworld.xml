@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Palworld</Name>
+  <Repository>ich777/steamcmd:palworld</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Palworld and run it.&#xD;
+&#xD;
+**Server Name:** Palworld Docker  &#xD;
+**Password:** Docker  &#xD;
+**Admin Password:** adminDocker  &#xD;
+&#xD;
+**Configuration:** The configuration is located at: .../Pal/Saved/Config/LinuxServer/PalWorldSettings.ini  &#xD;
+&#xD;
+**ATTENTION:** First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/palworld.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/palworld</Config>
+  <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '2394010 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">2394010</Config>
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your game parameters (for a community server put in the value 'EpicApp=PalServer' without quotes)" Type="Variable" Display="always-hide" Required="false" Mask="false">EpicApp=PalServer</Config>
+  <Config Name="Extra Game Parameters" Target="GAME_PARAMS_EXTRA" Default="" Mode="" Description="Enter your Extra Game Parameters seperated with a space and - (eg: -No-useperfthreads -NoAsyncLoadingThread)" Type="Variable" Display="always-hide" Required="false" Mask="false">-No-useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS</Config>
+  <Config Name="Update Public IP" Target="UPDATE_PUBLIC_IP" Default="false|true" Mode="" Description="If set to 'true' the container will check on each container start if the Public IP is still valid (the container will try to grab your public IP on the first server start since the public IP is necessary to run a community server)." Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="UDP1 - Game Port" Target="8211" Default="" Mode="udp" Description="UDP Gameport (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to click an 'Show more settings ...' and change the port number)" Type="Port" Display="always" Required="true" Mask="false">8211</Config>
+  <Config Name="TCP - RCON" Target="25575" Default="" Mode="tcp" Description="Default RCON Port (don't forward that in your router, RCON is only meant for local access and RCON is unencrypted - RCON is by default disabled in the config you have to first enable it in the config if you want to use it)" Type="Port" Display="always" Required="false" Mask="false">25575</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
+</Container>
