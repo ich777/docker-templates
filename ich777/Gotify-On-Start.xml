@@ -3,7 +3,7 @@
   <Name>Gotify-On-Start</Name>
   <Repository>ich777/gotify-on-start</Repository>
   <Registry>https://hub.docker.com/r/ich777/gotify-on-start</Registry>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
