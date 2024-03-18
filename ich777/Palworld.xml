@@ -32,7 +32,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <DateInstalled/>
   <DonateText>If you like my work please </DonateText>
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
-  <Requires/>
+  <Requires>At least 32GB of free system memory, a restart every 24 hours is recommended!</Requires>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/palworld</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '2394010 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">2394010</Config>
