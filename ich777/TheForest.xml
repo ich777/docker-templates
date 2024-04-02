@@ -17,7 +17,7 @@ BETA Warning: Since this Docker runs with WINE it's marked as BETA, i can not gu
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 **WARNING:** You have to create a Steam Token to play Online.&#xD;
-Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!). Put your Token into your GAME_PARAMS like this 'serverSteamAccount YOURTOKEN' (without quotes).&#xD;
+Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!). After creating your token you have to go to the file .../theforest/config/config.txt and append your token to the line that starts with: serverSteamAccount (eg: serverSteamAccount YOURTOKEN).&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -39,7 +39,7 @@ BETA Warning: Since this Docker runs with WINE it's marked as BETA, i can not gu
 ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
 &#xD;
 WARNING: You have to create a Steam Token to play Online.&#xD;
-Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!). Put your Token into your GAME_PARAMS like this 'serverSteamAccount YOURTOKEN' (without quotes).&#xD;
+Create your token here: https://steamcommunity.com/dev/managegameservers (please note that you must generate the token for the APPID: '242760' and every gameserver needs it's own token!!!). After creating your token you have to go to the file .../theforest/config/config.txt and append your token to the line that starts with: serverSteamAccount (eg: serverSteamAccount YOURTOKEN).&#xD;
 &#xD;
 Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
 &#xD;
@@ -117,7 +117,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/theforest</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">556450</Config>
-  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your Token here: you can obtain it here: https://steamcommunity.com/dev/managegameservers put it in like this 'serverSteamAccount YOURTOKEN' (without quotes), you can also enter more startup commands here." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your startup commands if needed." Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="false"/>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced-hide" Required="false" Mask="true"/>
