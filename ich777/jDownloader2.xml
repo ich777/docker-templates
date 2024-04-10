@@ -77,11 +77,17 @@ Update Notice: Updates will be handled through jDownloader2 directly, simply cli
       <Name>CUSTOM_RES_H</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONNECTED_CONTAINERS</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Data Dir" Target="/jDownloader2" Default="" Mode="rw" Description="Container Path: /jDownloader2" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/jdownloader2/</Config>
   <Config Name="WebGUI" Target="8080" Default="" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Download Path" Target="/mnt/jDownloader" Default="" Mode="rw" Description="Container Path: /mnt/jDownloader" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/jDownloader/</Config>
+  <Config Name="Connected Containers" Target="CONNECTED_CONTAINERS" Default="" Mode="" Description="If connected and routet through a VPN container compatible with the Connected Containers feature, allows the container to detect a restart from the VPN container and restart itself. The default value is: '127.0.0.1:27286' without quotes. If you don't want to use this feature leave this field empty." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Umask Value" Target="UMASK" Default="" Mode="" Description="Container Variable: UMASK" Type="Variable" Display="advanced" Required="true" Mask="false">000</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
