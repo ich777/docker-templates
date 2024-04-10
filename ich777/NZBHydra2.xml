@@ -77,12 +77,18 @@ MANUAL VERSION: You can also set a version manually by typing in the version num
       <Name>UMASK</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>CONNECTED_CONTAINERS</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="Data Dir" Target="/nzbhydra2" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/nzbhydra2</Config>
   <Config Name="Dowloads" Target="/mnt/downloads" Default="" Mode="rw" Description="Main download directory" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
   <Config Name="NZBHydra2 Release" Target="NZBHYDRA2_REL" Default="" Mode="" Description="Set the version that you want to install or set to 'latest' (without quotes) if you want to pull always the latest version." Type="Variable" Display="always" Required="true" Mask="false">latest</Config>
   <Config Name="TCP - WebGUI http" Target="5076" Default="" Mode="tcp" Description="WebGUI port http (don't change the IP adress or the port in the config itself)." Type="Port" Display="always" Required="true" Mask="false">5076</Config>
+  <Config Name="Connected Containers" Target="CONNECTED_CONTAINERS" Default="" Mode="" Description="If connected and routet through a VPN container compatible with the Connected Containers feature, allows the container to detect a restart from the VPN container and restart itself. The default value is: '127.0.0.1:27286' without quotes. If you don't want to use this feature leave this field empty." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Data Permissions" Target="DATA_PERM" Default="" Mode="" Description="Container Variable: DATA_PERM" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
