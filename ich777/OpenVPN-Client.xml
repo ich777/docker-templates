@@ -27,7 +27,7 @@ ADVANCED CONFIG: If you leave the appdata directory for this container empty it 
   <WebUI/>
   <TemplateURL>False</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/openvpn-client.png</Icon>
-  <ExtraParams>--cap-add=NET_ADMIN --dns=8.8.8.8 --sysctl net.ipv6.conf.all.disable_ipv6=1</ExtraParams>
+  <ExtraParams>--cap-add=NET_ADMIN --dns=8.8.8.8 --sysctl net.ipv6.conf.all.disable_ipv6=1 --restart=unless-stopped</ExtraParams>
   <PostArgs/>
   <CPUset/>
   <DateInstalled/>
@@ -63,4 +63,7 @@ ADVANCED CONFIG: If you leave the appdata directory for this container empty it 
   <Config Name="Data Path" Target="/vpn" Default="" Mode="rw" Description="Data Path for your 'vpn.ovpn' and your certificates or your 'vpn.auth'." Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/openvpn-client</Config>
   <Config Name="TUN device" Target="" Default="" Mode="" Description="TUN device that is needed to run the container." Type="Device" Display="advanced" Required="true" Mask="false">/dev/net/tun</Config>
   <Config Name="FIREWALL" Target="FIREWALL" Default="" Mode="" Description="This variable enables the firewall and blocks any connection when the VPN connection is not established (you don't have to specify anything here, if you want to disable the Firewall then simply delete this entry)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="CONNECTED_CONTAINERS" Target="CONNECTED_CONTAINERS" Default="" Mode="" Description="This variable enables the Connected Containers feature which will notify compatible containers when the VPN is restarted and restart themselves. To enable this feature enter '27286' without quotes, if you don't want to enable this feature leave this field empty." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PING_IP" Target="PING_IP" Default="" Mode="" Description="Enable a ping check if the container is still connected to the VPN (specify a IP like '8.8.8.8' or a domain name 'google.com' without quotes here). The container will restart if the ping fails (default interval is 30 seconds). If you don't want to use this feature leave this field empty." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="PING_INTERVAL" Target="PING_INTERVAL" Default="" Mode="" Description="Specify your ping interval in seconds here (default 30 seconds)." Type="Variable" Display="advanced" Required="false" Mask="false">30</Config>
 </Container>
