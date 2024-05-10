@@ -7,6 +7,7 @@
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
+  <Beta>true</Beta>
   <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
   <Project>https://www.abioticfactor.com/</Project>
   <Overview>This Docker will download and install SteamCMD. It will also install Abiotic Factor and run it.&#xD;
