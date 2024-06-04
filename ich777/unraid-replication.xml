@@ -5,7 +5,7 @@
   <Beta>True</Beta>
   <Category>Productivity: Tools:System</Category>
   <Name>unRAID-Replication</Name>
-  <Description>This plugin allows you to replicate your main applications (Docker/LXC containers and chosen directories) to a second, unRAID based, Backup machine.  
+  <Description>This plugin allows you to replicate your applications (Docker/LXC containers and chosen directories) from your Main machine to a second, unRAID based, Backup machine.  
 With the inclusion of keepalived you can also create a virtual IP for your Main and Backup machine where the backup machine can automatically run the replicated containers.  
 For more information visit the Support Thread on the forums.  
   
