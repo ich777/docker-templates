@@ -52,6 +52,11 @@ UPDATE: The container will search for a new version of the game on every start/r
   </Data>
   <Environment>
     <Variable>
+      <Value>server.cfg</Value>
+      <Name>CONFIG_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
       <Value/>
       <Name>START_PARAMS</Name>
       <Mode/>
@@ -80,6 +85,7 @@ UPDATE: The container will search for a new version of the game on every start/r
   <Labels/>
   <Config Name="Data Dir" Target="/urbanterror" Default="" Mode="rw" Description="Data Path" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/urban-terror/</Config>
   <Config Name="UDP - Game Port" Target="27960" Default="" Mode="udp" Description="UDP Game Port" Type="Port" Display="always" Required="true" Mask="false">27960</Config>
+  <Config Name="Configuration Name" Target="CONFIG_NAME" Default="" Mode="" Description="Specify your configuration name (leave it as is if you don't plan to run multiple servers from one directory)" Type="Variable" Display="always" Required="true" Mask="false">server.cfg</Config>
   <Config Name="Extra Start Parameters" Target="START_PARAMS" Default="" Mode="" Description="Enter you extra startup parameters if needed" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Check for Updates" Target="CHECK_FOR_UPDATES" Default="" Mode="" Description="Set to 'true' (without quotes) to search for updates on every start/restart otherwise leave empty" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
