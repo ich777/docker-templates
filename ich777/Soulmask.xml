@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Soulmask</Name>
+  <Repository>ich777/steamcmd:soulmask</Repository>
+  <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/79530-support-ich777-gameserver-dockers/</Support>
+  <Project>https://www.steampowered.com/</Project>
+  <Overview>This Docker will download and install SteamCMD. It will also install Soulmask and run it.&#xD;
+&#xD;
+Defaults: Servername: 'Soulmask Docker' Password: 'Docker' Admin Password: 'adminDocker'&#xD;
+(You can change that in the GAME_PARAMS variable)&#xD;
+&#xD;
+ATTENTION: First Startup can take very long since it downloads the gameserver files!&#xD;
+&#xD;
+Update Notice: Simply restart the container if a newer version of the game is available.&#xD;
+&#xD;
+You can also run multiple servers with only one SteamCMD directory!</Overview>
+  <Category>GameServers:</Category>
+  <WebUI/>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/soulmask.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
+  <Config Name="Server Files" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/soulmask</Config>
+  <Config Name="Start Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server (ATTENTION: You have to wrap SteamServerName, PSW and adminpsw in double quotes!)" Type="Variable" Display="always" Required="true" Mask="false">-SteamServerName="Soulmask Docker" -MaxPlayers=50 -PSW="Docker" -adminpsw="adminDocker" -pve -Port=8777 -QueryPort=27015 -EchoPort=18888</Config>
+  <Config Name="UDP1 - GamePort" Target="8777" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">8777</Config>
+  <Config Name="UDP2 - QueryPort" Target="27015" Default="" Mode="udp" Description="" Type="Port" Display="always" Required="true" Mask="false">27015</Config>
+  <Config Name="Game ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container downloads at startup. If you want to install a static or beta version of the game change the value to: '3017300 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">3017300</Config>
+  <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
+  <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>
