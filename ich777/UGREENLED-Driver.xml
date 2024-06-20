@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-ugreenleds-driver/master/ugreenleds-driver.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Requires>UGREEN NAS</Requires>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>UGREEN LED Driver</Name>
+  <Description>This package contains the UGREEN LED Driver which will allow you to get your LEDs to work on your UGREEN NAS (please note that not all models are supported).  
+The plugin is based on: https://github.com/miskcoo/ugreen_dx4600_leds_controller</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/ugreennas.png</Icon>
+</Containers>
