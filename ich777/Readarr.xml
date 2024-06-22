@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Readarr</Name>
+  <Repository>ich777/readarr</Repository>
+  <Registry>https://hub.docker.com/r/ich777/readarr</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/83786-support-ich777-application-dockers/</Support>
+  <Project>https://readarr.com/</Project>
+  <Overview>Readarr is an ebook and audiobook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books from your favorite authors and will grab, sort, and rename them. Note that only one type of a given book is supported. If you want both an audiobook and ebook of a given book you will need multiple instances.&#xD;
+&#xD;
+UPDATE: The container will check on every start/restart if there is a newer version available.&#xD;
+&#xD;
+MANUAL VERSION: You can also set a version manually by typing in the version number that you want to use for example: '0.3.28.2554' (without quotes) - valid options are 'develop' and 'latest' without quotes PLEASE NOTE THAT CURRENTLY ONLY DEVELOP IS WORKING BECAUSE ONLY DEVELOP BRANCH IS IN ACTIVE DEVELOPMENT&#xD;
+&#xD;
+ATTENTION: Don't change the port in the Readarr config itself.&#xD;
+&#xD;
+MIGRATION: If you are migrating from another Container please be sure to deltete the files/folders 'logs' and 'config.xml', don't forget to change the root folder for your books and select 'No, I'll Move the Files Myself'!&#xD;
+&#xD;
+WARNING: The main configuration of the paths has a performance and disk usage impact: slow, I/O intensive moves and wasted disk space. For a detailed guide to change that see https://trash-guides.info/hardlinks/#unraid .</Overview>
+  <Category>Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:8787]/</WebUI>
+  <TemplateURL>False</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/readarr.png</Icon>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled/>
+  <DonateText>If you like my work please </DonateText>
+  <DonateLink>https://www.paypal.me/chips777</DonateLink>
+  <Requires/>
+  <Config Name="Data Dir" Target="/readarr" Default="" Mode="rw" Description="Configuration directory" Type="Path" Display="always" Required="false" Mask="false">/mnt/cache/appdata/readarr</Config>
+  <Config Name="Music" Target="/mnt/books" Default="" Mode="rw" Description="Path to your Books&#13;&#10;&#13;&#10;WARNING: &#13;&#10;This style of paths has a performance and disk usage impact: slow, I/O intensive moves and wasted disk space.&#13;&#10;&#13;&#10;See https://trash-guides.info/hardlinks/#unraid for details." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Books/</Config>
+  <Config Name="Dowloads" Target="/mnt/downloads" Default="" Mode="rw" Description="Main download directory&#13;&#10;&#13;&#10;WARNING: &#13;&#10;This style of paths has a performance and disk usage impact: slow, I/O intensive moves and wasted disk space.&#13;&#10;&#13;&#10;See https://trash-guides.info/hardlinks/#unraid for details." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/Downloads/</Config>
+  <Config Name="Readarr Release" Target="READARR_REL" Default="" Mode="" Description="Select if you want to download a stable or prerelease (valid options are 'develop' and 'latest' without quotes PLEASE NOTE THAT CURRENTLY ONLY DEVELOP IS WORKING - you can also set the version manual in this format: '0.3.28.2554' or '0..2.3.1955' without quotes)." Type="Variable" Display="always" Required="true" Mask="false">develop</Config>
+  <Config Name="TCP - WebGUI http" Target="8787" Default="" Mode="tcp" Description="WebGUI port http" Type="Port" Display="always" Required="true" Mask="false">8787</Config>
+  <Config Name="Connected Containers" Target="CONNECTED_CONTAINERS" Default="" Mode="" Description="If connected and routet through a VPN container compatible with the Connected Containers feature, allows the container to detect a restart from the VPN container and restart itself. The default value is: '127.0.0.1:27286' without quotes. If you don't want to use this feature leave this field empty." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+  <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">0000</Config>
+  <Config Name="DATA_PERM" Target="DATA_PERM" Default="" Mode="" Description="" Type="Variable" Display="advanced" Required="true" Mask="false">770</Config>
+</Container>
