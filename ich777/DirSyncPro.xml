@@ -107,7 +107,7 @@ Also there is a commandline mode without the GUI if you configured all right und
       <Mode/>
     </Variable>
     <Variable>
-      <Value>https://sourceforge.net/projects/directorysync/files/DirSync Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz</Value>
+      <Value>https://github.com/ich777/docker-dirsyncpro/raw/master/executable/DirSyncPro-1.53-Linux.tar.gz</Value>
       <Name>DL_URL</Name>
       <Mode/>
     </Variable>
@@ -146,7 +146,7 @@ Also there is a commandline mode without the GUI if you configured all right und
   <Config Name="UID" Target="UID" Default="" Mode="" Description="Container Variable: UID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="Container Variable: GID" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="Runtime Name" Target="RUNTIME_NAME" Default="" Mode="" Description="Container Variable: RUNTIME_NAME" Type="Variable" Display="advanced-hide" Required="true" Mask="false">basicjre</Config>
-  <Config Name="DirSyncPro Download URL" Target="DL_URL" Default="" Mode="" Description="Change only if you know what you are doing" Type="Variable" Display="advanced" Required="true" Mask="false">https://sourceforge.net/projects/directorysync/files/DirSync Pro (stable)/1.53/DirSyncPro-1.53-Linux.tar.gz</Config>
+  <Config Name="DirSyncPro Download URL" Target="DL_URL" Default="" Mode="" Description="Change only if you know what you are doing" Type="Variable" Display="advanced" Required="true" Mask="false">https://github.com/ich777/docker-dirsyncpro/raw/master/executable/DirSyncPro-1.53-Linux.tar.gz</Config>
   <Config Name="CMD Mode" Target="CMD_MODE" Default="" Mode="" Description="Set to 'true' (without quotes) if you want to enable the command line mode without the GUI, otherwise leave blank." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="CMD File" Target="CMD_FILE" Default="" Mode="" Description="Please be sure to put the CMD file in the main directory of the Docker and only specify it without the extension for example if the file is named: 'Unraid.dsc' put in 'Unraid' (without quotes)." Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="CryFS Extra Parameters" Target="CRYFS_EXTRA_PARAMETERS" Default="" Mode="" Description="Extra parameters for CrFS if needed (eg: '--unmount-idle 30' without quotes)" Type="Variable" Display="advanced" Required="false" Mask="false"/>
