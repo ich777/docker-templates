@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-hailort-driver/master/hailort-driver.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Requires>Hailo-8R PCI Module</Requires>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>Hailo RT Driver</Name>
+  <Description>The Hailo RT (Real-Time) is a specialized AI processor designed to deliver high-performance and efficient edge computing capabilities. It excels in performing real-time AI inference tasks, making it ideal for applications such as video analytics, autonomous vehicles, and industrial IoT.  
+  
+This plugin provides the necessary drivers to leverage the Hailo RT processor, enhancing the performance and efficiency of AI-driven edge computing tasks on supported hardware.</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/hailo.png</Icon>
+</Containers>
