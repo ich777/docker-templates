@@ -15,11 +15,11 @@ ATTENTION: To get the server working please generate a Key over here: https://be
 &#xD;
 ServerConfig.toml: Please head over to https://wiki.beammp.com/en/home/server-maintenance to see all available options and descriptions from the ServerConfig.toml&#xD;
 &#xD;
-Web Server: The web server for http/https requests is turned off by default and you need to enable it in the ServerConfig.toml if you want too - it is strongly recommended that you reverse proxy the Web Server if possible.&#xD;
+WEB CONSOLE: You can connect to the BeamMP-Server console by opening your browser and go to HOSTIP:9045 (eg: 192.168.1.1:9045) or click on WebUI on the Docker page within Unraid.&#xD;
 &#xD;
 Update Notice: The container will check for a new version on each start/restart.</Overview>
   <Category>GameServers:</Category>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>false</TemplateURL>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/beamngmp.png</Icon>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
@@ -33,7 +33,7 @@ Update Notice: The container will check for a new version on each start/restart.
   <Config Name="Extra Startup Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your extra start up parameters for the server if needed." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="TCP - GamePort" Target="30814" Default="" Mode="tcp" Description="TCP Game Port (If you want to change the game port please change it in the ServerConfig.toml file first, then delete this entry and create new Port entries in the template with the Host and Container port set to the same as in the ServerConfig.toml)" Type="Port" Display="always" Required="true" Mask="false">30814</Config>
   <Config Name="UDP - GamePort" Target="30814" Default="" Mode="udp" Description="UDP Game Port (If you want to change the game port please change it in the ServerConfig.toml file first, then delete this entry and create new Port entries in the template with the Host and Container port set to the same as in the ServerConfig.toml)" Type="Port" Display="always" Required="true" Mask="false">30814</Config>
-  <Config Name="TCP - Internal http Server" Target="8080" Default="" Mode="tcp" Description="Intel http Server port (the web server isn't enabled by default, if you don't need it delete this entry, otherwise enable it in the ServerConfig.toml)" Type="Port" Display="always" Required="false" Mask="false">8080</Config>
+  <Config Name="TCP - WebConsole" Target="8080" Default="" Mode="tcp" Description="WebConsole (by default, you can connect to the BeamMP-Server console by opening your browser and go to HOSTIP:9045 - eg: 192.168.1.1:9045 - or click on WebUI on the Docker page within Unraid)." Type="Port" Display="always" Required="false" Mask="false">9045</Config>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
   <Config Name="UMASK" Target="UMASK" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">0000</Config>
