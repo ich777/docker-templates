@@ -5,9 +5,9 @@
   <Beta>False</Beta>
   <Category>Productivity: Tools:System</Category>
   <Name>LXC</Name>
-  <Description>LXC is a well-known Linux container runtime that consists of tools, templates, and library and language bindings. It's pretty low level, very flexible and covers just about every containment feature supported by the upstream kernel.
+  <Description>LXC is a well-known Linux container runtime that consists of tools, templates, and library and language bindings. It's pretty low level, very flexible and covers just about every containment feature supported by the upstream kernel.  
     
-ATTENTION: This plugin is currently in development and currently meant for advanced users only, please visit the support thread first! Not all features/distributions are supported currently!</Description>
+LXC (Linux Containers) is similar to Docker but with a key difference: while Docker abstracts away much of the system maintenance, LXC gives users greater control and responsibility over managing their environments. This allows for more customization and fine-tuning, making it ideal for users who prefer a hands-on approach.</Description>
   <Support>https://forums.unraid.net/topic/123935-plugin-lxc-plugin/</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/lxc.png</Icon>
 </Containers>
