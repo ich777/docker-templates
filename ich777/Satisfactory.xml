@@ -3,7 +3,7 @@
   <Name>Satisfactory</Name>
   <Repository>ich777/steamcmd:satisfactory</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
-  <Network>bridge</Network>
+  <Network>host</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
@@ -34,7 +34,7 @@ You can also run multiple servers with only one SteamCMD directory!</Overview>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;If you want to install a static or beta version of the game change the value to: '1690800 -beta YOURBRANCH' (without quotes, replace YOURBRANCH with the branch or version you want to install)." Type="Variable" Display="always" Required="true" Mask="false">1690800</Config>
   <Config Name="TCP - Game Port" Target="7777" Default="" Mode="tcp" Description="TCP Game Port (if you need another port, please delete this entry and create a new TCP Port with the required port number, also don't forget to set the port number in the Game Parameters with eg: '-Port=7777')" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
   <Config Name="UDP - Game Port" Target="7777" Default="" Mode="udp" Description="UDP Game Port (if you need another port, please delete this entry and create a new UDP Port with the required port number, also don't forget to set the port number in the Game Parameters with eg: '-Port=7777')" Type="Port" Display="always" Required="true" Mask="false">7777</Config>
-  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Type in your Extra Game Parameters seperated with a space and - (if you need for example other ports add: '-Port=7778 -ServerQueryPort=15778 -BeaconPort=15001')" Type="Variable" Display="always-hide" Required="false" Mask="false">-log -unattended -multihome=0.0.0.0</Config>
+  <Config Name="Game Parameters" Target="GAME_PARAMS" Default="" Mode="" Description="Type in your Extra Game Parameters seperated with a space and - (if you need for example other ports add: '-Port=7778 -ServerQueryPort=15778 -BeaconPort=15001')" Type="Variable" Display="always-hide" Required="false" Mask="false">-log -unattended</Config>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="UID" Target="UID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">99</Config>
   <Config Name="GID" Target="GID" Default="" Mode="" Description="" Type="Variable" Display="advanced-hide" Required="true" Mask="false">100</Config>
