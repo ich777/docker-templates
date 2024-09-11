@@ -3,7 +3,7 @@
   <Name>Satisfactory</Name>
   <Repository>ich777/steamcmd:satisfactory</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
-  <Network>host</Network>
+  <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
