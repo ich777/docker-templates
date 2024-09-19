@@ -19,12 +19,13 @@ Update Notice: The container will check by default on each start/restart on new 
 &#xD;
 **BattleNet|Epic|Steam Prefill Notice:** Steam Prefill needs to be configured to work properly, please enter the following commands and/or follow the prompts afterwards, you can close the window when you are finished:&#xD;
 1. Open up a container console&#xD;
-2. Type in 'cd ${DATA_DIR}/(BattleNet|Epic|Steam)Prefill' and press ENTER&#xD;
-3. Type in './(BattleNet|Epic|Steam)Prefill select-apps' and press ENTER&#xD;
+2. Type in 'su ${USER}' and press ENTER&#xD;
+3. Type in 'cd ${DATA_DIR}/(BattleNet|Epic|Steam)Prefill' and press ENTER&#xD;
 4. Type in './(BattleNet|Epic|Steam)Prefill select-apps' and press ENTER&#xD;
-5. Enter your credentials and/or follow the steps displayed&#xD;
-6. Select the apps you want to prefill and press ENTER&#xD;
-7. Done&#xD;
+5. Type in './(BattleNet|Epic|Steam)Prefill select-apps' and press ENTER&#xD;
+6. Enter your credentials and/or follow the steps displayed&#xD;
+7. Select the apps you want to prefill and press ENTER&#xD;
+8. Done&#xD;
 &#xD;
 _Notice:_ In the above example you have to choose between BattleNet, Epic or Steam so that it says BattleNetPrefill, EpicPrefill or SteamPrefill instead of (BattleNet|Epic|Steam)Prefill. (these stepps are also displayed in the container log when BatteNet/Epic/Steam isn't/aren't configured yet)&#xD;
 &#xD;
