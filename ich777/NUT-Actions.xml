@@ -8,5 +8,5 @@
   <Name>NUT Actions</Name>
   <Description>This plugin is intended to seamlessly integrate with the NUT Plugin, automatically shutting down all your Docker and LXC Containers, as well as virtual machines (VMs), when your Server is operating on battery power to save energy to bridge power outages without shutting down your Server. You can specify exceptions to this behavior. Once power is restored, the plugin will automatically restart all previously running containers and VMs. Don't forget to go to the plugin page after installing the plugin and configure which Containers/VMs should not be stopped.</Description>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba</Support>
-  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/refs/heads/master/ich777/images/nut-actions.png</Icon>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/nut-actions.png</Icon>
 </Containers>
