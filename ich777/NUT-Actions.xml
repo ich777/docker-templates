@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Containers>
-  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-nut-actions/refs/heads/master/nut-actions.plg</PluginURL>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-nut-actions/master/nut-actions.plg</PluginURL>
   <PluginAuthor>ich777</PluginAuthor>
   <Beta>False</Beta>
   <Requires>Network UPS Tools (NUT) for UNRAID by desertwitch aka Rysz</Requires>
