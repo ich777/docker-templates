@@ -4,6 +4,7 @@
   <PluginAuthor>ich777</PluginAuthor>
   <Beta>False</Beta>
   <Requires>Network UPS Tools (NUT) for UNRAID by desertwitch aka Rysz</Requires>
+  <RequiresFile>/var/log/plugins/nut-dw.plg</RequiresFile>
   <Category>Plugins Tools:System</Category>
   <Name>NUT Actions</Name>
   <Description>This plugin is intended to seamlessly integrate with the NUT Plugin, automatically shutting down all your Docker and LXC Containers, as well as virtual machines (VMs), when your Server is operating on battery power to save energy to bridge power outages without shutting down your Server. You can specify exceptions to this behavior. Once power is restored, the plugin will automatically restart all previously running containers and VMs. Don't forget to go to the plugin page after installing the plugin and configure which Containers/VMs should not be stopped.</Description>
