@@ -35,7 +35,7 @@ Update Notice: Simply restart the container if a newer version of the game is av
   <DonateLink>https://www.paypal.me/chips777</DonateLink>
   <Requires/>
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
-  <Config Name="Server Files" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/lotr-returntomoria</Config>
+  <Config Name="Server Files" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/returntomoria</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">3349480</Config>
   <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Enter your start up commands for the server." Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="UDP - Game Port" Target="7777" Default="" Mode="udp" Description="UDP GamePort (If you need another port delete this entry and create a new UDP port mapping here in the template with the Container and Host port set to the same as in your MoriaServerConfig.ini file)." Type="Port" Display="always" Required="true" Mask="false">7777</Config>
