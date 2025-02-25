@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Anope</Name>
-  <Repository>ich777/anope</Repository>
+  <Repository>ghcr.io/ich777/anope</Repository>
   <Registry>https://hub.docker.com/r/ich777/anope</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Microsoft-Edge</Name>
-  <Repository>ich777/microsoft-edge</Repository>
+  <Repository>ghcr.io/ich777/microsoft-edge</Repository>
   <Registry>https://hub.docker.com/r/ich777/microsoft-edge/</Registry>
   <Network>bridge</Network>
   <MyIP/>

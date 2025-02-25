@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>MyCrypto</Name>
-  <Repository>ich777/mycrypto</Repository>
+  <Repository>ghcr.io/ich777/mycrypto</Repository>
   <Registry>https://hub.docker.com/r/ich777/mycrypto</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>EuroTruckSimulator2</Name>
-  <Repository>ich777/steamcmd:ets2</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:ets2</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>

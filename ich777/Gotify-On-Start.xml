@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Gotify-On-Start</Name>
-  <Repository>ich777/gotify-on-start</Repository>
+  <Repository>ghcr.io/ich777/gotify-on-start</Repository>
   <Registry>https://hub.docker.com/r/ich777/gotify-on-start</Registry>
   <Network>host</Network>
   <MyIP/>

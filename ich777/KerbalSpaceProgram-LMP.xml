@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>KerbalSpaceProgram-LMP</Name>
-  <Repository>ich777/lunamultiplayer-ksp</Repository>
+  <Repository>ghcr.io/ich777/lunamultiplayer-ksp</Repository>
   <Registry>https://hub.docker.com/r/ich777/lunamultiplayer-ksp/</Registry>
   <Network>bridge</Network>
   <MyIP/>

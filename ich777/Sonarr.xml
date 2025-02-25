@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Sonarr</Name>
-  <Repository>ich777/sonarr</Repository>
+  <Repository>ghcr.io/ich777/sonarr</Repository>
   <Registry>https://hub.docker.com/r/ich777/sonarr</Registry>
   <Network>bridge</Network>
   <MyIP/>

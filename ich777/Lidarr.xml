@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Lidarr</Name>
-  <Repository>ich777/lidarr</Repository>
+  <Repository>ghcr.io/ich777/lidarr</Repository>
   <Registry>https://hub.docker.com/r/ich777/lidarr</Registry>
   <Network>bridge</Network>
   <MyIP/>

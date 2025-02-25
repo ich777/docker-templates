@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>FiveM</Name>
-  <Repository>ich777/fivemserver</Repository>
+  <Repository>ghcr.io/ich777/fivemserver</Repository>
   <Registry>https://hub.docker.com/r/ich777/fivemserver/</Registry>
   <Network>bridge</Network>
   <MyIP/>

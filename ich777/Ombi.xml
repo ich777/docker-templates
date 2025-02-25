@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Ombi</Name>
-  <Repository>ich777/ombi</Repository>
+  <Repository>ghcr.io/ich777/ombi</Repository>
   <Registry>https://hub.docker.com/r/ich777/ombi</Registry>
   <Network>bridge</Network>
   <MyIP/>

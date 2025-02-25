@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>OpenTTD</Name>
-  <Repository>ich777/openttdserver</Repository>
+  <Repository>ghcr.io/ich777/openttdserver</Repository>
   <Registry>https://hub.docker.com/r/ich777/openttdserver</Registry>
   <Network>bridge</Network>
   <MyIP/>

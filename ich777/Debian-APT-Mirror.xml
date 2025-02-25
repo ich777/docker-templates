@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Debian-APT-Mirror</Name>
-  <Repository>ich777/debian-mirror</Repository>
+  <Repository>ghcr.io/ich777/debian-mirror</Repository>
   <Registry>https://hub.docker.com/r/ich777/debian-mirror</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Craftopia</Name>
-  <Repository>ich777/steamcmd:craftopia</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:craftopia</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <Beta>True</Beta>

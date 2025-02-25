@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Tor-Browser</Name>
-  <Repository>ich777/torbrowser</Repository>
+  <Repository>ghcr.io/ich777/torbrowser</Repository>
   <Registry>https://hub.docker.com/r/ich777/torbrowser/</Registry>
   <Network>bridge</Network>
   <MyIP/>

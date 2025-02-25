@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>OnlineCheckYourServer</Name>
-  <Repository>ich777/online-check-pushover</Repository>
+  <Repository>ghcr.io/ich777/online-check-pushover</Repository>
   <Registry>https://hub.docker.com/r/ich777/online-check-pushover</Registry>
   <Network>bridge</Network>
   <MyIP/>

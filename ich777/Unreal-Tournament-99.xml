@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Unreal-Tournament-99</Name>
-  <Repository>ich777/unreal-tournament-99</Repository>
+  <Repository>ghcr.io/ich777/unreal-tournament-99</Repository>
   <Registry>https://hub.docker.com/r/ich777/unreal-tournament-99/</Registry>
   <Network>bridge</Network>
   <MyIP/>

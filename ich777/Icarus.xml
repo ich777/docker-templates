@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Icarus</Name>
-  <Repository>ich777/steamcmd:icarus</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:icarus</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Beta>True</Beta>
   <Network>bridge</Network>

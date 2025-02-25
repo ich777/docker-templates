@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Monero-GUI</Name>
-  <Repository>ich777/monero-gui</Repository>
+  <Repository>ghcr.io/ich777/monero-gui</Repository>
   <Registry>https://hub.docker.com/r/ich777/monero-gui</Registry>
   <Network>bridge</Network>
   <MyIP/>

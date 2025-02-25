@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>DayOfDefeatSource</Name>
-  <Repository>ich777/steamcmd:dods</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:dods</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>

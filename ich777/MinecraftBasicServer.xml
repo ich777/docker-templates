@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>MinecraftBasicServer</Name>
-  <Repository>ich777/minecraftbasicserver</Repository>
+  <Repository>ghcr.io/ich777/minecraftbasicserver</Repository>
   <Registry>https://hub.docker.com/r/ich777/minecraftbasicserver/</Registry>
   <Network>bridge</Network>
   <MyIP/>

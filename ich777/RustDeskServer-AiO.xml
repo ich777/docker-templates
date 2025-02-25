@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>RustDeskServer-AiO</Name>
-  <Repository>ich777/rustdesk-server-aio</Repository>
+  <Repository>ghcr.io/ich777/rustdesk-server-aio</Repository>
   <Registry>https://hub.docker.com/r/ich777/rustdesk-server-aio/</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>DayZ</Name>
-  <Repository>ich777/steamcmd:dayz</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:dayz</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <Beta>True</Beta>

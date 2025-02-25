@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Krusader</Name>
-  <Repository>ich777/krusader</Repository>
+  <Repository>ghcr.io/ich777/krusader</Repository>
   <Registry>https://hub.docker.com/r/ich777/krusader</Registry>
   <Network>bridge</Network>
   <MyIP/>

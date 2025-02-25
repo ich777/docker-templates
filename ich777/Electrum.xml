@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Electrum</Name>
-  <Repository>ich777/electrum</Repository>
+  <Repository>ghcr.io/ich777/electrum</Repository>
   <Registry>https://hub.docker.com/r/ich777/electrum</Registry>
   <Network>bridge</Network>
   <MyIP/>

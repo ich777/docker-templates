@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>MultiTheftAuto</Name>
-  <Repository>ich777/mtaserver</Repository>
+  <Repository>ghcr.io/ich777/mtaserver</Repository>
   <Registry>https://hub.docker.com/r/ich777/mtaserver/</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Debian-Bookworm</Name>
-  <Repository>ich777/debian-bookworm</Repository>
+  <Repository>ghcr.io/ich777/debian-bookworm</Repository>
   <Registry>https://hub.docker.com/r/ich777/debian-bookworm</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>DoH-Client</Name>
-  <Repository>ich777/doh-client</Repository>
+  <Repository>ghcr.io/ich777/doh-client</Repository>
   <Registry>https://hub.docker.com/r/ich777/doh-client</Registry>
   <Network>bridge</Network>
   <MyIP/>

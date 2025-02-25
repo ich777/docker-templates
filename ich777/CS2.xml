@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>CS2</Name>
-  <Repository>ich777/steamcmd:cs2</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:cs2</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <Beta>true</Beta>

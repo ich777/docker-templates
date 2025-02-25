@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Jenkins</Name>
-  <Repository>ich777/jenkins</Repository>
+  <Repository>ghcr.io/ich777/jenkins</Repository>
   <Registry>https://hub.docker.com/r/ich777/jenkins</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Stun-Turn-Server</Name>
-  <Repository>ich777/stun-turn-server</Repository>
+  <Repository>ghcr.io/ich777/stun-turn-server</Repository>
   <Registry>https://hub.docker.com/r/ich777/stun-turn-server</Registry>
   <Network>bridge</Network>
   <MyIP/>

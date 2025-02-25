@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>InspIRCd</Name>
-  <Repository>ich777/inspircd</Repository>
+  <Repository>ghcr.io/ich777/inspircd</Repository>
   <Registry>https://hub.docker.com/r/ich777/inspircd</Registry>
   <Network>bridge</Network>
   <MyIP/>

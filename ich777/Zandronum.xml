@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Zandronum</Name>
-  <Repository>ich777/zandronum</Repository>
+  <Repository>ghcr.io/ich777/zandronum</Repository>
   <Registry>https://hub.docker.com/r/ich777/zandronum</Registry>
   <Network>bridge</Network>
   <MyIP/>

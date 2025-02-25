@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Pushover-On-Start</Name>
-  <Repository>ich777/pushover-on-start</Repository>
+  <Repository>ghcr.io/ich777/pushover-on-start</Repository>
   <Registry>https://hub.docker.com/r/ich777/pushover-on-start</Registry>
   <Network>host</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>luckyBackup</Name>
-  <Repository>ich777/luckybackup</Repository>
+  <Repository>ghcr.io/ich777/luckybackup</Repository>
   <Registry>https://hub.docker.com/r/ich777/luckybackup/</Registry>
   <Network>bridge</Network>
   <MyIP/>

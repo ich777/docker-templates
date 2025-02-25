@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>InsurgencySandstorm</Name>
-  <Repository>ich777/steamcmd:insurgencysandstorm</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:insurgencysandstorm</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>TeamSpeak3</Name>
-  <Repository>ich777/teamspeak</Repository>
+  <Repository>ghcr.io/ich777/teamspeak</Repository>
   <Registry>https://hub.docker.com/r/ich777/teamspeak</Registry>
   <Network>bridge</Network>
   <MyIP/>

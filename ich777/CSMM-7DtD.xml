@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>CSMM-7DtD</Name>
-  <Repository>ich777/csmm-7dtd</Repository>
+  <Repository>ghcr.io/ich777/csmm-7dtd</Repository>
   <Registry>https://hub.docker.com/r/ich777/csmm-7dtd/</Registry>
   <Network>bridge</Network>
   <Beta>True</Beta>

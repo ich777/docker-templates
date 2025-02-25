@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Thunderbird</Name>
-  <Repository>ich777/thunderbird</Repository>
+  <Repository>ghcr.io/ich777/thunderbird</Repository>
   <Registry>https://hub.docker.com/r/ich777/thunderbird/</Registry>
   <Network>bridge</Network>
   <MyIP/>

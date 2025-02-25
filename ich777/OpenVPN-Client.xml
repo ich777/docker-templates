@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>OpenVPN-Client</Name>
-  <Repository>ich777/openvpn-client</Repository>
+  <Repository>ghcr.io/ich777/openvpn-client</Repository>
   <Registry>https://hub.docker.com/r/ich777/openvpn-client/</Registry>
   <Network>bridge</Network>
   <MyIP/>

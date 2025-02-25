@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>V-Rising</Name>
-  <Repository>ich777/steamcmd:vrising</Repository>
+  <Repository>ghcr.io/ich777/steamcmd:vrising</Repository>
   <Registry>https://hub.docker.com/r/ich777/steamcmd/</Registry>
   <Network>bridge</Network>
   <Beta>True</Beta>

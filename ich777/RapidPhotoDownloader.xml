@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>RapidPhotoDownloader</Name>
-  <Repository>ich777/rapidphotodownloader</Repository>
+  <Repository>ghcr.io/ich777/rapidphotodownloader</Repository>
   <Registry>https://hub.docker.com/r/ich777/rapidphotodownloader/</Registry>
   <Network>bridge</Network>
   <MyIP/>

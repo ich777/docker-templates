@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Remmina</Name>
-  <Repository>ich777/remmina</Repository>
+  <Repository>ghcr.io/ich777/remmina</Repository>
   <Registry>https://hub.docker.com/r/ich777/remmina/</Registry>
   <Network>bridge</Network>
   <MyIP/>

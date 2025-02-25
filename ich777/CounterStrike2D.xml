@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>CounterStrike2D</Name>
-  <Repository>ich777/cs2dserver</Repository>
+  <Repository>ghcr.io/ich777/cs2dserver</Repository>
   <Registry>https://hub.docker.com/r/ich777/cs2dserver/</Registry>
   <Network>bridge</Network>
   <MyIP/>

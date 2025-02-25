@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Radarr</Name>
-  <Repository>ich777/radarr</Repository>
+  <Repository>ghcr.io/ich777/radarr</Repository>
   <Registry>https://hub.docker.com/r/ich777/radarr</Registry>
   <Network>bridge</Network>
   <MyIP/>

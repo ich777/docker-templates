@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Portfolio-Performance</Name>
-  <Repository>ich777/portfolio-performance</Repository>
+  <Repository>ghcr.io/ich777/portfolio-performance</Repository>
   <Registry>https://hub.docker.com/r/ich777/portfolio-performance</Registry>
   <Network>bridge</Network>
   <MyIP/>

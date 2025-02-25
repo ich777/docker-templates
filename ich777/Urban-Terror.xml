@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Urban-Terror</Name>
-  <Repository>ich777/urbanterror</Repository>
+  <Repository>ghcr.io/ich777/urbanterror</Repository>
   <Registry>https://hub.docker.com/r/ich777/urbanterror/</Registry>
   <Network>bridge</Network>
   <MyIP/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>MinecraftBedrockEdition</Name>
-  <Repository>ich777/minecraftbedrockserver</Repository>
+  <Repository>ghcr.io/ich777/minecraftbedrockserver</Repository>
   <Registry>https://hub.docker.com/r/ich777/minecraftbedrockserver/</Registry>
   <Network>bridge</Network>
   <MyIP/>

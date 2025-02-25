@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Terraria</Name>
-  <Repository>ich777/terrariaserver</Repository>
+  <Repository>ghcr.io/ich777/terrariaserver</Repository>
   <Registry>https://hub.docker.com/r/ich777/terrariaserver/</Registry>
   <Network>bridge</Network>
   <MyIP/>

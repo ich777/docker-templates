@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Xonotic</Name>
-  <Repository>ich777/xonotic</Repository>
+  <Repository>ghcr.io/ich777/xonotic</Repository>
   <Registry>https://hub.docker.com/r/ich777/xonotic/</Registry>
   <Network>bridge</Network>
   <MyIP/>

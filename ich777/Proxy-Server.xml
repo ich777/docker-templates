@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Proxy-Server</Name>
-  <Repository>ich777/proxy-server</Repository>
+  <Repository>ghcr.io/ich777/proxy-server</Repository>
   <Registry>https://hub.docker.com/r/ich777/proxy-server/</Registry>
   <Network>bridge</Network>
   <MyIP/>

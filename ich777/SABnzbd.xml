@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>SABnzbd</Name>
-  <Repository>ich777/sabnzbd</Repository>
+  <Repository>ghcr.io/ich777/sabnzbd</Repository>
   <Registry>https://hub.docker.com/r/ich777/sabnzbd</Registry>
   <Network>bridge</Network>
   <MyIP/>
