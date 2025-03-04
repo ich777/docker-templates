@@ -97,7 +97,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
       <Mode/>
     </Variable>
     <Variable>
-      <Value/>
+      <Value>KF-bioticslab.rom?game=KFmod.KFGameType?VACSecured=true?MaxPlayers=6</Value>
       <Name>GAME_PARAMS</Name>
       <Mode/>
     </Variable>
@@ -131,7 +131,7 @@ You can also run multiple servers with only one SteamCMD directory!</Description
   <Config Name="SteamCMD" Target="/serverdata/steamcmd" Default="" Mode="rw" Description="Container Path: /serverdata/steamcmd" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/steamcmd</Config>
   <Config Name="ServerFiles" Target="/serverdata/serverfiles" Default="" Mode="rw" Description="Container Path: /serverdata/serverfiles" Type="Path" Display="always" Required="true" Mask="false">/mnt/cache/appdata/killingfloor</Config>
   <Config Name="GAME_ID" Target="GAME_ID" Default="" Mode="" Description="The GAME_ID that the container download at startup.&#13;&#10;(https://developer.valvesoftware.com/wiki/Dedicated_Servers_List)" Type="Variable" Display="always" Required="true" Mask="false">215360</Config>
-  <Config Name="GAME_PARAMS_EXTRA" Target="GAME_PARAMS" Default="" Mode="" Description="Type in your Extra Game Parameters seperated with - (like: -DisableDeathSpectator)" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="GAME_PARAMS" Target="GAME_PARAMS" Default="" Mode="" Description="Type in your Extra Game Parameters seperated with - (like: KF-bioticslab.rom?game=KFmod.KFGameType?VACSecured=true?MaxPlayers=6 -DisableDeathSpectator)" Type="Variable" Display="always" Required="false" Mask="false">KF-bioticslab.rom?game=KFmod.KFGameType?VACSecured=true?MaxPlayers=6</Config>
   <Config Name="Steam-Username" Target="USERNAME" Default="" Mode="" Description="Your Steam username goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="false"></Config>
   <Config Name="Validate Installation" Target="VALIDATE" Default="" Mode="" Description="Set the Variable to 'true' if you want to validate the installation otherwise leave it blank." Type="Variable" Display="always-hide" Required="false" Mask="false"/>
   <Config Name="Steam-Password" Target="PASSWRD" Default="" Mode="" Description="Your Steam password goes here if you want to install a game that needs a valid account, otherwise leave it blank (ATTENTION: You have to disable Steam Guard)." Type="Variable" Display="always-hide" Required="true" Mask="true"></Config>
