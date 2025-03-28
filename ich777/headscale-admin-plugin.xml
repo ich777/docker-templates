@@ -4,7 +4,7 @@
   <PluginAuthor>ich777</PluginAuthor>
   <Beta>False</Beta>
   <Category>Network:VPN Network:Privacy Productivity: Security:</Category>
-  <Name>Headscale Admin Panel for Unraid</Name>
+  <Name>Headscale Admin Panel</Name>
   <Requires>Headscale Docker container</Requires>
   <Description>This Plugin gives you the ability to Manage your Headscale Docker Container from within your Unraid WebUI.&#xD;
 &#xD;
