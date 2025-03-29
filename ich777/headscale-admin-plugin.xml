@@ -13,6 +13,6 @@ ATTENTION: You need to have the Headscale Docker container installed and configu
   <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/2-nodes.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/3-routes.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/4-policies.png</Screenshot>
-  <Support>https://github.com/ich777/unraid-headscale-admin</Support>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/headscale.png</Icon>
 </Containers>
