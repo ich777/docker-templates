@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/headscale-admin.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Category>Network:VPN Network:Privacy Productivity: Security:</Category>
+  <Name>Headscale Admin Panel</Name>
+  <Requires>Headscale Docker container</Requires>
+  <Description>This Plugin gives you the ability to Manage your Headscale Docker Container from within your Unraid WebUI.&#xD;
+&#xD;
+Note: This plugin supports both Local mode (through docker exec) and API mode (through the API), please visit the settings if you are planing to use the plugin in API mode.</Description>
+  <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/1-users.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/2-nodes.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/3-routes.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/4-policies.png</Screenshot>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/headscale.png</Icon>
+</Containers>
