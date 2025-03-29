@@ -13,6 +13,8 @@ Note: This plugin supports both Local mode (through docker exec) and API mode (t
   <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/2-nodes.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/3-routes.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/4-policies.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/5-settings_local.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/ich777/unraid-headscale-admin/master/images/6-settings_api.png</Screenshot>
   <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba</Support>
   <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/headscale.png</Icon>
 </Containers>
