@@ -83,7 +83,7 @@ All you data is stored in the jenkins/workdir folder in your appdata directory.<
       <Mode/>
     </Variable>
     <Variable>
-      <Value>jre17</Value>
+      <Value>jre21</Value>
       <Name>RUNTIME_NAME</Name>
       <Mode/>
     </Variable>
