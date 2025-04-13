@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-ashmem-driver/master/ashmem-driver.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>True</Beta>
+  <Category>Drivers:</Category>
+  <Name>ashmem</Name>
+  <Description>ashmem (Anonymous Shared Memory Subsystem for Android) is a shared memory allocator, similar to POSIX SHM but with different behavior and sporting a simpler file-based API.&#xD;
+&#xD;
+This driver allows you to run Docker containers like redroid on your Unraid server, please note that you might also need the binder driver.</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/android.png</Icon>
+</Containers>
