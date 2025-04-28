@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Containers>
+  <PluginURL>https://raw.githubusercontent.com/ich777/unraid-memryx-driver/master/memryx-driver.plg</PluginURL>
+  <PluginAuthor>ich777</PluginAuthor>
+  <Beta>False</Beta>
+  <Requires>PCI based MemryX MX3 Module</Requires>
+  <Category>Productivity: Tools:System Drivers:</Category>
+  <Name>MemryX Driver</Name>
+  <Description>This package contains the MemryX MX3 Module Drivers and installs them to utilize them in your Docker containers.</Description>
+  <Support>https://forums.unraid.net/topic/92865-support-ich777-amd-vendor-reset-coraltpu-hpsahba/</Support>
+  <Icon>https://raw.githubusercontent.com/ich777/docker-templates/master/ich777/images/memryx.png</Icon>
+</Containers>
