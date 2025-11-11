@@ -110,7 +110,7 @@ WEB CONSOLE: You can connect to the Minecraft console by opening your browser an
       <Mode/>
     </Variable>
     <Variable>
-      <Value>jre21</Value>
+      <Value>jre22</Value>
       <Name>RUNTIME_NAME</Name>
       <Mode/>
     </Variable>
